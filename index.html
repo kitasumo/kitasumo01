@@ -22,9 +22,19 @@ body {
 
   margin: 0;
 
-  font-family: -apple-system, BlinkMacSystemFont,
+  font-family:
 
-    "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    -apple-system,
+
+    BlinkMacSystemFont,
+
+    "Hiragino Kaku Gothic ProN",
+
+    "Yu Gothic",
+
+    Meiryo,
+
+    sans-serif;
 
   color: #333;
 
@@ -34,7 +44,19 @@ body {
 
 }
 
-/* 画像 */
+/* =========================
+
+   ヘッダー
+
+========================= */
+
+.header-wrap {
+
+  position: relative;
+
+  width: 100%;
+
+}
 
 .main-image {
 
@@ -48,19 +70,39 @@ body {
 
 }
 
-/* ヘッダーリンク */
+/* 画像内のBlogカードをリンクにする */
 
-.header-link {
+.blog-hit {
+
+  position: absolute;
+
+  /* 左側のBlogカード部分 */
+
+  left: 2%;
+
+  bottom: 3%;
+
+  width: 22%;
+
+  height: 43%;
 
   display: block;
 
+  z-index: 20;
+
 }
 
-/* 商品ラインナップ */
+/* =========================
+
+   商品ラインナップ
+
+========================= */
 
 .lineup-title {
 
   margin: 0;
+
+  /* 上下の余白 */
 
   padding: 38px 10px 34px;
 
@@ -80,7 +122,11 @@ body {
 
 }
 
-/* 北スモについて */
+/* =========================
+
+   北スモについて
+
+========================= */
 
 .about {
 
@@ -114,7 +160,11 @@ body {
 
 }
 
-/* ブログボタン */
+/* =========================
+
+   Blogボタン
+
+========================= */
 
 .blog-button {
 
@@ -126,7 +176,7 @@ body {
 
   background: #668d2e;
 
-  color: white;
+  color: #fff;
 
   text-decoration: none;
 
@@ -138,13 +188,17 @@ body {
 
 }
 
-/* フッター */
+/* =========================
+
+   フッター
+
+========================= */
 
 footer {
 
   background: #4f6829;
 
-  color: white;
+  color: #fff;
 
   text-align: center;
 
@@ -174,7 +228,11 @@ footer p {
 
 }
 
-/* スマホ */
+/* =========================
+
+   スマホ
+
+========================= */
 
 @media (max-width: 600px) {
 
@@ -182,7 +240,9 @@ footer p {
 
     font-size: 23px;
 
-    padding: 32px 5px 30px;
+    padding-top: 32px;
+
+    padding-bottom: 30px;
 
     letter-spacing: -0.04em;
 
@@ -206,6 +266,14 @@ footer p {
 
   }
 
+  .blog-button {
+
+    font-size: 16px;
+
+    padding: 11px 25px;
+
+  }
+
 }
 
 </style>
@@ -214,19 +282,13 @@ footer p {
 
 <body>
 
-<!-- ヘッダー画像・タップでBlogへ -->
+<!-- =========================
 
-<a
+     ヘッダー画像
 
-  href="https://ameblo.jp/sumokubei/"
+========================= -->
 
-  target="_blank"
-
-  rel="noopener noreferrer"
-
-  class="header-link"
-
->
+<div class="header-wrap">
 
   <img
 
@@ -238,9 +300,33 @@ footer p {
 
   >
 
-</a>
+  <!--
 
-<!-- 商品ラインナップ -->
+       画像内の
+
+       「北のスモーク Blog」
+
+       カードを押すとAmebaへ
+
+  -->
+
+  <a
+
+    href="https://ameblo.jp/sumokubei/"
+
+    class="blog-hit"
+
+    aria-label="北のスモークBlogを見る"
+
+  ></a>
+
+</div>
+
+<!-- =========================
+
+     商品ラインナップ見出し
+
+========================= -->
 
 <h1 class="lineup-title">
 
@@ -248,7 +334,11 @@ footer p {
 
 </h1>
 
-<!-- 商品説明画像 -->
+<!-- =========================
+
+     商品説明画像
+
+========================= -->
 
 <img
 
@@ -260,11 +350,19 @@ footer p {
 
 >
 
-<!-- 北スモについて -->
+<!-- =========================
+
+     北スモについて
+
+========================= -->
 
 <section class="about">
 
-  <h2>北スモについて</h2>
+  <h2>
+
+    北スモについて
+
+  </h2>
 
   <p>
 
@@ -276,13 +374,11 @@ footer p {
 
   </p>
 
+  <!-- Blogボタン -->
+
   <a
 
     href="https://ameblo.jp/sumokubei/"
-
-    target="_blank"
-
-    rel="noopener noreferrer"
 
     class="blog-button"
 
@@ -294,7 +390,11 @@ footer p {
 
 </section>
 
-<!-- フッター -->
+<!-- =========================
+
+     フッター
+
+========================= -->
 
 <footer>
 
