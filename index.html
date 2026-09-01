@@ -1,8 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>北のスモーク｜地域活動支援センター 北スモ</title>
@@ -10,137 +13,311 @@
 <style>
 
 * {
+
   box-sizing: border-box;
+
 }
 
 body {
+
   margin: 0;
+
   font-family: -apple-system, BlinkMacSystemFont,
+
     "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+
   color: #333;
+
   background: #fffaf2;
+
   line-height: 1.8;
+
 }
 
-/* =========================
-   ヘッダー画像
-========================= */
+/* 画像 */
 
 .main-image {
+
   display: block;
+
   width: 100%;
+
   height: auto;
+
   margin: 0;
+
 }
 
-/* =========================
-   商品ラインナップ見出し
-========================= */
+/* ヘッダーリンク */
+
+.header-link {
+
+  display: block;
+
+}
+
+/* 商品ラインナップ */
 
 .lineup-title {
+
   margin: 0;
+
   padding: 38px 10px 34px;
 
   text-align: center;
 
   font-size: clamp(24px, 4.5vw, 44px);
+
   font-weight: 700;
+
   line-height: 1.3;
 
   color: #332018;
+
   background: #fffaf2;
 
   white-space: nowrap;
+
 }
 
-/* =========================
-   北スモについて
-========================= */
+/* 北スモについて */
 
 .about {
+
   max-width: 900px;
+
   margin: 0 auto;
-  padding: 45px 25px 55px;
+
+  padding: 40px 25px 45px;
+
   text-align: center;
+
 }
 
 .about h2 {
+
   margin: 0 0 20px;
 
   font-size: 30px;
+
   color: #f58220;
+
 }
 
 .about p {
+
   margin: 0;
 
   font-size: 17px;
+
   line-height: 2;
+
 }
 
-/* =========================
-   スマホ
-========================= */
+/* ブログボタン */
+
+.blog-button {
+
+  display: inline-block;
+
+  margin-top: 28px;
+
+  padding: 12px 30px;
+
+  background: #668d2e;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  border-radius: 30px;
+
+}
+
+/* フッター */
+
+footer {
+
+  background: #4f6829;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 28px 20px;
+
+}
+
+footer p {
+
+  margin: 8px 0;
+
+}
+
+.footer-title {
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+}
+
+.copyright {
+
+  font-size: 13px;
+
+  opacity: 0.9;
+
+}
+
+/* スマホ */
 
 @media (max-width: 600px) {
 
   .lineup-title {
+
     font-size: 23px;
-    padding-top: 32px;
-    padding-bottom: 30px;
+
+    padding: 32px 5px 30px;
+
     letter-spacing: -0.04em;
+
   }
 
   .about {
-    padding: 35px 20px 45px;
+
+    padding: 35px 20px 40px;
+
   }
 
   .about h2 {
+
     font-size: 26px;
+
   }
 
   .about p {
+
     font-size: 16px;
+
   }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- ヘッダー画像 -->
-<img
-  src="IMG_0489.png"
-  alt="北のスモーク"
-  class="main-image"
+<!-- ヘッダー画像・タップでBlogへ -->
+
+<a
+
+  href="https://ameblo.jp/sumokubei/"
+
+  target="_blank"
+
+  rel="noopener noreferrer"
+
+  class="header-link"
+
 >
 
-<!-- タグで商品ラインナップ -->
+  <img
+
+    src="IMG_0489.png"
+
+    alt="北のスモーク"
+
+    class="main-image"
+
+  >
+
+</a>
+
+<!-- 商品ラインナップ -->
+
 <h1 class="lineup-title">
+
   北のスモーク 商品ラインナップ
+
 </h1>
 
 <!-- 商品説明画像 -->
+
 <img
+
   src="IMG_0490.png"
+
   alt="北のスモークの商品ラインナップ"
+
   class="main-image"
+
 >
 
 <!-- 北スモについて -->
+
 <section class="about">
 
   <h2>北スモについて</h2>
 
   <p>
+
     地域活動支援センター「北スモ」では、<br>
+
     一つひとつ心を込めて商品を手づくりしています。<br>
+
     日々の活動や商品のことなどを、ブログでも発信しています。
+
   </p>
+
+  <a
+
+    href="https://ameblo.jp/sumokubei/"
+
+    target="_blank"
+
+    rel="noopener noreferrer"
+
+    class="blog-button"
+
+  >
+
+    北のスモーク Blogを見る →
+
+  </a>
 
 </section>
 
+<!-- フッター -->
+
+<footer>
+
+  <p class="footer-title">
+
+    北のスモーク
+
+  </p>
+
+  <p>
+
+    地域活動支援センター 北スモ
+
+  </p>
+
+  <p class="copyright">
+
+    © 北のスモーク
+
+  </p>
+
+</footer>
+
 </body>
+
 </html>
