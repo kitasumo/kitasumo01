@@ -1,11 +1,8 @@
-=<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>北のスモーク｜地域活動支援センター 北スモ</title>
@@ -13,547 +10,137 @@
 <style>
 
 * {
-
   box-sizing: border-box;
-
 }
 
 body {
-
   margin: 0;
-
   font-family: -apple-system, BlinkMacSystemFont,
-
     "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
-
   color: #333;
+  background: #fffaf2;
+  line-height: 1.8;
+}
 
+/* =========================
+   ヘッダー画像
+========================= */
+
+.main-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* =========================
+   商品ラインナップ見出し
+========================= */
+
+.lineup-title {
+  margin: 0;
+  padding: 38px 10px 34px;
+
+  text-align: center;
+
+  font-size: clamp(24px, 4.5vw, 44px);
+  font-weight: 700;
+  line-height: 1.3;
+
+  color: #332018;
   background: #fffaf2;
 
-  line-height: 1.8;
-
+  white-space: nowrap;
 }
 
-/* ヘッダー */
-
-header {
-
-  background: white;
-
-  padding: 18px 20px;
-
-  text-align: center;
-
-  box-shadow: 0 2px 10px rgba(0,0,0,.06);
-
-}
-
-/* 北のスモーク ステッカー風タイトル */
-
-.logo {
-
-  display: inline-block;
-
-  background: #f58220;
-
-  color: white;
-
-  padding: 13px 32px 15px;
-
-  border-radius: 50%;
-
-  transform: rotate(-0deg);
-
-  box-shadow: 0 4px 12px rgba(0,0,0,.12);
-
-}
-
-.logo-main {
-
-  display: block;
-
-  font-size: 34px;
-
-  font-weight: 900;
-
-  line-height: 1.2;
-
-  letletter-spacing: 3px;
-
-}
-
-.logo-small {
-
-  display: block;
-
-  margin-top: 4px;
-
-  font-size: 13px;
-
-  font-style: italic;
-
-}
-
-/* メイン写真 */
-
-.hero {
-
-  position: relative;
-
-  max-width: 1100px;
-
-  margin: 25px auto;
-
-  padding: 0 18px;
-
-}
-
-.hero img {
-
-  width: 100%;
-
-  height: 480px;
-
-  object-fit: cover;
-
-  object-position: center;
-
-  display: block;
-
-  border-radius: 24px;
-
-  box-shadow: 0 8px 25px rgba(0,0,0,.12);
-
-}
-
-.hero-message {
-
-  position: absolute;
-
-  left: 55px;
-
-  bottom: 40px;
-
-  background: rgba(255,255,255,.93);
-
-  padding: 20px 28px;
-
-  border-radius: 18px;
-
-  box-shadow: 0 5px 20px rgba(0,0,0,.10);
-
-}
-
-.hero-message h1 {
-
-  margin: 0;
-
-  color: #f58220;
-
-  font-size: 36px;
-
-}
-
-.hero-message p {
-
-  margin: 5px 0 0;
-
-  color: #444;
-
-}
-
-/* ボタン */
-
-.button {
-
-  display: inline-block;
-
-  background: #f58220;
-
-  color: white;
-
-  text-decoration: none;
-
-  padding: 14px 30px;
-
-  border-radius: 30px;
-
-  font-weight: bold;
-
-  box-shadow: 0 4px 12px rgba(0,0,0,.10);
-
-}
-
-/* セクション */
-
-section {
-
-  padding: 55px 20px;
-
-}
-
-.inner {
-
-  max-width: 950px;
-
-  margin: auto;
-
-}
-
-h2 {
-
-  text-align: center;
-
-  color: #2f80ed;
-
-  font-size: 29px;
-
-  margin: 0 0 28px;
-
-}
-
-/* 北スモについて */
+/* =========================
+   北スモについて
+========================= */
 
 .about {
-
-  background: white;
-
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 45px 25px 55px;
   text-align: center;
-
 }
 
-.about-box {
+.about h2 {
+  margin: 0 0 20px;
 
-  max-width: 760px;
-
-  margin: auto;
-
-  background: #fff2c7;
-
-  padding: 20px 12px;
-
-  text-align: left;
-
-  border-radius: 20px;
-
-}
-
-/* ブログ */
-
-.latest {
-
-  background: #eaf8ff;
-
-}
-
-.latest-box {
-
-  max-width: 720px;
-
-  margin: auto;
-
-  padding: 32px;
-
-  background: white;
-
-  text-align: center;
-
-  border-radius: 20px;
-
-  box-shadow: 0 5px 18px rgba(0,0,0,.07);
-
-}
-
-.latest-box h3 {
-
+  font-size: 30px;
   color: #f58220;
-
-  font-size: 24px;
-
 }
 
-/* カード */
+.about p {
+  margin: 0;
 
-.cards {
-
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 20px;
-
+  font-size: 17px;
+  line-height: 2;
 }
 
-.card {
+/* =========================
+   スマホ
+========================= */
 
-  padding: 26px;
+@media (max-width: 600px) {
 
-  border-radius: 20px;
-
-  box-shadow: 0 5px 15px rgba(0,0,0,.06);
-
-}
-
-.card:nth-child(1) {
-
-  background: #e8f7ff;
-
-}
-
-.card:nth-child(2) {
-
-  background: #fff2c7;
-
-}
-
-.card:nth-child(3) {
-
-  background: #ffe8dc;
-
-}
-
-.card h3 {
-
-  color: #2f80ed;
-
-  margin-top: 0;
-
-}
-
-/* フッター */
-
-footer {
-
-  background: #2f80ed;
-
-  color: white;
-
-  text-align: center;
-
-  padding: 28px 20px;
-
-}
-
-/* iPhoneなど */
-
-@media (max-width: 700px) {
-
-  .logo-main {
-
-    font-size: 27px;
-
+  .lineup-title {
+    font-size: 23px;
+    padding-top: 32px;
+    padding-bottom: 30px;
+    letter-spacing: -0.04em;
   }
 
-  .hero {
-
-    margin-top: 18px;
-
+  .about {
+    padding: 35px 20px 45px;
   }
 
-  .hero img {
-
-    height: 400px;
-
-    border-radius: 18px;
-
+  .about h2 {
+    font-size: 26px;
   }
 
-  .hero-message {
-
-    position: relative;
-
-    left: auto;
-
-    bottom: auto;
-
-    margin: -45px 18px 0;
-
-    padding: 20px;
-
-    text-align: center;
-
-  }
-
-  .hero-message h1 {
-
-    font-size: 29px;
-
-  }
-
-  .cards {
-
-    grid-template-columns: 1fr;
-
-  }
-
-  h2 {
-
-    font-size: 25px;
-
+  .about p {
+    font-size: 16px;
   }
 
 }
 
 </style>
-
 </head>
 
 <body>
-  <img src="IMG_0403.png" alt="北のスモーク" style="width:100%;height:auto;">
-  
 
-<header>
+<!-- ヘッダー画像 -->
+<img
+  src="IMG_0489.png"
+  alt="北のスモーク"
+  class="main-image"
+>
 
-  <div class="logo">
+<!-- タグで商品ラインナップ -->
+<h1 class="lineup-title">
+  北のスモーク 商品ラインナップ
+</h1>
 
-    <span class="logo-main">北のスモーク</span>
+<!-- 商品説明画像 -->
+<img
+  src="IMG_0490.png"
+  alt="北のスモークの商品ラインナップ"
+  class="main-image"
+>
 
-    <span class="logo-small">hand made food</span>
-
-  </div>
-
-</header>
-
-<div class="hero">
-
-  <img src="A63AA278-E75F-4AD7-B4C8-59904F56831F.png" 
-    alt="岩手から届くブルーベリー" style="width:70%;height:auto;">
-
-       
-
-  
-
-    <h1></h1>
-
-    <p>
-
-  
-
-    </p>
-
-  </div>
-
-</div>
-
+<!-- 北スモについて -->
 <section class="about">
 
-<div class="inner">
+  <h2>北スモについて</h2>
 
-<h2>☀️ 北スモについて</h2>
-
-<div class="about-box">
-
-<p>
-
-地域活動支援センター 北のスモーク（北スモ）は<br>
-小規模ながら様々な障害をお持ちの方が集まり
-日々の活動や作業、情報交換、昼食、イベントなど、
-施設での毎日の様子を発信しています。
-
-</p>
-
-</div>
-
-</div>
+  <p>
+    地域活動支援センター「北スモ」では、<br>
+    一つひとつ心を込めて商品を手づくりしています。<br>
+    日々の活動や商品のことなどを、ブログでも発信しています。
+  </p>
 
 </section>
-
-<section class="latest">
-
-<div class="inner">
-
-<h2>✨ 北スモblog</h2>
-
-<div class="latest-box">
-
-<h3>最新の記事はこちら</h3>
-
-<p>
-
-日々の活動や楽しい出来事を<br>
-
-Amebaブログで更新しています。
-
-</p>
-
-<a class="button"
-
-   href="https://ameblo.jp/sumokubei/"
-
-   target="_blank">
-
-   北スモblogを見る →
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="inner">
-
-<h2>北スモの日常</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>😊 日々の活動</h3>
-
-<p>
-
-毎日の出来事や施設での活動、
-
-みなさんの様子をご紹介します。
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🍛 今日の昼食</h3>
-
-<p>
-
-毎日の昼食や季節のメニューなど、
-
-北スモのおいしい時間をご紹介します。
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>📦 作業・イベント</h3>
-
-<p>
-
-箱詰め作業や季節のイベントなど、
-
-さまざまな取り組みを発信しています。
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 地域活動支援センター 北のスモーク
-
-</footer>
 
 </body>
-
 </html>
