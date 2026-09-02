@@ -1,735 +1,437 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>仮サイト｜地域活動支援センター 仮サイト</title>
+<title>仮サイト</title>
 
 <style>
-
 * {
-
   box-sizing: border-box;
-
 }
 
 body {
-
   margin: 0;
-
   font-family: -apple-system, BlinkMacSystemFont,
-
     "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
-
   color: #44372f;
-
   background: #fffaf2;
-
   line-height: 1.8;
-
 }
 
 img {
-
   max-width: 100%;
-
   display: block;
-
 }
 
 /* =====================
-
    ヘッダー
-
 ===================== */
 
 .hero {
-
   width: 100%;
-
   background: #f8f1e5;
-
+  overflow: hidden;
 }
 
 .hero img {
-
   width: 100%;
-
   height: auto;
-
+  display: block;
 }
 
 /* =====================
-
    共通
-
 ===================== */
 
 section {
-
   padding: 48px 20px;
-
 }
 
 .inner {
-
   max-width: 1000px;
-
   margin: 0 auto;
-
 }
 
 h2 {
-
   text-align: center;
-
   color: #5a3928;
-
   font-size: 25px;
-
   margin: 0 0 28px;
-
 }
 
 h2::after {
-
   content: "";
-
   display: block;
-
   width: 45px;
-
   height: 3px;
-
   background: #d7823d;
-
   margin: 10px auto 0;
-
   border-radius: 3px;
-
 }
 
 /* =====================
-
-   仮サイトについて
-
+   紹介＋右端テキスト
 ===================== */
 
 .about {
-
   background: #fff;
+}
 
+.about-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
 }
 
 .about-text {
-
-  max-width: 760px;
-
-  margin: auto;
-
+  flex: 1;
   font-size: 16px;
+}
 
-  text-align: left;
+.side-links {
+  width: 220px;
+  text-align: right;
+  font-size: 14px;
+  color: #7a6658;
+}
 
+.side-links p {
+  margin: 0 0 8px;
 }
 
 /* =====================
-
    商品ラインナップ
-
 ===================== */
 
 .products {
-
   background: #fff8ee;
-
 }
 
 .product-list {
-
   display: flex;
-
   gap: 18px;
-
 }
 
 .product-card {
-
   flex: 1;
-
   background: #fff;
-
   padding: 14px;
-
   border-radius: 12px;
-
   box-shadow: 0 3px 12px rgba(0,0,0,.08);
-
   text-align: center;
-
 }
 
 .photo-space {
-
   height: 190px;
-
   background: #f1ece4;
-
   border: 2px dashed #d5c8b8;
-
   border-radius: 9px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   color: #a79b8e;
-
   font-size: 14px;
-
 }
 
 .product-card h3 {
-
   color: #5a3928;
-
   margin: 13px 0 4px;
-
   font-size: 18px;
-
 }
 
 .product-card p {
-
   margin: 0;
-
   color: #666;
-
   font-size: 14px;
-
 }
 
 /* =====================
-
-   リンク集
-
-===================== */
-
-.links {
-
-  background: #fff;
-
-}
-
-.link-buttons {
-
-  max-width: 650px;
-
-  margin: auto;
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 12px;
-
-}
-
-.link-button {
-
-  display: block;
-
-  text-decoration: none;
-
-  color: #fff;
-
-  background: #d77b34;
-
-  padding: 13px 18px;
-
-  border-radius: 8px;
-
-  text-align: center;
-
-  font-weight: bold;
-
-}
-
-.link-button:hover {
-
-  opacity: .85;
-
-}
-
-/* =====================
-
    アクセス
-
 ===================== */
 
 .access {
-
-  background: #fff8ee;
-
+  background: #fff;
 }
 
 .address {
-
   text-align: center;
-
   margin-bottom: 20px;
-
   font-size: 15px;
-
 }
 
-.map {
-
+.map-placeholder {
   max-width: 850px;
-
+  height: 340px;
   margin: auto;
-
+  background: #eee8df;
+  border: 2px dashed #cdbfae;
   border-radius: 12px;
-
-  overflow: hidden;
-
-}
-
-.map iframe {
-
-  width: 100%;
-
-  height: 350px;
-
-  border: 0;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9a8b7a;
+  font-size: 16px;
 }
 
 /* =====================
-
    BLOG
-
 ===================== */
 
 .blog {
-
-  background: #fff;
-
+  background: #fff8ee;
   text-align: center;
-
 }
 
 .blog p {
-
   margin-bottom: 18px;
-
 }
 
 .blog-button {
-
   display: inline-block;
-
   background: #f58220;
-
   color: #fff;
-
   text-decoration: none;
-
   font-weight: bold;
-
   padding: 13px 35px;
-
   border-radius: 30px;
-
-}
-
-.blog-button:hover {
-
-  opacity: .85;
-
+  cursor: default;
 }
 
 /* =====================
-
    フッター
-
 ===================== */
 
 footer {
-
   background: #5a3928;
-
   color: #fff;
-
   text-align: center;
-
   padding: 24px 15px;
-
   font-size: 13px;
-
 }
 
 footer p {
-
   margin: 3px 0;
-
 }
 
 /* =====================
-
    スマホ
-
 ===================== */
 
 @media (max-width: 650px) {
 
   section {
-
     padding: 38px 14px;
-
   }
 
   h2 {
-
     font-size: 21px;
+  }
 
+  .about-layout {
+    display: block;
   }
 
   .about-text {
-
     font-size: 14px;
-
   }
 
-  /* 商品はスマホでも3つ横並び */
+  .side-links {
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+    font-size: 13px;
+  }
 
   .product-list {
-
     gap: 7px;
-
   }
 
   .product-card {
-
     padding: 7px;
-
   }
 
   .photo-space {
-
     height: 105px;
-
     font-size: 11px;
-
   }
 
   .product-card h3 {
-
     font-size: 13px;
-
     line-height: 1.4;
-
   }
 
   .product-card p {
-
     font-size: 11px;
-
     line-height: 1.5;
-
   }
 
-  .map iframe {
-
-    height: 280px;
-
+  .map-placeholder {
+    height: 260px;
+    font-size: 14px;
   }
-
 }
-
 </style>
-
 </head>
 
 <body>
 
 <!-- =====================
-
      ヘッダー
-
 ===================== -->
 
 <header class="hero">
 
   <!--
-
-  ここに先ほど作ったヘッダー画像を入れます。
-
-  例：
-
-  <img src="header.png" alt="北のスモーク">
-
+  仮ヘッダー画像を入れる場合
+  <img src="header.png" alt="仮サイトヘッダー">
   -->
 
 </header>
 
+
 <!-- =====================
-
-     北スモについて
-
+     紹介
 ===================== -->
 
 <section class="about">
-
   <div class="inner">
 
-    <h2>北スモについて</h2>
+    <h2>施設について</h2>
 
-    <div class="about-text">
+    <div class="about-layout">
 
-      地域活動支援センター「北スモ」では、
+      <div class="about-text">
+        こちらは仮サイトです。<br><br>
 
-      日々の活動を通して、さまざまな製品づくりに取り組んでいます。
+        施設の紹介文や活動内容などが
+        ここに入ります。
+      </div>
 
-      <br><br>
-
-      一つひとつ丁寧に、心を込めて商品を作っています。
+      <div class="side-links">
+        <p>関連情報</p>
+        <p>関連情報</p>
+      </div>
 
     </div>
 
   </div>
-
 </section>
 
+
 <!-- =====================
-
      商品ラインナップ
-
 ===================== -->
 
 <section class="products">
-
   <div class="inner">
 
     <h2>商品ラインナップ</h2>
 
     <div class="product-list">
 
-      <!-- チーズ -->
-
       <div class="product-card">
-
         <div class="photo-space">
-
           商品写真
-
         </div>
 
-        <h3>チーズ</h3>
+        <h3>商品1</h3>
 
         <p>
-
-          商品説明は<br>
-
+          商品説明が<br>
           ここに入ります。
-
         </p>
-
       </div>
 
-      <!-- ブルーベリージャム -->
 
       <div class="product-card">
-
         <div class="photo-space">
-
           商品写真
-
         </div>
 
-        <h3>ブルーベリー<br>ジャム</h3>
+        <h3>商品2</h3>
 
         <p>
-
-          商品説明は<br>
-
+          商品説明が<br>
           ここに入ります。
-
         </p>
-
       </div>
 
-      <!-- 手芸品 -->
 
       <div class="product-card">
-
         <div class="photo-space">
-
           商品写真
-
         </div>
 
-        <h3>手芸品</h3>
+        <h3>商品3</h3>
 
         <p>
-
-          商品説明は<br>
-
+          商品説明が<br>
           ここに入ります。
-
         </p>
-
       </div>
 
     </div>
 
   </div>
-
 </section>
 
-<!-- =====================
-
-     リンク集
-
-===================== -->
-
-<section class="links">
-
-  <div class="inner">
-
-    <h2>リンク集</h2>
-
-    <div class="link-buttons">
-
-      <a class="link-button"
-
-         href="https://genkishopequal.jp/item/?type=food"
-
-         target="_blank"
-
-         rel="noopener">
-
-        元気ショップいこ〜る
-
-      </a>
-
-      <a class="link-button"
-
-         href="https://hiromaaru.org/"
-
-         target="_blank"
-
-         rel="noopener">
-
-        清田区役所（ひろまある）
-
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
 
 <!-- =====================
-
      アクセス
-
 ===================== -->
 
 <section class="access">
-
   <div class="inner">
 
     <h2>アクセス</h2>
 
     <div class="address">
-
-      <strong>地域活動支援センター 北スモ</strong><br>
-
       〒000-0000<br>
-
-      北海道札幌市〇〇区〇〇
-
+      北海道〇〇市〇〇
     </div>
 
-    <div class="map">
-
-      <!--
-
-      Googleマップの埋め込みコードを
-
-      ここに入れます。
-
-      -->
-
+    <div class="map-placeholder">
+      Googleマップが入る予定
     </div>
 
   </div>
-
 </section>
 
+
 <!-- =====================
-
      BLOG
-
 ===================== -->
 
 <section class="blog">
-
   <div class="inner">
 
-    <h2>北スモblog</h2>
+    <h2>blog</h2>
 
     <p>
-
-      北スモの日々の活動や<br>
-
-      最新情報を発信しています。
-
+      日々の活動や最新情報を掲載予定です。
     </p>
 
-    <a class="blog-button"
-
-       href="https://ameblo.jp/sumokubei/"
-
-       target="_blank"
-
-       rel="noopener">
-
-      北スモblogを見る
-
-    </a>
+    <span class="blog-button">
+      blogを見る
+    </span>
 
   </div>
-
 </section>
 
+
 <!-- =====================
-
      フッター
-
 ===================== -->
 
 <footer>
 
-  <p>地域活動支援センター 北スモ</p>
-
-  <p>
-
-    © 北スモ
-
-  </p>
+  <p>仮サイト</p>
+  <p>© Sample Site</p>
 
 </footer>
 
 </body>
-
 </html>
