@@ -42,7 +42,11 @@ img {
 
 }
 
-/* ヘッダー */
+/* =====================
+
+   ヘッダー
+
+===================== */
 
 .hero {
 
@@ -60,9 +64,15 @@ img {
 
   height: auto;
 
+  display: block;
+
 }
 
-/* 共通 */
+/* =====================
+
+   共通
+
+===================== */
 
 section {
 
@@ -108,7 +118,11 @@ h2::after {
 
 }
 
-/* 北のスモークについて */
+/* =====================
+
+   北のスモークについて
+
+===================== */
 
 .about {
 
@@ -156,7 +170,11 @@ h2::after {
 
 }
 
-/* 商品 */
+/* =====================
+
+   商品ラインナップ
+
+===================== */
 
 .products {
 
@@ -192,17 +210,29 @@ h2::after {
 
 }
 
+/* 商品画像
+
+   containで元画像を切らず全部表示 */
+
 .product-photo {
 
   width: 100%;
 
   height: 210px;
 
-  object-fit: cover;
+  object-fit: contain;
 
   border-radius: 9px;
 
   background: #f1ece4;
+
+}
+
+.product-card a {
+
+  display: block;
+
+  text-decoration: none;
 
 }
 
@@ -226,7 +256,11 @@ h2::after {
 
 }
 
-/* BLOG */
+/* =====================
+
+   BLOG
+
+===================== */
 
 .blog {
 
@@ -260,7 +294,11 @@ h2::after {
 
 }
 
-/* アクセス */
+/* =====================
+
+   アクセス
+
+===================== */
 
 .access {
 
@@ -306,7 +344,11 @@ h2::after {
 
 }
 
-/* フッター */
+/* =====================
+
+   フッター
+
+===================== */
 
 footer {
 
@@ -328,7 +370,11 @@ footer p {
 
 }
 
-/* スマホ */
+/* =====================
+
+   スマホ
+
+===================== */
 
 @media (max-width: 650px) {
 
@@ -380,9 +426,15 @@ footer p {
 
   }
 
+  /* スマホでも元画像を全部表示 */
+
   .product-photo {
 
+    width: 100%;
+
     height: 115px;
+
+    object-fit: contain;
 
   }
 
@@ -426,19 +478,27 @@ footer p {
 
 <body>
 
-<!-- ヘッダー -->
+<!-- =====================
+
+     ヘッダー
+
+===================== -->
 
 <header class="hero">
 
-  <img
+<img
 
-    src="19AD203E-81BB-4285-BB25-FEA5D7376B20.png"
+src="19AD203E-81BB-4285-BB25-FEA5D7376B20.png"
 
-    alt="北のスモーク">
+alt="北のスモーク">
 
 </header>
 
-<!-- 北のスモークについて -->
+<!-- =====================
+
+     北のスモークについて
+
+===================== -->
 
 <section class="about">
 
@@ -494,7 +554,11 @@ rel="noopener noreferrer">
 
 </section>
 
-<!-- 商品ラインナップ -->
+<!-- =====================
+
+     商品ラインナップ
+
+===================== -->
 
 <section class="products">
 
@@ -508,6 +572,12 @@ rel="noopener noreferrer">
 
 <div class="product-card">
 
+<a
+
+href="69E036B3-1893-4BB5-B508-1A17F325A705.png"
+
+target="_blank">
+
 <img
 
 src="69E036B3-1893-4BB5-B508-1A17F325A705.png"
@@ -515,6 +585,8 @@ src="69E036B3-1893-4BB5-B508-1A17F325A705.png"
 alt="チーズとブルーベリー"
 
 class="product-photo">
+
+</a>
 
 <h3>食品</h3>
 
@@ -528,9 +600,15 @@ class="product-photo">
 
 </div>
 
-<!-- 中：石鹸 -->
+<!-- 中：リサイクル石鹸 -->
 
 <div class="product-card">
+
+<a
+
+href="73ADD0F0-8ACD-4FA7-91C4-3B719D1E43B6.png"
+
+target="_blank">
 
 <img
 
@@ -539,6 +617,8 @@ src="73ADD0F0-8ACD-4FA7-91C4-3B719D1E43B6.png"
 alt="リサイクル石鹸"
 
 class="product-photo">
+
+</a>
 
 <h3>リサイクル石鹸</h3>
 
@@ -556,13 +636,21 @@ class="product-photo">
 
 <div class="product-card">
 
+<a
+
+href="7F5C1B69-5418-4CA4-A9F9-08119220DF91.png"
+
+target="_blank">
+
 <img
 
-src="7F5C1B69-5418-4CA4-A9F9-08119220DF91.jpeg"
+src="7F5C1B69-5418-4CA4-A9F9-08119220DF91.png"
 
-alt="エプロンとそばがら枕"
+alt="手芸品"
 
 class="product-photo">
+
+</a>
 
 <h3>手芸品</h3>
 
@@ -582,7 +670,11 @@ class="product-photo">
 
 </section>
 
-<!-- BLOG -->
+<!-- =====================
+
+     BLOG
+
+===================== -->
 
 <section class="blog">
 
@@ -614,7 +706,11 @@ blogを見る
 
 </section>
 
-<!-- アクセス -->
+<!-- =====================
+
+     アクセス
+
+===================== -->
 
 <section class="access">
 
@@ -654,7 +750,11 @@ title="北のスモーク Googleマップ">
 
 </section>
 
-<!-- フッター -->
+<!-- =====================
+
+     フッター
+
+===================== -->
 
 <footer>
 
