@@ -42,11 +42,7 @@ img {
 
 }
 
-/* =====================
-
-   ヘッダー
-
-===================== */
+/* ヘッダー */
 
 .hero {
 
@@ -64,15 +60,9 @@ img {
 
   height: auto;
 
-  display: block;
-
 }
 
-/* =====================
-
-   共通
-
-===================== */
+/* 共通 */
 
 section {
 
@@ -118,11 +108,7 @@ h2::after {
 
 }
 
-/* =====================
-
-   北のスモークについて
-
-===================== */
+/* 北のスモークについて */
 
 .about {
 
@@ -150,27 +136,27 @@ h2::after {
 
 .side-links {
 
-  width: 220px;
+  width: 240px;
 
   text-align: right;
 
   font-size: 14px;
 
+}
+
+.side-links a {
+
+  display: block;
+
   color: #7a6658;
 
-}
+  text-decoration: none;
 
-.side-links p {
-
-  margin: 0 0 8px;
+  margin-bottom: 10px;
 
 }
 
-/* =====================
-
-   商品ラインナップ
-
-===================== */
+/* 商品 */
 
 .products {
 
@@ -184,15 +170,19 @@ h2::after {
 
   gap: 18px;
 
+  align-items: stretch;
+
 }
 
 .product-card {
 
   flex: 1;
 
+  min-width: 0;
+
   background: #fff;
 
-  padding: 14px;
+  padding: 12px;
 
   border-radius: 12px;
 
@@ -202,27 +192,17 @@ h2::after {
 
 }
 
-.photo-space {
+.product-photo {
 
-  height: 190px;
+  width: 100%;
 
-  background: #f1ece4;
+  height: 210px;
 
-  border: 2px dashed #d5c8b8;
+  object-fit: cover;
 
   border-radius: 9px;
 
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  color: #a79b8e;
-
-  font-size: 14px;
-
-  overflow: hidden;
+  background: #f1ece4;
 
 }
 
@@ -246,11 +226,7 @@ h2::after {
 
 }
 
-/* =====================
-
-   BLOG
-
-===================== */
+/* BLOG */
 
 .blog {
 
@@ -262,7 +238,7 @@ h2::after {
 
 .blog p {
 
-  margin: 0 0 18px;
+  margin-bottom: 18px;
 
 }
 
@@ -284,17 +260,7 @@ h2::after {
 
 }
 
-.blog-button:hover {
-
-  opacity: 0.9;
-
-}
-
-/* =====================
-
-   アクセス
-
-===================== */
+/* アクセス */
 
 .access {
 
@@ -306,61 +272,41 @@ h2::after {
 
   text-align: center;
 
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 
   font-size: 15px;
 
-  line-height: 1.9;
+  line-height: 1.8;
 
 }
 
-.address div {
-
-  margin: 0;
-
-}
-
-.tel {
+.phone {
 
   white-space: nowrap;
 
-  margin-top: 4px !important;
-
 }
 
-.map-wrap {
+.map {
 
-  width: 100%;
+  width: 90%;
 
   max-width: 650px;
 
+  height: 260px;
+
   margin: 0 auto;
-
-  overflow: hidden;
-
-  border-radius: 12px;
-
-  box-shadow: 0 3px 14px rgba(0,0,0,.10);
-
-}
-
-.map-wrap iframe {
-
-  width: 100%;
-
-  height: 280px;
 
   border: 0;
 
+  border-radius: 12px;
+
   display: block;
+
+  box-shadow: 0 3px 12px rgba(0,0,0,.08);
 
 }
 
-/* =====================
-
-   フッター
-
-===================== */
+/* フッター */
 
 footer {
 
@@ -382,11 +328,7 @@ footer p {
 
 }
 
-/* =====================
-
-   スマホ
-
-===================== */
+/* スマホ */
 
 @media (max-width: 650px) {
 
@@ -434,15 +376,13 @@ footer p {
 
   .product-card {
 
-    padding: 7px;
+    padding: 6px;
 
   }
 
-  .photo-space {
+  .product-photo {
 
-    height: 105px;
-
-    font-size: 11px;
+    height: 115px;
 
   }
 
@@ -452,11 +392,13 @@ footer p {
 
     line-height: 1.4;
 
+    margin: 9px 0 3px;
+
   }
 
   .product-card p {
 
-    font-size: 11px;
+    font-size: 10px;
 
     line-height: 1.5;
 
@@ -466,19 +408,13 @@ footer p {
 
     font-size: 13px;
 
-    line-height: 1.8;
-
   }
 
-  .map-wrap {
+  .map {
 
-    max-width: 520px;
+    width: 88%;
 
-  }
-
-  .map-wrap iframe {
-
-    height: 220px;
+    height: 210px;
 
   }
 
@@ -490,11 +426,7 @@ footer p {
 
 <body>
 
-<!-- =====================
-
-     ヘッダー
-
-===================== -->
+<!-- ヘッダー -->
 
 <header class="hero">
 
@@ -506,219 +438,227 @@ footer p {
 
 </header>
 
-<!-- =====================
-
-     北のスモークについて
-
-===================== -->
+<!-- 北のスモークについて -->
 
 <section class="about">
 
-  <div class="inner">
+<div class="inner">
 
-    <h2>北のスモークについて</h2>
+<h2>北のスモークについて</h2>
 
-    <div class="about-layout">
+<div class="about-layout">
 
-      <div class="about-text">
+<div class="about-text">
 
-        現在サイト製作中です。<br><br>
+現在サイト製作中です。<br><br>
 
-        施設の紹介文や活動内容などが
+北のスモークでは、
 
-        ここに入ります。
+手作りの商品を通して
 
-      </div>
+地域での活動に取り組んでいます。
 
-      <div class="side-links">
+</div>
 
-        <p>関連情報</p>
+<div class="side-links">
 
-        <p>関連情報</p>
+<a
 
-      </div>
+href="https://genkishopequal.jp/item/?type=food"
 
-    </div>
+target="_blank"
 
-  </div>
+rel="noopener noreferrer">
+
+元気ショップいこ〜る
+
+</a>
+
+<a
+
+href="https://hiromaaru.org/"
+
+target="_blank"
+
+rel="noopener noreferrer">
+
+清田区役所（ひろまある）
+
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<!-- =====================
-
-     商品ラインナップ
-
-===================== -->
+<!-- 商品ラインナップ -->
 
 <section class="products">
 
-  <div class="inner">
+<div class="inner">
 
-    <h2>商品ラインナップ</h2>
+<h2>商品ラインナップ</h2>
 
-    <div class="product-list">
+<div class="product-list">
 
-      <div class="product-card">
+<!-- 左：食品 -->
 
-        <div class="photo-space">
+<div class="product-card">
 
-          商品写真
+<img
 
-        </div>
+src="69E036B3-1893-4BB5-B508-1A17F325A705.png"
 
-        <h3>商品1</h3>
+alt="チーズとブルーベリー"
 
-        <p>
+class="product-photo">
 
-          商品説明が<br>
+<h3>食品</h3>
 
-          ここに入ります。
+<p>
 
-        </p>
+チーズ・ブルーベリーなど<br>
 
-      </div>
+手作りの商品です。
 
-      <div class="product-card">
+</p>
 
-        <div class="photo-space">
+</div>
 
-          商品写真
+<!-- 中：石鹸 -->
 
-        </div>
+<div class="product-card">
 
-        <h3>商品2</h3>
+<img
 
-        <p>
+src="73ADD0F0-8ACD-4FA7-91C4-3B719D1E43B6.png"
 
-          商品説明が<br>
+alt="リサイクル石鹸"
 
-          ここに入ります。
+class="product-photo">
 
-        </p>
+<h3>リサイクル石鹸</h3>
 
-      </div>
+<p>
 
-      <div class="product-card">
+洗濯・掃除・<br>
 
-        <div class="photo-space">
+食器洗いに。
 
-          商品写真
+</p>
 
-        </div>
+</div>
 
-        <h3>商品3</h3>
+<!-- 右：手芸品 -->
 
-        <p>
+<div class="product-card">
 
-          商品説明が<br>
+<img
 
-          ここに入ります。
+src="7F5C1B69-5418-4CA4-A9F9-08119220DF91.jpeg"
 
-        </p>
+alt="エプロンとそばがら枕"
 
-      </div>
+class="product-photo">
 
-    </div>
+<h3>手芸品</h3>
 
-  </div>
+<p>
+
+エプロン・そばがら枕など<br>
+
+手作りの商品です。
+
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<!-- =====================
-
-     BLOG
-
-===================== -->
+<!-- BLOG -->
 
 <section class="blog">
 
-  <div class="inner">
+<div class="inner">
 
-    <h2>blog</h2>
+<h2>blog</h2>
 
-    <p>
+<p>
 
-      日々の活動や最新情報を掲載しています。
+日々の活動や最新情報を掲載しています。
 
-    </p>
+</p>
 
-    <a
+<a
 
-      class="blog-button"
+href="https://ameblo.jp/sumokubei/"
 
-      href="https://ameblo.jp/sumokubei/"
+target="_blank"
 
-      target="_blank"
+rel="noopener noreferrer"
 
-      rel="noopener noreferrer">
+class="blog-button">
 
-      blogを見る
+blogを見る
 
-    </a>
+</a>
 
-  </div>
+</div>
 
 </section>
 
-<!-- =====================
-
-     アクセス
-
-===================== -->
+<!-- アクセス -->
 
 <section class="access">
 
-  <div class="inner">
+<div class="inner">
 
-    <h2>アクセス</h2>
+<h2>アクセス</h2>
 
-    <div class="address">
+<div class="address">
 
-      <div>〒004-0805</div>
+〒004-0805<br>
 
-      <div>
+北海道札幌市清田区里塚緑ケ丘12丁目3-22<br>
 
-        北海道札幌市清田区里塚緑ケ丘12丁目3-22
+<span class="phone">
 
-      </div>
+TEL：011-883-3356
 
-      <div class="tel">
+</span>
 
-        TEL：011-883-3356
+</div>
 
-      </div>
+<iframe
 
-    </div>
+class="map"
 
-    <div class="map-wrap">
+src="https://www.google.com/maps?q=北海道札幌市清田区里塚緑ケ丘12丁目3-22&output=embed"
 
-      <iframe
+loading="lazy"
 
-        src="https://www.google.com/maps?q=北海道札幌市清田区里塚緑ケ丘12丁目3-22&output=embed"
+referrerpolicy="no-referrer-when-downgrade"
 
-        loading="lazy"
+title="北のスモーク Googleマップ">
 
-        referrerpolicy="no-referrer-when-downgrade"
+</iframe>
 
-        title="北のスモーク Googleマップ">
-
-      </iframe>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-<!-- =====================
-
-     フッター
-
-===================== -->
+<!-- フッター -->
 
 <footer>
 
-  <p>© 2026 北のスモーク</p>
+<p>© 2026 北のスモーク</p>
 
 </footer>
 
