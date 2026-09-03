@@ -130,43 +130,13 @@ h2::after {
 
 }
 
-.about-layout {
-
-  display: flex;
-
-  gap: 40px;
-
-  align-items: flex-start;
-
-}
-
 .about-text {
 
-  flex: 1;
+  max-width: 850px;
+
+  margin: 0 auto;
 
   font-size: 16px;
-
-}
-
-.side-links {
-
-  width: 240px;
-
-  text-align: right;
-
-  font-size: 14px;
-
-}
-
-.side-links a {
-
-  display: block;
-
-  color: #7a6658;
-
-  text-decoration: none;
-
-  margin-bottom: 10px;
 
 }
 
@@ -198,21 +168,17 @@ h2::after {
 
   min-width: 0;
 
-  background: #fff;
+  background: #fff8ee;
 
   padding: 12px;
 
   border-radius: 12px;
 
-  box-shadow: 0 3px 12px rgba(0,0,0,.08);
-
   text-align: center;
 
 }
 
-/* 商品画像
-
-   containで元画像を切らず全部表示 */
+/* 画像を切らず全部表示 */
 
 .product-photo {
 
@@ -224,15 +190,7 @@ h2::after {
 
   border-radius: 9px;
 
-  background: #f1ece4;
-
-}
-
-.product-card a {
-
-  display: block;
-
-  text-decoration: none;
+  background: #fff8ee;
 
 }
 
@@ -390,27 +348,9 @@ footer p {
 
   }
 
-  .about-layout {
-
-    display: block;
-
-  }
-
   .about-text {
 
     font-size: 14px;
-
-  }
-
-  .side-links {
-
-    width: 100%;
-
-    text-align: left;
-
-    margin-top: 20px;
-
-    font-size: 13px;
 
   }
 
@@ -426,8 +366,6 @@ footer p {
 
   }
 
-  /* スマホでも元画像を全部表示 */
-
   .product-photo {
 
     width: 100%;
@@ -435,6 +373,8 @@ footer p {
     height: 115px;
 
     object-fit: contain;
+
+    background: #fff8ee;
 
   }
 
@@ -506,8 +446,6 @@ alt="北のスモーク">
 
 <h2>北のスモークについて</h2>
 
-<div class="about-layout">
-
 <div class="about-text">
 
 現在サイト製作中です。<br><br>
@@ -517,36 +455,6 @@ alt="北のスモーク">
 手作りの商品を通して
 
 地域での活動に取り組んでいます。
-
-</div>
-
-<div class="side-links">
-
-<a
-
-href="https://genkishopequal.jp/item/?type=food"
-
-target="_blank"
-
-rel="noopener noreferrer">
-
-元気ショップいこ〜る
-
-</a>
-
-<a
-
-href="https://hiromaaru.org/"
-
-target="_blank"
-
-rel="noopener noreferrer">
-
-清田区役所（ひろまある）
-
-</a>
-
-</div>
 
 </div>
 
@@ -572,12 +480,6 @@ rel="noopener noreferrer">
 
 <div class="product-card">
 
-<a
-
-href="69E036B3-1893-4BB5-B508-1A17F325A705.png"
-
-target="_blank">
-
 <img
 
 src="69E036B3-1893-4BB5-B508-1A17F325A705.png"
@@ -585,8 +487,6 @@ src="69E036B3-1893-4BB5-B508-1A17F325A705.png"
 alt="チーズとブルーベリー"
 
 class="product-photo">
-
-</a>
 
 <h3>食品</h3>
 
@@ -604,12 +504,6 @@ class="product-photo">
 
 <div class="product-card">
 
-<a
-
-href="73ADD0F0-8ACD-4FA7-91C4-3B719D1E43B6.png"
-
-target="_blank">
-
 <img
 
 src="73ADD0F0-8ACD-4FA7-91C4-3B719D1E43B6.png"
@@ -617,8 +511,6 @@ src="73ADD0F0-8ACD-4FA7-91C4-3B719D1E43B6.png"
 alt="リサイクル石鹸"
 
 class="product-photo">
-
-</a>
 
 <h3>リサイクル石鹸</h3>
 
@@ -636,12 +528,6 @@ class="product-photo">
 
 <div class="product-card">
 
-<a
-
-href="7F5C1B69-5418-4CA4-A9F9-08119220DF91.png"
-
-target="_blank">
-
 <img
 
 src="7F5C1B69-5418-4CA4-A9F9-08119220DF91.png"
@@ -649,8 +535,6 @@ src="7F5C1B69-5418-4CA4-A9F9-08119220DF91.png"
 alt="手芸品"
 
 class="product-photo">
-
-</a>
 
 <h3>手芸品</h3>
 
