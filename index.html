@@ -120,7 +120,7 @@ h2::after {
 
 /* =====================
 
-   施設について
+   北のスモークについて
 
 ===================== */
 
@@ -262,35 +262,35 @@ h2::after {
 
   text-align: center;
 
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   font-size: 15px;
 
 }
 
-.map-placeholder {
+.map-wrap {
 
   max-width: 850px;
 
-  height: 340px;
+  margin: 0 auto;
 
-  margin: auto;
-
-  background: #eee8df;
-
-  border: 2px dashed #cdbfae;
+  overflow: hidden;
 
   border-radius: 12px;
 
-  display: flex;
+  box-shadow: 0 3px 14px rgba(0,0,0,.10);
 
-  align-items: center;
+}
 
-  justify-content: center;
+.map-wrap iframe {
 
-  color: #9a8b7a;
+  width: 100%;
 
-  font-size: 16px;
+  height: 360px;
+
+  border: 0;
+
+  display: block;
 
 }
 
@@ -446,11 +446,9 @@ footer p {
 
   }
 
-  .map-placeholder {
+  .map-wrap iframe {
 
-    height: 260px;
-
-    font-size: 14px;
+    height: 280px;
 
   }
 
@@ -480,7 +478,7 @@ footer p {
 
 <!-- =====================
 
-     施設について
+     北のスモークについて
 
 ===================== -->
 
@@ -616,15 +614,25 @@ footer p {
 
     <div class="address">
 
-      〒000-0000<br>
+      〒004-0805<br>
 
-      北海道〇〇市〇〇
+      北海道札幌市清田区里塚緑ケ丘12丁目3-22
 
     </div>
 
-    <div class="map-placeholder">
+    <div class="map-wrap">
 
-      Googleマップが入る予定
+      <iframe
+
+        src="https://www.google.com/maps?q=北海道札幌市清田区里塚緑ケ丘12丁目3-22&output=embed"
+
+        loading="lazy"
+
+        referrerpolicy="no-referrer-when-downgrade"
+
+        title="北のスモーク Googleマップ">
+
+      </iframe>
 
     </div>
 
