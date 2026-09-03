@@ -262,7 +262,7 @@ h2::after {
 
 .blog p {
 
-  margin-bottom: 18px;
+  margin: 0 0 18px;
 
 }
 
@@ -284,6 +284,12 @@ h2::after {
 
 }
 
+.blog-button:hover {
+
+  opacity: 0.9;
+
+}
+
 /* =====================
 
    アクセス
@@ -300,17 +306,33 @@ h2::after {
 
   text-align: center;
 
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   font-size: 15px;
 
-  line-height: 1.8;
+  line-height: 1.9;
+
+}
+
+.address div {
+
+  margin: 0;
+
+}
+
+.tel {
+
+  white-space: nowrap;
+
+  margin-top: 4px !important;
 
 }
 
 .map-wrap {
 
-  max-width: 700px;
+  width: 100%;
+
+  max-width: 650px;
 
   margin: 0 auto;
 
@@ -326,7 +348,7 @@ h2::after {
 
   width: 100%;
 
-  height: 300px;
+  height: 280px;
 
   border: 0;
 
@@ -440,15 +462,23 @@ footer p {
 
   }
 
+  .address {
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+  }
+
   .map-wrap {
 
-    max-width: 100%;
+    max-width: 520px;
 
   }
 
   .map-wrap iframe {
 
-    height: 230px;
+    height: 220px;
 
   }
 
@@ -608,15 +638,23 @@ footer p {
 
     <p>
 
-      日々の活動や最新情報を掲載予定です。
+      日々の活動や最新情報を掲載しています。
 
     </p>
 
-    <span class="blog-button">
+    <a
+
+      class="blog-button"
+
+      href="https://ameblo.jp/sumokubei/"
+
+      target="_blank"
+
+      rel="noopener noreferrer">
 
       blogを見る
 
-    </span>
+    </a>
 
   </div>
 
@@ -636,11 +674,19 @@ footer p {
 
     <div class="address">
 
-      〒004-0805<br>
+      <div>〒004-0805</div>
 
-      北海道札幌市清田区里塚緑ケ丘12丁目3-22<br>
+      <div>
 
-      TEL：011-886-3354
+        北海道札幌市清田区里塚緑ケ丘12丁目3-22
+
+      </div>
+
+      <div class="tel">
+
+        TEL：011-883-3356
+
+      </div>
 
     </div>
 
