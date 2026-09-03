@@ -42,34 +42,6 @@ img{
 
 }
 
-/* =========================
-
-   ヘッダー
-
-========================= */
-
-.hero{
-
-  width:100%;
-
-  background:#fff;
-
-}
-
-.hero img{
-
-  width:100%;
-
-  height:auto;
-
-}
-
-/* =========================
-
-   共通
-
-========================= */
-
 section{
 
   padding:45px 20px;
@@ -114,11 +86,33 @@ h2::after{
 
 }
 
-/* =========================
+/* =====================
+
+   ヘッダー
+
+===================== */
+
+.hero{
+
+  width:100%;
+
+  background:#fff;
+
+}
+
+.hero img{
+
+  width:100%;
+
+  height:auto;
+
+}
+
+/* =====================
 
    北のスモークについて
 
-========================= */
+===================== */
 
 .about{
 
@@ -144,17 +138,17 @@ h2::after{
 
 }
 
-/* =========================
+/* =====================
 
    商品ラインナップ
 
-========================= */
+===================== */
 
 .products{
 
   background:#fff8ef;
 
-  padding-bottom:34px;
+  padding-bottom:38px;
 
 }
 
@@ -162,7 +156,7 @@ h2::after{
 
   display:flex;
 
-  gap:14px;
+  gap:7px;
 
   align-items:stretch;
 
@@ -178,7 +172,7 @@ h2::after{
 
   border-radius:12px;
 
-  padding:10px 10px 16px;
+  padding:7px 7px 14px;
 
   box-shadow:0 3px 13px rgba(0,0,0,.10);
 
@@ -190,15 +184,17 @@ h2::after{
 
   width:100%;
 
-  height:245px;
-
-  background:#f2ede5;
+  height:175px;
 
   border-radius:9px;
 
   overflow:hidden;
 
   cursor:zoom-in;
+
+  /* 画像の周囲もネイビー */
+
+  background:#1d3152;
 
 }
 
@@ -216,15 +212,17 @@ h2::after{
 
 .product-card h3{
 
-  margin:14px 0 6px;
+  margin:10px 0 5px;
 
   color:#553725;
 
   text-align:center;
 
-  font-size:18px;
+  font-size:12px;
 
   line-height:1.4;
+
+  white-space:nowrap;
 
 }
 
@@ -232,53 +230,59 @@ h2::after{
 
 .product-card p{
 
-  margin:0 5px 17px;
+  margin:0 3px 13px;
 
   color:#555;
 
   text-align:left;
 
-  font-size:14px;
+  font-size:10.5px;
 
-  line-height:1.75;
+  line-height:1.65;
 
 }
+
+/* 2つ目の商品タイトル */
 
 .product-card h3:not(:first-of-type){
 
   border-top:1px solid #ead8ca;
 
-  padding-top:15px;
+  padding-top:11px;
 
 }
 
-/* =========================
+/* =====================
 
    受注生産のお知らせ
 
-========================= */
+===================== */
 
 .order-notice{
 
-  margin:28px auto 0;
+  margin:30px auto 0;
 
   text-align:center;
 
   font-weight:600;
 
-  font-size:14px;
+  font-size:10px;
 
   color:#44372f;
 
+  /* 横一列 */
+
   white-space:nowrap;
+
+  letter-spacing:-0.3px;
 
 }
 
-/* =========================
+/* =====================
 
    SNS
 
-========================= */
+===================== */
 
 .sns{
 
@@ -286,17 +290,23 @@ h2::after{
 
   text-align:center;
 
-  padding-top:38px;
+  /* 商品ラインナップとの間を少し空ける */
+
+  padding-top:48px;
+
+  padding-bottom:48px;
 
 }
 
 .sns p{
 
-  margin:0 0 23px;
+  margin:0 0 24px;
 
-  font-size:16px;
+  font-size:14px;
 
 }
+
+/* 北スモblog 緑ボタン */
 
 .blog-button{
 
@@ -306,17 +316,17 @@ h2::after{
 
   justify-content:center;
 
-  gap:16px;
+  gap:18px;
 
   min-width:230px;
 
-  padding:13px 32px;
+  padding:14px 34px;
+
+  background:linear-gradient(135deg,#18b83d,#00a52d);
 
   color:#fff;
 
-  background:linear-gradient(135deg,#16b53a,#009d29);
-
-  border-radius:32px;
+  border-radius:35px;
 
   text-decoration:none;
 
@@ -324,7 +334,7 @@ h2::after{
 
   font-weight:bold;
 
-  box-shadow:0 6px 16px rgba(0,150,45,.25);
+  box-shadow:0 6px 17px rgba(0,160,50,.25);
 
   transition:.2s;
 
@@ -338,17 +348,17 @@ h2::after{
 
 .blog-button .arrow{
 
-  font-size:25px;
+  font-size:27px;
 
   line-height:1;
 
 }
 
-/* =========================
+/* =====================
 
    アクセス
 
-========================= */
+===================== */
 
 .access{
 
@@ -365,6 +375,12 @@ h2::after{
   font-size:15px;
 
   line-height:1.8;
+
+}
+
+.phone{
+
+  white-space:nowrap;
 
 }
 
@@ -396,11 +412,11 @@ h2::after{
 
 }
 
-/* =========================
+/* =====================
 
    フッター
 
-========================= */
+===================== */
 
 footer{
 
@@ -422,11 +438,11 @@ footer p{
 
 }
 
-/* =========================
+/* =====================
 
-   商品画像 拡大
+   商品画像タップ拡大
 
-========================= */
+===================== */
 
 .modal{
 
@@ -466,8 +482,6 @@ footer p{
 
   object-fit:contain;
 
-  border-radius:5px;
-
 }
 
 .modal-close{
@@ -490,11 +504,11 @@ footer p{
 
 }
 
-/* =========================
+/* =====================
 
    スマホ
 
-========================= */
+===================== */
 
 @media(max-width:650px){
 
@@ -516,7 +530,7 @@ footer p{
 
   }
 
-  /* 3列のまま */
+  /* 商品は3列のまま */
 
   .product-list{
 
@@ -566,23 +580,21 @@ footer p{
 
   }
 
-  /* 受注生産文を横一列 */
-
   .order-notice{
 
-    margin-top:25px;
+    margin-top:30px;
 
     font-size:10px;
 
     white-space:nowrap;
 
-    letter-spacing:-0.2px;
+    letter-spacing:-0.3px;
 
   }
 
   .sns{
 
-    padding-top:38px;
+    padding-top:48px;
 
   }
 
@@ -594,9 +606,15 @@ footer p{
 
   .blog-button{
 
-    min-width:220px;
+    min-width:230px;
 
-    font-size:16px;
+    font-size:17px;
+
+  }
+
+  .address{
+
+    font-size:13px;
 
   }
 
@@ -646,11 +664,11 @@ footer p{
 
 <body>
 
-<!-- =========================
+<!-- =====================
 
      ヘッダー
 
-========================= -->
+===================== -->
 
 <header class="hero">
 
@@ -662,11 +680,11 @@ alt="北のスモーク">
 
 </header>
 
-<!-- =========================
+<!-- =====================
 
      北のスモークについて
 
-========================= -->
+===================== -->
 
 <section class="about">
 
@@ -676,11 +694,7 @@ alt="北のスモーク">
 
 <div class="about-text">
 
-<p>
-
-現在サイト製作中です。
-
-</p>
+<p>現在サイト製作中です。</p>
 
 <p>
 
@@ -694,11 +708,11 @@ alt="北のスモーク">
 
 </section>
 
-<!-- =========================
+<!-- =====================
 
      商品ラインナップ
 
-========================= -->
+===================== -->
 
 <section class="products">
 
@@ -708,7 +722,7 @@ alt="北のスモーク">
 
 <div class="product-list">
 
-<!-- 左 -->
+<!-- ===== 左 ===== -->
 
 <div class="product-card">
 
@@ -742,7 +756,7 @@ onclick="openImage(this.src)">
 
 </div>
 
-<!-- 真ん中 -->
+<!-- ===== 真ん中 ===== -->
 
 <div class="product-card">
 
@@ -768,7 +782,7 @@ onclick="openImage(this.src)">
 
 </div>
 
-<!-- 右 -->
+<!-- ===== 右 ===== -->
 
 <div class="product-card">
 
@@ -776,7 +790,7 @@ onclick="openImage(this.src)">
 
 <img
 
-src="7F5C1B69-5418-4CA4-A9F9-08119220DF91.png"
+src="handmade-navy.png"
 
 alt="エプロンドレスとそばがら枕"
 
@@ -804,7 +818,11 @@ onclick="openImage(this.src)">
 
 </div>
 
-<!-- 受注生産のお知らせ -->
+<!-- =====================
+
+     受注生産
+
+===================== -->
 
 <div class="order-notice">
 
@@ -816,11 +834,11 @@ onclick="openImage(this.src)">
 
 </section>
 
-<!-- =========================
+<!-- =====================
 
      SNS
 
-========================= -->
+===================== -->
 
 <section class="sns">
 
@@ -854,11 +872,11 @@ rel="noopener noreferrer">
 
 </section>
 
-<!-- =========================
+<!-- =====================
 
      アクセス
 
-========================= -->
+===================== -->
 
 <section class="access">
 
@@ -872,7 +890,11 @@ rel="noopener noreferrer">
 
 北海道札幌市清田区里塚緑ケ丘12丁目3-22<br>
 
+<span class="phone">
+
 TEL：011-883-3356
+
+</span>
 
 </div>
 
@@ -896,11 +918,11 @@ title="北のスモーク Googleマップ">
 
 </section>
 
-<!-- =========================
+<!-- =====================
 
      フッター
 
-========================= -->
+===================== -->
 
 <footer>
 
@@ -912,11 +934,11 @@ title="北のスモーク Googleマップ">
 
 </footer>
 
-<!-- =========================
+<!-- =====================
 
-     商品画像拡大
+     商品画像 拡大
 
-========================= -->
+===================== -->
 
 <div
 
