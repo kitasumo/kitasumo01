@@ -132,6 +132,10 @@ h2::after {
 
 .about-text {
 
+  max-width: 850px;
+
+  margin: 0 auto;
+
   font-size: 16px;
 
   text-align: left;
@@ -202,11 +206,9 @@ h2::after {
 
   object-fit: contain;
 
-  display: block;
-
 }
 
-/* 商品タイトル */
+/* 商品タイトル中央 */
 
 .product-card h3 {
 
@@ -220,7 +222,7 @@ h2::after {
 
 }
 
-/* 商品説明 */
+/* 商品説明左寄せ */
 
 .product-card p {
 
@@ -255,8 +257,6 @@ h2::after {
   margin-bottom: 22px;
 
 }
-
-/* 北スモblog ボタン */
 
 .blog-button {
 
@@ -302,8 +302,6 @@ h2::after {
 
   transform: scale(.96);
 
-  box-shadow: 0 2px 7px rgba(180,90,20,.2);
-
 }
 
 /* =====================
@@ -328,15 +326,23 @@ h2::after {
 
   font-size: 15px;
 
-  line-height: 1.7;
+  line-height: 1.8;
+
+}
+
+.phone {
+
+  white-space: nowrap;
 
 }
 
 .map {
 
-  max-width: 700px;
+  width: 90%;
 
-  height: 280px;
+  max-width: 650px;
+
+  height: 260px;
 
   margin: 0 auto;
 
@@ -355,6 +361,8 @@ h2::after {
   height: 100%;
 
   border: 0;
+
+  display: block;
 
 }
 
@@ -398,9 +406,7 @@ footer p {
 
   z-index: 9999;
 
-  left: 0;
-
-  top: 0;
+  inset: 0;
 
   width: 100%;
 
@@ -446,7 +452,7 @@ footer p {
 
   right: 22px;
 
-  color: white;
+  color: #fff;
 
   font-size: 42px;
 
@@ -482,6 +488,8 @@ footer p {
 
   }
 
+  /* 3枚横並び */
+
   .product-list {
 
     gap: 7px;
@@ -494,9 +502,17 @@ footer p {
 
   }
 
+  /* 元画像を切らずに表示 */
+
   .product-image {
 
     height: 150px;
+
+  }
+
+  .product-image img {
+
+    object-fit: contain;
 
   }
 
@@ -506,7 +522,7 @@ footer p {
 
     line-height: 1.4;
 
-    margin-top: 10px;
+    margin: 10px 0 4px;
 
   }
 
@@ -520,9 +536,17 @@ footer p {
 
   }
 
+  .address {
+
+    font-size: 13px;
+
+  }
+
   .map {
 
-    height: 230px;
+    width: 88%;
+
+    height: 210px;
 
   }
 
@@ -568,9 +592,7 @@ footer p {
 
       <p>
 
-        北のスモークでは、手作りの商品を通して
-
-        地域での活動に取り組んでいます。
+        北のスモークでは、手作りの商品を通して地域での活動に取り組んでいます。
 
       </p>
 
@@ -594,7 +616,7 @@ footer p {
 
     <div class="product-list">
 
-      <!-- 左：チーズスモーク・ブルーベリージャム -->
+      <!-- 左：チーズスモーク＋ブルーベリージャム -->
 
       <div class="product-card">
 
@@ -638,7 +660,7 @@ footer p {
 
             src="73ADD0F0-8ACD-4FA7-91C4-3B719D1E43B6.png"
 
-            alt="リサイクル石鹸"
+            alt="石鹸"
 
             onclick="openImage(this.src)">
 
@@ -654,7 +676,7 @@ footer p {
 
       </div>
 
-      <!-- 右：エプロンドレス・そばがら枕 -->
+      <!-- 右：エプロンドレス＋そばがら枕 -->
 
       <div class="product-card">
 
@@ -662,7 +684,7 @@ footer p {
 
           <img
 
-            src="IMG_0490.png"
+            src="7F5C1B69-5418-4CA4-A9F9-08119220DF91.png"
 
             alt="エプロンドレスとそばがら枕"
 
@@ -720,7 +742,7 @@ footer p {
 
       target="_blank"
 
-      rel="noopener">
+      rel="noopener noreferrer">
 
       北スモblog <span>›</span>
 
@@ -748,7 +770,11 @@ footer p {
 
       北海道札幌市清田区里塚緑ケ丘12丁目3-22<br>
 
-      TEL：011-883-3356
+      <span class="phone">
+
+        TEL：011-883-3356
+
+      </span>
 
     </div>
 
@@ -786,11 +812,17 @@ footer p {
 
 <!-- =====================
 
-     商品画像 拡大表示
+     商品画像 拡大
 
 ===================== -->
 
-<div id="imageModal" class="modal" onclick="closeImage()">
+<div
+
+  id="imageModal"
+
+  class="modal"
+
+  onclick="closeImage()">
 
   <span class="modal-close">&times;</span>
 
