@@ -1,4 +1,4 @@
-<!DOCTYPE >
+<!DOCTYPE html>
 
 <html lang="ja">
 
@@ -56,12 +56,6 @@ section{
 
 }
 
-/* ========================================
-
-   共通見出し
-
-======================================== */
-
 h2{
 
   margin:0 0 30px;
@@ -72,15 +66,27 @@ h2{
 
   font-size:26px;
 
-  font-weight:700;
+}
+
+h2::after{
+
+  content:"";
+
+  display:block;
+
+  width:48px;
+
+  height:3px;
+
+  margin:10px auto 0;
+
+  background:#dc7c31;
+
+  border-radius:5px;
 
 }
 
-/* ========================================
-
-   ヘッダー
-
-======================================== */
+/* ===== ヘッダー ===== */
 
 .hero{
 
@@ -98,17 +104,13 @@ h2{
 
 }
 
-/* ========================================
-
-   北のスモークについて
-
-======================================== */
+/* ===== 北のスモークについて ===== */
 
 .about{
 
   background:#fff;
 
-  /* ヘッダー下の余白を調整 */
+  /* ヘッダー下の余白をバランス良く */
 
   padding-top:34px;
 
@@ -118,4 +120,1150 @@ h2{
 
 .about h2{
 
- 
+  font-size:30px;
+
+  margin-bottom:28px;
+
+  color:#553725;
+
+  font-weight:700;
+
+}
+
+/* センス良い下線 */
+
+.about h2::after{
+
+  content:"";
+
+  display:block;
+
+  width:150px;
+
+  height:3px;
+
+  margin:12px auto 0;
+
+  background:
+
+    linear-gradient(
+
+      90deg,
+
+      transparent 0%,
+
+      #dc7c31 15%,
+
+      #dc7c31 42%,
+
+      transparent 42%,
+
+      transparent 58%,
+
+      #dc7c31 58%,
+
+      #dc7c31 85%,
+
+      transparent 100%
+
+    );
+
+  border-radius:10px;
+
+}
+
+.about-text{
+
+  max-width:900px;
+
+  margin:auto;
+
+  text-align:left;
+
+  font-size:16px;
+
+}
+
+.about-text p{
+
+  margin:0 0 20px;
+
+}
+
+/* ===== 商品ラインナップ ===== */
+
+.products{
+
+  background:#fff8ef;
+
+  padding:45px 15px 38px;
+
+}
+
+.products .inner{
+
+  max-width:1500px;
+
+}
+
+.products h2{
+
+  margin:0 0 38px;
+
+  text-align:center;
+
+  color:#553725;
+
+  font-size:34px;
+
+  font-weight:700;
+
+}
+
+/* 商品ラインナップ下線を文字幅に近づける */
+
+.products h2::after{
+
+  content:"";
+
+  display:block;
+
+  width:220px;
+
+  height:4px;
+
+  margin:9px auto 0;
+
+  background:#dc7c31;
+
+  border-radius:5px;
+
+}
+
+/* ===== PC：5列 ===== */
+
+.product-list{
+
+  display:grid;
+
+  grid-template-columns:repeat(5,1fr);
+
+  gap:12px;
+
+  align-items:stretch;
+
+}
+
+/* ===== 商品カード ===== */
+
+.product-card{
+
+  min-width:0;
+
+  background:#fff;
+
+  border-radius:14px;
+
+  padding:10px 10px 16px;
+
+  box-shadow:0 3px 13px rgba(0,0,0,.09);
+
+}
+
+/* ===== 商品画像 ===== */
+
+.product-image{
+
+  width:100%;
+
+  aspect-ratio:1 / 1;
+
+  background:#071f4b;
+
+  border-radius:10px;
+
+  overflow:hidden;
+
+  cursor:zoom-in;
+
+}
+
+.product-image img{
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:contain;
+
+}
+
+/* チーズ */
+
+.cheese-image img{
+
+  object-fit:cover;
+
+  object-position:center;
+
+}
+
+/* ブルーベリー */
+
+.blueberry-image img{
+
+  object-fit:cover;
+
+  object-position:center;
+
+}
+
+/* リサイクルエコ石鹸 */
+
+.soap-image img{
+
+  object-fit:contain;
+
+}
+
+/* 手芸品 */
+
+.craft-image img{
+
+  object-fit:contain;
+
+}
+
+/* ===== 木製雑貨 ===== */
+
+.product-image.empty{
+
+  position:relative;
+
+  cursor:default;
+
+  background:#faf7f1;
+
+  border:1.5px dashed #ccbba8;
+
+}
+
+.product-image.empty::before{
+
+  content:"🌱";
+
+  position:absolute;
+
+  inset:0;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:44px;
+
+}
+
+/* ===== 商品名 ===== */
+
+.product-card h3{
+
+  display:table;
+
+  width:max-content;
+
+  max-width:100%;
+
+  margin:11px 4px 10px;
+
+  padding:0 0 3px;
+
+  color:#553725;
+
+  text-align:left;
+
+  font-size:18px;
+
+  font-weight:700;
+
+  line-height:1.35;
+
+  border-bottom:3px solid #dc7c31;
+
+}
+
+/* ブルーベリージャムは1行 */
+
+.product-card:nth-child(2) h3{
+
+  white-space:nowrap;
+
+}
+
+/* ===== 商品説明 ===== */
+
+.product-card p{
+
+  margin:0 4px 8px;
+
+  color:#44372f;
+
+  text-align:left;
+
+  font-size:14px;
+
+  line-height:1.7;
+
+}
+
+/* ===== 受注生産 ===== */
+
+.order-notice{
+
+  margin:30px 60px 0;
+
+  padding-top:16px;
+
+  border-top:1px solid #e4b789;
+
+  text-align:center;
+
+  font-weight:500;
+
+  font-size:14px;
+
+  line-height:1.7;
+
+  color:#44372f;
+
+}
+
+/* ===== SNS ===== */
+
+.sns{
+
+  background:#fff;
+
+  text-align:center;
+
+  padding-top:48px;
+
+  padding-bottom:48px;
+
+}
+
+.sns p{
+
+  margin:0 0 24px;
+
+  font-size:14px;
+
+}
+
+/* ===== 北スモblog ===== */
+
+.blog-button{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:18px;
+
+  min-width:230px;
+
+  padding:14px 34px;
+
+  background:linear-gradient(135deg,#18b83d,#00a52d);
+
+  color:#fff;
+
+  border-radius:35px;
+
+  text-decoration:none;
+
+  font-size:17px;
+
+  font-weight:bold;
+
+  box-shadow:0 6px 17px rgba(0,160,50,.25);
+
+  transition:.2s;
+
+}
+
+.blog-button:active{
+
+  transform:scale(.96);
+
+}
+
+.blog-button .arrow{
+
+  font-size:27px;
+
+  line-height:1;
+
+}
+
+/* ===== アクセス ===== */
+
+.access{
+
+  background:#fff8ef;
+
+  text-align:center;
+
+}
+
+.address{
+
+  margin-bottom:20px;
+
+  font-size:15px;
+
+  line-height:1.8;
+
+}
+
+.phone{
+
+  white-space:nowrap;
+
+}
+
+/* ===== Googleマップ ===== */
+
+.map{
+
+  width:90%;
+
+  max-width:680px;
+
+  height:270px;
+
+  margin:auto;
+
+  overflow:hidden;
+
+  border-radius:9px;
+
+  box-shadow:0 3px 12px rgba(0,0,0,.08);
+
+}
+
+.map iframe{
+
+  width:100%;
+
+  height:100%;
+
+  border:0;
+
+}
+
+/* ===== フッター ===== */
+
+footer{
+
+  background:#56351f;
+
+  color:#fff;
+
+  padding:24px 15px;
+
+  text-align:center;
+
+  font-size:13px;
+
+}
+
+footer p{
+
+  margin:0;
+
+}
+
+/* ===== 商品画像タップ拡大 ===== */
+
+.modal{
+
+  position:fixed;
+
+  inset:0;
+
+  z-index:99999;
+
+  display:none;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:4px;
+
+  background:rgba(0,0,0,.94);
+
+}
+
+.modal.show{
+
+  display:flex;
+
+}
+
+.modal img{
+
+  width:auto;
+
+  height:auto;
+
+  max-width:99vw;
+
+  max-height:96vh;
+
+  object-fit:contain;
+
+}
+
+.modal-close{
+
+  position:fixed;
+
+  z-index:100000;
+
+  top:12px;
+
+  right:18px;
+
+  color:#fff;
+
+  font-size:44px;
+
+  line-height:1;
+
+  cursor:pointer;
+
+}
+
+/* ==================================================
+
+   スマホ：上3・下2
+
+   ================================================== */
+
+@media(max-width:650px){
+
+  section{
+
+    padding:38px 14px;
+
+  }
+
+  h2{
+
+    font-size:22px;
+
+  }
+
+  .about{
+
+    padding-top:28px;
+
+    padding-bottom:44px;
+
+  }
+
+  .about h2{
+
+    font-size:27px;
+
+    margin-bottom:24px;
+
+  }
+
+  .about h2::after{
+
+    width:135px;
+
+    height:3px;
+
+    margin-top:10px;
+
+  }
+
+  .about-text{
+
+    font-size:14px;
+
+  }
+
+  /* 商品ラインナップ */
+
+  .products{
+
+    padding:42px 10px 32px;
+
+  }
+
+  .products h2{
+
+    font-size:27px;
+
+    margin-bottom:34px;
+
+  }
+
+  .products h2::after{
+
+    width:165px;
+
+    height:3px;
+
+  }
+
+  /* ===== 上3・下2 ===== */
+
+  .product-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(6,minmax(0,1fr));
+
+    gap:14px 8px;
+
+  }
+
+  /* 上段3枚 */
+
+  .product-card:nth-child(1){
+
+    grid-column:1 / 3;
+
+  }
+
+  .product-card:nth-child(2){
+
+    grid-column:3 / 5;
+
+  }
+
+  .product-card:nth-child(3){
+
+    grid-column:5 / 7;
+
+  }
+
+  /* 下段2枚 */
+
+  .product-card:nth-child(4){
+
+    grid-column:2 / 4;
+
+  }
+
+  .product-card:nth-child(5){
+
+    grid-column:4 / 6;
+
+  }
+
+  .product-card{
+
+    padding:7px 7px 13px;
+
+    border-radius:11px;
+
+  }
+
+  /* 商品画像 */
+
+  .product-image{
+
+    width:100%;
+
+    aspect-ratio:1 / 1;
+
+    border-radius:8px;
+
+  }
+
+  /* 商品名 */
+
+  .product-card h3{
+
+    display:table;
+
+    width:max-content;
+
+    max-width:100%;
+
+    margin:9px 2px 9px;
+
+    padding:0 0 3px;
+
+    font-size:12px;
+
+    line-height:1.35;
+
+    border-bottom:3px solid #dc7c31;
+
+  }
+
+  /* ブルーベリージャム1行 */
+
+  .product-card:nth-child(2) h3{
+
+    white-space:nowrap;
+
+    font-size:11px;
+
+    letter-spacing:-0.5px;
+
+  }
+
+  /* リサイクルエコ石鹸 */
+
+  .product-card:nth-child(3) h3{
+
+    font-size:10.5px;
+
+    white-space:nowrap;
+
+    letter-spacing:-0.5px;
+
+  }
+
+  /* 商品説明は自然な自動改行 */
+
+  .product-card p{
+
+    margin:0 2px 6px;
+
+    font-size:11px;
+
+    line-height:1.7;
+
+  }
+
+  /* 木製雑貨 */
+
+  .product-image.empty::before{
+
+    font-size:30px;
+
+  }
+
+  /* 注意書き */
+
+  .order-notice{
+
+    margin:27px 10px 0;
+
+    padding-top:14px;
+
+    font-size:10px;
+
+    line-height:1.7;
+
+  }
+
+  /* SNS */
+
+  .sns{
+
+    padding-top:48px;
+
+  }
+
+  .sns p{
+
+    font-size:14px;
+
+  }
+
+  .blog-button{
+
+    min-width:230px;
+
+    font-size:17px;
+
+  }
+
+  /* アクセス */
+
+  .address{
+
+    font-size:13px;
+
+  }
+
+  .map{
+
+    width:92%;
+
+    height:210px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ===== ヘッダー ===== -->
+
+<header class="hero">
+
+<img
+
+src="0613014F-34DA-4B7A-BFE1-97F1AAA28BDF.png"
+
+alt="北のスモーク">
+
+</header>
+
+<!-- ===== 北のスモークについて ===== -->
+
+<section class="about">
+
+<div class="inner">
+
+<h2>北のスモークについて</h2>
+
+<div class="about-text">
+
+<p>現在サイト製作中です。</p>
+
+<p>
+
+北のスモークでは、手作りの商品を通して地域での活動に取り組んでいます。
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== 商品ラインナップ ===== -->
+
+<section class="products">
+
+<div class="inner">
+
+<h2>商品ラインナップ</h2>
+
+<div class="product-list">
+
+<!-- チーズスモーク -->
+
+<div class="product-card">
+
+<div class="product-image cheese-image">
+
+<img
+
+src="IMG_0549.jpeg"
+
+alt="チーズスモーク"
+
+onclick="openImage(this.src)">
+
+</div>
+
+<h3>チーズスモーク</h3>
+
+<p>
+
+北スモ商品1番人気です。北海道産生乳を100%使用したおいしいプロセスチーズをじっくり燻しました。
+
+</p>
+
+</div>
+
+<!-- ブルーベリージャム -->
+
+<div class="product-card">
+
+<div class="product-image blueberry-image">
+
+<img
+
+src="A5610077-05F4-4064-ADE7-50C9B9507555.png"
+
+alt="ブルーベリージャム"
+
+onclick="openImage(this.src)">
+
+</div>
+
+<h3>ブルーベリージャム</h3>
+
+<p>
+
+国産ブルーベリーとてんさい糖だけで手作りしたジャムです。畑からの採取から製造、商品化までおこなっております。
+
+</p>
+
+</div>
+
+<!-- リサイクルエコ石鹸 -->
+
+<div class="product-card">
+
+<div class="product-image soap-image">
+
+<img
+
+src="73ADD0F0-8ACD-4FA7-91C4-3B719D1E43B6.png"
+
+alt="リサイクルエコ石鹸"
+
+onclick="openImage(this.src)">
+
+</div>
+
+<h3>リサイクルエコ石鹸</h3>
+
+<p>
+
+使用済み油と苛性ソーダでつくられたリサイクルエコ石鹸です。洗濯、掃除、食器洗いに使え、物価高騰している現在の強い味方です。
+
+</p>
+
+</div>
+
+<!-- 手芸品 -->
+
+<div class="product-card">
+
+<div class="product-image craft-image">
+
+<img
+
+src="374524ED-DF94-49A0-A34B-CF6594E7A439.png"
+
+alt="手芸品"
+
+onclick="openImage(this.src)">
+
+</div>
+
+<h3>手芸品</h3>
+
+<p>
+
+エプロンドレスや、そば柄枕など暮らしに寄り添う品を工夫を重ね丁寧に一つひとつ製作しています。
+
+</p>
+
+</div>
+
+<!-- 木製雑貨 -->
+
+<div class="product-card">
+
+<div class="product-image empty"></div>
+
+<h3>木製雑貨</h3>
+
+<p>
+
+画像、説明は後日掲載予定です。
+
+</p>
+
+</div>
+
+</div>
+
+<!-- ===== 受注生産 ===== -->
+
+<div class="order-notice">
+
+商品によっては、受注生産の商品もありますので、お電話等で、ご確認頂けると幸いです。
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== SNS ===== -->
+
+<section class="sns">
+
+<div class="inner">
+
+<h2>SNS</h2>
+
+<p>
+
+日々の活動や最新情報を掲載しています。
+
+</p>
+
+<a
+
+href="https://ameblo.jp/sumokubei/"
+
+class="blog-button"
+
+target="_blank"
+
+rel="noopener noreferrer">
+
+北スモblog
+
+<span class="arrow">›</span>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ===== アクセス ===== -->
+
+<section class="access">
+
+<div class="inner">
+
+<h2>アクセス</h2>
+
+<div class="address">
+
+〒004-0805<br>
+
+北海道札幌市清田区里塚緑ケ丘12丁目3-22<br>
+
+<span class="phone">
+
+TEL：011-883-3356
+
+</span>
+
+</div>
+
+<div class="map">
+
+<iframe
+
+src="https://www.google.com/maps?q=北海道札幌市清田区里塚緑ケ丘12丁目3-22&output=embed"
+
+loading="lazy"
+
+referrerpolicy="no-referrer-when-downgrade"
+
+title="北のスモーク Googleマップ">
+
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== フッター ===== -->
+
+<footer>
+
+<p>© 2026 北のスモーク</p>
+
+</footer>
+
+<!-- ===== 商品画像 拡大 ===== -->
+
+<div
+
+id="imageModal"
+
+class="modal"
+
+onclick="closeImage()">
+
+<span
+
+class="modal-close"
+
+onclick="closeImage()">
+
+×
+
+</span>
+
+<img
+
+id="modalImage"
+
+src=""
+
+alt="商品画像拡大"
+
+onclick="event.stopPropagation()">
+
+</div>
+
+<script>
+
+function openImage(src){
+
+  const modal =
+
+    document.getElementById("imageModal");
+
+  const image =
+
+    document.getElementById("modalImage");
+
+  image.src = src;
+
+  modal.classList.add("show");
+
+  document.body.style.overflow = "hidden";
+
+}
+
+function closeImage(){
+
+  document
+
+    .getElementById("imageModal")
+
+    .classList.remove("show");
+
+  document.body.style.overflow = "";
+
+}
+
+document.addEventListener(
+
+  "keydown",
+
+  function(event){
+
+    if(event.key === "Escape"){
+
+      closeImage();
+
+    }
+
+  }
+
+);
+
+</script>
+
+</body>
+
+</html>
