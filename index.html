@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYP html>
 
 <html lang="ja">
 
@@ -44,7 +44,7 @@ img{
 
 section{
 
-  padding:42px 20px;
+  padding:45px 20px;
 
 }
 
@@ -110,33 +110,13 @@ h2::after{
 
   background:#fff;
 
-  /* ヘッダーとの間を適度に空ける */
-
-  padding-top:52px;
-
-  padding-bottom:42px;
-
-}
-
-.about h2{
-
-  text-align:left;
-
-  margin-bottom:22px;
-
-}
-
-.about h2::after{
-
-  margin:10px 0 0;
-
 }
 
 .about-text{
 
   max-width:900px;
 
-  margin:0;
+  margin:auto;
 
   text-align:left;
 
@@ -146,7 +126,7 @@ h2::after{
 
 .about-text p{
 
-  margin:0;
+  margin:0 0 20px;
 
 }
 
@@ -156,37 +136,23 @@ h2::after{
 
   background:#fff8ef;
 
-  padding-top:42px;
-
   padding-bottom:38px;
 
 }
 
-/*
-
-  上段3枠
-
-  下段2枠
-
-  全部まったく同じ幅
-
-*/
-
 .product-list{
 
-  display:grid;
+  display:flex;
 
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:7px;
 
-  gap:10px;
-
-  align-items:start;
+  align-items:stretch;
 
 }
 
 .product-card{
 
-  width:100%;
+  flex:1;
 
   min-width:0;
 
@@ -200,15 +166,7 @@ h2::after{
 
 }
 
-/* ===== 全商品画像枠 ===== */
-
-/*
-
-  チーズを基準に
-
-  全5枠の画像部分を同じサイズにする
-
-*/
+/* 商品画像の外側はアイボリー */
 
 .product-image{
 
@@ -222,21 +180,9 @@ h2::after{
 
   overflow:hidden;
 
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
   cursor:zoom-in;
 
 }
-
-/*
-
-  画像の縦横比は絶対に崩さない
-
-*/
 
 .product-image img{
 
@@ -246,75 +192,47 @@ h2::after{
 
   object-fit:contain;
 
-  object-position:center;
-
 }
 
-/* ===== 木製製品の空き画像枠 ===== */
-
-.product-image.placeholder{
-
-  cursor:default;
-
-  border:1px dashed #cfc2b7;
-
-  color:#9b8d82;
-
-  text-align:center;
-
-  font-size:14px;
-
-  line-height:1.7;
-
-}
-
-/* ===== 商品タイトル ===== */
+/* 商品タイトル */
 
 .product-card h3{
 
-  margin:10px 3px 5px;
+  margin:10px 0 5px;
 
   color:#553725;
 
-  text-align:left;
+  text-align:center;
 
-  font-size:14px;
+  font-size:12px;
 
   line-height:1.4;
 
+  white-space:nowrap;
+
 }
 
-/* ===== 商品説明 ===== */
+/* 商品説明は左寄せ */
 
 .product-card p{
 
-  margin:0 3px 8px;
+  margin:0 3px 13px;
 
   color:#555;
 
   text-align:left;
 
-  font-size:12px;
+  font-size:10.5px;
 
   line-height:1.65;
 
 }
 
-/* ===== 下段の位置 ===== */
+.product-card h3:not(:first-of-type){
 
-/* 石鹸はチーズの真下 */
+  border-top:1px solid #ead8ca;
 
-.soap-card{
-
-  grid-column:1;
-
-}
-
-/* 木製製品は中央 */
-
-.wood-card{
-
-  grid-column:2;
+  padding-top:11px;
 
 }
 
@@ -328,9 +246,13 @@ h2::after{
 
   font-weight:600;
 
-  font-size:12px;
+  font-size:10px;
 
-  color:#9b2d17;
+  color:#44372f;
+
+  white-space:nowrap;
+
+  letter-spacing:-0.3px;
 
 }
 
@@ -355,6 +277,8 @@ h2::after{
   font-size:14px;
 
 }
+
+/* ===== 北スモblog 緑ボタン ===== */
 
 .blog-button{
 
@@ -383,6 +307,8 @@ h2::after{
   font-weight:bold;
 
   box-shadow:0 6px 17px rgba(0,160,50,.25);
+
+  transition:.2s;
 
 }
 
@@ -540,11 +466,7 @@ footer p{
 
 }
 
-/* =========================
-
-   スマホ
-
-========================= */
+/* ===== スマホ ===== */
 
 @media(max-width:650px){
 
@@ -560,37 +482,13 @@ footer p{
 
   }
 
-  .about{
-
-    padding-top:46px;
-
-    padding-bottom:38px;
-
-  }
-
-  .about h2{
-
-    font-size:22px;
-
-  }
-
   .about-text{
 
     font-size:14px;
 
   }
 
-  /*
-
-    スマホでも
-
-    上3枠・下2枠を維持
-
-  */
-
   .product-list{
-
-    grid-template-columns:repeat(3,minmax(0,1fr));
 
     gap:7px;
 
@@ -598,73 +496,75 @@ footer p{
 
   .product-card{
 
-    padding:6px 6px 12px;
+    padding:6px 6px 13px;
 
     border-radius:11px;
 
   }
 
-  /*
-
-    チーズ・ジャム・エプロン・石鹸・木製
-
-    全部完全に同じ画像枠
-
-  */
-
   .product-image{
 
-    height:150px;
+    height:175px;
 
   }
 
   .product-card h3{
 
-    margin:9px 2px 5px;
+    font-size:12px;
 
-    font-size:11px;
+    margin:10px 0 5px;
 
-    line-height:1.4;
+    white-space:nowrap;
 
   }
 
   .product-card p{
 
-    margin:0 2px 7px;
+    margin:0 3px 13px;
 
-    font-size:9.8px;
+    font-size:10.5px;
 
-    line-height:1.6;
+    line-height:1.65;
 
     text-align:left;
 
   }
 
-  .product-image.placeholder{
+  .product-card h3:not(:first-of-type){
 
-    font-size:10px;
+    padding-top:11px;
 
   }
 
   .order-notice{
 
-    margin-top:28px;
+    margin-top:30px;
 
     font-size:10px;
+
+    white-space:nowrap;
+
+    letter-spacing:-0.3px;
 
   }
 
   .sns{
 
-    padding-top:45px;
-
-    padding-bottom:45px;
+    padding-top:48px;
 
   }
 
   .sns p{
 
     font-size:14px;
+
+  }
+
+  .blog-button{
+
+    min-width:230px;
+
+    font-size:17px;
 
   }
 
@@ -688,19 +588,19 @@ footer p{
 
   .product-image{
 
-    height:135px;
+    height:160px;
 
   }
 
   .product-card h3{
 
-    font-size:10px;
+    font-size:11px;
 
   }
 
   .product-card p{
 
-    font-size:9px;
+    font-size:9.8px;
 
   }
 
@@ -740,15 +640,11 @@ alt="北のスモーク">
 
 <div class="about-text">
 
+<p>現在サイト製作中です。</p>
+
 <p>
 
-平成3年4月　作業、コミュニケーション、情報交換の場として、
-
-小規模作業所北のスモークを開設しました。<br>
-
-平成17年現在の清田区に移転、障がいの種別を問わず様々な人が集まり、
-
-地域との交流・社会参加・自立生活の支援を目的に活動しています。
+北のスモークでは、手作りの商品を通して地域での活動に取り組んでいます。
 
 </p>
 
@@ -768,7 +664,7 @@ alt="北のスモーク">
 
 <div class="product-list">
 
-<!-- ===== 左上：チーズ ===== -->
+<!-- ===== 左 ===== -->
 
 <div class="product-card">
 
@@ -776,9 +672,9 @@ alt="北のスモーク">
 
 <img
 
-src="cheese.jpg"
+src="69E036B3-1893-4BB5-B508-1A17F325A705.png"
 
-alt="チーズスモーク"
+alt="チーズスモークとブルーベリージャム"
 
 onclick="openImage(this.src)">
 
@@ -792,9 +688,17 @@ onclick="openImage(this.src)">
 
 </p>
 
+<h3>ブルーベリージャム</h3>
+
+<p>
+
+国産ブルーベリーとてんさい糖だけで手作りしたジャムです。畑採取から製造、商品化しております。
+
+</p>
+
 </div>
 
-<!-- ===== 中央上：ブルーベリー ===== -->
+<!-- ===== 真ん中 ===== -->
 
 <div class="product-card">
 
@@ -802,27 +706,25 @@ onclick="openImage(this.src)">
 
 <img
 
-src="blueberry.jpg"
+src="73ADD0F0-8ACD-4FA7-91C4-3B719D1E43B6.png"
 
-alt="ブルーベリージャム"
+alt="石鹸"
 
 onclick="openImage(this.src)">
 
 </div>
 
-<h3>ブルーベリージャム</h3>
+<h3>石鹸</h3>
 
 <p>
 
-国産ブルーベリーとてんさい糖だけで手作りしたジャムです。
-
-畑採取から製造、商品化しております。
+使用済み油と苛性ソーダでつくられたエコ石鹸です。洗濯、掃除、食器洗いに。
 
 </p>
 
 </div>
 
-<!-- ===== 右上：エプロン・枕 ===== -->
+<!-- ===== 右 ===== -->
 
 <div class="product-card">
 
@@ -838,63 +740,19 @@ onclick="openImage(this.src)">
 
 </div>
 
-<h3>エプロンドレス・そばがら枕</h3>
+<h3>エプロンドレス</h3>
 
 <p>
 
 オシャレなエプロンでサイドにゴムを使用して着やすく作られてます。
 
-そばがら枕は、丁寧に素材選別し、生地、サイズも選べます。
-
 </p>
 
-</div>
-
-<!-- ===== 左下：石鹸 ===== -->
-
-<div class="product-card soap-card">
-
-<div class="product-image">
-
-<img
-
-src="soap.jpg"
-
-alt="リサイクル石鹸"
-
-onclick="openImage(this.src)">
-
-</div>
-
-<h3>リサイクル石鹸</h3>
+<h3>そばがら枕</h3>
 
 <p>
 
-使用済み油と苛性ソーダでつくられたエコ石鹸です。
-
-洗濯、掃除、食器洗いに。
-
-</p>
-
-</div>
-
-<!-- ===== 中央下：木製製品 ===== -->
-
-<div class="product-card wood-card">
-
-<div class="product-image placeholder">
-
-画像は<br>
-
-後日追加予定です
-
-</div>
-
-<h3>木製製品・雑貨</h3>
-
-<p>
-
-<!-- 説明は後から追加 -->
+丁寧に素材選別し、生地、サイズも選べます。
 
 </p>
 
@@ -998,7 +856,7 @@ title="北のスモーク Googleマップ">
 
 </footer>
 
-<!-- ===== 商品画像拡大 ===== -->
+<!-- ===== 商品画像 拡大 ===== -->
 
 <div
 
