@@ -909,7 +909,95 @@ footer p{
   }
 
 }
+/* ===== 見出し下線 調整 ===== */
 
+/* 北のスモークについて：🌱入り */
+
+.about h2::after{
+
+  content:"🌱";
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  width:260px;
+
+  height:20px;
+
+  margin:7px auto 0;
+
+  color:#7d9b62;
+
+  font-size:15px;
+
+  line-height:20px;
+
+  background:
+
+    linear-gradient(
+
+      to right,
+
+      #dc7c31 0,
+
+      #dc7c31 43%,
+
+      transparent 43%,
+
+      transparent 57%,
+
+      #dc7c31 57%,
+
+      #dc7c31 100%
+
+    )
+
+    center / 100% 3px no-repeat;
+
+  border-radius:0;
+
+}
+
+/* アクセス：下線を長く */
+
+.access h2::after{
+
+  width:100px;
+
+  height:3px;
+
+  margin:9px auto 0;
+
+  background:#dc7c31;
+
+  border-radius:5px;
+
+}
+
+@media(max-width:650px){
+
+  .about h2::after{
+
+    width:250px;
+
+    height:20px;
+
+    margin-top:7px;
+
+    font-size:14px;
+
+  }
+
+  .access h2::after{
+
+    width:90px;
+
+  }
+
+}
 </style>
 
 </head>
