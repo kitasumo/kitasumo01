@@ -1102,6 +1102,47 @@ footer p{
   }
 
 }
+  /* =========================
+
+   商品ラインナップ余白調整
+
+   ========================= */
+
+.products-grid{
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 0 14px;
+
+  gap: 18px;
+
+}
+
+/* スマホ */
+
+@media (max-width: 600px){
+
+  .products-grid{
+
+    padding-left: 18px;
+
+    padding-right: 18px;
+
+    column-gap: 12px;
+
+    row-gap: 18px;
+
+  }
+
+  .product-card{
+
+    min-width: 0;
+
+  }
+
+}
 </style>
 
 </head>
