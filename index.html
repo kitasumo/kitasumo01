@@ -263,25 +263,6 @@ h2::after{
 
 
 .about h2::after{
-  content:"";
-  display:block;
-  width:250px;
-  height:3px;
-  margin:12px auto 0;
-  background:linear-gradient(
-    90deg,
-    transparent 0%,
-    #dc7c31 8%,
-    #dc7c31 43%,
-    transparent 43%,
-    transparent 57%,
-    #dc7c31 57%,
-    #dc7c31 92%,
-    transparent 100%
-  );
-  border-radius:10px;
-}
-
 
 
 
@@ -1408,20 +1389,7 @@ footer p{
   }
 
 
-.about h2{
-  position:relative;
-}
 
-.about h2::before{
-  content:"☘️";
-  position:absolute;
-  left:50%;
-  bottom:-18px;
-  transform:translateX(-50%);
-  font-size:14px;
-  line-height:1;
-  z-index:2;
-}
   .about-text{
 
 
@@ -2063,75 +2031,7 @@ footer p{
 
 
 }
-  /* 商品ラインナップの下線を強調 */
-.products h2::after{
-  content:"";
-  display:block;
-  width:230px;
-  height:5px;
-  margin:10px auto 0;
-  border-radius:999px;
-  background:linear-gradient(
-    90deg,
-    transparent 0%,
-    #dc7c31 20%,
-    #dc7c31 80%,
-    transparent 100%
-  );
-}
-.about h2::after{
-  content:"";
-  display:block;
-  width:230px;
-  height:5px;
-  margin:10px auto 0;
-  border-radius:999px;
-  background:linear-gradient(
-    90deg,
-    transparent 0%,
-    #dc7c31 20%,
-    #dc7c31 80%,
-    transparent 100%
-  );
-}
-  .about h2{
-  position:relative;
-}
 
-.about h2::before{
-  content:"☘️";
-  position:absolute;
-  left:calc(50% - 145px);
-  bottom:-19px;
-  font-size:15px;
-}
-
-.about h2{
-  --right-clover:"☘️";
-}
-
-.about h2::after{
-  /* 今の線の設定は変更しない */
-}
-  /* 北のスモークについて・三つ葉 */
-.about h2{
-  position:relative;
-}
-
-.about h2 .clover{
-  position:absolute;
-  bottom:-20px;
-  font-size:14px;
-  line-height:1;
-}
-
-.about h2 .clover:first-child{
-  left:calc(50% - 145px);
-}
-
-.about h2 .clover:last-child{
-  right:calc(50% - 145px);
-}
 </style>
 
 
@@ -2180,7 +2080,8 @@ alt="北のスモーク">
 
 
 
-<h2><span class="clover">☘️</span>北のスモークについて<span class="clover">☘️</span></h2>
+<h2>北のスモークについて</h2>
+
 
 
 <div class="about-text">
