@@ -2091,6 +2091,25 @@ footer p{
     transparent 100%
   );
 }
+  .about h2{
+  position:relative;
+}
+
+.about h2::before{
+  content:"☘️";
+  position:absolute;
+  left:calc(50% - 145px);
+  bottom:-19px;
+  font-size:15px;
+}
+
+.about h2{
+  --right-clover:"☘️";
+}
+
+.about h2::after{
+  /* 今の線の設定は変更しない */
+}
 </style>
 
 
