@@ -263,23 +263,43 @@ h2::after{
 
 
 .about h2::after{
-  .about h2{
+  content:"";
+  display:block;
+  width:250px;
+  height:3px;
+  margin:12px auto 0;
+  background:linear-gradient(
+    90deg,
+    transparent 0%,
+    #dc7c31 8%,
+    #dc7c31 43%,
+    transparent 43%,
+    transparent 57%,
+    #dc7c31 57%,
+    #dc7c31 92%,
+    transparent 100%
+  );
+  border-radius:10px;
+}
+
+.about h2{
   position:relative;
 }
 
-.about h2::before{
-  content:"☘️                         ☘️";
+.about h2 .clover{
   position:absolute;
-  left:50%;
   bottom:-20px;
-  transform:translateX(-50%);
-  width:290px;
-  text-align:justify;
-  text-align-last:justify;
-  font-size:15px;
+  font-size:14px;
   line-height:1;
 }
 
+.about h2 .clover:first-child{
+  left:calc(50% - 145px);
+}
+
+.about h2 .clover:last-child{
+  right:calc(50% - 145px);
+}
 
 
   content:"";
