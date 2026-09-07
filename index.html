@@ -2031,6 +2031,22 @@ footer p{
 
 
 }
+  /* 商品ラインナップの下線を強調 */
+.products h2::after{
+  content:"";
+  display:block;
+  width:140px;
+  height:5px;
+  margin:10px auto 0;
+  border-radius:999px;
+  background:linear-gradient(
+    90deg,
+    transparent 0%,
+    #dc7c31 20%,
+    #dc7c31 80%,
+    transparent 100%
+  );
+}
 
 </style>
 
