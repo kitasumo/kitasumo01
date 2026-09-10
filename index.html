@@ -1370,41 +1370,57 @@ footer p{
   gap:14px;
   width:100%;
 }
+.product-wrap{
+  min-width:0;
+}
 .product-slot{
   background:#fff;
   border:1px solid #ead8c7;
   border-radius:10px;
   box-shadow:0 2px 9px rgba(0,0,0,.06);
   overflow:hidden;
+  display:flex;
+  flex-direction:column;
 }
 
-/* 商品画像：カードの横幅にぴったり合わせる */
+/* 商品タイトル：各枠の上 */
+.product-name{
+  margin:0 0 7px;
+  min-height:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:16px;
+  font-weight:700;
+  color:#553725;
+  background:transparent;
+}
+
+/* 商品画像：全て同じ高さで下ラインを揃える */
 .product-image{
   display:block;
   width:100%;
   aspect-ratio:1 / 1;
   object-fit:contain;
-  object-position:center top;
-  background:#fff;
+  object-position:center center;
+  background:#d7c7b5;
   cursor:zoom-in;
 }
 
-/* 画像の下の説明スペース */
+/* 説明文：左寄せ */
 .product-info{
-  padding:10px 9px 12px;
-  text-align:center;
-}
-.product-name{
-  margin:0 0 5px;
-  font-size:16px;
-  font-weight:700;
-  color:#553725;
+  padding:10px 10px 12px;
+  text-align:left;
+  flex:1;
+  background:#fff;
 }
 .product-description{
   margin:0;
   font-size:13px;
   line-height:1.6;
   color:#66574d;
+  text-align:left;
 }
 
 /* スマホでも3列×2段を維持 */
@@ -1437,7 +1453,7 @@ footer p{
   align-items:center;
   justify-content:center;
   padding:10px;
-  background:#f7efe4;
+  background:#d7c7b5;
   color:#8a5b38;
   font-size:22px;
   font-weight:700;
@@ -1582,46 +1598,58 @@ alt="北のスモーク">
     <h2>北スモ商品ラインナップ</h2>
 
     <div class="product-grid">
-      <div class="product-slot">
-        <img class="product-image" src="cheese-smoke.png" alt="チーズスモーク">
-        <div class="product-info">
-          <h3 class="product-name">チーズスモーク</h3>
-          <p class="product-description">説明文</p>
+      <div class="product-wrap">
+        <h3 class="product-name">チーズスモーク</h3>
+        <div class="product-slot">
+          <img class="product-image" src="cheese-smoke.png" alt="チーズスモーク">
+          <div class="product-info">
+            <p class="product-description">説明文</p>
+          </div>
         </div>
       </div>
-      <div class="product-slot">
-        <img class="product-image" src="blueberry-jam.png" alt="ブルーベリージャム">
-        <div class="product-info">
-          <h3 class="product-name">ブルーベリージャム</h3>
-          <p class="product-description">説明文</p>
+      <div class="product-wrap">
+        <h3 class="product-name">ブルーベリージャム</h3>
+        <div class="product-slot">
+          <img class="product-image" src="blueberry-jam.png" alt="ブルーベリージャム">
+          <div class="product-info">
+            <p class="product-description">説明文</p>
+          </div>
         </div>
       </div>
-      <div class="product-slot">
-        <img class="product-image" src="kikuimo-chips.png" alt="菊芋チップ">
-        <div class="product-info">
-          <h3 class="product-name">菊芋チップ</h3>
-          <p class="product-description">説明文</p>
+      <div class="product-wrap">
+        <h3 class="product-name">菊芋チップ</h3>
+        <div class="product-slot">
+          <img class="product-image" src="kikuimo-chips.png" alt="菊芋チップ">
+          <div class="product-info">
+            <p class="product-description">説明文</p>
+          </div>
         </div>
       </div>
-      <div class="product-slot">
-        <img class="product-image" src="recycle-soap.png" alt="リサイクルエコ石鹸">
-        <div class="product-info">
-          <h3 class="product-name">リサイクルエコ石鹸</h3>
-          <p class="product-description">説明文</p>
+      <div class="product-wrap">
+        <h3 class="product-name">リサイクルエコ石鹸</h3>
+        <div class="product-slot">
+          <img class="product-image" src="recycle-soap.png" alt="リサイクルエコ石鹸">
+          <div class="product-info">
+            <p class="product-description">説明文</p>
+          </div>
         </div>
       </div>
-      <div class="product-slot">
-        <img class="product-image" src="handmade.png" alt="手芸品">
-        <div class="product-info">
-          <h3 class="product-name">手芸品</h3>
-          <p class="product-description">説明文</p>
+      <div class="product-wrap">
+        <h3 class="product-name">手芸品</h3>
+        <div class="product-slot">
+          <img class="product-image" src="handmade.png" alt="手芸品">
+          <div class="product-info">
+            <p class="product-description">説明文</p>
+          </div>
         </div>
       </div>
-      <div class="product-slot">
-        <div class="seasonal-placeholder">季節限定商品</div>
-        <div class="product-info">
-          <h3 class="product-name">季節限定商品</h3>
-          <p class="product-description">季節に合わせた商品をご用意しています。</p>
+      <div class="product-wrap">
+        <h3 class="product-name">季節限定商品</h3>
+        <div class="product-slot">
+          <div class="seasonal-placeholder">季節限定商品</div>
+          <div class="product-info">
+            <p class="product-description">季節に合わせた商品をご用意しています。</p>
+          </div>
         </div>
       </div>
     </div>
