@@ -814,27 +814,6 @@ footer p{
 
 @media(max-width:650px){
 
-  .product-wrap{
-    display:flex;
-    flex-direction:column;
-    min-width:0;
-  }
-  .product-slot{
-    display:flex;
-    flex-direction:column;
-    height:100%;
-  }
-  .product-image,
-  .seasonal-placeholder{
-    width:100%;
-    aspect-ratio:1 / 1;
-    height:auto;
-    flex:none;
-    object-fit:contain;
-    object-position:center center;
-  }
-
-
 
 
   section{
@@ -1425,7 +1404,7 @@ footer p{
   aspect-ratio:1 / 1;
   object-fit:contain;
   object-position:center center;
-  background:#cdbda9;
+  background:#d7c7b5;
   cursor:zoom-in;
 }
 
@@ -1474,7 +1453,7 @@ footer p{
   align-items:center;
   justify-content:center;
   padding:10px;
-  background:#cdbda9;
+  background:#d7c7b5;
   color:#8a5b38;
   font-size:22px;
   font-weight:700;
@@ -1482,6 +1461,78 @@ footer p{
 }
 @media(max-width:650px){
   .seasonal-placeholder{font-size:15px;}
+}
+
+
+/* ===== 商品欄 最終調整：スマホ基準 ===== */
+@media(max-width:650px){
+
+  /* 3列×2段はそのまま */
+  .product-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:9px;
+    align-items:start;
+  }
+
+  /* タイトルは枠外・全商品1行・高さ固定 */
+  .product-name{
+    height:22px !important;
+    min-height:22px !important;
+    margin:0 0 5px !important;
+    padding:0 !important;
+    display:block !important;
+    line-height:22px !important;
+    font-size:8px !important;
+    font-weight:700 !important;
+    letter-spacing:-0.35px !important;
+    white-space:nowrap !important;
+    text-align:center !important;
+    overflow:visible !important;
+    background:transparent !important;
+  }
+
+  /* タイトル高さが同じなので画像の上ラインが揃う */
+  .product-wrap{
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .product-slot{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+  }
+
+  /* 元写真は一切変更しない。表示領域だけ全て同寸法 */
+  .product-image,
+  .seasonal-placeholder{
+    display:block;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:1 / 1 !important;
+    flex:0 0 auto !important;
+  }
+
+  .product-image{
+    object-fit:contain !important;
+    object-position:center center !important;
+  }
+
+  /* 画像領域が同寸法なので下ラインも揃う */
+  .product-info{
+    width:100%;
+    padding:7px 6px 9px !important;
+    text-align:left !important;
+  }
+
+  .product-description{
+    margin:0 !important;
+    font-size:10px !important;
+    line-height:1.45 !important;
+    text-align:left !important;
+  }
 }
 
 </style>
