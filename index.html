@@ -1214,7 +1214,7 @@ footer p{
 .activity-tabs{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:14px;
+  gap:16px;
   margin-bottom:16px;
 }
 .activity-tab{
@@ -1237,7 +1237,7 @@ footer p{
   align-items:stretch;
 }
 .activity-coming{
-  min-height:190px;
+  min-height:160px;
   border-radius:10px;
   background:#f9ddd8;
   display:flex;
@@ -1334,6 +1334,97 @@ footer p{
   .activity-label{
     padding:3px 2px;
     font-size:10px;
+  }
+}
+
+
+/* ===== 商品ラインナップ：6枠の土台 ===== */
+.products{
+  background:#fff8ef;
+  padding:42px 14px 38px;
+}
+.products .inner{
+  width:100%;
+  max-width:1040px;
+  margin:0 auto;
+}
+.products h2{
+  margin:0 0 28px;
+  text-align:center;
+  color:#553725;
+  font-size:30px;
+  font-weight:700;
+}
+.products h2::after{
+  content:"";
+  display:block;
+  width:190px;
+  height:3px;
+  margin:9px auto 0;
+  background:#dc7c31;
+  border-radius:5px;
+}
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  width:100%;
+}
+.product-slot{
+  background:#fff;
+  border:1px solid #ead8c7;
+  border-radius:10px;
+  box-shadow:0 2px 9px rgba(0,0,0,.06);
+  overflow:hidden;
+}
+
+/* 商品画像：カードの横幅にぴったり合わせる */
+.product-image{
+  display:block;
+  width:100%;
+  aspect-ratio:1 / 1;
+  object-fit:contain;
+  background:#fff;
+  cursor:zoom-in;
+}
+
+/* 画像の下の説明スペース */
+.product-info{
+  padding:10px 9px 12px;
+  text-align:center;
+}
+.product-name{
+  margin:0 0 5px;
+  font-size:16px;
+  font-weight:700;
+  color:#553725;
+}
+.product-description{
+  margin:0;
+  font-size:13px;
+  line-height:1.6;
+  color:#66574d;
+}
+
+/* スマホでも3列×2段を維持 */
+@media(max-width:650px){
+  .products{
+    padding:36px 14px 30px;
+  }
+  .products h2{
+    font-size:27px;
+    margin-bottom:24px;
+  }
+  .products h2::after{
+    width:165px;
+  }
+  .product-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:9px;
+  }
+  .product-slot{
+    min-height:190px;
+    border-radius:8px;
   }
 }
 
@@ -1465,7 +1556,59 @@ alt="北のスモーク">
   </div>
 </section>
 
-<!-- ===== 商品ラインナップ 差し込み位置（HTML） ===== -->
+
+<!-- ===== 商品ラインナップ ===== -->
+<section class="products">
+  <div class="inner">
+    <h2>北スモ商品ラインナップ</h2>
+
+    <div class="product-grid">
+      <div class="product-slot">
+        <!-- ここに商品画像を入れる -->
+        <div class="product-info">
+          <h3 class="product-name">チーズスモーク</h3>
+          <p class="product-description">説明文</p>
+        </div>
+      </div>
+      <div class="product-slot">
+        <!-- ここに商品画像を入れる -->
+        <div class="product-info">
+          <h3 class="product-name">ブルーベリージャム</h3>
+          <p class="product-description">説明文</p>
+        </div>
+      </div>
+      <div class="product-slot">
+        <!-- ここに商品画像を入れる -->
+        <div class="product-info">
+          <h3 class="product-name">菊芋チップ</h3>
+          <p class="product-description">説明文</p>
+        </div>
+      </div>
+      <div class="product-slot">
+        <!-- ここに商品画像を入れる -->
+        <div class="product-info">
+          <h3 class="product-name">リサイクルエコ石鹸</h3>
+          <p class="product-description">説明文</p>
+        </div>
+      </div>
+      <div class="product-slot">
+        <!-- ここに商品画像を入れる -->
+        <div class="product-info">
+          <h3 class="product-name">手芸品</h3>
+          <p class="product-description">説明文</p>
+        </div>
+      </div>
+      <div class="product-slot">
+        <!-- ここに商品画像を入れる -->
+        <div class="product-info">
+          <h3 class="product-name">季節限定商品</h3>
+          <p class="product-description">説明文</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- ===== SNS ===== -->
 
