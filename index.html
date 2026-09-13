@@ -1737,7 +1737,7 @@ alt="北のスモーク">
       <div class="product-wrap">
         <h3 class="product-name">チーズスモーク</h3>
         <div class="product-slot">
-        <img class="product-image" src="cheese-smoke.PNG" alt="チーズスモーク">
+        <img class="product-image" src="cheese-smoke.PNG" alt="チーズスモーク" onclick="openImage(this.src)">
           <div class="product-info">
             <p class="product-description">北海道産１００％プロセスチーズを</p>
           </div>
@@ -1746,7 +1746,7 @@ alt="北のスモーク">
       <div class="product-wrap">
         <h3 class="product-name">ブルーベリージャム</h3>
         <div class="product-slot">
-          <img class="product-image" src="blueberry-jam.png" alt="ブルーベリージャム">
+          <img class="product-image" src="blueberry-jam.png" alt="ブルーベリージャム" onclick="openImage(this.src)">
           <div class="product-info">
             <p class="product-description">説明文</p>
           </div>
@@ -1755,7 +1755,7 @@ alt="北のスモーク">
       <div class="product-wrap">
         <h3 class="product-name">菊芋チップ</h3>
         <div class="product-slot">
-          <img class="product-image" src="kikuimo-chips.png" alt="菊芋チップ">
+          <img class="product-image" src="kikuimo-chips.png" alt="菊芋チップ" onclick="openImage(this.src)">
           <div class="product-info">
             <p class="product-description">説明文</p>
           </div>
@@ -1764,7 +1764,7 @@ alt="北のスモーク">
       <div class="product-wrap">
         <h3 class="product-name">リサイクルエコ石鹸</h3>
         <div class="product-slot">
-          <img class="product-image" src="recycle-soap.png" alt="リサイクルエコ石鹸">
+          <img class="product-image" src="recycle-soap.png" alt="リサイクルエコ石鹸" onclick="openImage(this.src)">
           <div class="product-info">
             <p class="product-description">説明文</p>
           </div>
@@ -2120,7 +2120,18 @@ document.addEventListener(
 );
 
 
+function openImage(src) {
+  const overlay = document.createElement("div");
+  overlay.style.cssText = "position:fixed;inset:0;background:rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;z-index:99999;padding:20px;cursor:pointer;";
 
+  const img = document.createElement("img");
+  img.src = src;
+  img.style.cssText = "max-width:95%;max-height:90vh;object-fit:contain;border-radius:10px;";
+
+  overlay.appendChild(img);
+  overlay.onclick = () => overlay.remove();
+  document.body.appendChild(overlay);
+}
 </script>
 
 
