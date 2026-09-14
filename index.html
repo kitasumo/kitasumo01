@@ -1099,18 +1099,37 @@ footer p{
 
 }
 /* 北のスモークについて：ラインを端に向かって薄く */
+/* 北のスモークについて：最終固定 */
 .about h2::after{
- 
-  width:100%;
-  max-width:none;
-  background:linear-gradient(
-  to right,
-  transparent 0%,
-  #dc7c31 12%,
-  #dc7c31 88%,
-  transparent 100%
-);
-    center / 100% 3px no-repeat;
+  content:"🌱" !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+
+  width:100% !important;
+  height:20px !important;
+  margin:10px auto 0 !important;
+
+  color:#7d9b62 !important;
+  font-size:15px !important;
+  line-height:20px !important;
+
+  background-image:linear-gradient(
+    to right,
+    transparent 0%,
+    #dc7c31 8%,
+    #dc7c31 43%,
+    transparent 43%,
+    transparent 57%,
+    #dc7c31 57%,
+    #dc7c31 92%,
+    transparent 100%
+  ) !important;
+
+  background-size:100% 3px !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+  border-radius:0 !important;
 }
 
 /* 北のスモークについて：文章下のライン */
