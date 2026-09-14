@@ -1085,9 +1085,49 @@ footer p{
 
 
 }
+/* 北のスモークについて：ラインを端に向かって薄く */
+.about h2::after{
+  background:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      #dc7c31 8%,
+      #dc7c31 43%,
+      transparent 43%,
+      transparent 57%,
+      #dc7c31 57%,
+      #dc7c31 92%,
+      transparent 100%
+    )
+    center / 100% 3px no-repeat;
+}
 
-
-
+/* 北のスモークについて：文章下のライン */
+.about-bottom-line{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:20px;
+  margin:26px auto 0;
+  color:#7d9b62;
+  font-size:15px;
+  line-height:20px;
+  background:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      #dc7c31 8%,
+      #dc7c31 43%,
+      transparent 43%,
+      transparent 57%,
+      #dc7c31 57%,
+      #dc7c31 92%,
+      transparent 100%
+    )
+    center / 100% 3px no-repeat;
+}
+  
 /* アクセス：下線を長く */
 
 
@@ -1673,7 +1713,8 @@ alt="北のスモーク">
 誕生日会やクリスマス会など、日々の生活も大切にしながら、<br>
 楽しい時間を共に過ごしています。
 </p>
-
+    
+<div class="about-bottom-line">🌱</div>
 </div>
 
 
