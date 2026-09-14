@@ -1257,6 +1257,20 @@ footer p{
   font-size:30px;
   font-weight:700;
 }
+  .activities h2::after{
+  content:"";
+  display:block;
+  width:180px;
+  height:3px;
+  margin:10px auto 0;
+  background:linear-gradient(
+    to right,
+    transparent 0%,
+    #dc7c31 12%,
+    #dc7c31 88%,
+    transparent 100%
+  );
+}
 .activity-tabs{
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -1734,7 +1748,7 @@ alt="北のスモーク">
 <!-- ===== 私たちの活動 ===== -->
 <section class="activities">
   <div class="inner">
-    <h2>🍃 私たちの活動 🍃</h2>
+    <h2> 私たちの活動 </h2>
 
     <div class="activity-tabs">
       <div class="activity-tab make">🍴　作る</div>
