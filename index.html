@@ -1272,14 +1272,14 @@ footer p{
   max-width:1050px;
   margin:0 auto;
 }
-.activities h2{
+{
   margin:0 0 18px;
   text-align:center;
   color:#6b1d17;
   font-size:20px;
   font-weight:700;
 }
-  .activities h2::after{
+  ::after{
   content:"";
   display:block;
   width:180px;
@@ -1376,7 +1376,7 @@ footer p{
   .activities{
     padding:16px 10px 24px;
   }
-  .activities h2{
+  {
     font-size:27px;
   }
   .activity-tabs{
@@ -1512,6 +1512,9 @@ footer p{
 
 /* スマホでも3列×2段を維持 */
 @media(max-width:650px){
+.activities h2{
+  font-size:20px;
+}  
   .products{
     padding:36px 14px 30px;
   }
