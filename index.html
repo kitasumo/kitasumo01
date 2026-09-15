@@ -1528,9 +1528,10 @@ footer p{
 
 /* スマホでも3列×2段を維持 */
 @media(max-width:650px){
-.activities h2{
-  font-size:20px;
-}  
+.activity-tabs{
+  grid-template-columns:repeat(4,1fr);
+  gap:6px;
+}
   .products{
     padding:36px 14px 30px;
   }
