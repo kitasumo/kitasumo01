@@ -1272,14 +1272,30 @@ footer p{
   max-width:1050px;
   margin:0 auto;
 }
-{
+
+.activities h2{
   margin:0 0 18px;
   text-align:center;
   color:#6b1d17;
   font-size:20px;
   font-weight:700;
 }
-  ::after{
+
+.activities h2::after{
+  content:"";
+  display:block;
+  width:180px;
+  height:3px;
+  margin:10px auto 0;
+  background:linear-gradient(
+    to right,
+    transparent 0%,
+    #dc7c31 12%,
+    #dc7c31 88%,
+    transparent 100%
+  );
+}
+ 
   content:"";
   display:block;
   width:180px;
