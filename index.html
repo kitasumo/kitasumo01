@@ -1,422 +1,124 @@
-
-
 <!DOCTYPE html>
-
-
-
 <html lang="ja">
-
-
-
 <head>
-
-
-
 <meta charset="UTF-8">
-
-
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
 <title>北のスモーク</title>
 
-
-
 <style>
-
-
-
 *{
-
-
-
   box-sizing:border-box;
-
-
-
 }
-
-
 
 body{
-
-
-
   margin:0;
-
-
-
   font-family:-apple-system,BlinkMacSystemFont,
-
-
-
   "Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
-
-
-
   color:#44372f;
-
-
-
   background:#fff;
-
-
-
   line-height:1.8;
-
-
-
 }
-
-
 
 img{
-
-
-
   display:block;
-
-
-
   max-width:100%;
-
-
-
 }
-
-
 
 section{
-
-
-
   padding:45px 20px;
-
-
-
 }
-
-
 
 .inner{
-
-
-
   max-width:1050px;
-
-
-
   margin:0 auto;
-
-
-
 }
-
-
 
 h2{
-
-
-
   margin:0 0 30px;
-
-
-
   text-align:center;
-
-
-
   color:#553725;
-
-
-
   font-size:26px;
-
-
-
 }
-
-
 
 h2::after{
-
-
-
   content:"";
-
-
-
   display:block;
-
-
-
   width:48px;
-
-
-
   height:3px;
-
-
-
   margin:10px auto 0;
-
-
-
   background:#dc7c31;
-
-
-
   border-radius:5px;
-
-
-
 }
-
-
 
 /* ===== ヘッダー ===== */
-
-
-
 .hero{
-
-
-
   width:100%;
-
-
-
   background:#fff;
-
-
-
-}
-
-
-
-.hero {
-
-
-
-  width:100%;
-
-
-
   height:auto;
-
-
-
 }
-
-
 
 /* ===== 私たちの活動について ===== */
-
-
-
 .about{
-
-
-
   background:#fff;
-
-
-padding-top:18px;
-
-
-
+  padding-top:18px;
   padding-bottom:48px;
-
-
-
 }
-
-
 
 .about h2{
-
-
-
   font-size:25px;
-
-
-
   margin-bottom:28px;
-
-
-
   color:#553725;
-
-
-
   font-weight:700;
-
-
-
 }
-
-
-
-/* センス良い下線 */
-
-
 
 .about h2::after{
-
-
-
   content:"";
-
-
-
   display:block;
-
-
-
   width:250px;
-
-
-
   height:3px;
-
-
-
   margin:12px auto 0;
-
-
-
-  background:
-
-
-
-    linear-gradient(
-
-
-
-      90deg,
-
-
-
-      transparent 0%,
-
-
-
-      #dc7c31 8%,
-
-
-
-      #dc7c31 43%,
-
-
-
-      transparent 43%,
-
-
-
-     
-
-    );
-transparent 0%,
-#dc7c31 8%,
-#dc7c31 43%,
-transparent 43%,
-transparent 57%,
-#dc7c31 57%,
-#dc7c31 92%,
-transparent 100%    
-
-
+  background:linear-gradient(
+    90deg,
+    transparent 0%,
+    #dc7c31 8%,
+    #dc7c31 43%,
+    transparent 43%,
+    transparent 57%,
+    #dc7c31 57%,
+    #dc7c31 92%,
+    transparent 100%
+  );
   border-radius:10px;
-
-
-
 }
-
-
 
 .about-text{
-
-
-
   max-width:900px;
-
-
-
   margin:auto;
-
-
-
   text-align:left;
-
-
-
   font-size:16px;
-
-
-
 }
-
-
 
 .about-text p{
-
-
-
   margin:0 0 20px;
-
-
-
 }
 
-
-
-/* ===== 商品ラインナップ 差し込み位置（CSS） ===== */
-
 /* ===== SNS ===== */
-
-
 .sns h2{
   font-size:20px;
 }
+
 .sns{
-
-
-
   background:#fff;
-
-
-
   text-align:center;
-
-
-
   padding-top:48px;
-
-
-
   padding-bottom:48px;
-
-
-
 }
-
-
 
 .sns p{
-
-
-
   margin:0 0 24px;
-
-
-
   font-size:14px;
-
-
-
 }
+
 .sns h2::after{
   content:"";
   display:block;
@@ -432,219 +134,67 @@ transparent 100%
   );
 }
 
-
 /* ===== 北スモblog ===== */
-
-
-
 .blog-button{
-
-
-
   display:inline-flex;
-
-
-
   align-items:center;
-
-
-
   justify-content:center;
-
-
-
   gap:18px;
-
-
-
   min-width:230px;
-
-
-
   padding:14px 34px;
-
-
-
   background:linear-gradient(135deg,#18b83d,#00a52d);
-
-
-
   color:#fff;
-
-
-
   border-radius:35px;
-
-
-
   text-decoration:none;
-
-
-
   font-size:17px;
-
-
-
   font-weight:bold;
-
-
-
   box-shadow:0 6px 17px rgba(0,160,50,.25);
-
-
-
   transition:.2s;
-
-
-
 }
-
-
 
 .blog-button:active{
-
-
-
-  (.96);
-
-
-
+  transform:scale(.96);
 }
-
-
 
 .blog-button .arrow{
-
-
-
   font-size:27px;
-
-
-
   line-height:1;
-
-
-
 }
-
-
 
 /* ===== アクセス ===== */
-
-
-
 .access{
-
-
-
   background:#fff8ef;
-
-
-
   text-align:center;
-
-
-
 }
-
-
 
 .address{
-
-
-
   margin-bottom:20px;
-
-
-
   font-size:15px;
-
-
-
   line-height:1.8;
-
-
-
 }
-
-
 
 .phone{
-
-
-
   white-space:nowrap;
-
-
-
 }
-
-
 
 /* ===== Googleマップ ===== */
-
-
-
 .map{
-
-
-
   width:90%;
-
-
-
   max-width:680px;
-
-
-
   height:270px;
-
-
-
   margin:auto;
-
-
-
   overflow:hidden;
-
-
-
   border-radius:9px;
-
-
-
   box-shadow:0 3px 12px rgba(0,0,0,.08);
-
-
-
 }
-
-
 
 .map iframe{
-
-
-
   width:100%;
-
-
-
   height:100%;
-
-
-
   border:0;
-
-
-
 }
 
-
-
 /* ===== フッター ===== */
-
-
-
 footer{
   background:#56351f;
   color:#fffaf2;
@@ -684,452 +234,151 @@ footer{
   white-space:nowrap;
 }
 
-
-
 footer p{
-
-
-
   margin:0;
-
-
-
 }
-
-
 
 /* ===== 商品画像タップ拡大 ===== */
-
-
-
 .modal{
-
-
-
   position:fixed;
-
-
-
   inset:0;
-
-
-
   z-index:99999;
-
-
-
   display:none;
-
-
-
   align-items:center;
-
-
-
   justify-content:center;
-
-
-
   padding:4px;
-
-
-
   background:rgba(0,0,0,.94);
-
-
-
 }
-
-
 
 .modal.show{
-
-
-
   display:flex;
-
-
-
 }
 
-
-
-.modal {
-
-
-
+.modal img{
   width:auto;
-
-
-
   height:auto;
-
-
-
   max-width:99vw;
-
-
-
   max-height:96vh;
-
-
-
   object-fit:contain;
-
-
-
 }
-
-
 
 .modal-close{
-
-
-
   position:fixed;
-
-
-
   z-index:100000;
-
-
-
   top:12px;
-
-
-
   right:18px;
-
-
-
   color:#fff;
-
-
-
   font-size:44px;
-
-
-
   line-height:1;
-
-
-
   cursor:pointer;
-
-
-
 }
 
-
-
-/* ==================================================
-
-
-
-   スマホ：上3・下2
-
-
-
-   ================================================== */
-
-
-
+/* ===== スマホ ===== */
 @media(max-width:650px){
-
-
-
   section{
-
-
-
     padding:38px 14px;
-
-
-
   }
-
-
 
   h2{
-
-
-
     font-size:19px;
-
-
-
   }
-
-
 
   .about{
-
-
-
     padding-top:28px;
-
-
-
     padding-bottom:44px;
-
-
-
   }
-
-
 
   .about h2{
-
-
-
     font-size:27px;
-
-
-
     margin-bottom:24px;
-
-
-
   }
 
-
-
   .about h2::after{
-
-
-
     width:250px;
-
-
-
     height:3px;
-
-
-
     margin-top:10px;
+    background:linear-gradient(
+      to right,
+      transparent 0%,
+      #dc7c31 12%,
+      #dc7c31 88%,
+      transparent 100%
+    );
+  }
 
-
-
-  
-  background:linear-gradient(
-  to right,
-  transparent 0%,
-  #dc7c31 12%,
-  #dc7c31 88%,
-  transparent 100%
-);
-｝
-
-
- .about-text{
+  .about-text{
     font-size:14px;
     width:82% !important;
     margin-left:auto !important;
     margin-right:auto !important;
-}
+  }
 
-.about-text p{
+  .about-text p{
     width:100% !important;
     margin-left:0 !important;
     margin-right:0 !important;
-}
-  /* ===== 商品ラインナップ 差し込み位置（スマホCSS） ===== */
-
-  /* SNS */
-
-
+  }
 
   .sns{
-
-
-
     padding-top:48px;
-
-
-
   }
-
-
 
   .sns p{
-
-
-
     font-size:14px;
-
-
-
   }
-
-
 
   .blog-button{
-
-
-
     min-width:230px;
-
-
-
     font-size:17px;
-
-
-
   }
-
-
-
-  /* アクセス */
-
-
 
   .address{
-
-
-
     font-size:13px;
-
-
-
   }
-
-
 
   .map{
-
-
-
     width:92%;
-
-
-
     height:210px;
-
-
-
   }
-
-
-
 }
 
 /* ===== 見出し下線 調整 ===== */
-
-
-
-/* 北のスモークについて：🌱入り */
-
-
-
 .about h2::after{
-
-
-
   content:"🌱";
-
-
-
   display:flex;
-
-
-
   align-items:center;
-
-
-
   justify-content:center;
-
-
-
   width:260px;
-
-
-
   height:20px;
-
-
-
   margin:7px auto 0;
-
-
-
   color:#7d9b62;
-
-
-
   font-size:15px;
-
-
-
   line-height:20px;
-
-
-
   background:
-
-
-
     linear-gradient(
-
-
-
       to right,
-
-
-
       #dc7c31 0,
-
-
-
       #dc7c31 43%,
-
-
-
       transparent 43%,
-
-
-
       transparent 57%,
-
-
-
       #dc7c31 57%,
-
-
-
       #dc7c31 100%
-
-
-
     )
-
-
-
     center / 100% 3px no-repeat;
-
-
-
   border-radius:0;
-
-
-
 }
-/* 北のスモークについて：ラインを端に向かって薄く */
-/* 北のスモークについて：最終固定 */
+
 .about h2::after{
   content:"🌱" !important;
   display:flex !important;
   align-items:center !important;
   justify-content:center !important;
-
   width:100% !important;
   height:20px !important;
   margin:10px auto 0 !important;
-
   color:#7d9b62 !important;
   font-size:15px !important;
   line-height:20px !important;
-
   background-image:linear-gradient(
     to right,
     transparent 0%,
@@ -1141,14 +390,12 @@ footer p{
     #dc7c31 92%,
     transparent 100%
   ) !important;
-
   background-size:100% 3px !important;
   background-position:center !important;
   background-repeat:no-repeat !important;
   border-radius:0 !important;
 }
 
-/* 北のスモークについて：文章下のライン */
 .about-bottom-line{
   display:flex;
   align-items:center;
@@ -1173,10 +420,6 @@ footer p{
     )
     center / 100% 3px no-repeat;
 }
-  
-/* アクセス：下線を長く */
-
-
 
 .access h2::after{
   content:"";
@@ -1193,88 +436,31 @@ footer p{
   );
 }
 
-
-
-}
-
-
-
 @media(max-width:650px){
-
-
-
   .about h2::after{
-
-
-
     width:250px;
-
-
-
     height:20px;
-
-
-
     margin-top:7px;
-
-
-
     font-size:14px;
-
-
-
   }
-
-
 
   .access h2::after{
-
-
-
     width:90px;
-
-
-
   }
-
-
-
 }
 
-  * 🌱ラインをもっと長く */
-
-
-
+/* 🌱ラインをもっと長く */
 .about h2::after{
-
-
-
   width:330px;
-
-
-
 }
-
-
 
 @media(max-width:650px){
-
-
-
   .about h2::after{
-
-
-
     width:320px;
-
-
-
   }
-
-
-
 }
-  /* ===== 私たちの活動：新レイアウト ===== */
+
+/* ===== 私たちの活動 ===== */
 .activities{
   background:#f7f8f1;
   padding:18px 14px 30px;
@@ -1286,7 +472,6 @@ footer p{
   margin:0 auto;
 }
 
-/* 作る｜受託｜出店｜レクリエーション */
 .activities h2{
   margin:0 0 22px;
   text-align:center;
@@ -1311,7 +496,6 @@ footer p{
   );
 }
 
-/* 大きな活動枠 */
 .activity-slider{
   position:relative;
   width:92%;
@@ -1352,7 +536,6 @@ footer p{
   font-size:15px;
 }
 
-/* 左右矢印 */
 .activity-arrow{
   position:absolute;
   top:50%;
@@ -1368,15 +551,9 @@ footer p{
   cursor:pointer;
 }
 
-.activity-arrow.prev{
-  left:12px;
-}
+.activity-arrow.prev{ left:12px; }
+.activity-arrow.next{ right:12px; }
 
-.activity-arrow.next{
-  right:12px;
-}
-
-/* スライド位置の丸 */
 .activity-dots{
   display:flex;
   justify-content:center;
@@ -1396,7 +573,6 @@ footer p{
   background:#7a3f1d;
 }
 
-/* 下の説明 */
 .activity-note{
   width:92%;
   max-width:760px;
@@ -1411,9 +587,7 @@ footer p{
   text-align:left;
 }
 
-/* ===== スマホ ===== */
 @media(max-width:650px){
-
   .activities{
     padding:16px 10px 26px;
   }
@@ -1434,21 +608,10 @@ footer p{
     border-radius:16px;
   }
 
-  .activity-slider .leaves{
-    font-size:22px;
-  }
-
-  .activity-slider strong{
-    font-size:32px;
-  }
-
-  .activity-slider .sprout{
-    font-size:38px;
-  }
-
-  .activity-slider small{
-    font-size:13px;
-  }
+  .activity-slider .leaves{ font-size:22px; }
+  .activity-slider strong{ font-size:32px; }
+  .activity-slider .sprout{ font-size:38px; }
+  .activity-slider small{ font-size:13px; }
 
   .activity-arrow{
     width:38px;
@@ -1456,13 +619,8 @@ footer p{
     font-size:26px;
   }
 
-  .activity-arrow.prev{
-    left:8px;
-  }
-
-  .activity-arrow.next{
-    right:8px;
-  }
+  .activity-arrow.prev{ left:8px; }
+  .activity-arrow.next{ right:8px; }
 
   .activity-dots{
     margin-top:22px;
@@ -1476,19 +634,18 @@ footer p{
   }
 }
 
-
-
-
-/* ===== 商品ラインナップ：6枠の土台 ===== */
+/* ===== 商品ラインナップ ===== */
 .products{
   background:#fff8ef;
   padding:42px 14px 38px;
 }
+
 .products .inner{
   width:100%;
   max-width:1040px;
   margin:0 auto;
 }
+
 .products h2{
   margin:0 0 28px;
   text-align:center;
@@ -1496,6 +653,7 @@ footer p{
   font-size:20px;
   font-weight:700;
 }
+
 .products h2::after{
   content:"";
   display:block;
@@ -1510,15 +668,18 @@ footer p{
     transparent 100%
   );
 }
+
 .product-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:14px;
   width:100%;
 }
+
 .product-wrap{
   min-width:0;
 }
+
 .product-slot{
   background:#fff;
   border:1px solid #ead8c7;
@@ -1529,7 +690,6 @@ footer p{
   flex-direction:column;
 }
 
-/* 商品タイトル：各枠の上 */
 .product-name{
   margin:0 0 7px;
   min-height:30px;
@@ -1543,7 +703,6 @@ footer p{
   background:transparent;
 }
 
-/* 商品画像：全て同じ高さで下ラインを揃える */
 .product-image{
   display:block;
   width:100%;
@@ -1554,13 +713,13 @@ footer p{
   cursor:zoom-in;
 }
 
-/* 説明文：左寄せ */
 .product-info{
   padding:10px 10px 12px;
   text-align:left;
   flex:1;
   background:#fff;
 }
+
 .product-description{
   margin:0;
   font-size:13px;
@@ -1569,29 +728,30 @@ footer p{
   text-align:left;
 }
 
-/* スマホでも3列×2段を維持 */
 @media(max-width:650px){
-
   .products{
     padding:36px 14px 30px;
   }
+
   .products h2{
     font-size:20px;
     margin-bottom:24px;
   }
+
   .products h2::after{
     width:165px;
   }
+
   .product-grid{
     grid-template-columns:repeat(3,minmax(0,1fr));
     gap:9px;
   }
+
   .product-slot{
     min-height:190px;
     border-radius:8px;
   }
 }
-
 
 .seasonal-placeholder{
   width:100%;
@@ -1606,22 +766,18 @@ footer p{
   font-weight:700;
   text-align:center;
 }
+
 @media(max-width:650px){
   .seasonal-placeholder{font-size:15px;}
 }
 
-
-/* ===== 商品欄 最終調整：スマホ基準 ===== */
 @media(max-width:650px){
-
-  /* 3列×2段はそのまま */
   .product-grid{
     grid-template-columns:repeat(3,minmax(0,1fr));
     gap:9px;
     align-items:start;
   }
 
-  /* タイトルは枠外・全商品1行・高さ固定 */
   .product-name{
     height:22px !important;
     min-height:22px !important;
@@ -1638,7 +794,6 @@ footer p{
     background:transparent !important;
   }
 
-  /* タイトル高さが同じなので画像の上ラインが揃う */
   .product-wrap{
     min-width:0;
     display:flex;
@@ -1652,7 +807,6 @@ footer p{
     overflow:hidden;
   }
 
-  /* 元写真は一切変更しない。表示領域だけ全て同寸法 */
   .product-image,
   .seasonal-placeholder{
     display:block;
@@ -1667,7 +821,6 @@ footer p{
     object-position:center center !important;
   }
 
-  /* 画像領域が同寸法なので下ラインも揃う */
   .product-info{
     width:100%;
     padding:7px 6px 9px !important;
@@ -1682,8 +835,6 @@ footer p{
   }
 }
 
-
-/* ===== 北スモ商品欄：スマホ最終固定 ===== */
 @media(max-width:650px){
   .product-grid{
     display:grid !important;
@@ -1691,11 +842,13 @@ footer p{
     gap:9px !important;
     align-items:start !important;
   }
+
   .product-wrap{
     min-width:0 !important;
     display:flex !important;
     flex-direction:column !important;
   }
+
   .product-name{
     height:22px !important;
     min-height:22px !important;
@@ -1708,12 +861,14 @@ footer p{
     overflow:visible !important;
     text-align:center !important;
   }
+
   .product-slot{
     width:100% !important;
     overflow:hidden !important;
     display:flex !important;
     flex-direction:column !important;
   }
+
   .product-image,
   .seasonal-placeholder{
     display:block !important;
@@ -1722,20 +877,22 @@ footer p{
     height:auto !important;
     flex:none !important;
   }
+
   .product-image{
     object-fit:contain !important;
     object-position:center top !important;
     background:#cdbda9 !important;
   }
- 
 
   .seasonal-placeholder{
     background:#cdbda9 !important;
   }
+
   .product-info{
     padding:7px 6px 9px !important;
     text-align:left !important;
   }
+
   .product-description{
     margin:0 !important;
     font-size:10px !important;
@@ -1743,100 +900,53 @@ footer p{
     text-align:left !important;
   }
 }
-
 </style>
-
-
-
 </head>
-
-
 
 <body>
 
-
-
-<!-- ===== ヘッダー ===== -->
-
-
-
 <header class="hero">
-
-
-
-<
-
-
-
-<img src="kitasumo-header-new.png"alt="北のスモーク">
-
-
-
+  <img src="kitasumo-header-new.png" alt="北のスモーク">
 </header>
 
-
-  
-
-<!-- ===== 北のスモークについて ===== -->
-
-
-
 <section class="about">
+  <div class="inner">
+    <h2 style="font-size:20px;">私たちの活動について</h2>
 
+    <div class="about-text">
+      <p style="margin-left:20px; margin-right:20px;">
+        北のスモークは、障がいの種別や重さを問わず、多様なメンバーが集う
+        札幌市の「地域支援センター」です。
+      </p>
 
+      <p style="margin-left:20px; margin-right:20px;">
+        食品加工、下請け作業、畑作業、手芸品製作、バザーへの出店など、幅広い活動を行っています。
+      </p>
 
-<div class="inner">
+      <p style="margin-left:20px; margin-right:20px;">
+        一人ひとりが自分に合った作業に取り組み、
+        それぞれの力を発揮できるよう努めています。
+      </p>
 
+      <p style="margin-left:20px; margin-right:20px;">
+        また、作業だけではなく、清掃や昼食の調理、行事での外出、誕生日会やクリスマス会など、日々の生活も大切にしながら、楽しい時間を共に過ごしています。
+      </p>
 
-
-<h2 style="font-size:20px;">私たちの活動について</h2>
-
-
-
-
-  <div class="about-text">
-<p style="margin-left:20px; margin-right:20px;">
-北のスモークは、障がいの種別や重さを問わず、多様なメンバーが集う
-札幌市の「地域支援センター」です。
-</p>
-
-<p style="margin-left:20px; margin-right:20px;">
-食品加工、下請け作業、畑作業、手芸品製作、バザーへの出店など、幅広い活動を行っています。
-</p>
-<p style="margin-left:20px; margin-right:20px;">
-一人ひとりが自分に合った作業に取り組み、
-それぞれの力を発揮できるよう努めています。
-<p style="margin-left:20px; margin-right:20px;">
-また、作業だけではなく、清掃や昼食の調理、行事での外出、誕生日会やクリスマス会など、日々の生活も大切にしながら、楽しい時間を共に過ごしています。
-</p>
-    
-<div class="about-bottom-line">🌱</div>
-</div>
-
-
-</div>
-
-
-
+      <div class="about-bottom-line">🌱</div>
+    </div>
+  </div>
 </section>
-<!-- ===== 私たちの活動 ===== -->
+
 <section class="activities">
   <div class="inner">
-
     <h2>作る ｜ 受託 ｜ 出店 ｜ レクリエーション</h2>
 
     <div class="activity-slider">
-
       <button class="activity-arrow prev">‹</button>
-
       <div class="leaves">🍃　🍃</div>
-
       <strong>準 備 中</strong>
-
       <div class="sprout">🌱</div>
-
       <small>しばらくお待ちください</small>
-
       <button class="activity-arrow next">›</button>
 
       <div class="activity-dots">
@@ -1845,37 +955,32 @@ footer p{
         <span class="activity-dot"></span>
         <span class="activity-dot"></span>
       </div>
-
     </div>
 
     <div class="activity-note">
       🍃 枠の中で4つの活動項目が切り替わります。<br>
       各項目に複数の画像がある場合は、横にスライドしてご覧いただけます。
     </div>
-
   </div>
 </section>
 
-
-
-
-
-
-<!-- ===== 商品ラインナップ ===== -->
 <section class="products">
   <div class="inner">
     <h2>見出し名考え中</h2>
-<p class="product-tap-note">画像をタップすると拡大できます。</p>
+    <p class="product-tap-note">画像をタップすると拡大できます。</p>
+
     <div class="product-grid">
+
       <div class="product-wrap">
         <h3 class="product-name">チーズスモーク</h3>
         <div class="product-slot">
-        <img class="product-image" src="cheese-smoke.png" alt="チーズスモーク" onclick="openImage(this.src)">
+          <img class="product-image" src="cheese-smoke.png" alt="チーズスモーク" onclick="openImage(this.src)">
           <div class="product-info">
             <p class="product-description">北海道生乳を100%使用したおいしいプロセスチーズをじっくり燻しました。北のスモーク1番人気商品です。</p>
           </div>
         </div>
       </div>
+
       <div class="product-wrap">
         <h3 class="product-name">ブルーベリージャム</h3>
         <div class="product-slot">
@@ -1885,15 +990,17 @@ footer p{
           </div>
         </div>
       </div>
-  <div class="product-wrap">
-  <h3 class="product-name">菊芋チップス</h3>
-  <div class="product-slot">
-    <div class="seasonal-placeholder">只今画像準備中です。</div>
-    <div class="product-info">
-      <p class="product-description">説明文</p>
-    </div>
-  </div>
-</div>
+
+      <div class="product-wrap">
+        <h3 class="product-name">菊芋チップス</h3>
+        <div class="product-slot">
+          <div class="seasonal-placeholder">只今画像準備中です。</div>
+          <div class="product-info">
+            <p class="product-description">説明文</p>
+          </div>
+        </div>
+      </div>
+
       <div class="product-wrap">
         <h3 class="product-name">リサイクルエコ石鹸</h3>
         <div class="product-slot">
@@ -1903,15 +1010,17 @@ footer p{
           </div>
         </div>
       </div>
+
       <div class="product-wrap">
         <h3 class="product-name">手芸品</h3>
         <div class="product-slot">
-         <img class="product-image" src="handmade.png" alt="手芸品" onclick="openImage(this.src)">
+          <img class="product-image" src="handmade.png" alt="手芸品" onclick="openImage(this.src)">
           <div class="product-info">
             <p class="product-description">説明文</p>
           </div>
         </div>
       </div>
+
       <div class="product-wrap">
         <h3 class="product-name">季節限定商品</h3>
         <div class="product-slot">
@@ -1921,394 +1030,51 @@ footer p{
           </div>
         </div>
       </div>
-    </div>
-    <p class="product-note">
 
-  <p class="product-note">※受注製造の商品もございます。お電話にてご確認ください。</p>
-   
+    </div>
+
+    <p class="product-note">※受注製造の商品もございます。お電話にてご確認ください。</p>
   </div>
 </section>
 
-
-<!-- ===== SNS ===== -->
-
-
-
 <section class="sns">
+  <div class="inner">
+    <h2>SNS</h2>
+    <p>日々の活動や最新情報を掲載しています。</p>
 
-
-
-<div class="inner">
-
-
-
-<h2>SNS</h2>
-
-
-
-<p>
-
-
-
-日々の活動や最新情報を掲載しています。
-
-
-
-</p>
-
-
-
-<a
-
-
-
-href="https://ameblo.jp/sumokubei/"
-
-
-
-class="blog-button"
-
-
-
-target="_blank"
-
-
-
-rel="noopener noreferrer">
-
-
-
-北スモblog
-
-
-
-<span class="arrow">›</span>
-
-
-
-</a>
-
-
-
-</div>
-
-
-
+    <a
+      href="https://ameblo.jp/sumokubei/"
+      class="blog-button"
+      target="_blank"
+      rel="noopener noreferrer">
+      北スモblog
+      <span class="arrow">›</span>
+    </a>
+  </div>
 </section>
-
-
-
-<!-- ===== アクセス ===== -->
-
-
 
 <section class="access">
+  <div class="inner">
+    <h2>アクセス</h2>
 
+    <div class="address">
+      〒004-0805<br>
+      北海道札幌市清田区里塚緑ケ丘12丁目3-22<br>
+      <span class="phone">TEL：011-883-3356</span>
+    </div>
 
-
-<div class="inner">
-
-
-
-<h2>アクセス</h2>
-
-
-
-<div class="address">
-
-
-
-〒004-0805<br>
-
-
-
-北海道札幌市清田区里塚緑ケ丘12丁目3-22<br>
-
-
-
-<span class="phone">
-
-
-
-TEL：011-883-3356
-
-
-
-</span>
-
-
-
-</div>
-
-
-
-<div class="map">
-
-
-
-<iframe
-
-
-
-src="https://www.google.com/maps?q=北海道札幌市清田区里塚緑ケ丘12丁目3-22&output=embed"
-
-
-
-loading="lazy"
-
-
-
-referrerpolicy="no-referrer-when-downgrade"
-
-
-
-title="北のスモーク Googleマップ">
-
-
-
-</iframe>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps?q=北海道札幌市清田区里塚緑ケ丘12丁目3-22&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="北のスモーク Googleマップ">
+      </iframe>
+    </div>
+  </div>
 </section>
-
-
-
-<!-- ===== フッター ===== -->
-
-
-
-<footer>
-
 
 <footer>
   <p class="footer-name">特定非営利活動法人 北のスモーク</p>
-
   <div class="footer-leaf">🌱</div>
-
-  <p class="footer-copy">© 2026 KITA NO SMOKE　All Rights Reserved.</p>
-</footer>
-
-
-
-
-</footer>
-
-
-
-<!-- ===== 商品画像 拡大 ===== -->
-
-
-
-<div
-
-
-
-id="imageModal"
-
-
-
-class="modal"
-
-
-
-onclick="closeImage()">
-
-
-
-<span
-
-
-
-class="modal-close"
-
-
-
-onclick="closeImage()">
-
-
-
-×
-
-
-
-</span>
-
-
-
-<
-
-
-
-id="modalImage"
-
-
-
-src=""
-
-
-
-alt="商品画像拡大"
-
-
-
-onclick="event.stopPropagation()">
-
-
-
-</div>
-
-
-
-<script>
-
-
-
-function openImage(src){
-
-
-
-  const modal =
-
-
-
-    document.getElementById("imageModal");
-
-
-
-  const image =
-
-
-
-    document.getElementById("modalImage");
-
-
-
-  image.src = src;
-
-
-
-  modal.classList.add("show");
-
-
-
-  document.body.style.overflow = "hidden";
-
-
-
-}
-
-
-
-function closeImage(){
-
-
-
-  document
-
-
-
-    .getElementById("imageModal")
-
-
-
-    .classList.remove("show");
-
-
-
-  document.body.style.overflow = "";
-
-
-
-}
-
-
-
-document.addEventListener(
-
-
-
-  "keydown",
-
-
-
-  function(event){
-
-
-
-    if(event.key === "Escape"){
-
-
-
-      closeImage();
-
-
-
-    }
-
-
-
-  }
-
-
-
-);
-
-
-function openImage(src) {
-  const overlay = document.createElement("div");
-  overlay.style.cssText = "position:fixed;inset:0;background:rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;z-index:99999;padding:20px;cursor:pointer;";
-
-  const img = document.createElement("img");
-  img.src = src;
-  img.style.cssText = "max-width:95%;max-height:90vh;object-fit:contain;border-radius:10px;";
-
-  overlay.appendChild(img);
-  overlay.onclick = () => overlay.remove();
-  document.body.appendChild(overlay);
-}
-</script>
-<style>
-img[src="cheese-smoke.png"]{
-  object-fit:cover !important;
-  object-position:center center !important;
-  transform:none !important;
-  background:#cdbda9 !important;
- 
-}
-
-img[src="handmade.png"]{
-  object-position:center 58% !important;
-  background:rgb(196,178,157) !important;
-}
-  .product-tap-note{
-  margin:-12px 0 20px !important;
-  text-align:center !important;
-  font-size:11px !important;
-  color:#8a7769 !important;
-}
-  .product-note{
-  margin:-12px 0 20px !important;
-  text-align:center !important;
-  font-size:11px !important;
-  color:#8a7769 !important;
-    margin-top:10px !important;
-}
-
-
-</style>
-
-
-</body>
-
-
-
-
+  <p class="footer-copy">© 
