@@ -646,29 +646,42 @@ transparent 100%
 
 
 footer{
-
-
-
-  background :#56351f;
-
-
-
-  color:#fff;
-
-
-
-  padding:24px 15px;
-
-
-
+  background:#56351f;
+  color:#fffaf2;
+  padding:28px 15px 26px;
   text-align:center;
+}
 
+.footer-name{
+  margin:0;
+  font-size:16px;
+  font-weight:500;
+  letter-spacing:.04em;
+}
 
+.footer-leaf{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin:9px auto 7px;
+  font-size:15px;
+}
 
-  font-size:13px;
+.footer-leaf::before,
+.footer-leaf::after{
+  content:"";
+  width:55px;
+  height:1px;
+  background:#fffaf2;
+  opacity:.8;
+}
 
-
-
+.footer-copy{
+  margin:0;
+  font-size:10px;
+  letter-spacing:.12em;
+  white-space:nowrap;
 }
 
 
@@ -2080,8 +2093,14 @@ title="北のスモーク Googleマップ">
 <footer>
 
 
+<footer>
+  <p class="footer-name">特定非営利活動法人 北のスモーク</p>
 
-<p>© 2026 北のスモーク</p>
+  <div class="footer-leaf">🌱</div>
+
+  <p class="footer-copy">© 2026 KITA NO SMOKE　All Rights Reserved.</p>
+</footer>
+
 
 
 
