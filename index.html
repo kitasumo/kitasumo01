@@ -1077,4 +1077,25 @@ footer p{
 <footer>
   <p class="footer-name">特定非営利活動法人 北のスモーク</p>
   <div class="footer-leaf">🌱</div>
-  <p class="footer-copy">© 
+  <p class="footer-copy">© 2026 北のスモーク</p>
+</footer>
+
+<!-- 商品画像 拡大表示 -->
+<div id="imageModal" class="modal" onclick="closeImage()">
+  <span class="modal-close">&times;</span>
+  <img id="modalImage" src="" alt="拡大画像">
+</div>
+
+<script>
+function openImage(src){
+  document.getElementById("modalImage").src = src;
+  document.getElementById("imageModal").classList.add("show");
+}
+
+function closeImage(){
+  document.getElementById("imageModal").classList.remove("show");
+}
+</script>
+
+</body>
+</html>
