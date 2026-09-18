@@ -102,11 +102,7 @@ h2::after{
   margin:0 0 20px;
 }
 
-/* ===== SNS ===== */
-.sns h2{
-  font-size:20px;
-}
-
+/* ===== SNS・関連リンク ===== */
 .sns{
   background:#fff;
   text-align:center;
@@ -114,15 +110,15 @@ h2::after{
   padding-bottom:48px;
 }
 
-.sns p{
-  margin:0 0 24px;
-  font-size:14px;
+.sns h2{
+  font-size:20px;
+  margin-bottom:18px;
 }
 
 .sns h2::after{
   content:"";
   display:block;
-  width:55px;
+  width:140px;
   height:3px;
   margin:10px auto 0;
   background:linear-gradient(
@@ -134,14 +130,100 @@ h2::after{
   );
 }
 
-/* ===== 北スモblog ===== */
+.sns p{
+  margin:0 0 26px;
+  font-size:14px;
+}
+
+.sns-links-wrap{
+  width:100%;
+  max-width:760px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  align-items:start;
+}
+
+.sns-blog{
+  display:flex;
+  justify-content:flex-start;
+  align-items:flex-start;
+}
+
 .ameblo-image{
-  width:220px;
-  max-width:70%;
+  width:260px;
+  max-width:100%;
   height:auto;
   display:block;
-  margin:0 auto;
+  margin:0;
 }
+
+.related-links{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  text-align:left;
+}
+
+.related-links a{
+  display:block;
+  padding:9px 12px;
+  background:#fff8ef;
+  border:1px solid #ead8c7;
+  border-radius:8px;
+  color:#553725;
+  font-size:13px;
+  line-height:1.4;
+  text-decoration:none;
+}
+
+.related-links a:hover{
+  background:#f7eee3;
+}
+
+@media(max-width:650px){
+  .sns{
+    padding:38px 14px 42px;
+  }
+
+  .sns h2{
+    font-size:19px;
+  }
+
+  .sns p{
+    font-size:13px;
+    margin-bottom:22px;
+  }
+
+  .sns-links-wrap{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    align-items:start;
+  }
+
+  .sns-blog{
+    justify-content:flex-start;
+  }
+
+  .ameblo-image{
+    width:100%;
+    max-width:165px;
+    margin:0;
+  }
+
+  .related-links{
+    gap:7px;
+  }
+
+  .related-links a{
+    padding:7px 6px;
+    font-size:10px;
+    border-radius:7px;
+  }
+}
+
+
 
 
 
@@ -1032,15 +1114,47 @@ footer p{
 
 <section class="sns">
   <div class="inner">
-    <h2>SNS</h2>
+
+    <h2>SNS・関連リンク</h2>
+
     <p>日々の活動や最新情報を掲載しています。</p>
 
-  <a
-  href="https://ameblo.jp/sumokubei/"
-  target="_blank"
-  rel="noopener noreferrer">
-  <img src="blog -aicon.PNG" alt="北スモblog" class="ameblo-image">
-</a>  
+    <div class="sns-links-wrap">
+
+      <div class="sns-blog">
+        <a
+          href="https://ameblo.jp/sumokubei/"
+          target="_blank"
+          rel="noopener noreferrer">
+          <img
+            src="blog -aicon.PNG"
+            alt="北スモblog"
+            class="ameblo-image">
+        </a>
+      </div>
+
+      <div class="related-links">
+
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          さっされん
+        </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          ナイスハートネット
+        </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          元気ショップいこ〜る
+        </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          ひろまある清田
+        </a>
+
+      </div>
+
+    </div>
+
   </div>
 </section>
 
