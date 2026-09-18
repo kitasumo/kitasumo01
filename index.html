@@ -147,7 +147,41 @@ h2::after{
   gap:10px;
   text-align:left;
 }
+.related-links a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 16px;
+  background:#fff;
+  border:2px solid #6b4328;
+  border-left-width:6px;
+  border-radius:12px;
+  color:#2f5d3a;
+  font-size:14px;
+  font-weight:700;
+  line-height:1.4;
+  text-decoration:none;
+}
 
+.related-links a::before{
+  content:"↗";
+  font-size:16px;
+  color:#6b4328;
+  font-weight:700;
+}
+
+.related-links a::after{
+  content:"›";
+  margin-left:auto;
+  font-size:20px;
+  color:#6b4328;
+  font-weight:700;
+}
+
+.related-links a:hover{
+  background:#f3e2d1;
+  transform:translateY(-1px);
+}
 .related-links a{
   display:flex;
   align-items:center;
