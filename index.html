@@ -115,38 +115,86 @@ h2::after{
   margin:0 0 20px;
 }
 
-/* ===== SNS ===== */
-.sns h2{
-  font-size:20px;
-}
-
-.sns{
-  background:#fff;
+/* ===== SNS・関連リンク ===== */
+.sns-section{
   text-align:center;
-  padding-top:48px;
-  padding-bottom:48px;
+}
+.sns-title{
+  display:inline-block;
+  margin:0 0 22px;
+  color:#553725;
+  font-size:26px;
+  line-height:1.4;
 }
 
-.sns p{
-  margin:0 0 24px;
-  font-size:14px;
-}
-
-.sns h2::after{
+.sns-title::after{
   content:"";
   display:block;
-  width:55px;
+  width:100%;
   height:3px;
   margin:10px auto 0;
-  background:linear-gradient(
-    to right,
-    transparent 0%,
-    #dc7c31 12%,
-    #dc7c31 88%,
-    transparent 100%
-  );
+  background:#dc7c31;
 }
 
+.sns-lead{
+  margin:0 0 30px;
+  text-align:center;
+}
+
+.sns-links-wrap{
+  max-width:680px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:50px;
+  text-align:left;
+}
+
+.sns-blog,
+.related-links{
+  flex:1;
+}
+
+.sns-blog h3,
+.related-links h3{
+  margin:0 0 12px;
+  font-size:18px;
+  color:#553725;
+}
+
+.sns-blog img{
+  width:260px;
+  max-width:100%;
+}
+
+.related-links p{
+  margin:7px 0;
+}
+
+@media(max-width:650px){
+  .sns-title{
+    font-size:24px;
+  }
+
+  .sns-links-wrap{
+    gap:20px;
+  }
+
+  .sns-blog h3,
+  .related-links h3{
+    font-size:14px;
+  }
+
+  .related-links p{
+    font-size:12px;
+    margin:5px 0;
+  }
+
+  .sns-blog img{
+    width:100%;
+  }
+}
 /* ===== 北スモblog ===== */
 .ameblo-image{
   width:220px;
@@ -1043,17 +1091,40 @@ footer p{
   </div>
 </section>
 
-<section class="sns">
+<section class="sns-section">
   <div class="inner">
-    <h2>SNS</h2>
-    <p>日々の活動や最新情報を掲載しています。</p>
 
-  <a
-  href="https://ameblo.jp/sumokubei/"
-  target="_blank"
-  rel="noopener noreferrer">
-  <img src="blog -aicon.PNG" alt="北スモblog" class="ameblo-image">
-</a>  
+    <h2 class="sns-title">SNS・関連リンク</h2>
+
+    <p class="sns-lead">
+      北スモの最新情報を、SNSや関連サイトでもご覧いただけます。
+    </p>
+
+    <div class="sns-links-wrap">
+
+      <div class="sns-blog">
+        <h3>北スモブログ</h3>
+
+        <a
+          href="https://ameblo.jp/sumokubei/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="blog -aicon.PNG" alt="北スモblog">
+        </a>
+      </div>
+
+      <div class="related-links">
+        <h3>関連リンク</h3>
+
+        <p>さっされん</p>
+        <p>ナイスハートネット</p>
+        <p>元気ショップ いこ〜る</p>
+        <p>ひろまある清田</p>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
