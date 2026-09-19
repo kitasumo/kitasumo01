@@ -1120,7 +1120,9 @@ footer p{
       </div>
 <div class="latest-post">
   <span>最新記事</span>
-  <a href="#">記事タイトルが入ります →</a>
+  <a id="latest-post-link" href="https://ameblo.jp/sumokubei/" target="_blank" rel="noopener noreferrer">
+    読み込み中...
+  </a>
 </div>
       
 
@@ -1171,6 +1173,22 @@ function openImage(src){
 function closeImage(){
   document.getElementById("imageModal").classList.remove("show");
 }
+ fetch("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frssblog.ameba.jp%2Fsumokubei%2Frss20.xml")
+  .then(response => response.json())
+  .then(data => {
+    if(data.status === "ok" && data.items && data.items.length > 0){
+      const latest = data.items[0];
+      const link = document.getElementById("latest-post-link");
+
+      link.textContent = latest.title + " →";
+      link.href = latest.link;
+    }
+  })
+  .catch(() => {
+    const link = document.getElementById("latest-post-link");
+    link.textContent = "最新記事を見る →";
+    link.href = "https://ameblo.jp/sumokubei/";
+  }); 
 </script>
 
 </body>
