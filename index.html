@@ -1239,7 +1239,7 @@ function closeImage(){
       const latest = data.items[0];
       const link = document.getElementById("latest-post-link");
 
-    link.textContent = latest.title + "\u00A0→";
+    link.textContent = latest.title + "\u2060→";
       link.href = latest.link;
     }
   })
