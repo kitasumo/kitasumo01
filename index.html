@@ -695,11 +695,29 @@ footer p{
 
   .activity-slider{
     width:94%;
-    min-height:300px;
+   min-height:0;
     padding:30px 42px 20px;
     border-radius:16px;
   }
+.activity-slider img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:14px;
+}
+  .activity-images{
+  width:100%;
+  overflow:hidden;
+}
 
+.activity-images img{
+  display:none;
+}
+
+.activity-images img:first-child{
+  display:block;
+}
   .activity-slider .leaves{ font-size:22px; }
   .activity-slider strong{ font-size:32px; }
   .activity-slider .sprout{ font-size:38px; }
@@ -1048,10 +1066,11 @@ footer p{
 
     <div class="activity-slider">
       <button class="activity-arrow prev">‹</button>
-      <div class="leaves">🍃　🍃</div>
-      <strong>準 備 中</strong>
-      <div class="sprout">🌱</div>
-      <small>しばらくお待ちください</small>
+     <div class="activity-images">
+  <img src="activity-work-1.jpeg" alt="作業の様子1">
+  <img src="activity-work-2.jpg" alt="作業の様子2">
+  <img src="activity-work-3.jpg" alt="作業の様子3">
+</div>
       <button class="activity-arrow next">›</button>
 
       <div class="activity-dots">
@@ -1238,6 +1257,27 @@ function openImage(src){
 function closeImage(){
   document.getElementById("imageModal").classList.remove("show");
 }
+  let activityIndex = 0;
+
+const activityImages = document.querySelectorAll(".activity-images img");
+const activityPrev = document.querySelector(".activity-arrow.prev");
+const activityNext = document.querySelector(".activity-arrow.next");
+
+function showActivityImage(index){
+  activityImages.forEach((img, i) => {
+    img.style.display = i === index ? "block" : "none";
+  });
+}
+
+activityNext.addEventListener("click", () => {
+  activityIndex = (activityIndex + 1) % activityImages.length;
+  showActivityImage(activityIndex);
+});
+
+activityPrev.addEventListener("click", () => {
+  activityIndex = (activityIndex - 1 + activityImages.length) % activityImages.length;
+  showActivityImage(activityIndex);
+});
  fetch("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frssblog.ameba.jp%2Fsumokubei%2Frss20.xml")
   .then(response => response.json())
   .then(data => {
