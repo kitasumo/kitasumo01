@@ -1044,12 +1044,23 @@ footer p{
 }
 
 .product-grid{
+  position:relative;
   width:calc(100% - 20px) !important;
   margin-left:auto !important;
   margin-right:auto !important;
-  background:#dedbd5;
   border-radius:16px;
   padding:14px 6px;
+}
+  .product-grid::before{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:-10px;
+  right:-10px;
+  background:#dedbd5;
+  border-radius:16px;
+  z-index:-1;
 }
 }
  
