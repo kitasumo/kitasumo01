@@ -1014,6 +1014,17 @@ footer p{
   .cheese-image{
   object-fit:cover !important;
 }
+  .product-wrap:first-child .product-price{
+  margin:0 0 2px;
+  font-size:14px;
+  font-weight:700;
+  line-height:1.3;
+}
+
+.product-wrap:first-child .product-description{
+  font-size:10px !important;
+  line-height:1.4 !important;
+}
   @media (max-width:650px){
   #latest-post{
     white-space:nowrap;
@@ -1127,11 +1138,12 @@ footer p{
       <div class="product-wrap">
         <h3 class="product-name">チーズスモーク</h3>
         <div class="product-slot">
-       <img class="product-image cheese-image" src="cheese-smoke.png" alt="チーズスモーク" onclick="openImage(this.src)">
-          <div class="product-info">
-            <p class="product-description">北海道生乳を100%使用したおいしいプロセスチーズをじっくり燻しました。北のスモーク1番人気商品です。</p>
-          </div>
-        </div>
+       <img class="product-image cheese-image" src="cheese-smoke.png" alt="チーズスモーク" onclick="openImage(
+      <div class="product-info">
+  <p class="product-price">800円</p>
+  <p class="product-description">北海道産チーズをじっくり燻製。<br>北スモ人気商品です。</p>
+</div>     
+ </div>
       </div>
 
       <div class="product-wrap">
