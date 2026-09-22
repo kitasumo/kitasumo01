@@ -1023,6 +1023,33 @@ footer p{
     white-space:nowrap;
   }
 }
+  /* ===== 商品ラインナップ 外側グレー枠 ===== */
+.products .inner{
+  background:#dedbd5;
+  border-radius:18px;
+  padding:28px 20px 24px;
+}
+
+@media(max-width:650px){
+  .products .inner{
+    width:94%;
+    padding:22px 0 18px;
+    border-radius:16px;
+  }
+
+  .products h2,
+  .product-tap-note,
+  .product-note{
+    padding-left:10px;
+    padding-right:10px;
+  }
+
+  .product-grid{
+    width:calc(100% + 20px) !important;
+    margin-left:-10px !important;
+  }
+}
+  
 </style>
 </head>
 
