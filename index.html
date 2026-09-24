@@ -693,7 +693,30 @@ footer p{
     width:270px;
   }
 
-  .activity-slider{
+   .activity-tabs{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:6px;
+    margin-bottom:20px;
+  }
+
+  .activity-tab{
+    padding:7px 10px;
+    border:1.5px solid #c96f2b;
+    border-radius:18px;
+    background:#fffaf3;
+    color:#63351d;
+    font-size:12px;
+    font-weight:700;
+    white-space:nowrap;
+  }
+
+  .activity-tab.active{
+    background:#c96f2b;
+    color:#fff;
+    }
+.activity-slider{
     width:94%;
    min-height:0;
     padding:30px 42px 20px;
@@ -1103,8 +1126,12 @@ footer p{
 
 <section class="activities">
   <div class="inner">
-    <h2>作る ｜ 受託 ｜ 出店 ｜ レクリエーション</h2>
-
+   <div class="activity-tabs">
+  <button class="activity-tab active">作る</button>
+  <button class="activity-tab">受託</button>
+  <button class="activity-tab">出店</button>
+  <button class="activity-tab">レクリエーション</button>
+</div>
     <div class="activity-slider">
       <button class="activity-arrow prev">‹</button>
      <div class="activity-images">
