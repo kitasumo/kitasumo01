@@ -1371,6 +1371,14 @@ activityPrev.addEventListener("click", () => {
     link.textContent = "最新記事を見る →";
     link.href = "https://ameblo.jp/sumokubei/";
   }); 
+const activityTabs = document.querySelectorAll(".activity-tab");
+
+activityTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    activityTabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+  });
+});
 </script>
 
 </body>
