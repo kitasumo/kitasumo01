@@ -287,17 +287,6 @@ margin-right:0;
 .access{
   background:#fff8ef;
   text-align:center;
-  position:relative;
-}
-
-.access::before{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  top:-40px;
-  height:40px;
-  background:#fff8ef;
 }
 
 .address{
@@ -1098,6 +1087,12 @@ display:flex;
   border-radius:12px;
   color:#553725;
   }
+  @media(max-width:650px){
+  .access-up{
+    transform:translateY(-40px);
+    margin-bottom:-40px;
+  }
+  }
 </style>
 </head>
 
@@ -1302,7 +1297,7 @@ onclick="openImage(this.src)">
 
   
 </section>
-<section class="access">
+<section class="access access-up">
   <div class="inner">
     <h2>アクセス</h2>
 
