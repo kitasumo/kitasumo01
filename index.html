@@ -1044,6 +1044,35 @@ footer p{
     overflow-x:hidden;
   }
 }
+  .access-features{
+  display:flex;
+  justify-content:space-around;
+  align-items:flex-start;
+  gap:8px;
+  margin:22px auto 18px;
+}
+
+.access-feature{
+  width:33.333%;
+  text-align:center;
+  font-size:12px;
+  font-weight:700;
+  line-height:1.4;
+}
+
+.access-icon{
+  width:42px;
+  height:42px;
+  margin:0 auto 7px;
+  border-radius:50%;
+  background:#1687e8;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:23px;
+  font-weight:700;
+}
 </style>
 </head>
 
@@ -1255,9 +1284,25 @@ onclick="openImage(this.src)">
     <div class="address">
       〒004-0805<br>
       北海道札幌市清田区里塚緑ケ丘12丁目3-22<br>
-      <span class="phone">TEL：011-883-3356</span>
+      <span class="phone">TEL：011-883-3356</span><br>
+<span class="fax">FAX：011-886-3354</span>
     </div>
+<div class="access-features">
+  <div class="access-feature">
+    <div class="access-icon">♿</div>
+    <div>車椅子対応入口</div>
+  </div>
 
+  <div class="access-feature">
+    <div class="access-icon">🚻</div>
+    <div>車椅子対応<br>トイレあり</div>
+  </div>
+
+  <div class="access-feature">
+    <div class="access-icon">P</div>
+    <div>駐車場あり</div>
+  </div>
+</div>
     <div class="map">
       <iframe
         src="https://www.google.com/maps?q=北海道札幌市清田区里塚緑ケ丘12丁目3-22&output=embed"
