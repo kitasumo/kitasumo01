@@ -1117,6 +1117,89 @@ display:flex;
     padding-top:45px;
   }
 }
+  .activity-product-bridge{
+  width:100%;
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  padding:12px 14px 14px;
+  background:#fff4e8;
+  color:#9a4215;
+}
+
+.bridge-text{
+  text-align:center;
+  font-size:22px;
+  line-height:1.35;
+  font-weight:700;
+}
+
+.bridge-sprout{
+  position:relative;
+  font-size:28px;
+  line-height:1;
+}
+
+/* 左のオレンジ飾り */
+.bridge-sprout:first-child::before,
+.bridge-sprout:first-child::after{
+  content:"";
+  position:absolute;
+  width:14px;
+  height:2px;
+  background:#e8872f;
+  right:-14px;
+}
+
+.bridge-sprout:first-child::before{
+  top:-8px;
+  transform:rotate(45deg);
+}
+
+.bridge-sprout:first-child::after{
+  top:-1px;
+  right:-20px;
+  transform:rotate(25deg);
+}
+
+/* 右のオレンジ飾り */
+.bridge-sprout:last-child::before,
+.bridge-sprout:last-child::after{
+  content:"";
+  position:absolute;
+  width:14px;
+  height:2px;
+  background:#e8872f;
+  left:-14px;
+}
+
+.bridge-sprout:last-child::before{
+  top:-8px;
+  transform:rotate(-45deg);
+}
+
+.bridge-sprout:last-child::after{
+  top:-1px;
+  left:-20px;
+  transform:rotate(-25deg);
+}
+
+@media(max-width:650px){
+  .activity-product-bridge{
+    gap:14px;
+    padding:11px 8px 13px;
+  }
+
+  .bridge-text{
+    font-size:20px;
+  }
+
+  .bridge-sprout{
+    font-size:25px;
+  }
+}
 </style>
 </head>
 
@@ -1181,12 +1264,19 @@ display:flex;
     </div>
 
     <div class="activity-note">
-食品加工や受託作業、イベントへの出店など、さまざまな活動に取り組んでいます。日々の作業を経て、下記の商品が出来上がります。<br>
 上のタブから、それぞれの活動の様子をご覧いただけます。<br>
 <span style="color:#c66a2b;">複数の画像がある項目は、横にスライドしてご覧ください。</span>
     </div>
   </div>
 </section>
+<div class="activity-product-bridge">
+  <span class="bridge-sprout">🌱</span>
+  <div class="bridge-text">
+    日々の活動を通して、<br>
+    下記の商品が出来上がります。
+  </div>
+  <span class="bridge-sprout">🌱</span>
+</div>
 
 <section class="products">
   <div class="inner">
