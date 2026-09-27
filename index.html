@@ -720,7 +720,16 @@ footer p{
   color:#4f6d3b;
 }
  
-  
+  @supports (-webkit-touch-callout: none) {
+  .activity-tab{
+    padding:13px 15px;
+    font-size:15px;
+  }
+
+  .activity-tabs{
+    gap:5px;
+  }
+}
 .activity-caption{
   margin:10px 0 6px;
   font-size:12px;
