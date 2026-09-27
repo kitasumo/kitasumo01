@@ -1200,10 +1200,15 @@ display:flex;
     font-size:25px;
   }
 }
+  html.is-android .bridge-text{
+  font-size:17px;
+  letter-spacing:-0.3px;
+  }
 </style>
 </head>
 
 <body>
+  <script>if(/Android/i.test(navigator.userAgent)){document.documentElement.classList.add('is-android');}</script>
 
 <header class="hero">
   <img src="kitasumo-header-new.png" alt="北のスモーク">
