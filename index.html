@@ -1412,14 +1412,23 @@ const activityCaptions = [
   "施設の下駄箱を作る作業です。",
   "施設前の歩道の雑草を刈り、お花を植えました。"
 ];
-
+const activityDots = document.querySelectorAll(".activity-dot");
 const activityCaption = document.querySelector(".activity-caption");
+
+ 
 function showActivityImage(index){
   activityImages.forEach((img, i) => {
     img.style.display = i === index ? "block" : "none";
   });
+
   activityCaption.textContent = activityCaptions[index];
+
+  activityDots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
+  });
 }
+
+  
 
 activityNext.addEventListener("click", () => {
   activityIndex = (activityIndex + 1) % activityImages.length;
