@@ -283,16 +283,34 @@ margin-right:0;
 }
 
 /* ===== フッター ===== */
-.footer-image{
+footer{
+  background:#dc7c31;
+  color:#fffaf2;
+  padding:16px 15px;
+  text-align:center;
+}
+@media(max-width:650px){
+  footer{
+    margin-top:140px;
+  }
+}
+.footer-name{
   margin:0;
-  padding:0;
-  background:#fff;
+  font-size:16px;
+  font-weight:500;
+  letter-spacing:.04em;
 }
 
-.footer-image img{
-  display:block;
-  width:100%;
-  height:auto;
+
+
+.footer-copy{
+  margin:0;
+  font-size:10px;
+  letter-spacing:.12em;
+  white-space:nowrap;
+}
+
+footer p{
   margin:0;
 }
 
@@ -1366,8 +1384,10 @@ onclick="openImage(this.src)">
   </div>
 </section>
 
-<footer class="footer-image">
-<img src="footer.PNG" alt="地域活動支援センター 北のスモーク">
+<footer>
+  <p class="footer-name">北のスモーク</p>
+  
+  <p class="footer-copy">© 2026 特定非営利活動法人　地域活動支援センター 北のスモーク</p>
 </footer>
 
 <!-- 商品画像 拡大表示 -->
