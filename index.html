@@ -1137,6 +1137,25 @@ display:flex;
   }
 
 }
+  .order-guide{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:4px;
+  color:#553725;
+  font-size:11px;
+  font-weight:700;
+  line-height:1.5;
+}
+
+@media(max-width:650px){
+  .order-guide{
+    font-size:9px;
+    line-height:1.45;
+    padding:2px;
+  }
+}
 </style>
 </head>
 
@@ -1219,78 +1238,92 @@ display:flex;
   <div class="inner">
     <h2>北スモ商品ラインナップ</h2>
     <p class="product-tap-note">画像をタップすると拡大できます。</p>
+<div class="product-grid">
 
-   <div class="product-gray-box">
-  <div class="product-grid">
-      <div class="product-wrap">
-        <h3 class="product-name">チーズスモーク</h3>
-        <div class="product-slot">
-       <img class="product-image cheese-image"
-src="cheese-smoke-new1.PNG" alt="チーズスモーク"
-onclick="openImage(this.src)">
-
-<div class="product-info">
-  <p class="product-price">800円</p>
-  <p class="product-description">北海道産チーズをじっくり燻製。<br>
-  一番商品です。</p>
-</div>
-</div>
-</div>
-
-      <div class="product-wrap">
-        <h3 class="product-name">ブルーベリージャム</h3>
-        <div class="product-slot">
-          <img class="product-image" src="blueberry-jam-new.PNG" alt="ブルーベリージャム" onclick="openImage(this.src)">
-  <div class="product-info">
-  <p class="product-price">800円</p>
-  <p class="product-description">国産ブルーベリーと、てんさい糖のみ使用してます。</p>
-</div>       
-        </div>
-      </div>
-
-      <div class="product-wrap">
-        <h3 class="product-name">菊芋チップス</h3>
-        <div class="product-slot">
-          <div class="seasonal-placeholder">只今画像準備中です。</div>
-          <div class="product-info">
-            <p class="product-description">説明文</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-wrap">
-        <h3 class="product-name">リサイクルエコ石鹸</h3>
-        <div class="product-slot">
-          <img class="product-image" src="recycle-soap-new.PNG" alt="リサイクルエコ石鹸" onclick="openImage(this.src)">
-          <div class="product-info">
-            <p class="product-price">60円</p>
-<p class="product-description">廃油と苛性ソーダで作る<br>エコ石鹸です。</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-wrap">
-        <h3 class="product-name">手芸品</h3>
-        <div class="product-slot">
-          <img class="product-image" src="handmade.png" alt="手芸品" onclick="openImage(this.src)">
-          <div class="product-info">
-            <p class="product-description">説明文</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-wrap">
-        <h3 class="product-name">季節限定商品</h3>
-        <div class="product-slot">
-          <div class="seasonal-placeholder">季節限定商品</div>
-          <div class="product-info">
-            <p class="product-description">季節に合わせた商品をご用意しています。</p>
-          </div>
-        </div>
-      </div>
-
+  <div class="product-wrap">
+    <h3 class="product-name">チーズスモーク</h3>
+    <div class="product-slot">
+      <img class="product-image cheese-image"
+        src="cheese-smoke-new1.PNG"
+        alt="チーズスモーク"
+        onclick="openImage(this.src)">
     </div>
-     </div>
+  </div>
+
+  <div class="product-wrap">
+    <h3 class="product-name">ブルーベリージャム</h3>
+    <div class="product-slot">
+      <img class="product-image"
+        src="blueberry-jam-new.PNG"
+        alt="ブルーベリージャム"
+        onclick="openImage(this.src)">
+    </div>
+  </div>
+
+  <div class="product-wrap">
+    <h3 class="product-name">菊芋チップス</h3>
+    <div class="product-slot">
+      <div class="seasonal-placeholder">
+        只今画像<br>準備中です。
+      </div>
+    </div>
+  </div>
+
+  <div class="product-wrap">
+    <h3 class="product-name">リサイクルエコ石鹸</h3>
+    <div class="product-slot">
+      <img class="product-image"
+        src="recycle-soap-new.PNG"
+        alt="リサイクルエコ石鹸"
+        onclick="openImage(this.src)">
+    </div>
+  </div>
+
+  <div class="product-wrap">
+    <h3 class="product-name">手芸品（エプロン）</h3>
+    <div class="product-slot">
+      <div class="seasonal-placeholder">
+        只今画像<br>準備中です。
+      </div>
+    </div>
+  </div>
+
+  <div class="product-wrap">
+    <h3 class="product-name">手芸品（枕）</h3>
+    <div class="product-slot">
+      <div class="seasonal-placeholder">
+        只今画像<br>準備中です。
+      </div>
+    </div>
+  </div>
+
+  <div class="product-wrap">
+    <h3 class="product-name">工作品</h3>
+    <div class="product-slot">
+      <div class="seasonal-placeholder">
+        只今画像<br>準備中です。
+      </div>
+    </div>
+  </div>
+
+  <div class="product-wrap">
+    <h3 class="product-name">季節限定品</h3>
+    <div class="product-slot">
+      <div class="seasonal-placeholder">
+        只今画像<br>準備中です。
+      </div>
+    </div>
+  </div>
+
+  <div class="order-guide">
+    🌱 受注生産の商品も<br>
+    ございますので、🌱<br>
+    お電話にてご確認<br>
+    いただけると幸いです。
+  </div>
+
+</div>
+</div>
     <p class="product-note">※受注製造の商品もございます。お電話にてご確認ください。</p>
   </div>
 </section>
