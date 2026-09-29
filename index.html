@@ -792,11 +792,17 @@ margin-right:0;
   display:block;
   width:100%;
   aspect-ratio:1 / 1;
-  object-fit:cover;
+  object-fit:contain;
   object-position:center center;
   background:#d7c7b5;
   cursor:zoom-in;
   border-bottom:2px solid #c98a5a;
+}
+  .product-image[src="blueberry.JPEG"],
+.product-image[src="soap.PNG"]{
+  aspect-ratio:auto;
+  height:auto;
+  object-fit:unset;
 }
 
 .product-info{
