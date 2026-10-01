@@ -1459,14 +1459,43 @@ function closeImage(){
 const activityImages = document.querySelectorAll(".activity-images img");
 const activityPrev = document.querySelector(".activity-arrow.prev");
 const activityNext = document.querySelector(".activity-arrow.next");
-const activityCaptions = [
+let activityCaptions = [
   "受託にて、食品の箱詰め作業を行っています。",
   "出来上がった石鹸の形を整える作業です。",
   "施設の下駄箱を作る作業です。",
   "施設前の歩道の雑草を刈り、お花を植えました。"
 ];
+
+const activityCaptionSets = {
+  "受託": [
+    "受託にて、食品の箱詰め作業を行っています。",
+    "出来上がった石鹸の形を整える作業です。",
+    "施設の下駄箱を作る作業です。",
+    "施設前の歩道の雑草を刈り、お花を植えました。"
+  ],
+  "作業": [
+    "廃食油をこして、不純物を取り除きます。",
+    "材料を加え、しっかり混ぜ合わせます。",
+    "とろみが出るまで、40分程度丁寧に混ぜ続けます。",
+    "出来上がった石鹸の形を整える作業です。"
+  ]
+};
 const activityDots = document.querySelectorAll(".activity-dot");
 const activityCaption = document.querySelector(".activity-caption");
+  const activitySets = {
+  "受託": [
+    "activity-work-1new1.PNG",
+    "activity-work-2-new.jpg",
+    "activity-work-3-new2.PNG",
+    "activity-flowerbed.PNG"
+  ],
+  "作業": [
+    "activity-2-1.JPG",
+    "activity-2-2.JPG",
+    "activity-2-3.JPG",
+    "activity-work-2-new.jpg"
+  ]
+};
 
  
 function showActivityImage(index){
@@ -1508,12 +1537,37 @@ activityPrev.addEventListener("click", () => {
     link.textContent = "最新記事を見る →";
     link.href = "https://ameblo.jp/sumokubei/";
   }); 
-const activityTabs = document.querySelectorAll(".activity-tab");
+const activityTabs =
+document.querySelectorAll(".activity-tab");
 
 activityTabs.forEach(tab => {
   tab.addEventListener("click", () => {
-    activityTabs.forEach(t => t.classList.remove("active"));
+    activityTabs.forEach(t =>
+      t.classList.remove("active")
+    );
     tab.classList.add("active");
+
+    const tabName = tab.textContent.trim();
+const set = activitySets[tabName];
+const captions = activityCaptionSets[tabName];
+
+if(!set || !captions) return;
+
+activityCaptions = captions;
+activityCaption.textContent = activityCaptions[0];
+
+    activityIndex = 0;
+
+    activityImages.forEach((img, i) => {
+      if(set[i]){
+        img.src = set[i];
+        img.style.display = i === 0 ? "block" : "none";
+      }
+    });
+
+    activityDots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === 0);
+    });
   });
 });
 </script>
