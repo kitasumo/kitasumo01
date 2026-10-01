@@ -317,6 +317,7 @@ margin-right:0;
   display:none;
   align-items:center;
   justify-content:center;
+  flex-direction:column;
   padding:4px;
   background:rgba(0,0,0,.94);
 }
@@ -342,6 +343,21 @@ margin-right:0;
   font-size:44px;
   line-height:1;
   cursor:pointer;
+}
+  #modalTitle{
+  margin:12px 0 4px;
+  color:#fff;
+  font-size:18px;
+  font-weight:700;
+  text-align:center;
+}
+
+#modalDescription{
+  margin:0;
+  color:#fff;
+  font-size:14px;
+  line-height:1.7;
+  text-align:center;
 }
 
 /* ===== スマホ ===== */
@@ -1259,7 +1275,7 @@ display:flex;
       <img class="product-image cheese-image"
         src="cheese-smoke-new1.PNG"
         alt="チーズスモーク"
-        onclick="openImage(this.src)">
+       onclick="openImage(this.src, 'チーズスモーク', '北海道生乳100%のプロセスチーズを<br>クルミのチップで燻製しています。<br><br>香りも楽しめるおいしいチーズです。<br>北スモ一番人気商品です。<br>是非ご賞味下さい。<br><br>800円（税込み）')"
     </div>
   </div>
 
@@ -1441,11 +1457,15 @@ display:flex;
 <div id="imageModal" class="modal" onclick="closeImage()">
   <span class="modal-close">&times;</span>
   <img id="modalImage" src="" alt="拡大画像">
+  <p id="modalTitle"></p>
+<p id="modalDescription"></p>
 </div>
 
 <script>
-function openImage(src){
+function openImage(src, title = "", description = ""){
   document.getElementById("modalImage").src = src;
+  document.getElementById("modalTitle").textContent = title;
+  document.getElementById("modalDescription").innerHTML = description;
   document.getElementById("imageModal").classList.add("show");
 }
 
