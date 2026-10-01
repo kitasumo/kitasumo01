@@ -1629,6 +1629,22 @@ activityTabs.forEach(tab => {
 
 
 buildActivitySlider();
+  fetch("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frssblog.ameba.jp%2Fsumokubei%2Frss20.xml")
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === "ok" && data.items && data.items.length > 0) {
+      const latest = data.items[0];
+      const link = document.getElementById("latest-post-link");
+
+      if (link) {
+        link.textContent = latest.title;
+        link.href = latest.link;
+      }
+    }
+  })
+  .catch(error => {
+    console.error("ブログ最新記事取得エラー:", error);
+  });
 </script>
 
 </body>
