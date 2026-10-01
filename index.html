@@ -1454,128 +1454,152 @@ function openImage(src){
 function closeImage(){
   document.getElementById("imageModal").classList.remove("show");
 }
-  
-let activityIndex = 0;
-let activityCaptions = [];
+  let activityIndex = 0;
 
-const activityImages = document.querySelectorAll(".activity-images img");
-const activityPrev = document.querySelector(".activity-arrow.prev");
-const activityNext = document.querySelector(".activity-arrow.next");
-const activityDots = document.querySelectorAll(".activity-dot");
-const activityCaption = document.querySelector(".activity-caption");
+const activityImagesWrap =
+  document.querySelector(".activity-images");
+
+const activityDotsWrap =
+  document.querySelector(".activity-dots");
+
+const activityPrev =
+  document.querySelector(".activity-arrow.prev");
+
+const activityNext =
+  document.querySelector(".activity-arrow.next");
+
+const activityCaption =
+  document.querySelector(".activity-caption");
+
+const activityTabs =
+  document.querySelectorAll(".activity-tab");
+
 
 const activitySets = {
-  "受託": [
-    "activity-work-1new1.PNG"
-  ],
 
-  "作業": [
-    "activity-2-1.JPG",
-    "activity-2-2.JPG",
-    "activity-2-3.JPG",
-    "activity-work-2-new.jpg"
-  ],
+  "受託": {
+    images: [
+      "activity-work-1new1.PNG"
+    ],
+    captions: [
+      "受託にて、食品の箱詰め作業を行っています。"
+    ]
+  },
 
-  "その他の活動": [
-    "activity-work-3-new2.PNG",
-    "activity-flowerbed.PNG"
-  ]
+  "作業": {
+    images: [
+      "activity-2-1.JPG",
+      "activity-2-2.JPG",
+      "activity-2-3.JPG",
+      "activity-work-2-new.jpg"
+    ],
+    captions: [
+      "廃食油をこして、不純物を取り除きます。",
+      "材料を加え、しっかり混ぜ合わせます。",
+      "とろみが出るまで、40分程度丁寧に混ぜ続けます。",
+      "出来上がった石鹸の形を整える作業です。"
+    ]
+  },
+
+  "その他の活動": {
+    images: [
+      "activity-work-3-new2.PNG",
+      "activity-flowerbed.PNG"
+    ],
+    captions: [
+      "施設の下駄箱を作る作業です。",
+      "施設前の歩道の雑草を刈り、お花を植えました。"
+    ]
+  }
+
 };
 
-const activityCaptionSets = {
-  "受託": [
-    "受託にて、食品の箱詰め作業を行っています。"
-  ],
 
-  "作業": [
-    "廃食油をこして、不純物を取り除きます。",
-    "材料を加え、しっかり混ぜ合わせます。",
-    "とろみが出るまで、40分程度丁寧に混ぜ続けます。",
-    "出来上がった石鹸の形を整える作業です。"
-  ],
+let currentSet = activitySets["受託"];
 
-  "その他の活動": [
-    "施設の下駄箱を作る作業です。",
-    "施設前の歩道の雑草を刈り、お花を植えました。"
-  ]
-};
 
-let currentActivitySet = activitySets["受託"];
+function buildActivitySlider(){
 
-function showActivityImage(index){
-  activityImages.forEach((img, i) => {
+  activityImagesWrap.innerHTML = "";
+  activityDotsWrap.innerHTML = "";
+
+  currentSet.images.forEach((src, i) => {
+
+    const img = document.createElement("img");
+
+    img.src = src;
+    img.alt = "活動の様子";
+
     img.style.display =
-      i === index && i < currentActivitySet.length
-      ? "block"
-      : "none";
+      i === activityIndex ? "block" : "none";
+
+    activityImagesWrap.appendChild(img);
+
+
+    const dot = document.createElement("span");
+
+    dot.className =
+      i === activityIndex
+      ? "activity-dot active"
+      : "activity-dot";
+
+    activityDotsWrap.appendChild(dot);
+
   });
 
-  activityCaption.textContent = activityCaptions[index] || "";
 
-  activityDots.forEach((dot, i) => {
-    dot.style.display =
-      i < currentActivitySet.length ? "block" : "none";
+  activityCaption.textContent =
+    currentSet.captions[activityIndex] || "";
 
-    dot.classList.toggle("active", i === index);
-  });
 
-  const showArrows = currentActivitySet.length > 1;
-  activityPrev.style.display = showArrows ? "flex" : "none";
-  activityNext.style.display = showArrows ? "flex" : "none";
+  const showArrows =
+    currentSet.images.length > 1;
+
+  activityPrev.style.display =
+    showArrows ? "flex" : "none";
+
+  activityNext.style.display =
+    showArrows ? "flex" : "none";
 }
 
-activityNext.addEventListener("click", () => {
-  activityIndex =
-    (activityIndex + 1) % currentActivitySet.length;
 
-  showActivityImage(activityIndex);
+function changeActivity(index){
+
+  activityIndex = index;
+
+  if(activityIndex < 0){
+    activityIndex =
+      currentSet.images.length - 1;
+  }
+
+  if(activityIndex >= currentSet.images.length){
+    activityIndex = 0;
+  }
+
+  buildActivitySlider();
+}
+
+
+activityNext.addEventListener("click", () => {
+  changeActivity(activityIndex + 1);
 });
+
 
 activityPrev.addEventListener("click", () => {
-  activityIndex =
-    (activityIndex - 1 + currentActivitySet.length)
-    % currentActivitySet.length;
-
-  showActivityImage(activityIndex);
-});
-  
-
-activityNext.addEventListener("click", () => {
-  activityIndex = (activityIndex + 1) % activityImages.length;
-  showActivityImage(activityIndex);
+  changeActivity(activityIndex - 1);
 });
 
-activityPrev.addEventListener("click", () => {
-  activityIndex = (activityIndex - 1 + activityImages.length) % activityImages.length;
-  showActivityImage(activityIndex);
-});
- fetch("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frssblog.ameba.jp%2Fsumokubei%2Frss20.xml")
-  .then(response => response.json())
-  .then(data => {
-    if(data.status === "ok" && data.items && data.items.length > 0){
-      const latest = data.items[0];
-      const link = document.getElementById("latest-post-link");
-
-    link.textContent = latest.title + "\u2060→";
-      link.href = latest.link;
-    }
-  })
-  .catch(() => {
-    const link = document.getElementById("latest-post-link");
-    link.textContent = "最新記事を見る →";
-    link.href = "https://ameblo.jp/sumokubei/";
-  }); 
-const activityTabs =
-document.querySelectorAll(".activity-tab");
 
 activityTabs.forEach(tab => {
+
   tab.addEventListener("click", () => {
 
-    const tabName = tab.textContent.trim();
-    const set = activitySets[tabName];
-    const captions = activityCaptionSets[tabName];
+    const tabName =
+      tab.textContent.trim();
 
-    if(!set || !captions) return;
+    if(!activitySets[tabName]){
+      return;
+    }
 
     activityTabs.forEach(t =>
       t.classList.remove("active")
@@ -1583,30 +1607,19 @@ activityTabs.forEach(tab => {
 
     tab.classList.add("active");
 
-    currentActivitySet = set;
-    activityCaptions = captions;
+    currentSet =
+      activitySets[tabName];
+
     activityIndex = 0;
 
-    activityImages.forEach((img, i) => {
-      if(set[i]){
-        img.src = set[i];
-      }
-    });
+    buildActivitySlider();
 
-    showActivityImage(0);
   });
+
 });
 
-currentActivitySet = activitySets["受託"];
-activityCaptions = activityCaptionSets["受託"];
 
-activityImages.forEach((img, i) => {
-  if(currentActivitySet[i]){
-    img.src = currentActivitySet[i];
-  }
-});
-
-showActivityImage(0);
+buildActivitySlider();
 </script>
 
 </body>
