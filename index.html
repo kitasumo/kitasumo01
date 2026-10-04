@@ -1185,12 +1185,15 @@ display:flex;
   
 html.is-android .shop-guide p{
   letter-spacing:-0.7px;
-  font-weight:600 !important;
+  font-weight:700 !important;
 }
-  .product-slot,
-.product-info{
-  background:transparent !important;
-  box-shadow:none !important;
+
+.android-break{
+  display:none;
+}
+
+html.is-android .android-break{
+  display:inline;
 }
   @media(max-width:650px){
 
@@ -1546,7 +1549,7 @@ padding:6px;
   <p>
   チーズスモーク、ブルーベリージャム、エコ石鹸は、<br>
   大通元気ショップ・元気ショップいこ〜るでも販売しています。<br>
-  お近くにお越しの際は是非、お立ち寄りください。
+  お近くにお越しの際は是非、<br class="android-break">お立ち寄りください。
 </p>
  
  
