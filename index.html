@@ -1087,7 +1087,12 @@ display:flex;
   border-radius:12px;
   color:#553725;
   }
-  
+  @media(max-width:650px){
+  .access-up{
+    transform:translateY(-40px);
+    margin-bottom:-40px;
+  }
+  }
   @media(max-width:650px){
   .access{
     padding-top:45px;
@@ -1177,15 +1182,15 @@ display:flex;
     font-size:25px;
   }
 }
-  
-
-
-.android-break{
-  display:none;
+  html.is-android .bridge-text{
+  font-size:17px;
+  letter-spacing:-0.3px;
+  }
+  .product-slot,
+.product-info{
+  background:transparent !important;
+  box-shadow:none !important;
 }
-
-
-
   @media(max-width:650px){
 
   .product-info{
@@ -1217,7 +1222,13 @@ display:flex;
   line-height:1.5;
 }
 
-
+@media(max-width:650px){
+  .order-guide{
+    font-size:9px;
+    line-height:1.45;
+    padding:2px;
+  }
+}
   .work-illust-wrap{
   display:flex;
   align-items:flex-end;
@@ -1284,7 +1295,7 @@ padding:6px;
     margin:18px auto 10px;
     display:grid;
     
-  grid-template-columns:1fr;
+  grid-template-columns:1fr 1fr;
 
     gap:10px;
     align-items:start;
@@ -1292,18 +1303,10 @@ padding:6px;
 
 .shop-related-row .shop-guide{
   width:100%;
-  margin:18px auto 0;
-  
+  margin:18px 0 0;
+  transform:translateX(-12px);
 }
 
-
-
-  .shop-related-row .simple-related-links{
-  width:100%;
-  margin:20px 0 0;
-  position:relative;
-  left:8px;
-}
 .shop-related-row .shop-guide h3{
   margin:0 0 6px;
   font-size:13px;
@@ -1311,9 +1314,13 @@ padding:6px;
   text-align:center;
 }
 
-.shop-related-row .shop-guide p{
-  text-align:center !important;
+  .shop-related-row .simple-related-links{
+  width:100%;
+  margin:20px 0 0;
+  position:relative;
+  left:8px;
 }
+
   .shop-related-row .simple-related-links h3{
     width:100%;
     margin:0 0 6px;
@@ -1535,12 +1542,12 @@ padding:6px;
    <div class="shop-related-row">
  <div class="shop-guide">
   <h3>商品販売案内</h3>
-  <p style="text-align:center;">
-  <span style="display:inline-block; text-align:left; font-size:13px; line-height:1.6;">
-    下記のリンク先でも<br>チーズスモーク・ブルーベリージャム
-    エコ石鹸を<br>ご購入いただけます。
-  </span>
+  <p>
+  チーズスモーク、ブルーベリージャム、エコ石鹸は、<br>
+  大通元気ショップ・元気ショップいこ〜るでも販売しています。<br>
+  お近くにお越しの際は是非、お立ち寄りください。
 </p>
+ 
  
 </div>
     <div class="simple-related-links">
