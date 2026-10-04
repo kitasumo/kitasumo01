@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>北のスモーク</title>
-
 <style>
 *{
   box-sizing:border-box;
@@ -70,6 +69,8 @@ h2::after{
   color:#553725;
   font-weight:700;
 }
+
+
 
 .about-text{
   max-width:900px;
@@ -139,6 +140,7 @@ h2::after{
   margin:0;
 }
 
+
 @media(max-width:650px){
   .sns{
     padding:38px 14px 42px;
@@ -155,7 +157,7 @@ h2::after{
   }
 
   .sns-links-wrap{
-    grid-template-columns:1fr 1fr;
+   grid-template-columns:1fr 1fr;
     gap:10px;
     align-items:start;
   }
@@ -163,53 +165,90 @@ h2::after{
   .sns-blog{
     justify-content:flex-start;
     transform:translateX(-30px);
-  }
+    }
+  
 
   .ameblo-image{
     width:100%;
     max-width:165px;
     margin:0;
-    transform:scale(2.55);
-    transform-origin:left top;
-    position:relative;
-    top:-115px;
-  }
-
+   transform:scale(2.55);
+  transform-origin:left top;
+     position:relative;
+top:-115px;
+}
   .latest-post{
-    width:90%;
+  width:90%;
     margin:10px auto 25px;
-    padding:12px 14px;
-    text-align:left;
-    background:#fff8ef;
-    border:1px solid #ead8c7;
-    border-radius:10px;
-  }
+  padding:12px 14px;
+  text-align:left;
+  background:#fff8ef;
+  border:1px solid #ead8c7;
+  border-radius:10px;
+}
+.latest-post span{
+  display:block;
+  font-size:12px;
+  font-weight:700;
+  color:#5f7f53;
+  margin-bottom:6px;
+}
 
-  .latest-post span{
-    display:block;
-    font-size:12px;
-    font-weight:700;
-    color:#5f7f53;
-    margin-bottom:6px;
-  }
 
-  .latest-post a{
-    font-size:13px;
-    line-height:1.6;
-    color:#553725;
-    font-weight:700;
-    text-decoration:none;
-  }
+.latest-post a{
+  font-size:13px;
+  line-height:1.6;
+  color:#553725;
+  font-weight:700;
+  text-decoration:none;
+}
+  
+ .new-badge{
+  margin-left:6px;
+  padding:2px 5px;
+  font-size:9px;
+  color:#fff;
+  background:#dc7c31;
+  border-radius:4px;
+  vertical-align:1px;
+}
 
-  .new-badge{
-    margin-left:6px;
-    padding:2px 5px;
-    font-size:9px;
-    color:#fff;
-    background:#dc7c31;
-    border-radius:4px;
-    vertical-align:1px;
-  }
+ .simple-related-links{
+  width:90%;
+  margin:18px auto 10px;
+  text-align:left;
+}
+.simple-related-links{
+  margin-top:18px;
+}
+.simple-related-links h3{
+  margin:0 0 6px auto;
+  width:50%;
+  font-size:13px;
+  font-weight:700;
+  text-align:center;
+}
+
+.simple-related-links a{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:9px 2px;
+  border-bottom:1px solid #d8c7b8;
+  
+  font-size:12px;
+  font-weight:600;
+  text-decoration:none;
+  width:50%;
+margin-left:auto;
+margin-right:0;
+}
+
+.simple-related-links a:last-child{
+  border-bottom:none;
+}
+
+
 }
 
 /* ===== アクセス ===== */
@@ -251,8 +290,7 @@ h2::after{
   color:#777;
   margin:0 0 12px;
 }
-
-.recruit-note{
+ .recruit-note{
   width:88%;
   max-width:620px;
   margin:45px auto 28px;
@@ -272,6 +310,8 @@ h2::after{
   color:#44372f;
 }
 
+
+
 @media(max-width:650px){
   .recruit-note{
     width:88%;
@@ -283,20 +323,18 @@ h2::after{
     font-size:12px;
     line-height:1.85;
   }
-
   .recruit-title{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    margin:0 0 6px;
-
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin:0 0 6px;
     .recruit-title span:first-child,
-    .recruit-title span:last-child{
-      font-size:17px;
-      flex:none;
-    }
-  }
+.recruit-title span:last-child{
+  font-size:17px;
+  flex:none;
+
+}
 }
 
 /* ===== フッター ===== */
@@ -325,7 +363,6 @@ h2::after{
     object-position:center;
   }
 }
-
 /* ===== 商品画像タップ拡大 ===== */
 .modal{
   position:fixed;
@@ -361,8 +398,7 @@ h2::after{
   line-height:1;
   cursor:pointer;
 }
-
-#modalTitle{
+  #modalTitle{
   margin:12px 0 4px;
   color:#fff;
   font-size:18px;
@@ -376,7 +412,8 @@ h2::after{
   font-size:14px;
   line-height:1.7;
   text-align:center;
-  white-space:pre-line;
+  white-space: pre-line;
+  text-align:center;
 }
 
 /* ===== スマホ ===== */
@@ -421,18 +458,20 @@ h2::after{
   }
 
   .about-text p{
-    width:100% !important;
-    margin:0 0 12px !important;
-    line-height:1.65;
-  }
+  width:100% !important;
+  margin:0 0 12px !important;
+  line-height:1.65;
+}
 
   .sns{
     padding-top:25px;
   }
 
-  .sns p{
-    font-size:12px;
-  }
+ .sns p{
+  font-size:12px;
+}
+
+ 
 
   .address{
     font-size:13px;
@@ -445,6 +484,7 @@ h2::after{
 }
 
 /* ===== 見出し下線 調整 ===== */
+
 .about h2::after{
   content:"🌱" !important;
   display:flex !important;
@@ -524,11 +564,12 @@ h2::after{
   .access h2::after{
     width:90px;
   }
-
   .access{
-    padding-top:24px;
-  }
+  padding-top:24px;
 }
+}
+
+
 
 /* ===== 私たちの活動 ===== */
 .activities{
@@ -582,7 +623,6 @@ h2::after{
   text-align:center;
   color:#63351d;
 }
-
 .activity-arrow{
   position:absolute;
   top:50%;
@@ -622,6 +662,7 @@ h2::after{
   background:#7a3f1d;
 }
 
+
 .activity-note{
   width:92%;
   max-width:760px;
@@ -650,101 +691,93 @@ h2::after{
     width:270px;
   }
 
-  .activity-tabs{
+   .activity-tabs{
     display:flex;
     justify-content:center;
     align-items:center;
     gap:6px;
-    margin-top:-15px;
-    margin-bottom:20px;
+     margin-top:-15px;
+    margin-bottom:20px;   
   }
-
   .activity-tab{
-    padding:12px 15px;
-    border:1.5px solid #d8b88f;
-    border-radius:20px;
-    background:#f7eadc;
-    color:#63351d;
-    font-size:14px;
-    font-weight:700;
-    white-space:nowrap;
-    box-shadow:0 2px 5px rgba(0,0,0,.08);
+  padding:12px 15px;
+  border:1.5px solid #d8b88f;
+  border-radius:20px;
+  background:#f7eadc;
+  color:#63351d;
+  font-size:14px;
+  font-weight:700;
+  white-space:nowrap;
+  box-shadow:0 2px 5px rgba(0,0,0,.08);
+  }
+.activity-tab.active{
+  background:#dbe8cf;
+  border-color:#88a875;
+  color:#4f6d3b;
+}
+ 
+  @supports (-webkit-touch-callout: none) {
+  .activity-tab{
+    padding:13px 15px;
+    font-size:15px;
   }
 
-  .activity-tab.active{
-    background:#dbe8cf;
-    border-color:#88a875;
-    color:#4f6d3b;
+  .activity-tabs{
+    gap:5px;
   }
-
-  @supports (-webkit-touch-callout:none){
-    .activity-tab{
-      padding:13px 15px;
-      font-size:15px;
-    }
-
-    .activity-tabs{
-      gap:5px;
-    }
-  }
-
-  .activity-caption{
-    margin:10px 0 6px;
-    font-size:12px;
-    line-height:1.5;
-    text-align:center;
-    color:#333;
-  }
-
-  .activity-slider{
+}
+.activity-caption{
+  margin:10px 0 6px;
+  font-size:12px;
+  line-height:1.5;
+  text-align:center;
+  color:#333;
+}
+ 
+.activity-slider{
     width:94%;
-    min-height:0;
-    padding:30px 30px 20px;
+   min-height:0;
+   padding:30px 30px 20px;
     border-radius:16px;
   }
-
-  .activity-slider img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    object-position:center;
-    border-radius:14px;
-  }
-
+.activity-slider img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:14px;
+}
   .activity-slider img[src="oshima-tsumugi.jpeg"]{
-    object-position:center 25%;
-  }
-
+  object-position:center 25%;
+}
   .activity-images{
-    width:100%;
-    overflow:hidden;
-  }
+  width:100%;
+  overflow:hidden;
+}
 
-  .activity-images img{
-    display:none;
-  }
+.activity-images img{
+  display:none;
+}
 
-  .activity-images img:first-child{
-    display:block;
-  }
-
+.activity-images img:first-child{
+  display:block;
+}
   .activity-slider .leaves{ font-size:22px; }
   .activity-slider strong{ font-size:32px; }
   .activity-slider .sprout{ font-size:38px; }
   .activity-slider small{ font-size:13px; }
-
-  .activity-arrow{
-    top:43%;
-    width:26px;
-    height:44px;
-    border-radius:10px;
-    font-size:27px;
-    line-height:1;
-    padding:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
+.activity-arrow{
+  top:43%;
+  width:26px;
+  height:44px;
+  border-radius:10px;
+  font-size:27px;
+  line-height:1;
+  padding:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
   .activity-arrow.prev{ left:4px; }
   .activity-arrow.next{ right:4px; }
@@ -808,6 +841,7 @@ h2::after{
   min-width:0;
 }
 
+
 .product-name{
   margin:0 0 7px;
   min-height:30px;
@@ -829,6 +863,7 @@ h2::after{
   object-position:center center;
   background:#d7c7b5;
   cursor:zoom-in;
+  
 }
 
 .product-info{
@@ -837,6 +872,8 @@ h2::after{
   flex:1;
   background:#fff;
 }
+
+
 
 @media(max-width:650px){
   .products h2{
@@ -874,10 +911,10 @@ h2::after{
 }
 
 @media(max-width:650px){
-  .seasonal-placeholder{
-    font-size:13px;
-  }
+  .seasonal-placeholder{font-size:13px;}
 }
+
+
 
 @media(max-width:650px){
   .product-grid{
@@ -901,9 +938,915 @@ h2::after{
     font-size:8px !important;
     line-height:22px !important;
     letter-spacing:-0.35px !important;
+    
     text-align:center !important;
   }
 
   .product-slot{
     width:100% !important;
-    overflow:hidden !
+    overflow:hidden !important;
+    display:flex !important;
+    flex-direction:column !important;
+  }
+
+  .product-image{
+  display:block !important;
+  width:100% !important;
+  aspect-ratio:1/1 !important;
+  height:auto !important;
+  flex:none !important;
+}
+
+.seasonal-placeholder{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:100% !important;
+  aspect-ratio:1/1 !important;
+  height:auto !important;
+  flex:none !important;
+}
+  .product-image{
+    object-fit:contain !important;
+    object-position:center top !important;
+    background:#cdbda9 !important;
+  }
+
+  .seasonal-placeholder{
+    background:#cdbda9 !important;
+  }
+
+  .product-info{
+    padding:7px 6px 9px !important;
+    text-align:left !important;
+  }
+
+  .product-description{
+    margin:0 !important;
+    font-size:10px !important;
+    line-height:1.45 !important;
+    text-align:left !important;
+  }
+}
+ .product-tap-note,
+.product-note{
+  text-align:center;
+  font-size:10px;
+  white-space:nowrap;
+}
+ 
+  .product-price{
+  margin:0 0 2px;
+  font-size:14px;
+  font-weight:700;
+  line-height:1.3;
+}
+
+.product-wrap:first-child .product-description{
+  font-size:10px !important;
+  line-height:1.4 !important;
+}
+ 
+  /* ===== 商品ラインナップ 外側グレー枠 ===== */
+.products .inner{
+  
+  border-radius:18px;
+  padding:28px 20px 24px;
+}
+
+@media(max-width:650px){
+  .products .inner{
+    width:94%;
+    padding:22px 0 18px;
+    border-radius:16px;
+  }
+.products h2,
+.product-tap-note,
+.product-note{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.product-grid{
+  width:calc(100% - 20px) !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+  .product-gray-box{
+  background:#e6dfd5;
+  border-radius:16px;
+  padding:14px 10px;
+}
+}
+  @media(max-width:650px){
+  html,
+  body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+    background:#fbfcf7;
+  }
+}
+  .access-features{
+  display:flex;
+  justify-content:space-around;
+  align-items:flex-start;
+  gap:8px;
+  margin:22px auto 18px;
+}
+
+.access-feature{
+  width:33.333%;
+  text-align:center;
+  font-size:12px;
+  font-weight:700;
+  line-height:1.4;
+}
+
+.access-icon{
+  width:42px;
+  height:42px;
+  margin:0 auto 7px;
+    color:#1687e8;
+display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:23px;
+  font-weight:700;
+}
+  .transport-note{
+  margin:8px auto 16px;
+  padding:9px 8px;
+  max-width:95%;
+  text-align:center;
+  font-size:12px;
+  font-weight:700;
+  line-height:1.5;
+  background:#f7f9ef;
+  border:1px solid #b9c99f;
+  border-radius:12px;
+  color:#553725;
+  }
+  @media(max-width:650px){
+  .access-up{
+    transform:translateY(-40px);
+    margin-bottom:-40px;
+  }
+  }
+  @media(max-width:650px){
+  .access{
+    padding-top:45px;
+  }
+}
+  .activity-product-bridge{
+  width:100%;
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  padding:12px 14px 14px;
+  background:#fff4e8;
+  color:#9a4215;
+}
+
+.bridge-text{
+  text-align:center;
+  font-size:22px;
+  line-height:1.35;
+  font-weight:700;
+}
+
+.bridge-sprout{
+  position:relative;
+  font-size:28px;
+  line-height:1;
+}
+
+/* 左のオレンジ飾り */
+.bridge-sprout:first-child::before,
+.bridge-sprout:first-child::after{
+  content:"";
+  position:absolute;
+  width:14px;
+  height:2px;
+  background:#e8872f;
+  right:-14px;
+}
+
+.bridge-sprout:first-child::before{
+  top:-8px;
+  transform:rotate(45deg);
+}
+
+.bridge-sprout:first-child::after{
+  top:-1px;
+  right:-20px;
+  transform:rotate(25deg);
+}
+
+/* 右のオレンジ飾り */
+.bridge-sprout:last-child::before,
+.bridge-sprout:last-child::after{
+  content:"";
+  position:absolute;
+  width:14px;
+  height:2px;
+  background:#e8872f;
+  left:-14px;
+}
+
+.bridge-sprout:last-child::before{
+  top:-8px;
+  transform:rotate(-45deg);
+}
+
+.bridge-sprout:last-child::after{
+  top:-1px;
+  left:-20px;
+  transform:rotate(-25deg);
+}
+
+@media(max-width:650px){
+  .activity-product-bridge{
+    gap:14px;
+    padding:11px 8px 13px;
+    background:#fff8ef;
+  }
+
+  .bridge-text{
+    font-size:20px;
+  }
+
+  .bridge-sprout{
+    font-size:25px;
+  }
+}
+  html.is-android .bridge-text{
+  font-size:17px;
+  letter-spacing:-0.3px;
+  }
+  .product-slot,
+.product-info{
+  background:transparent !important;
+  box-shadow:none !important;
+}
+  @media(max-width:650px){
+
+  .product-info{
+    display:none !important;
+  }
+
+  .product-slot{
+    min-height:0 !important;
+  }
+
+  .product-image{
+    border-bottom:none !important;
+  }
+
+  .product-gray-box{
+    padding:8px 10px !important;
+  }
+
+}
+  .order-guide{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:4px;
+  color:#553725;
+  font-size:11px;
+  font-weight:700;
+  line-height:1.5;
+}
+
+@media(max-width:650px){
+  .order-guide{
+    font-size:9px;
+    line-height:1.45;
+    padding:2px;
+  }
+}
+  .work-illust-wrap{
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  overflow:hidden;
+  aspect-ratio:1 / 1;
+}
+
+.work-illust-wrap img{
+  width:230%;
+  max-width:none;
+  height:auto;
+  display:block;
+  transform:translateY(24%);
+}
+  @media(max-width:650px){
+
+  .shop-guide{
+  width:47%;
+  margin-top:25px;
+  margin-left:5%;
+  margin-right:auto;
+  text-align:left;
+  color:#553725;
+  background:#f7f9ef;
+border:1px solid #b9c99f;
+border-radius:10px;
+padding:6px;
+}
+
+.shop-guide img{
+  width:100%;
+  max-width:155px;
+  height:auto;
+  margin:0 auto 4px;
+}
+
+.shop-guide p{
+  margin:15px 0 0;
+  font-size:12px;
+  line-height:1.55;
+  text-align:left;
+  font-weight:600;
+  color:#44372f;
+}
+
+.shop-guide-stores{
+  color:#4f8b3b;
+  font-weight:700;
+  font-size:13px;
+}
+  .shop-guide-stores{
+    margin:7px 0;
+    font-size:11px;
+    line-height:1.7;
+    font-weight:700;
+    color:#557a45;
+  }
+}
+  @media(max-width:650px){
+
+  .shop-related-row{
+    width:90%;
+    margin:18px auto 10px;
+    display:grid;
+    
+  grid-template-columns:1fr 1fr;
+
+    gap:10px;
+    align-items:start;
+  }
+
+.shop-related-row .shop-guide{
+  width:100%;
+  margin:18px 0 0;
+  transform:translateX(-12px);
+}
+
+.shop-related-row .shop-guide h3{
+  margin:0 0 6px;
+  font-size:13px;
+  font-weight:700;
+  text-align:center;
+}
+
+  .shop-related-row .simple-related-links{
+  width:100%;
+  margin:20px 0 0;
+  position:relative;
+  left:8px;
+}
+
+  .shop-related-row .simple-related-links h3{
+    width:100%;
+    margin:0 0 6px;
+  }
+
+  .shop-related-row .simple-related-links a{
+    width:100%;
+    margin-left:0;
+    margin-right:0;
+  }
+
+  .shop-related-row .shop-guide img{
+    width:155px;
+    max-width:100%;
+    margin:0 auto 10px;
+    
+  }
+}
+</style>
+</head>
+
+<body>
+  <script>if(/Android/i.test(navigator.userAgent)){document.documentElement.classList.add('is-android');}</script>
+
+<header class="hero">
+  <img src="kitasumo-header-new.png" alt="北のスモーク">
+</header>
+
+<section class="about">
+  <div class="inner">
+    <h2 style="font-size:20px;">私たちの活動について</h2>
+
+    <div class="about-text">
+      <p style="margin-left:20px; margin-right:20px;">
+        北のスモークは、障がいの種別や重さを問わず、多様なメンバーが集う
+        札幌市の「地域支援センター」です。
+      </p>
+
+      <p style="margin-left:20px; margin-right:20px;">
+        食品加工、下請け作業、畑作業、手芸品製作、バザーへの出店など、幅広い活動を行っています。
+      </p>
+
+      <p style="margin-left:20px; margin-right:20px;">
+        一人ひとりが自分に合った作業に取り組み、
+        それぞれの力を発揮できるよう努めています。
+      </p>
+
+      <p style="margin-left:20px; margin-right:20px;">
+        また、作業だけではなく、清掃や昼食の調理、行事での外出、誕生日会やクリスマス会など、日々の生活も大切にしながら、楽しい時間を共に過ごしています。
+      </p>
+
+      <div class="about-bottom-line">🌱</div>
+    </div>
+  </div>
+</section>
+
+<section class="activities">
+  <div class="inner">
+   <div class="activity-tabs">
+  <button class="activity-tab active">受託</button>
+  <button class="activity-tab">作る</button>
+  <button class="activity-tab">出店</button>
+  <button class="activity-tab">その他の活動</button>
+</div>
+    <div class="activity-slider">
+      <button class="activity-arrow prev">‹</button>
+     <div class="activity-images">
+  <img src="activity-work-1new1.PNG" alt="作業の様子1">
+  <img src="activity-work-2-new.jpg" alt="作業の様子2">
+  <img src="activity-work-3-new2.PNG" alt="作業の様子3">
+    <img src="activity-flowerbed.PNG" alt="花壇整備の様子">   
+</div>
+      <button class="activity-arrow next">›</button>
+<p class="activity-caption">食品企業様の受託にて、食品の箱詰め作業を行っています。</p>
+      <div class="activity-dots">
+        <span class="activity-dot active"></span>
+        <span class="activity-dot"></span>
+        <span class="activity-dot"></span>
+        <span class="activity-dot"></span>
+      </div>
+    </div>
+
+    <div class="activity-note">
+上のタブから、それぞれの活動の様子をご覧いただけます。<br>
+<span style="color:#c66a2b;">複数の画像がある項目は、横にスライドしてご覧ください。</span>
+    </div>
+  </div>
+</section>
+<div class="activity-product-bridge">
+  <span class="bridge-sprout">🌱</span>
+  <div class="bridge-text">
+    日々の活動を経て<br>
+    下記の商品が出来上がります。
+  </div>
+  <span class="bridge-sprout">🌱</span>
+</div>
+<section class="products">
+  <div class="inner">
+    <h2>北スモ商品ラインナップ</h2>
+    <p class="product-tap-note">画像をタップすると拡大と説明がご覧いただけます。</p>
+<div class="product-grid">
+
+  <div class="product-wrap">
+    <h3 class="product-name">チーズスモーク</h3>
+    <div class="product-slot">
+      <img class="product-image cheese-image"
+        src="cheese-smoke-new1.PNG"
+        alt="チーズスモーク"
+       onclick="openImage(this.src, 'チーズスモーク', '北海道生乳100%のプロセスチーズを<br>クルミのチップで燻製しています。<br><br>香りも楽しめるおいしいチーズです。<br>北スモ一番人気商品です。<br>是非ご賞味下さい。<br><br>800円（税込み）')">
+    </div>
+  </div>
+
+  <div class="product-wrap">
+    <h3 class="product-name">ブルーベリージャム</h3>
+    <div class="product-slot">
+      <img class="product-image"
+        src="blueberry.JPEG"
+        alt="ブルーベリージャム"
+        onclick="openImage(this.src, 'ブルーベリージャム', '畑での収穫から製造・商品化まで、<br>北のスモークでおこなっています。<br><br>国産ブルーベリーと甜菜糖のみを使用した、<br>コク深くまろやかな味わいです。<br><br>800円（税込）')">
+    </div>
+  </div>
+
+  <div class="product-wrap">
+    <h3 class="product-name">菊芋チップス</h3>
+    <div class="product-slot">
+      <div class="seasonal-placeholder">
+        収穫待準備中
+      </div>
+    </div>
+  </div>
+
+  <div class="product-wrap">
+    <h3 class="product-name">リサイクルエコ石鹸</h3>
+    <div class="product-slot">
+      <img class="product-image"
+        src="sopa.PNG"
+        alt="リサイクルエコ石鹸"
+        onclick="openImage(this.src, 'リサイクルエコ石鹸', '廃油と苛性ソーダで作った、<br>リサイクルエコ石鹸です。<br><br>お掃除や食器洗いにお使いいただけます。<br>物価高の今、使いやすい価格で販売しています。<br>ぜひお試しください。<br><br>80円（税込）')">
+    </div>
+  </div>
+
+    <div class="product-wrap">
+    <h3 class="product-name">エプロンドレス</h3>
+    <div class="product-slot">
+      <img class="product-image"
+        src="handmade-apron.PNG"
+        alt="エプロンドレス"
+       onclick="openImage('apron-360.PNG', '手作りエプロンドレス', '腰まわりなどにストレッチゴムを使い<br>動きやすく仕上げています。<br>ちょっとおしゃれで、着やすいエプロンです。<br>生地の在庫があれば、柄の変更も可能です。<br><br>1,000円（税込）〜<br>※仕様により価格が変わります。')">
+    </div>
+  </div>
+
+  <div class="product-wrap">
+   <h3 class="product-name">岩手産たろう昆布</h3>
+<div class="product-slot">
+  <img class="product-image"
+       src="taro-kombu.PNG"
+       alt="岩手産たろう昆布"
+       onclick="openImage(this.src, '岩手産たろう昆布', '岩手県産宮古市（旧田老町）のたろう昆布。<br>三陸の豊かな海で育った昆布ならではの、<br>上品で深いコクのある出汁が取れます。<br>950円（税込み）')">
+</div>
+    </div>
+  
+
+  <div class="product-wrap">
+    <h3 class="product-name">牛乳パック椅子</h3>
+    <div class="product-slot">
+      <img class="product-image"
+        src="milkpack-chair.PNG"
+        alt="牛乳パック椅子"
+        onclick="openImage(this.src, '牛乳パック椅子', '牛乳パックとダンボールで強度を持たせた、手作り椅子です。<br>子供から大人までお使いいただけます。<br><br>四角形　1,800円（税込）<br>六角形　2,800円（税込）<br><br>※強い衝撃や無理な荷重はお避けください。')">
+    </div>
+  </div>
+  <div class="product-wrap">
+  <h3 class="product-name">そばがら枕</h3>
+  <div class="product-slot">
+    <img class="product-image"
+         src="sobagara-pillow.PNG"
+         alt="手芸品（枕）"
+         onclick="openImage(this.src, 'そば殻枕', '幌加内産の天然そば殻100％を使用した、手作り枕です。<br><br>1,200円〜（税込）<br><br>※そばアレルギーをお持ちの方は、ご使用をお控えください。')">
+  </div>
+</div>
+  </div>
+  
+</div>
+</div>
+    <p class="product-note">※受注製造の商品もございます。お電話にてご確認ください。</p>
+  </div>
+</section>
+
+<section class="sns">
+  <div class="inner">
+
+    <h2>ブログ・関連リンク</h2>
+
+    <p>日々の活動や最新情報を掲載しています。</p>
+
+    <div class="sns-links-wrap">
+
+      <div class="sns-blog">
+        <a
+          href="https://ameblo.jp/sumokubei/"
+          target="_blank"
+          rel="noopener noreferrer">
+          <img
+            src="blog -aicon.PNG"
+            alt="北スモblog"
+            class="ameblo-image">
+        </a>
+        
+</div>
+      </div>
+
+<div class="latest-post">
+ 
+  <span>最新記事 <b class="new-badge">NEW</b></span>
+  <a id="latest-post-link" href="https://ameblo.jp/sumokubei/" target="_blank" rel="noopener noreferrer">
+    読み込み中...
+  </a>
+</div>
+   <div class="shop-related-row">
+ <div class="shop-guide">
+  <h3>商品販売案内</h3>
+  <p>
+  チーズスモーク、ブルーベリージャム、エコ石鹸は、<br>
+  大通元気ショップ・元気ショップいこ〜るでも販売しています。<br>
+  お近くにお越しの際は是非、お立ち寄りください。
+</p>
+ 
+ 
+</div>
+    <div class="simple-related-links">
+  <h3>関連リンク</h3>
+
+  <a href="https://sassaren.or.jp/" target="_blank" rel="noopener noreferrer">
+    <span>さっされん</span><span>›</span>
+  </a>
+
+  <a href="https://nice-heart-net.jp/" target="_blank" rel="noopener noreferrer">
+    <span>ナイスハートネット</span><span>›</span>
+  </a>
+
+  <a href="https://genkishopequal.jp/" target="_blank" rel="noopener noreferrer">
+    <span>元気ショップ いこ〜る</span><span>›</span>
+  </a>
+
+  <a href="https://hiromaaru.org/" target="_blank" rel="noopener noreferrer">
+    <span>ひろまある清田</span><span>›</span>
+  </a>
+</div>
+</div>
+    </div>
+
+  
+</section>
+<section class="access access-up">
+  <div class="inner">
+    <h2>アクセス</h2>
+
+    <div class="address">
+      〒004-0805<br>
+      北海道札幌市清田区里塚緑ケ丘12丁目3-22<br>
+      <span class="phone">TEL：011-883-3356</span><br>
+<span class="fax">FAX：011-883-3356</span><br>
+<a class="mail-link" href="mailto:kitasumo@jk2.so-net.ne.jp">
+  ✉ メールでお問い合わせ
+</a>
+    </div>
+<div class="access-features">
+  <div class="access-feature">
+    <div class="access-icon">♿</div>
+    <div>車椅子対応入口</div>
+  </div>
+
+  <div class="access-feature">
+    <div class="access-icon">🚻</div>
+    <div>車椅子対応<br>トイレあり</div>
+  </div>
+
+  <div class="access-feature">
+    <div class="access-icon">🅿️</div>
+    <div>駐車場あり</div>
+  </div>
+</div>
+    <div class="transport-note">
+  🚐 通所の送迎もおこなってます。（日時は応相談）
+    </div>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps?q=北海道札幌市清田区里塚緑ケ丘12丁目3-22&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="北のスモーク Googleマップ">
+      </iframe>
+    </div>
+  </div>
+</section>
+ <div class="recruit-note">
+
+  <p class="recruit-title">
+    <span>☘️</span>
+    <span>
+      北のスモークでは、通所者さんと<br>
+      ボランティアさんを募集しています。
+    </span>
+    <span>☘️</span>
+  </p>
+
+  <p>
+    小規模な活動センターですので、親しみやすい環境です。<br>
+    活動の様子を見てから、ご検討いただくこともできます。<br>
+    興味のある方は、ぜひ一度お気軽に見学へお越しください。
+  </p>
+
+</div>
+  <p class="pc-adjust-note">※パソコン版は現在調整中です。</p>
+<footer class="footer-image">
+  <img src="footer -hd.png" alt="地域活動支援センター 北のスモーク">
+</footer>
+<!-- 商品画像 拡大表示 -->
+<div id="imageModal" class="modal" onclick="closeImage()">
+  <span class="modal-close">&times;</span>
+  <img id="modalImage" src="" alt="拡大画像">
+  <p id="modalTitle"></p>
+<p id="modalDescription"></p>
+</div>
+
+<script>
+function openImage(src, title = "", description = ""){
+  document.getElementById("modalImage").src = src;
+  document.getElementById("modalTitle").textContent = title;
+  document.getElementById("modalDescription").innerHTML = description;
+  document.getElementById("imageModal").classList.add("show");
+}
+
+function closeImage(){
+  document.getElementById("imageModal").classList.remove("show");
+}
+  let activityIndex = 0;
+
+const activityImagesWrap =
+  document.querySelector(".activity-images");
+
+const activityDotsWrap =
+  document.querySelector(".activity-dots");
+
+const activityPrev =
+  document.querySelector(".activity-arrow.prev");
+
+const activityNext =
+  document.querySelector(".activity-arrow.next");
+
+const activityCaption =
+  document.querySelector(".activity-caption");
+
+const activityTabs =
+  document.querySelectorAll(".activity-tab");
+
+
+const activitySets = {
+
+  "受託": {
+    images: [
+      "activity-work-1new1.PNG"
+    ],
+    captions:[
+  "食品企業様からの受託にて、<br>食品の箱詰め作業を行っています。"
+]
+  },
+
+  "作る": {
+  images: [
+    "activity-2-1.JPG",
+    "activity-2-2.JPG",
+    "activity-work-2-new.jpg",
+    "activity-2-5.PNG",
+    "oshima-tsumugi.jpeg"
+  ],
+  captions: [
+    "石鹸製造:廃食油を濾して不純物を取り除きます。",
+    "材料を加えしっかり混ぜ合わせます。",
+    "出来上がった石鹸の形を整えて製品になります。",
+    "そば殻を選別する作業です。枕の素材になります。",
+    "裁縫の先生が大島紬（生地）を広げて<br>何を作ろうか思案中です。"
+  ]
+},
+    "出店": {
+  images: [
+    "activity-bazaar-1.JPG"
+  ],
+  captions: [
+    "厚別夢市場「フリーマーケット」に<br>定期的に出店しています"
+  ]
+},
+  "その他の活動": {
+    images: [
+      "activity-work-3-new2.PNG",
+      "activity-flowerbed.PNG"
+    ],
+    captions: [
+      "施設整備:施設の下駄箱を作る作業です。",
+      "施設前の歩道の雑草を刈りお花を植えました。"
+    ]
+  }
+
+};
+
+
+let currentSet = activitySets["受託"];
+
+
+function buildActivitySlider(){
+
+  activityImagesWrap.innerHTML = "";
+  activityDotsWrap.innerHTML = "";
+
+  currentSet.images.forEach((src, i) => {
+
+    const img = document.createElement("img");
+
+    img.src = src;
+    img.alt = "活動の様子";
+
+    img.style.display =
+      i === activityIndex ? "block" : "none";
+
+    activityImagesWrap.appendChild(img);
+
+
+    const dot = document.createElement("span");
+
+    dot.className =
+      i === activityIndex
+      ? "activity-dot active"
+      : "activity-dot";
+
+    activityDotsWrap.appendChild(dot);
+});
+
+activityCaption.innerHTML =
+  currentSet.captions[activityIndex] || "";
+
+
+  const showArrows =
+    currentSet.images.length > 1;
+
+  activityPrev.style.display =
+    showArrows ? "flex" : "none";
+
+  activityNext.style.display =
+    showArrows ? "flex" : "none";
+}
+
+
+function changeActivity(index){
+
+  activityIndex = index;
+
+  if(activityIndex < 0){
+    activityIndex =
+      currentSet.images.length - 1;
+  }
+
+  if(activityIndex >= currentSet.images.length){
+    activityIndex = 0;
+  }
+
+  buildActivitySlider();
+}
+
+
+activityNext.addEventListener("click", () => {
+  changeActivity(activityIndex + 1);
+});
+
+
+activityPrev.addEventListener("click", () => {
+  changeActivity(activityIndex - 1);
+});
+
+
+activityTabs.forEach(tab => {
+
+  tab.addEventListener("click", () => {
+
+    const tabName =
+      tab.textContent.trim();
+
+    if(!activitySets[tabName]){
+      return;
+    }
+
+    activityTabs.forEach(t =>
+      t.classList.remove("active")
+    );
+
+    tab.classList.add("active");
+
+    currentSet =
+      activitySets[tabName];
+
+    activityIndex = 0;
+
+    buildActivitySlider();
+
+  });
+
+});
+
+
+buildActivitySlider();
+  fetch("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frssblog.ameba.jp%2Fsumokubei%2Frss20.xml")
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === "ok" && data.items && data.items.length > 0) {
+      const latest = data.items[0];
+      const link = document.getElementById("latest-post-link");
+
+      if (link) {
+        link.textContent = latest.title;
+        link.href = latest.link;
+      }
+    }
+  })
+  .catch(error => {
+    console.error("ブログ最新記事取得エラー:", error);
+  });
+</script>
+
+</body>
+</html>
