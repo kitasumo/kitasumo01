@@ -1271,6 +1271,37 @@ top:-16px;
   color:#6a5a50;
   text-align:center;
 }
+
+  .page-jump{
+  position:fixed;
+  right:12px;
+  bottom:90px;
+  z-index:999;
+  width:42px;
+  overflow:hidden;
+  border:1px solid rgba(120,90,65,.25);
+  border-radius:22px;
+  background:rgba(255,250,244,.88);
+  box-shadow:0 3px 12px rgba(0,0,0,.12);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+}
+
+.page-jump button{
+  width:42px;
+  height:42px;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:#6b4630;
+  font-size:20px;
+  line-height:42px;
+  text-align:center;
+}
+
+.page-jump button + button{
+  border-top:1px solid rgba(120,90,65,.18);
+}
 </style>
 </head>
 
@@ -1790,6 +1821,26 @@ buildActivitySlider();
     console.error("ブログ最新記事取得エラー:", error);
   });
 </script>
+<div class="page-jump">
+  <button type="button" id="jumpTop" aria-label="ページ上部へ">↑</button>
+  <button type="button" id="jumpBottom" aria-label="ページ下部へ">↓</button>
+</div>
+  <script>
+document.getElementById("jumpTop").addEventListener("click", function(){
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+});
 
+document.getElementById("jumpBottom").addEventListener("click", function(){
+  window.scrollTo({
+    top:document.documentElement.scrollHeight,
+    behavior:"smooth"
+  });
+});
+</script>
 </body>
+
+  
 </html>
