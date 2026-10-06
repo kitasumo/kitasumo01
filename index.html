@@ -1348,15 +1348,21 @@ display:flex;
 
 /* ===== パソコン版 ===== */
 @media(min-width:1025px){
+
+  html,
+  body{
+    overflow-x:hidden;
+  }
+
   .hero{
-    width:100%;
-    max-width:none;
+    width:100vw;
+    margin:0;
     overflow:hidden;
   }
 
   .hero img{
     display:block;
-    width:100%;
+    width:100vw;
     max-width:none;
     height:520px;
     object-fit:cover;
