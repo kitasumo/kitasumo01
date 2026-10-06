@@ -1349,27 +1349,21 @@ display:flex;
 }
 
 /* ===== パソコン版 ===== */
-@media(min-width:1025px){
+  @media(min-width:1025px){
+.hero{
+  width:100vw;
+  margin:0;
+  overflow:hidden;
+}
 
-  html,
-  body{
-    overflow-x:hidden;
-  }
-
-  .hero{
-    width:100vw;
-    margin:0;
-    overflow:hidden;
-  }
-
-  .hero img{
-    display:block;
-    width:100vw;
-    max-width:none;
-    height:300px;
-    object-fit:cover;
-    object-position:center;
-  }
+.hero img{
+  display:block;
+  width:100vw;
+  max-width:none;
+  height:300px;
+  object-fit:cover;
+  object-position:center;
+}
 }
 </style>
 </head>
