@@ -1348,11 +1348,17 @@ display:flex;
 
 /* ===== パソコン版 ===== */
 @media(min-width:1025px){
+  .hero{
+    overflow:hidden;
+  }
+
   .hero img{
     width:100%;
-    height:auto;
+    height:520px;
+    object-fit:cover;
+    object-position:center;
   }
-}  
+}
 </style>
 </head>
 
