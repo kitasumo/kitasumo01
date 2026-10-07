@@ -1365,35 +1365,34 @@ display:flex;
 }
   }
 
-/* ===== パソコン版 調整中 ===== */
-  @media(min-width:1025px){
-     html,
-  body{
-    overflow-x:hidden;
-  }
+/* ===== PC版 ヘッダー ===== */
 .hero{
   width:100%;
+  height:370px;
   margin:0;
-  overflow:visible;
+  overflow:hidden;
   text-align:center;
 }
 
 .hero img{
   display:block;
-  width:35%;
+  width:60%;
   max-width:1200px;
-  height:auto;
+  height:100%;
   margin:0 auto;
-  object-fit:contain;
+  object-fit:cover;
+  object-position:center;
 }
 
+/* ===== PC版 フッター ===== */
 .footer-image{
-  width:35%;
+  width:60%;
   max-width:1200px;
   margin:0 auto;
 }
 
 .footer-image img{
+  display:block;
   width:100%;
   height:auto;
 }
