@@ -1404,7 +1404,11 @@ display:flex;
   <script>if(/Android/i.test(navigator.userAgent)){document.documentElement.classList.add('is-android');}</script>
 
 <header class="hero">
-  <img src="kitasumo-header-new.png" alt="北のスモーク">
+  <picture>
+    <source media="(min-width:1025px)"
+            srcset="kitasumo-header-pc.png">
+    <img src="kitasumo-header-new.png" alt="北のスモーク">
+  </picture>
 </header>
 
 <section class="about">
