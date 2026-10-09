@@ -1396,6 +1396,10 @@ content:url("kitasumo-header-pc.png");
     display:block;
     width:100%;
     height:auto;
+    /* PC版だけ見出しの線を細く */
+.about h2::after{
+  background-size:100% 1px !important;
+}
   }
 }
   @media (min-width:651px) and (hover:hover) and (pointer:fine) and (max-width:1024px){
