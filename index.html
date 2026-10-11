@@ -1479,6 +1479,17 @@ max-width:none;
     background-position: center !important;
   }
 }
+  /* PC全画面：見出し下を一本線に */
+@media screen and (min-width:1025px) {
+  .about h2::after {
+    content:"" !important;
+    width:100% !important;
+    height:5px !important;
+    background:#dc7c31 !important;
+    background-image:none !important;
+    border-radius:0 !important;
+  }
+}
 </style>
 </head>
 
