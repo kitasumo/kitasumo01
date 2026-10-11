@@ -1468,7 +1468,16 @@ max-width:none;
     height: auto;
     margin: 0 auto;
   }
-
+}
+  /* PC版：上下のオレンジ線を統一 */
+@media screen and (min-width:1025px) {
+  .about h2::after {
+    width: 100% !important;
+    height: 20px !important;
+    background-color: transparent !important;
+    background-size: 100% 3px !important;
+    background-position: center !important;
+  }
 }
 </style>
 </head>
