@@ -1519,6 +1519,21 @@ max-width:none;
   object-fit:cover;
   object-position:center;
 }
+}
+  /* PC版：活動写真のサイズ統一 */
+@media screen and (min-width:1025px) {
+
+  .activity-slider .activity-images {
+    width:100%;
+    max-width:100%;
+  }
+
+  .activity-slider .activity-images img {
+    width:100% !important;
+    height:400px !important;
+    object-fit:cover !important;
+    object-position:center;
+  }
 
 }
 </style>
