@@ -1436,6 +1436,21 @@ background-color:transparent !important;
     margin:0 auto;
   }
 }
+  /* PC版：左余白の調整中表示 */
+@media screen and (min-width:1025px) {
+  body::before {
+    content: "現在、パソコン版は調整中です。";
+    position: fixed;
+    top: 180px;
+    left: 25px;
+    writing-mode: vertical-rl;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #8b735e;
+    z-index: 10;
+    pointer-events: none;
+  }
+}
 </style>
 </head>
 
