@@ -1498,6 +1498,29 @@ max-width:none;
     border-radius:0 !important;
   }
 }
+  /* PC版：活動スライド調整 */
+@media screen and (min-width:1025px) {
+
+  .activity-tabs {
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:20px;
+  }
+
+  .activity-slider {
+    max-width:760px;
+    min-height:0;
+  }
+
+  .activity-slider img {
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    object-position:center;
+  }
+
+}
 </style>
 </head>
 
