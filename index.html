@@ -1481,7 +1481,8 @@ max-width:none;
 }
   /* PC全画面：見出し下を一本線に */
 @media screen and (min-width:1025px) {
-  .about h2::after {
+ .about h2::after,
+.about-bottom-line {
     content:"" !important;
     width:100% !important;
     height:5px !important;
@@ -1492,7 +1493,7 @@ max-width:none;
   #dc7c31 88%,
   transparent 100%
 ) !important;
-    background-image:none !important;
+ 
     border-radius:0 !important;
   }
 }
