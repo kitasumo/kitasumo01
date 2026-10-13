@@ -1872,6 +1872,59 @@ max-width:none;
     line-height:1.9;
     text-align:left;
   }
+
+  /* ===== PC全体の統一：背景・余白・横幅をそろえる ===== */
+
+  /* 背景色はスマホ版と同じ配色に */
+  html,
+  body,
+  .about,
+  .sns{
+    background-color:#fbfcf7;
+  }
+
+  /* 各ブロックの上下の余白を同じに */
+  .about,
+  .activities,
+  .products,
+  .access{
+    padding-top:64px;
+    padding-bottom:64px;
+  }
+
+  .sns{
+    padding-top:64px;
+    padding-bottom:64px;
+  }
+
+  /* 枠もの（カード）の横幅を680pxでそろえる */
+  .latest-post,
+  .sales-guide-box,
+  .sales-links,
+  .access-features,
+  .transport-note,
+  .map,
+  .map-open-btn,
+  .recruit-note{
+    width:calc(100% - 36px);
+    max-width:680px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .map-open-btn{
+    max-width:420px;
+  }
+
+  /* 見出しの大きさを全部そろえる */
+  .about h2,
+  .activities h2,
+  .products h2,
+  .sns h2,
+  .access h2{
+    font-size:26px !important;
+  }
+
 }
 
 /* PCブラウザを小窓にしたとき：商品の拡大表示で説明・値段まで画面に収める
