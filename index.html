@@ -1730,19 +1730,37 @@ max-width:none;
     font-size:15px;
   }
 
+  /* ブログアイコン：スマホと同じ大きさ・同じ見え方にする
+     （スマホ版と同じ組み方を、スマホと同じ幅の箱の中で再現） */
   .sns-links-wrap{
-    display:flex;
-    justify-content:center;
+    width:362px;
+    max-width:362px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    align-items:start;
   }
 
   .sns-blog{
-    justify-content:center;
+    justify-content:flex-start;
+    transform:translateX(-30px);
+  }
+
+  .ameblo-image{
+    width:100%;
+    max-width:165px;
+    margin:0;
+    transform:scale(2.55);
+    transform-origin:left top;
+    position:relative;
+    top:-115px;
   }
 
   .latest-post{
     width:100%;
     max-width:620px;
-    margin:24px auto 30px;
+    margin:10px auto 30px;
     padding:16px 20px;
     text-align:left;
     background:#fff8ef;
