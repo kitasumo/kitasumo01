@@ -1905,6 +1905,89 @@ max-width:none;
     margin:0;
   }
 
+  /* 活動スライド：PCでは左にスライド、右に案内を並べて左右の空きを埋める */
+  .activities .inner{
+    display:grid;
+    grid-template-columns:448px 340px;
+    column-gap:48px;
+    justify-content:center;
+    align-items:center;
+  }
+
+  /* タブはスライドの真上に、スライドと同じ幅でそろえる */
+  .activities .activity-tabs{
+    grid-column:1;
+    display:flex;
+    justify-content:space-between;
+    gap:8px;
+    width:100%;
+    margin:0 0 20px;
+  }
+
+  .activities .activity-tab{
+    flex:1 1 auto;
+    padding:12px 10px;
+    font-size:15px;
+  }
+
+  .activities .activity-tabs + .activity-slider{
+    grid-row:2;
+  }
+
+  /* 右の案内枠：スライドと同じ高さ・同じ角丸・同じ余白でバランスをとる */
+  .activities .activity-note{
+    grid-row:2;
+    align-self:stretch;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:24px 28px !important;
+    border-radius:18px !important;
+    box-sizing:border-box;
+  }
+
+  .activities .activity-slider{
+    grid-column:1;
+    margin:0;
+    width:100%;
+  }
+
+  .activities .activity-note{
+    grid-column:2;
+    width:100%;
+    max-width:none;
+    margin:0;
+    padding:28px 26px;
+    text-align:left;
+    font-size:15px;
+    line-height:1.9;
+    border-radius:16px;
+  }
+
+  /* 各タブの中身の一覧（枠の下半分を埋める） */
+  .activities .activity-note::after{
+    content:"受ける ─ 企業様からの受託作業\A作る ─ 石鹸・枕・エプロンの製造\A出店 ─ フリーマーケットへの出店\Aその他 ─ 施設整備・花壇づくり";
+    white-space:pre-line;
+    display:block;
+    margin-top:18px;
+    padding-top:14px;
+    border-top:2px dashed #f0dcc6;
+    font-size:14px;
+    line-height:2.1;
+    color:#63351d;
+  }
+
+  .activities .activity-note::before{
+    content:"🌱 北スモの日々の活動";
+    display:block;
+    margin-bottom:12px;
+    padding-bottom:10px;
+    border-bottom:2px solid #f0dcc6;
+    font-size:18px;
+    font-weight:700;
+    color:#63351d;
+  }
+
   /* ===== PC全体の統一：背景・余白・横幅をそろえる ===== */
 
   /* 背景色はスマホ版と同じ配色に */
