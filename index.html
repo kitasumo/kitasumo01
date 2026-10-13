@@ -1891,19 +1891,18 @@ max-width:none;
     text-align:left;
   }
 
-  /* ヘッダー：PCでもスマホと同じ画像（header0.jpg）を使う
-     （PC専用画像への差し替えを取り消し、画面に収まる大きさで中央に） */
+  /* ヘッダー：スマホと同じデザインのPC用横長画像（kitasumo-header-wide.jpg）を
+     画面の横幅いっぱいに。伸ばさず・切らずに表示 */
   .hero{
-    background:#fbfcf7;
+    background:#e6713c;
   }
 
   .hero img{
-    content:normal;
-    width:auto;
-    max-width:100%;
-    max-height:70vh;
+    content:url("kitasumo-header-wide.jpg");
+    width:100%;
+    max-width:none;
     height:auto;
-    margin:0 auto;
+    margin:0;
   }
 
   /* ===== PC全体の統一：背景・余白・横幅をそろえる ===== */
