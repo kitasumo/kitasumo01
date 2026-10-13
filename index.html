@@ -1833,6 +1833,42 @@ max-width:none;
   .recruit-note p{
     font-size:14px;
   }
+ 
+  /* --- 商品画像の拡大表示：PCでは写真の横に説明を並べる --- */
+  .modal.show{
+    display:grid;
+    grid-template-columns:minmax(0,auto) minmax(260px,380px);
+    grid-template-rows:auto auto;
+    align-content:center;
+    justify-content:center;
+    column-gap:48px;
+    padding:40px 80px;
+  }
+ 
+  .modal img{
+    grid-column:1;
+    grid-row:1 / span 2;
+    align-self:center;
+    max-width:55vw;
+    max-height:82vh;
+    border-radius:12px;
+  }
+ 
+  #modalTitle{
+    grid-column:2;
+    align-self:end;
+    margin:0 0 14px;
+    font-size:24px;
+    text-align:left;
+  }
+ 
+  #modalDescription{
+    grid-column:2;
+    align-self:start;
+    font-size:16px;
+    line-height:1.9;
+    text-align:left;
+  }
 }
 </style>
 </head>
