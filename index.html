@@ -2228,6 +2228,20 @@ br.pc-br{display:none;}
   border:1px solid #ead8c7;    /* 枠で囲む */
   border-radius:12px;
 }
+/* スマホ：募集のお知らせの見出し（上の2行）だけ大きく */
+@media (max-width:650px), (min-width:651px) and (max-width:1024px) and (hover:hover) and (pointer:fine){
+  .recruit-title span:nth-child(2){
+    font-size:min(14.5px, calc((100vw * 0.88 - 90px) / 18));   /* 画面幅に合わせて、2行のまま入る一番大きいサイズ */
+    line-height:1.7;
+    white-space:nowrap;
+  }
+
+  /* 本文の3行：行の途中で折れない大きさに（画面幅に合わせて少しだけ調整） */
+  .recruit-note p:not(.recruit-title){
+    font-size:min(12px, calc((100vw * 0.88 - 32px) / 27.5));
+    white-space:nowrap;
+  }
+}
 </style>
 </head>
 
@@ -2485,8 +2499,7 @@ br.pc-br{display:none;}
     <div class="address">
       〒004-0805<br>
       北海道札幌市清田区里塚緑ケ丘12丁目3-22<br>
-      <span class="phone">TEL：011-886-3356</span><br>
-<span class="fax">FAX：011-886-3356</span><br>
+      <span class="phone">TEL / FAX：011-886-3354</span><br>
 <a class="mail-link" href="mailto:kitasumo@jk2.so-net.ne.jp">
   ✉ メールでお問い合わせ
 </a>
