@@ -2103,7 +2103,13 @@ max-width:none;
 
   /* 枠を広げたぶん、字と余白もひと回り大きく */
   .sns .latest-post{
-    padding:20px 28px !important;
+    padding:22px 28px !important;
+    text-align:center !important;
+  }
+
+  /* 最新記事：下の販売案内と同じく中央ぞろえにして、右側の空きをなくす */
+  .sns .latest-post span{
+    margin-bottom:10px !important;
   }
 
   .sns .latest-post span{
@@ -2119,13 +2125,18 @@ max-width:none;
     font-size:18px !important;
   }
 
+  /* 商品販売案内：背景と枠線は最新記事と同じ、文字は枠いっぱいに */
   .sales-guide-box{
-    padding:20px 24px !important;
+    padding:22px 20px !important;
+    background:#fff8ef !important;
+    border:1px solid #ead8c7 !important;
+    border-radius:12px !important;
   }
 
   .sales-guide-box p{
-    font-size:18px !important;
+    font-size:19px !important;
     line-height:1.9 !important;
+    letter-spacing:0;
   }
 
   .sales-links{
@@ -2135,6 +2146,22 @@ max-width:none;
   .sales-links a{
     font-size:17px !important;
     padding:12px 8px !important;
+  }
+
+  /* 商品販売案内：PCは横幅が広いので2行にまとめる（スマホは今まで通り4行） */
+  .sales-guide-box br.sp-br{
+    display:none;
+  }
+
+  .sales-guide-box .sales-guide-note{
+    margin-top:14px !important;
+    padding-top:14px !important;
+    font-size:16px !important;
+    line-height:1.9 !important;
+  }
+
+  .sales-guide-box .sales-guide-note br{
+    display:none;
   }
 
   /* 見出しの大きさを全部そろえる */
@@ -2157,6 +2184,13 @@ max-width:none;
 }
 /* PC専用の改行（スマホでは無効） */
 br.pc-br{display:none;}
+.sales-guide-box .sales-guide-note{
+  margin-top:10px;
+  padding-top:10px;
+  border-top:1px dashed #ead8c7;
+  font-weight:500;
+  color:#6b4a35;
+}
 </style>
 </head>
 
@@ -2375,10 +2409,13 @@ br.pc-br{display:none;}
   <div class="sales-guide-title">商品販売案内</div>
 <div class="sales-guide-box">
   <p>
-    北のスモーク主力商品の<br>
-    チーズスモーク・ブルーベリージャム・<br>
-    リサイクルエコ石鹸は、<br>
+    北のスモーク主力商品の<br class="sp-br"><!--
+    -->チーズスモーク・ブルーベリージャム・<br class="sp-br"><!--
+    -->リサイクルエコ石鹸は、<br>
     下記のリンク先からもご購入いただけます。
+  </p>
+  <p class="sales-guide-note">
+    元気ショップ「いこ〜る」（JR札幌駅西コンコース1階）、<br>元気ショップ（地下鉄南北線大通駅コンコース内）の<br>お近くにお越しの際は、ぜひお立ち寄りください。
   </p>
 </div>
   
