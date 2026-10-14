@@ -1908,7 +1908,7 @@ max-width:none;
   /* 活動スライド：PCでは左にスライド、右に案内を並べて左右の空きを埋める */
   .activities .inner{
     display:grid;
-    grid-template-columns:448px 340px;
+    grid-template-columns:448px 360px;
     column-gap:48px;
     justify-content:center;
     align-items:center;
@@ -1916,18 +1916,26 @@ max-width:none;
 
   /* タブはスライドの真上に、スライドと同じ幅でそろえる */
   .activities .activity-tabs{
-    grid-column:1;
-    display:flex;
-    justify-content:space-between;
-    gap:8px;
+    grid-column:1 / -1;
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:14px;
     width:100%;
-    margin:0 0 20px;
+    margin:0 0 22px;
   }
 
+  /* タブ：4つ同じ幅・大きめにしてバランスよく */
   .activities .activity-tab{
-    flex:1 1 auto;
-    padding:12px 10px;
-    font-size:15px;
+    width:100%;
+    min-height:56px;
+    padding:0 4px;
+    font-size:18px;
+    letter-spacing:.05em;
+    border-radius:28px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    white-space:nowrap;
   }
 
   .activities .activity-tabs + .activity-slider{
@@ -1940,8 +1948,8 @@ max-width:none;
     align-self:stretch;
     display:flex;
     flex-direction:column;
-    justify-content:center;
-    padding:24px 28px !important;
+    justify-content:flex-start;
+    padding:24px 24px !important;
     border-radius:18px !important;
     box-sizing:border-box;
   }
@@ -1964,10 +1972,19 @@ max-width:none;
     border-radius:16px;
   }
 
+  /* 右の案内枠：PCだけ区切りのいいところで改行し、文字が途中で折れないように */
+  .activities .activity-note br.pc-br{
+    display:inline;
+  }
+
+  .activities .activity-note{
+    white-space:nowrap;
+  }
+
   /* 各タブの中身の一覧（枠の下半分を埋める） */
   .activities .activity-note::after{
-    content:"受ける ─ 企業様からの受託作業\A作る ─ 石鹸・枕・エプロンの製造\A出店 ─ フリーマーケットへの出店\Aその他 ─ 施設整備・花壇づくり";
-    white-space:pre-line;
+    content:"受ける ─ 企業様からの受託作業\A作る ─ 石鹸・枕・エプロンの製造\A出店 ─ アンテナショップ・フリーマーケット\Aその他 ─ 施設整備・花壇・レクリエーション";
+    white-space:pre;
     display:block;
     margin-top:18px;
     padding-top:14px;
@@ -2095,6 +2112,8 @@ max-width:none;
     max-height:58vh;
   }
 }
+/* PC専用の改行（スマホでは無効） */
+br.pc-br{display:none;}
 </style>
 </head>
 
@@ -2160,8 +2179,8 @@ max-width:none;
     </div>
 
     <div class="activity-note">
-上記のタブから、それぞれの活動の様子をご覧いただけます。<br>
-<span style="color:#c66a2b;">複数の画像がある項目は、横にスライドしてご覧ください。</span>
+上記のタブから、<br class="pc-br">それぞれの活動の様子をご覧いただけます。<br>
+<span style="color:#c66a2b;">複数の画像がある項目は、<br class="pc-br">横にスライドしてご覧ください。</span>
     </div>
   </div>
 </section>
