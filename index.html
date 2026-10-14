@@ -2153,15 +2153,11 @@ max-width:none;
     display:none;
   }
 
-  .sales-guide-box .sales-guide-note{
-    margin-top:14px !important;
-    padding-top:14px !important;
-    font-size:16px !important;
+  .sales-links .sales-shop-note{
+    margin:26px auto 6px !important;
+    padding:18px 28px !important;
+    font-size:18px !important;
     line-height:1.9 !important;
-  }
-
-  .sales-guide-box .sales-guide-note br{
-    display:none;
   }
 
   /* 見出しの大きさを全部そろえる */
@@ -2184,12 +2180,22 @@ max-width:none;
 }
 /* PC専用の改行（スマホでは無効） */
 br.pc-br{display:none;}
-.sales-guide-box .sales-guide-note{
-  margin-top:10px;
-  padding-top:10px;
-  border-top:1px dashed #ead8c7;
-  font-weight:500;
-  color:#6b4a35;
+/* 関連リンクの下の案内文（書体は「商品販売案内」の文と同じ） */
+.sales-links .sales-shop-note{
+  width:fit-content;
+  max-width:calc(100% - 16px);
+  box-sizing:border-box;
+  margin:18px auto 0;
+  padding:10px 12px;
+  font-size:min(12px, calc((100vw - 76px) / 27));  /* 小さいスマホでも行の途中で折れない大きさ */
+  line-height:1.85;
+  font-weight:600;
+  color:#553725;
+  text-align:left;             /* 行の頭をそろえる */
+  white-space:nowrap;
+  background:#fff8ef;
+  border:1px solid #ead8c7;    /* 枠で囲む */
+  border-radius:12px;
 }
 </style>
 </head>
@@ -2414,9 +2420,6 @@ br.pc-br{display:none;}
     -->リサイクルエコ石鹸は、<br>
     下記のリンク先からもご購入いただけます。
   </p>
-  <p class="sales-guide-note">
-    元気ショップ「いこ〜る」（JR札幌駅西コンコース1階）、<br>元気ショップ（地下鉄南北線大通駅コンコース内）の<br>お近くにお越しの際は、ぜひお立ち寄りください。
-  </p>
 </div>
   
 <div class="sales-links">
@@ -2436,6 +2439,10 @@ br.pc-br{display:none;}
   <a href="https://hiromaaru.org/" target="_blank" rel="noopener">
     ひろまある清田（地域情報交流サイト）
   </a>
+
+  <p class="sales-shop-note">
+    元気ショップ「いこ〜る」（JR札幌駅西コンコース1階）、<br>元気ショップ（地下鉄南北線大通駅コンコース内）の<br>お近くにお越しの際は、ぜひお立ち寄りください。
+  </p>
 
 </div>
 
