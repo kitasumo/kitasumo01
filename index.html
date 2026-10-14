@@ -2191,6 +2191,34 @@ max-width:none;
     white-space:nowrap;
   }
 
+  /* 見出しを文字の幅にそろえる（下線を文字の長さに合わせるため） */
+  .about h2,
+  .activities h2,
+  .products h2,
+  .sns h2,
+  .access h2{
+    display:table !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+
+  /* 各セクションの見出しの下線：太さ・色・間隔をそろえ、長さは文字に合わせる */
+  .about h2::after,
+  .activities h2::after,
+  .products h2::after,
+  .sns h2::after,
+  .access h2::after{
+    content:"" !important;
+    display:block !important;
+    width:auto !important;
+    height:3px !important;
+    margin:12px -24px 0 !important;   /* 線の長さは見出しの文字の長さ＋左右少し */
+    font-size:0 !important;
+    background:linear-gradient(to right, transparent 0%, #dc7c31 12%, #dc7c31 88%, transparent 100%) !important;
+    background-size:auto !important;
+    border-radius:0 !important;
+  }
+
   /* 見出しの大きさを全部そろえる */
   .about h2,
   .activities h2,
@@ -2237,6 +2265,11 @@ br.pc-br{display:none;}
   }
 
   /* 本文の3行：行の途中で折れない大きさに（画面幅に合わせて少しだけ調整） */
+  /* 見出しを「アクセス・ご利用案内」にしたので、下線も文字の長さに合わせる */
+  .access h2::after{
+    width:210px;
+  }
+
   .recruit-note p:not(.recruit-title){
     font-size:min(12px, calc((100vw * 0.88 - 32px) / 27.5));
     white-space:nowrap;
@@ -2494,7 +2527,7 @@ br.pc-br{display:none;}
 <section class="access access-up">
 
   <div class="inner">
-    <h2>アクセス</h2>
+    <h2>アクセス・ご利用案内</h2>
 
     <div class="address">
       〒004-0805<br>
