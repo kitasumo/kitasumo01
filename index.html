@@ -2191,8 +2191,15 @@ max-width:none;
     white-space:nowrap;
   }
 
+  /* 「私たちの活動について」：見出しの下の線を、本文の下の線と同じ長さに */
+  .about h2::after{
+    width:100% !important;
+    max-width:820px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+
   /* 見出しを文字の幅にそろえる（下線を文字の長さに合わせるため） */
-  .about h2,
   .activities h2,
   .products h2,
   .sns h2,
@@ -2203,7 +2210,6 @@ max-width:none;
   }
 
   /* 各セクションの見出しの下線：太さ・色・間隔をそろえ、長さは文字に合わせる */
-  .about h2::after,
   .activities h2::after,
   .products h2::after,
   .sns h2::after,
