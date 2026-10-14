@@ -2170,6 +2170,27 @@ max-width:none;
     white-space:nowrap;
   }
 
+  /* フッター：上の「地域活動支援センター」の部分を隠してスリムに（画像の上側だけ切る） */
+  .footer-image{
+    overflow:hidden;
+    background:#e6713c;
+  }
+
+  .footer-image img{
+    width:100% !important;
+    max-width:1200px !important;
+    margin:calc(min(100vw, 1200px) * -0.074) auto 0 !important;
+  }
+
+  /* 募集のお知らせ：PCは見出しを1行に横へ伸ばす */
+  .recruit-title br.sp-br{
+    display:none;
+  }
+
+  .recruit-title span:nth-child(2){
+    white-space:nowrap;
+  }
+
   /* 見出しの大きさを全部そろえる */
   .about h2,
   .activities h2,
@@ -2307,7 +2328,7 @@ br.pc-br{display:none;}
       <img class="product-image"
         src="blueberry.JPEG"
         alt="ブルーベリージャム"
-        onclick="openImage(this.src, 'ブルーベリージャム', '畑での収穫から製造・商品化まで、<br>北のスモークでおこなっています。<br><br>国産ブルーベリーと甜菜糖のみを使用した、<br>コク深くまろやかな味わいです。<br><br>800円（税込）')">
+        onclick="openImage(this.src, 'ブルーベリージャム', '畑での収穫から製造・商品化まで、<br>北のスモークでおこなっています。<br><br>国産ブルーベリーと甜菜糖のみを使用した、<br>コク深くまろやかな味わいです。<br><br>800円（税込み）')">
     </div>
   </div>
 
@@ -2326,7 +2347,7 @@ br.pc-br{display:none;}
       <img class="product-image"
         src="sopa.PNG"
         alt="リサイクルエコ石鹸"
-        onclick="openImage(this.src, 'リサイクルエコ石鹸', '廃油と苛性ソーダで作った、<br>リサイクルエコ石鹸です。<br><br>お掃除や食器洗いにお使いいただけます。<br>物価高の今、使いやすい価格で販売しています。<br>ぜひお試しください。<br><br>80円（税込）')">
+        onclick="openImage(this.src, 'リサイクルエコ石鹸', '廃油と苛性ソーダで作った、<br>リサイクルエコ石鹸です。<br><br>お掃除や食器洗いにお使いいただけます。<br>物価高の今、使いやすい価格で販売しています。<br>ぜひお試しください。<br><br>80円（税込み）')">
     </div>
   </div>
 
@@ -2336,7 +2357,7 @@ br.pc-br{display:none;}
       <img class="product-image"
         src="handmade-apron.PNG"
         alt="エプロンドレス"
-       onclick="openImage('apron-360.PNG', '手作りエプロンドレス', '腰まわりなどにストレッチゴムを使い<br>動きやすく仕上げています。<br>ちょっとおしゃれで、着やすいエプロンです。<br>生地の在庫があれば、柄の変更も可能です。<br><br>1,000円（税込）〜<br>※仕様により価格が変わります。')">
+       onclick="openImage('apron-360.PNG', '手作りエプロンドレス', '腰まわりなどにストレッチゴムを使い<br>動きやすく仕上げています。<br>ちょっとおしゃれで、着やすいエプロンです。<br>生地の在庫があれば、柄の変更も可能です。<br><br>1,000円〜（税込み）<br>※仕様により価格が変わります。')">
     </div>
   </div>
 
@@ -2357,7 +2378,7 @@ br.pc-br{display:none;}
       <img class="product-image"
         src="milkpack-chair.PNG"
         alt="牛乳パック椅子"
-        onclick="openImage(this.src, '牛乳パック椅子', '牛乳パックとダンボールで強度を持たせた、手作り椅子です。<br>子供から大人までお使いいただけます。<br><br>四角形　1,800円（税込）<br>六角形　2,800円（税込）<br><br>※強い衝撃や無理な荷重はお避けください。')">
+        onclick="openImage(this.src, '牛乳パック椅子', '牛乳パックとダンボールで強度を持たせた、手作り椅子です。<br>子供から大人までお使いいただけます。<br><br>四角形　1,800円（税込み）<br>六角形　2,800円（税込み）<br><br>※強い衝撃や無理な荷重はお避けください。')">
     </div>
   </div>
   <div class="product-wrap">
@@ -2366,7 +2387,7 @@ br.pc-br{display:none;}
     <img class="product-image"
          src="sobagara-pillow.PNG"
          alt="手芸品（枕）"
-         onclick="openImage(this.src, 'そば殻枕', '幌加内産の天然そば殻100％を使用した、手作り枕です。<br><br>1,200円〜（税込）<br><br>※そば殻アレルギーの方はお控えください。')">
+         onclick="openImage(this.src, 'そば殻枕', '幌加内産の天然そば殻100％を使用した、手作り枕です。<br><br>1,200円〜（税込み）<br><br>※そば殻アレルギーの方はお控えください。')">
   </div>
 </div>
   <div class="product-wrap">
@@ -2517,8 +2538,8 @@ br.pc-br{display:none;}
   <p class="recruit-title">
     <span>☘️</span>
     <span>
-      北のスモークでは、通所者さんと<br>
-      ボランティアさんを募集しています。
+      北のスモークでは、通所者さんと<br class="sp-br"><!--
+      -->ボランティアさんを募集しています。
     </span>
     <span>☘️</span>
   </p>
