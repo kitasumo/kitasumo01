@@ -1360,6 +1360,15 @@ display:flex;
   text-align:center;
 }
 
+/* スマホ・小窓：送迎車の説明文は行の頭をそろえて、枠ごと真ん中に */
+@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
+  .car-caption{
+    width:fit-content;
+    max-width:calc(100% - 36px);
+    text-align:left;
+  }
+}
+
   .map-open-btn{
   display:block;
   width:calc(100% - 36px);
@@ -2067,6 +2076,16 @@ max-width:none;
     margin-right:auto;
   }
 
+  /* 送迎車の説明文：PCでは横に広げて2行に */
+  .car-caption .car-sp{
+    display:none;
+  }
+
+  .car-caption{
+    font-size:14px;
+    line-height:1.9;
+  }
+
   .map-open-btn{
     max-width:420px;
   }
@@ -2600,7 +2619,7 @@ br.pc-br{display:none;}
   🚐 通所の送迎もおこなってます。（日時は応相談）
     </div>
     <img class="car-photo" src="sougei-car.jpg" alt="北のスモークの送迎車（車椅子用リフト付き）" loading="lazy">
-    <p class="car-caption">送迎は、スロープ付きの軽バンと、<br>リフト付きの福祉車両でおこなっています。<br>どちらも車椅子のまま、安心してご乗車いただけます。<br>ぜひ、ご利用ください。</p>
+    <p class="car-caption">送迎は、スロープ付きの軽バンと、<br class="car-sp">リフト付きの福祉車両でおこなっています。<br>どちらも車椅子のまま、安心してご乗車いただけます。<br class="car-sp">ぜひ、ご利用ください。</p>
     <div class="map">
       <iframe
         src="https://www.google.com/maps?q=北海道札幌市清田区里塚緑ケ丘12丁目3-22&output=embed"
