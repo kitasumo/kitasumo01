@@ -2342,6 +2342,16 @@ br.pc-br{display:none;}
     user-select:all;   /* クリックするとアドレス全体が選ばれてコピーしやすい */
   }
 }
+/* PCだけ：Gmailの新規作成画面を宛先入りで開くリンク（スマホでは出さない） */
+.gmail-link{display:none;}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .gmail-link{
+    display:inline-block;
+    margin:0 0 6px;
+    font-size:13px;
+    color:#2f5f9f;
+  }
+}
 </style>
 </head>
 
@@ -2604,6 +2614,7 @@ br.pc-br{display:none;}
   ✉ メールでお問い合わせ
 </a>
 <div class="mail-address">kitasumo@jk2.so-net.ne.jp</div>
+<a class="gmail-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=kitasumo@jk2.so-net.ne.jp" target="_blank" rel="noopener">Gmailで送る方はこちら ↗</a>
 <div class="access-hours">
   開所 10:00〜16:00　｜　休業日 土・日・祝
 </div>
