@@ -2352,6 +2352,10 @@ br.pc-br{display:none;}
     color:#2f5f9f;
   }
 }
+/* PCだけ：「メールでお問い合わせ」ボタンは隠して、アドレス表示だけにする（スマホはボタンのまま） */
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .mail-link{display:none !important;}
+}
 </style>
 </head>
 
@@ -2613,7 +2617,7 @@ br.pc-br{display:none;}
 <a class="mail-link" href="mailto:kitasumo@jk2.so-net.ne.jp">
   ✉ メールでお問い合わせ
 </a>
-<div class="mail-address">kitasumo@jk2.so-net.ne.jp</div>
+<div class="mail-address">✉ メール：kitasumo@jk2.so-net.ne.jp</div>
 <a class="gmail-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=kitasumo@jk2.so-net.ne.jp" target="_blank" rel="noopener">Gmailで送る方はこちら ↗</a>
 <div class="access-hours">
   開所 10:00〜16:00　｜　休業日 土・日・祝
