@@ -2335,6 +2335,39 @@ br.pc-br{display:none;}
 @media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
   .mail-link{display:none !important;}
 }
+  /* スマホ・タブレットだけ（パソコンには効かない）：
+   送迎の説明文と募集の本文を、改行なしで端まで使って自然に折り返す */
+@media (pointer:coarse) and (max-width:1024.98px){
+
+  /* 送迎の説明文 */
+  .car-caption{
+    width:calc(100% - 36px) !important;
+    max-width:740px !important;
+    margin:10px auto 0 !important;
+    text-align:left !important;
+    white-space:normal !important;
+    word-break:auto-phrase;
+    line-break:strict;
+    text-wrap:pretty;
+  }
+  .car-caption br{
+    display:none;
+  }
+
+  /* 募集のお知らせの本文（上の見出し2行はそのまま） */
+  .recruit-note p:not(.recruit-title){
+    font-size:12px !important;
+    text-align:left !important;
+    white-space:normal !important;
+    word-break:auto-phrase;
+    line-break:strict;
+    text-wrap:pretty;
+  }
+  .recruit-note p:not(.recruit-title) br{
+    display:none;
+  }
+}
+
 </style>
 </head>
 
