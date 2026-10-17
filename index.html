@@ -2339,12 +2339,14 @@ br.pc-br{display:none;}
    送迎の説明文と募集の本文を、改行なしで端まで使って自然に折り返す */
 @media (pointer:coarse) and (max-width:1024.98px){
 
-  /* 送迎の説明文 */
+  /* 送迎の説明文（両端ぞろえで左右の余白を同じに） */
   .car-caption{
     width:calc(100% - 36px) !important;
     max-width:740px !important;
     margin:10px auto 0 !important;
-    text-align:left !important;
+    text-align:justify !important;
+    text-align-last:left;
+    text-justify:inter-character;
     white-space:normal !important;
     word-break:auto-phrase;
     line-break:strict;
