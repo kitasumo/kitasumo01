@@ -251,12 +251,6 @@ top:-115px;
   border:0;
 }
 
-.pc-adjust-note{
-  text-align:center;
-  font-size:12px;
-  color:#777;
-  margin:0 0 12px;
-}
  .recruit-note{
   width:88%;
   max-width:620px;
@@ -1427,13 +1421,13 @@ max-width:none;
     display:block;
     width:100%;
     height:auto;
+  }
     /* PC版だけ見出しの線を細く */
 .about h2::after{
 background-image:linear-gradient(to right,transparent 0%,#dc7c31 8%,#dc7c31 43%,transparent 43%,transparent 57%,#dc7c31 57%,#dc7c31 92%,transparent 100%) !important;
   background-size:100% 1px !important;
 background-color:transparent !important;
 }
-  }
 }
 /* PCブラウザを小窓にした場合はスマホ幅で中央表示 */
 @media (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
@@ -1465,21 +1459,6 @@ background-color:transparent !important;
 max-width:none;
     height:auto;
     margin:0 auto;
-  }
-}
-  /* PC版：左余白の調整中表示 */
-@media screen and (min-width:1025px) {
-  body::before {
-    content: "現在、パソコン版は調整中です。";
-    position: fixed;
-    top: 180px;
-    left: 25px;
-    writing-mode: vertical-rl;
-    font-size: 13px;
-    letter-spacing: 3px;
-    color: #8b735e;
-    z-index: 10;
-    pointer-events: none;
   }
 }
   /* PC版のみ：ヘッダー・フッターを全幅表示 */
@@ -2372,12 +2351,12 @@ br.pc-br{display:none;}
 
     <div class="about-text">
       <p style="margin-left:20px; margin-right:20px;">
-        北のスモークは、障がいの種別や重さを問わず、多様なメンバーが集う
+        北のスモークは、障がいの種別や程度を問わず、多様なメンバーが集う
         札幌市の「地域活動支援センター」です。
       </p>
 
       <p style="margin-left:20px; margin-right:20px;">
-        食品加工、下請け作業、畑作業、手芸品製作、バザーへの出店など、幅広い活動を行っています。
+        食品加工、受託作業、畑作業、手芸品製作、バザーへの出店など、幅広い活動を行っています。
       </p>
 
       <p style="margin-left:20px; margin-right:20px;">
@@ -2446,7 +2425,7 @@ br.pc-br{display:none;}
       <img class="product-image cheese-image"
         src="cheese-smoke-new1.PNG"
         alt="チーズスモーク"
-       onclick="openImage(this.src, 'チーズスモーク', '北海道生乳100%のプロセスチーズを<br>クルミのチップで燻製しています。<br><br>香りも楽しめるおいしいチーズです。<br>北スモ一番人気商品です。<br>ぜひご賞味ください。<br><br>800円（税込み）')">
+       onclick="openImage(this.src, 'チーズスモーク', '北海道生乳100%のプロセスチーズを<br>クルミのチップで燻製しています。<br><br>香りも楽しめるおいしいチーズです。<br>北スモで一番人気の商品です。<br>ぜひご賞味ください。<br><br>800円（税込み）')">
     </div>
   </div>
 
@@ -2475,7 +2454,7 @@ br.pc-br{display:none;}
       <img class="product-image"
         src="sopa.PNG"
         alt="リサイクル石鹸"
-        onclick="openImage(this.src, 'リサイクル石鹸', '使い終わった食用油を再利用して作った、<br>リサイクル石鹸です。<br><br>お掃除や食器洗いにお使いいただけます。<br>物価高の今、使いやすい価格で販売しています。<br>ぜひお試しください。<br><br>80円（税込み）')">
+        onclick="openImage(this.src, 'リサイクル石鹸', '使い終わった食用油を再利用して作った、<br>リサイクル石鹸です。<br><br>お洗濯・お掃除・食器洗いにお使いいただけます。<br>物価高の今、お求めやすい価格で販売しています。<br>ぜひお試しください。<br><br>80円（税込み）')">
     </div>
   </div>
 
@@ -2506,7 +2485,7 @@ br.pc-br{display:none;}
       <img class="product-image"
         src="milkpack-chair.PNG"
         alt="牛乳パック椅子"
-        onclick="openImage(this.src, '牛乳パック椅子', '牛乳パックとダンボールで強度を持たせた、手作り椅子です。<br>子供から大人までお使いいただけます。<br><br>1,200円〜（税込み）<br>※形・大きさにより、価格変動あり。<br><br>※強い衝撃や無理な荷重はお避けください。')">
+        onclick="openImage(this.src, '牛乳パック椅子', '牛乳パックとダンボールで強度を持たせた、手作り椅子です。<br>子供から大人までお使いいただけます。<br><br>1,200円〜（税込み）<br>※形・大きさにより価格が変わります。<br><br>※強い衝撃や無理な荷重はお避けください。')">
     </div>
   </div>
   <div class="product-wrap">
@@ -2514,8 +2493,8 @@ br.pc-br{display:none;}
   <div class="product-slot">
     <img class="product-image"
          src="sobagara-pillow.PNG"
-         alt="手芸品（枕）"
-         onclick="openImage(this.src, 'そば殻枕', '幌加内産の天然そば殻100％を使用した、手作り枕です。<br><br>1,000円〜（税込み）<br>※サイズにより、価格変動あり。<br><br>※そば殻アレルギーの方はお控えください。')">
+         alt="そば殻枕"
+         onclick="openImage(this.src, 'そば殻枕', '幌加内産の天然そば殻100％を使用した、手作り枕です。<br><br>1,000円〜（税込み）<br>※サイズにより価格が変わります。<br><br>※そば殻アレルギーの方はお控えください。')">
   </div>
 </div>
   <div class="product-wrap">
@@ -2682,7 +2661,6 @@ br.pc-br{display:none;}
   </p>
 
 </div>
-  <p class="pc-adjust-note">※パソコン版は現在調整中です。</p>
 <footer class="footer-image">
   <img src="footer.png" alt="地域活動支援センター 北のスモーク">
 </footer>
@@ -2747,7 +2725,7 @@ const activitySets = {
     "shugei-sagyou.PNG"
   ],
   captions: [
-    "石鹸：使用済み油を濾して不純物を取り除きます。",
+    "石鹸：使い終わった食用油を濾して不純物を取り除きます。",
     "材料を加えしっかり混ぜ合わせます。",
     "出来上がった石鹸の形を整えて製品になります。",
     "そば殻を選別する作業です。枕の素材にします。",
