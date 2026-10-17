@@ -2336,7 +2336,7 @@ br.pc-br{display:none;}
   .mail-link{display:none !important;}
 }
 /* スマホ・タブレットだけ（パソコンには効かない）：
-   送迎の説明文と募集の本文を、改行なしで端まで使って自然に折り返す */
+   送迎の説明文・募集の本文・商品販売案内・お店の案内文を、改行なしで端まで使って自然に折り返す */
 @media (pointer:coarse) and (max-width:1024.98px){
 
   /* 送迎の説明文（両端ぞろえで左右の余白を同じに） */
@@ -2370,7 +2370,38 @@ br.pc-br{display:none;}
   .recruit-note p:not(.recruit-title) br{
     display:none;
   }
-}  
+
+  /* 商品販売案内の文（枠はそのまま・両端ぞろえ） */
+  .sales-guide-box p{
+    text-align:justify !important;
+    text-align-last:left;
+    text-justify:inter-character;
+    white-space:normal !important;
+    word-break:auto-phrase;
+    line-break:strict;
+    text-wrap:pretty;
+  }
+  .sales-guide-box p br{
+    display:none;
+  }
+
+  /* お役立ちリンクの下のお店の案内文（枠はそのまま・両端ぞろえ） */
+  .sales-links .sales-shop-note{
+    width:calc(100% - 36px) !important;
+    max-width:none !important;
+    font-size:12px !important;
+    text-align:justify !important;
+    text-align-last:left;
+    text-justify:inter-character;
+    white-space:normal !important;
+    word-break:auto-phrase;
+    line-break:strict;
+    text-wrap:pretty;
+  }
+  .sales-links .sales-shop-note br{
+    display:none;
+  }
+}
 </style>
 </head>
 
