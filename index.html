@@ -2386,7 +2386,8 @@ br.pc-br{display:none;}
     display:none;
   }
 }
-  /* Androidだけ：活動スライドの矢印を細くして外側に寄せ、写真とのあいだにすき間をあける */
+
+/* Androidだけ：活動スライドの矢印を細くして外側に寄せ、写真とのあいだにすき間をあける */
 @media (pointer:coarse) and (max-width:1024.98px){
   html.is-android .activity-arrow{
     width:20px !important;
@@ -2394,6 +2395,50 @@ br.pc-br{display:none;}
   }
   html.is-android .activity-arrow.prev{ left:2px !important; }
   html.is-android .activity-arrow.next{ right:2px !important; }
+}
+
+/* =========================================================
+   色の統一（B案：あたたかいクリーム）スマホ・PC共通
+   背景は全部 #fdf5ea、枠は白地＋線 #e6c9a8 にそろえる
+   ※募集・交通の緑の枠、ヘッダー・フッターのオレンジはそのまま
+   ========================================================= */
+html,
+body,
+section,
+.about,
+.activities,
+.products,
+.sns,
+.access,
+.activity-product-bridge{
+  background-color:#fdf5ea !important;
+}
+
+/* 文章の枠 */
+.latest-post,
+.sales-guide-box,
+.sales-links .sales-shop-note,
+.activity-note{
+  background:#fffdf9 !important;
+  border:1px solid #e6c9a8 !important;
+}
+
+/* 写真・リンクの大きい枠 */
+.activity-slider,
+.product-gray-box,
+.sales-links{
+  background:#ffffff !important;
+  border:1px solid #e6c9a8 !important;
+}
+
+.sales-links{
+  border-radius:14px !important;
+}
+
+/* 送迎車の写真・地図の枠線も同じ色に */
+.car-photo,
+.map{
+  border-color:#e6c9a8 !important;
 }
 </style>
 </head>
@@ -2715,9 +2760,9 @@ br.pc-br{display:none;}
   </p>
 
   <p>
-    小規模な活動センターで、親しみやすい環境です。<br>
-    活動の様子を見てから、ご検討いただくこともできます。<br>
-    興味のある方は、ぜひ一度お気軽に見学へお越しください。
+    小規模な活動センターで、親しみやすい環境です。<br><!--
+    -->活動の様子を見てから、ご検討いただくこともできます。<br><!--
+    -->興味のある方は、ぜひ一度お気軽に見学へお越しください。
   </p>
 
 </div>
