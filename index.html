@@ -2780,6 +2780,20 @@ html.is-android .site-nav a{
 .sns{
   background-color:#f6e6d1 !important;
 }
+
+/* ブログのコーナーの続き（商品販売案内・お役立ちリンク）も同じベージュの背景に */
+.sales-area{
+  background-color:#f6e6d1;
+  padding:1px 0 36px;
+}
+.sales-area .sales-links{
+  margin-bottom:0 !important;
+}
+
+/* スマホはアクセスのコーナーが40px上に重なるので、そのぶん余白を足す */
+@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
+  .sales-area{ padding-bottom:70px; }
+}
 </style>
 </head>
 
@@ -3004,6 +3018,7 @@ html.is-android .site-nav a{
   </section>
 
 <!-- 商品販売案内 -->
+<div class="sales-area">
   <div class="sales-guide-title">商品販売案内</div>
 <div class="sales-guide-box">
    <p>
@@ -3036,6 +3051,7 @@ html.is-android .site-nav a{
     元気ショップ「いこ〜る」（JR札幌駅西コンコース1階）、<br>元気ショップ（地下鉄南北線大通駅コンコース内）の<br>お近くにお越しの際は、ぜひお立ち寄りいただけると幸いです。
   </p>
 
+</div>
 </div>
 
 <section class="access access-up" id="access">
