@@ -2754,6 +2754,26 @@ html.is-android .site-nav a{
     max-width:calc(100% - 48px) !important;
   }
 }
+
+/* お店の案内：内側の枠をなくして、リンク一覧の下に添える文に（スマホ・PC共通） */
+.sales-links .sales-shop-note{
+  background:transparent !important;
+  border:none !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  padding:0 !important;
+  margin:22px auto 0 !important;
+  color:#6b4a36 !important;
+}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .sales-links .sales-shop-note{
+    font-size:16px !important;
+  }
+}
+
+.sales-links{
+  padding-bottom:26px !important;
+}
 </style>
 </head>
 
