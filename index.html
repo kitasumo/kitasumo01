@@ -2386,6 +2386,15 @@ br.pc-br{display:none;}
     display:none;
   }
 }
+  /* Androidだけ：活動スライドの矢印を細くして外側に寄せ、写真とのあいだにすき間をあける */
+@media (pointer:coarse) and (max-width:1024.98px){
+  html.is-android .activity-arrow{
+    width:20px !important;
+    font-size:22px !important;
+  }
+  html.is-android .activity-arrow.prev{ left:2px !important; }
+  html.is-android .activity-arrow.next{ right:2px !important; }
+}
 </style>
 </head>
 
