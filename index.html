@@ -2794,6 +2794,64 @@ html.is-android .site-nav a{
 @media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
   .sales-area{ padding-bottom:70px; }
 }
+
+/* ===== お役立ちリンク：見出しを枠の外に出し、ボタンを「左にオレンジの帯」の形に（スマホ・PC共通）===== */
+.sales-links::before{
+  content:none !important;
+  display:none !important;
+}
+.sales-links-title{
+  margin:30px auto 12px;
+  font-size:14px;
+  line-height:1;
+  font-weight:600;
+  color:#553725;
+  text-align:center;
+}
+.sales-links{
+  margin-top:0 !important;
+  padding-top:16px !important;
+}
+.sales-links a{
+  display:flex !important;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  width:auto !important;
+  margin:0 14px 10px !important;
+  padding:12px 12px !important;
+  border:1px solid #e5d3b8 !important;
+  border-left:8px solid #E86F3C !important;
+  border-radius:0 !important;
+  background:#fffdf8 !important;
+  color:#2f5f9f !important;
+  font-weight:600;
+  text-align:left;
+  text-decoration:none;
+}
+.sales-links a::after{
+  content:"›";
+  flex-shrink:0;
+  font-size:1.6em;
+  line-height:1;
+  color:#E86F3C;
+}
+.sales-links a:hover{
+  background:#fbefe2 !important;
+}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .sales-links-title{
+    margin:44px auto 14px;
+    font-size:18px;
+  }
+  .sales-links{
+    padding-top:22px !important;
+  }
+  .sales-links a{
+    margin:0 22px 12px !important;
+    padding:14px 16px !important;
+  }
+}
 </style>
 </head>
 
@@ -3029,6 +3087,7 @@ html.is-android .site-nav a{
   </p>
 </div>
   
+<div class="sales-links-title">お役立ちリンク</div>
 <div class="sales-links">
 
   <a href="https://genkishopequal.jp/" target="_blank" rel="noopener">
