@@ -2526,6 +2526,105 @@ html.is-android .site-nav a{
     text-decoration:underline;
   }
 }
+
+/* ===== 北のスモークより（ページの締めくくり）===== */
+.closing-note{
+  width:calc(100% - 36px);
+  max-width:620px;
+  margin:20px auto 0;
+  padding:22px 4px 8px;
+  border-top:2px solid #e6c9a8;
+  text-align:center;
+  color:#553725;
+}
+.closing-title{
+  margin:0 0 12px;
+  font-size:18px;
+  font-weight:700;
+  color:#63351d;
+}
+.closing-note p{
+  margin:0 0 18px;
+  font-size:14px;
+  line-height:1.9;
+  font-weight:600;
+}
+.closing-note br.pc-only{
+  display:none;
+}
+.closing-tel{
+  display:inline-block;
+  padding:12px 26px;
+  border-radius:999px;
+  background:#E86F3C;
+  color:#fff;
+  font-size:16px;
+  font-weight:700;
+  text-decoration:none;
+}
+/* スマホ：改行なしで端まで使って折り返す（両端ぞろえ） */
+@media (max-width:699.98px), (pointer:coarse) and (max-width:1024.98px){
+  .closing-note p{
+    text-align:justify;
+    text-align-last:left;
+  }
+}
+/* PC：区切りのいいところで改行して中央に */
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .closing-note{
+    max-width:680px;
+    margin-top:20px;
+  }
+  .closing-title{ font-size:22px; }
+  .closing-note p{ font-size:16px; }
+  .closing-note br.pc-only{ display:inline; }
+  .closing-tel:hover{ background:#d65f2e; }
+}
+
+/* ===== スマホ：商品名を読める大きさに（長い名前は2行までOK） ===== */
+@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
+  .products .product-name{
+    height:auto !important;
+    min-height:2.7em !important;
+    margin:0 0 5px !important;
+    font-size:11px !important;
+    line-height:1.3 !important;
+    letter-spacing:0 !important;
+    white-space:normal !important;
+    word-break:keep-all !important;
+    display:flex !important;
+    align-items:flex-end !important;
+    justify-content:center !important;
+  }
+}
+
+/* ===== 余白を詰める：スマホ ===== */
+@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
+  .about{ padding-bottom:12px !important; }
+  .activities{ padding:30px 10px 30px !important; }
+  .products{ padding-top:0 !important; padding-bottom:10px !important; }
+  .products .inner{ padding-top:16px !important; padding-bottom:8px !important; }
+  .sns{ padding-top:16px !important; padding-bottom:24px !important; }
+  .access{ padding-top:28px !important; padding-bottom:20px !important; }
+  .footer-image{ margin-top:36px !important; }
+}
+
+/* ===== 余白を詰める：PC ===== */
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .about, .activities, .access{
+    padding-top:44px !important;
+    padding-bottom:44px !important;
+  }
+  .products{
+    padding-top:24px !important;
+    padding-bottom:32px !important;
+  }
+  .sns{
+    padding-top:32px !important;
+    padding-bottom:40px !important;
+  }
+  .footer-image{ margin-top:44px !important; }
+}
 </style>
 </head>
 
@@ -2542,7 +2641,7 @@ html.is-android .site-nav a{
   <a href="#products">商品ラインナップ</a>
   <a href="#blog">ブログ・販売案内</a>
   <a href="#access">アクセス</a>
-  <a href="#recruit">募集のお知らせ</a>
+  <a href="#recruit">北のスモークより</a>
 </nav>
   
 <section class="about" id="about">
@@ -2620,7 +2719,7 @@ html.is-android .site-nav a{
 <div class="product-grid">
 
   <div class="product-wrap">
-    <h3 class="product-name">チーズスモーク</h3>
+    <h3 class="product-name">チーズ<wbr>スモーク</h3>
     <div class="product-slot">
       <img class="product-image cheese-image"
         src="cheese-smoke-new1.PNG"
@@ -2630,7 +2729,7 @@ html.is-android .site-nav a{
   </div>
 
   <div class="product-wrap">
-    <h3 class="product-name">ブルーベリージャム</h3>
+    <h3 class="product-name">ブルーベリー<wbr>ジャム</h3>
     <div class="product-slot">
       <img class="product-image"
         src="blueberry.JPEG"
@@ -2649,7 +2748,7 @@ html.is-android .site-nav a{
   </div>
 
   <div class="product-wrap">
-    <h3 class="product-name">リサイクル石鹸</h3>
+    <h3 class="product-name">リサイクル<wbr>石鹸</h3>
     <div class="product-slot">
       <img class="product-image"
         src="sopa.PNG"
@@ -2659,7 +2758,7 @@ html.is-android .site-nav a{
   </div>
 
     <div class="product-wrap">
-    <h3 class="product-name">エプロンドレス</h3>
+    <h3 class="product-name">エプロン<wbr>ドレス</h3>
     <div class="product-slot">
       <img class="product-image"
         src="handmade-apron.PNG"
@@ -2669,7 +2768,7 @@ html.is-android .site-nav a{
   </div>
 
   <div class="product-wrap">
-   <h3 class="product-name">岩手産たろう昆布</h3>
+   <h3 class="product-name">岩手産<wbr>たろう昆布</h3>
 <div class="product-slot">
   <img class="product-image"
        src="taro-kombu.PNG"
@@ -2680,7 +2779,7 @@ html.is-android .site-nav a{
   
 
   <div class="product-wrap">
-    <h3 class="product-name">牛乳パック椅子</h3>
+    <h3 class="product-name">牛乳パック<wbr>椅子</h3>
     <div class="product-slot">
       <img class="product-image"
         src="milkpack-chair.PNG"
@@ -2843,24 +2942,18 @@ html.is-android .site-nav a{
 <p class="map-note">（別画面で開きます）</p>
   </div>
 </section>
- <div class="recruit-note" id="recruit">
-
-  <p class="recruit-title">
-    <span>☘️</span>
-    <span>
-      北のスモークでは、通所者さんと<br class="sp-br"><!--
-      -->ボランティアさんを募集しています。
-    </span>
-    <span>☘️</span>
-  </p>
-
+ <div class="closing-note" id="recruit">
+  <h3 class="closing-title">北のスモークより</h3>
   <p>
-    小規模な活動センターで、親しみやすい環境です。<br><!--
-    -->活動の様子を見てから、ご検討いただくこともできます。<br><!--
-    -->興味のある方は、ぜひ一度お気軽に見学へお越しください。
+    北のスモークは、小さな活動センターです。<br class="pc-only"><!--
+    -->作業だけでなく、日々の出来事や情報を分かち合う、<br class="pc-only"><!--
+    -->コミュニケーションの場としても大切にしています。<br class="pc-only"><!--
+    -->通所者さんやボランティアさんも、いつでも歓迎しています。<br class="pc-only"><!--
+    -->見学もできますので、お気軽にお電話ください。
   </p>
-
+  <a class="closing-tel" href="tel:011-886-3354">📞 011-886-3354 に電話する</a>
 </div>
+
 <footer class="footer-image">
   <img src="footer.png" alt="地域活動支援センター 北のスモーク">
 </footer>
