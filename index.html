@@ -2005,7 +2005,7 @@ max-width:none;
   }
 
   .activities .activity-note::before{
-    content:"🌱 北スモの日々の活動";
+    content:"北スモの日々の活動";
     display:block;
     margin-bottom:12px;
     padding-bottom:10px;
@@ -2553,14 +2553,12 @@ html.is-android .site-nav a{
   display:none;
 }
 .closing-tel{
-  display:inline-block;
-  padding:12px 26px;
-  border-radius:999px;
-  background:#E86F3C;
-  color:#fff;
-  font-size:16px;
+  margin:0 !important;
+  font-size:15px !important;
   font-weight:700;
-  text-decoration:none;
+  color:#63351d;
+  text-align:center !important;
+  text-align-last:center !important;
 }
 /* スマホ：改行なしで端まで使って折り返す（両端ぞろえ） */
 @media (max-width:699.98px), (pointer:coarse) and (max-width:1024.98px){
@@ -2577,8 +2575,8 @@ html.is-android .site-nav a{
   }
   .closing-title{ font-size:22px; }
   .closing-note p{ font-size:16px; }
-  .closing-note br.pc-only{ display:inline; }
-  .closing-tel:hover{ background:#d65f2e; }
+  .closing-note p:not(.closing-tel){ text-align:justify; text-align-last:left; }
+  .closing-tel{ font-size:17px !important; }
 }
 
 /* ===== スマホ：商品名を読める大きさに（長い名前は2行までOK） ===== */
@@ -2625,6 +2623,27 @@ html.is-android .site-nav a{
   }
   .footer-image{ margin-top:44px !important; }
 }
+
+/* ===== 葉っぱ・枝の飾りをなくす（スマホ・PC共通）===== */
+/* 見出しの下線：葉っぱをなくして一本線に */
+.about h2::after,
+.about-bottom-line{
+  content:"" !important;
+  font-size:0 !important;
+  height:3px !important;
+  background:linear-gradient(
+    to right,
+    transparent 0%,
+    #dc7c31 12%,
+    #dc7c31 88%,
+    transparent 100%
+  ) !important;
+  border-radius:0 !important;
+}
+/* 「日々の活動を経て〜」の両側の芽と枝 */
+.bridge-sprout{
+  display:none !important;
+}
 </style>
 </head>
 
@@ -2667,7 +2686,7 @@ html.is-android .site-nav a{
         また、作業だけではなく、清掃や昼食の調理、行事での外出、誕生日会やクリスマス会など、日々の生活も大切にしながら、楽しい時間を共に過ごしています。
       </p>
 
-      <div class="about-bottom-line">🌱</div>
+      <div class="about-bottom-line"></div>
     </div>
   </div>
 </section>
@@ -2945,14 +2964,17 @@ html.is-android .site-nav a{
  <div class="closing-note" id="recruit">
   <h3 class="closing-title">北のスモークより</h3>
   <p>
-    北のスモークは、小さな活動センターです。<br class="pc-only"><!--
-    -->作業だけでなく、日々の出来事や情報を分かち合う、<br class="pc-only"><!--
+    北のスモークのホームページをご覧いただき、ありがとうございます。<br class="pc-only"><!--
+    -->私たちは、作業だけでなく、日々の出来事や情報を分かち合う、<br class="pc-only"><!--
     -->コミュニケーションの場としても大切にしています。<br class="pc-only"><!--
+    -->「ここに来ると落ち着く」「みんなと話せるのが楽しい」<br class="pc-only"><!--
+    -->そんな声が聞こえる場所であり続けたいと思っています。<br class="pc-only"><!--
+    -->商品を手に取ってくださる皆さま、<br class="pc-only"><!--
+    -->出店先で声をかけてくださる皆さまとのつながりも、私たちの大きな励みです。<br class="pc-only"><!--
     -->通所者さんやボランティアさんも、いつでも歓迎しています。<br class="pc-only"><!--
-    -->見学もできますので、お気軽にお電話ください。
+    -->見学もできますので、お気軽にお問い合わせください。
   </p>
-  <a class="closing-tel" href="tel:011-886-3354">📞 011-886-3354 に電話する</a>
-</div>
+  <p class="closing-tel">TEL 011-886-3354</p></div>
 
 <footer class="footer-image">
   <img src="footer.png" alt="地域活動支援センター 北のスモーク">
