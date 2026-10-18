@@ -2713,6 +2713,47 @@ html.is-android .site-nav a{
     transparent 100%
   );
 }
+
+/* PC：送迎の説明文は改行なしで横いっぱいに（左右の端をそろえる） */
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .car-caption{
+    width:calc(100% - 36px) !important;
+    max-width:560px !important;
+    margin:12px auto 0 !important;
+    font-size:15px !important;
+    line-height:1.8 !important;
+    text-align:justify !important;
+    text-align-last:left !important;
+  }
+  .car-caption br{
+    display:none !important;
+  }
+}
+
+/* PC：商品販売案内・お店の案内も改行なしで横いっぱいに */
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  /* お店の案内：区切りのいいところで改行し、左ぞろえに */
+  .sales-links .sales-shop-note{
+    text-align:left !important;
+    white-space:normal !important;
+  }
+  /* 商品販売案内：「石鹸は、」で改行し、左ぞろえに（ピラミッドにしない） */
+  .sales-guide-box p{
+    text-align:left !important;
+    width:fit-content;
+    margin:0 auto !important;
+  }
+  .sales-guide-box p br.sp-br{
+    display:none !important;
+  }
+  .sales-guide-box{
+    padding:16px 24px !important;
+  }
+  .sales-links .sales-shop-note{
+    width:fit-content !important;
+    max-width:calc(100% - 48px) !important;
+  }
+}
 </style>
 </head>
 
@@ -3013,7 +3054,7 @@ html.is-android .site-nav a{
       <p>通所の送迎は、ご自宅から北のスモークまでおこなっています。</p>
     </div>
     <img class="car-photo" src="sougei-car.jpg" alt="北のスモークの送迎車（車椅子用リフト付き）" loading="lazy">
-    <p class="car-caption">車両は、スロープ付きの軽バンと、<br class="car-sp">リフト付きの福祉車両です。<br>どちらも車椅子のまま、安心してご乗車いただけます。<br class="car-sp">ぜひ、ご利用ください。<br>日時はお気軽にご相談ください。</p>
+    <p class="car-caption">車両は、スロープ付きの軽バンと、<br class="car-sp">リフト付きの福祉車両です。<br>どちらも車椅子のまま、安心してご乗車いただけます。<br class="car-sp">日時はお気軽にご相談ください。<br>ぜひ、ご利用ください。</p>
     <div class="map">
       <iframe
         src="https://www.google.com/maps?q=北海道札幌市清田区里塚緑ケ丘12丁目3-22&output=embed"
