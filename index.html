@@ -2683,6 +2683,27 @@ html.is-android .site-nav a{
   .transport-head p{ font-size:16px; }
   .transport-head br.pc-only{ display:inline; }
 }
+
+/* 送迎についての下線：他の見出しと同じ、両端がうすくなるオレンジの線に */
+.transport-head h3{
+  display:block !important;
+  padding:0 !important;
+  border-bottom:none !important;
+}
+.transport-head h3::after{
+  content:"";
+  display:block;
+  width:150px;
+  height:3px;
+  margin:8px auto 0;
+  background:linear-gradient(
+    to right,
+    transparent 0%,
+    #dc7c31 12%,
+    #dc7c31 88%,
+    transparent 100%
+  );
+}
 </style>
 </head>
 
@@ -2980,7 +3001,7 @@ html.is-android .site-nav a{
 </div>
     <div class="transport-head">
       <h3>送迎について</h3>
-      <p>ご自宅から北のスモークまで、送迎をおこなっています。<br class="pc-only"><!--
+      <p>通所の送迎は、ご自宅から北のスモークまでおこなっています。<br class="pc-only"><!--
       -->日時はお気軽にご相談ください。</p>
     </div>
     <img class="car-photo" src="sougei-car.jpg" alt="北のスモークの送迎車（車椅子用リフト付き）" loading="lazy">
