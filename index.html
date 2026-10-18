@@ -1993,7 +1993,7 @@ max-width:none;
 
   /* 各タブの中身の一覧（枠の下半分を埋める） */
   .activities .activity-note::after{
-    content:"受ける ─ 企業様からの受託作業\A作る ─ 石鹸・枕・エプロンの製造\A出店 ─ アンテナショップ・フリーマーケット\Aその他 ─ 施設整備・花壇・レクリエーション";
+    content:"受ける ─ 食品の箱詰め・広報誌のポスティング\A作る ─ チーズ・石鹸・枕・エプロンの製造\A出店 ─ アンテナショップ・フリーマーケット\Aその他 ─ 施設整備・畑・レクリエーション";
     white-space:pre;
     display:block;
     margin-top:18px;
@@ -2439,6 +2439,22 @@ section,
 .car-photo,
 .map{
   border-color:#e6c9a8 !important;
+}
+
+/* PCだけ：右の案内枠は「見出し → 活動の一覧 → 点線 → 案内文」の順に */
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .activities .activity-note::before{
+    order:-2;
+  }
+  .activities .activity-note::after{
+    order:-1;
+    margin-top:0 !important;
+    padding-top:0 !important;
+    border-top:none !important;
+    margin-bottom:18px;
+    padding-bottom:14px;
+    border-bottom:2px dashed #f0dcc6;
+  }
 }
 </style>
 </head>
