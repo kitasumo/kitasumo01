@@ -2885,6 +2885,14 @@ html.is-android .site-nav a{
   background:#f4f3e6 !important;
 }
 
+/* エプロンお披露目の写真：PCでも3人の左右が切れないように全体を表示 */
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .activity-slider .activity-images img[src="apron-ohirome.jpg"]{
+    object-fit:contain !important;
+    clip-path:inset(29px 0 round 14px);
+  }
+}
+
 </style>
 </head>
 
@@ -3278,7 +3286,8 @@ const activitySets = {
     "activity-work-2-new.jpg",
     "activity-2-5.PNG",
     "oshima-tsumugi.jpeg",
-    "shugei-sagyou.PNG"
+    "shugei-sagyou.PNG",
+    "apron-ohirome.jpg"
   ],
   captions: [
     "石鹸：使用済み油を濾して不純物を取り除きます。",
@@ -3286,7 +3295,8 @@ const activitySets = {
     "出来上がった石鹸の形を整えて製品になります。",
     "そばがらを選別する作業です。枕の素材にします。",
     "裁縫の先生が大島紬（生地）を広げて<br>何を作ろうか思案中です。",
-    "エプロンの生地を整える作業です。"
+    "エプロンの生地を整える作業です。",
+    "出来上がったエプロンのお披露目です。"
   ]
 },
 
