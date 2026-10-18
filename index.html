@@ -2644,6 +2644,45 @@ html.is-android .site-nav a{
 .bridge-sprout{
   display:none !important;
 }
+
+/* ===== 送迎について（小見出し）===== */
+.transport-head{
+  width:calc(100% - 36px);
+  max-width:740px;
+  margin:30px auto 0;
+  text-align:center;
+  color:#553725;
+}
+.transport-head h3{
+  display:inline-block;
+  margin:0 0 10px;
+  padding:0 6px 6px;
+  border-bottom:2px solid #dc7c31;
+  font-size:18px;
+  font-weight:700;
+  color:#63351d;
+}
+.transport-head p{
+  margin:0;
+  font-size:14px;
+  line-height:1.8;
+  font-weight:600;
+}
+.transport-head br.pc-only{
+  display:none;
+}
+@media (max-width:699.98px), (pointer:coarse) and (max-width:1024.98px){
+  .transport-head p{
+    text-align:justify;
+    text-align-last:left;
+  }
+}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .transport-head{ max-width:560px; margin-top:40px; }
+  .transport-head h3{ font-size:21px; }
+  .transport-head p{ font-size:16px; }
+  .transport-head br.pc-only{ display:inline; }
+}
 </style>
 </head>
 
@@ -2939,8 +2978,10 @@ html.is-android .site-nav a{
   </div>
   
 </div>
-    <div class="transport-note">
-  🚐 通所の送迎もおこなっています。（日時は応相談）
+    <div class="transport-head">
+      <h3>送迎について</h3>
+      <p>ご自宅から北のスモークまで、送迎をおこなっています。<br class="pc-only"><!--
+      -->日時はお気軽にご相談ください。</p>
     </div>
     <img class="car-photo" src="sougei-car.jpg" alt="北のスモークの送迎車（車椅子用リフト付き）" loading="lazy">
     <p class="car-caption">送迎は、スロープ付きの軽バンと、<br class="car-sp">リフト付きの福祉車両でおこなっています。<br>どちらも車椅子のまま、安心してご乗車いただけます。<br class="car-sp">ぜひ、ご利用ください。</p>
