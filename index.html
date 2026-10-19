@@ -2961,6 +2961,23 @@ html.is-android .site-nav a{
 .closing-note p:last-child{
   margin-bottom:18px !important;
 }
+/* ===== 「活動について」も行の頭を1文字あける ===== */
+.about-text p{
+  text-indent:1em;
+}
+/* ===== 皆さまへ：字の大きさと行間を「活動について」とそろえる ===== */
+@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
+  .closing-note p{
+    font-size:14px !important;
+    line-height:1.65 !important;
+  }
+}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .closing-note p{
+    font-size:17px !important;
+    line-height:2 !important;
+  }
+}
 </style>
 </head>
 
@@ -2986,8 +3003,7 @@ html.is-android .site-nav a{
 
     <div class="about-text">
       <p style="margin-left:20px; margin-right:20px;">
-        北のスモークは、障がいの種別や程度を問わず、多様なメンバーが集う
-        札幌市の「地域活動支援センター」です。
+        北のスモークは、障がいの種別や程度を問わず、多様なメンバーが集う札幌市の「地域活動支援センター」です。
       </p>
 
       <p style="margin-left:20px; margin-right:20px;">
@@ -2995,8 +3011,7 @@ html.is-android .site-nav a{
       </p>
 
       <p style="margin-left:20px; margin-right:20px;">
-        一人ひとりが自分に合った作業に取り組み、
-        それぞれの力を発揮できるよう努めています。
+        一人ひとりが自分に合った作業に取り組み、それぞれの力を発揮できるよう努めています。
       </p>
 
       <p style="margin-left:20px; margin-right:20px;">
