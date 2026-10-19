@@ -2956,6 +2956,27 @@ html.is-android .site-nav a{
     line-height:2 !important;
   }
 }
+/* ===== 見出しの下線：PC・スマホとも、見出しの文字の長さ＋左右少しにそろえる ===== */
+.about h2,
+.activities h2,
+.products h2,
+.sns h2,
+.access h2{
+  display:table !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.about h2::after,
+.activities h2::after,
+.products h2::after,
+.sns h2::after,
+.access h2::after{
+  display:block !important;
+  width:auto !important;
+  max-width:none !important;
+  margin-left:-24px !important;
+  margin-right:-24px !important;
+}
 </style>
 </head>
 
