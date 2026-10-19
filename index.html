@@ -2977,6 +2977,34 @@ html.is-android .site-nav a{
   margin-left:-24px !important;
   margin-right:-24px !important;
 }
+/* ===== 商品販売案内・お役立ちリンクの下の文・送迎車の説明：枠なしで、ご利用案内の「通所の送迎は〜」と同じ字に ===== */
+.sales-guide-box{
+  background:transparent !important;
+  border:none !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  padding:0 !important;
+}
+.sales-guide-box p,
+.sales-links .sales-shop-note,
+.car-caption{
+  font-size:14px !important;
+  line-height:1.8 !important;
+}
+@media (max-width:699.98px), (pointer:coarse) and (max-width:1024.98px){
+  .sales-guide-box p,
+  .sales-links .sales-shop-note{
+    text-align:justify !important;
+    text-align-last:left !important;
+  }
+}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .sales-guide-box p,
+  .sales-links .sales-shop-note,
+  .car-caption{
+    font-size:16px !important;
+  }
+}
 </style>
 </head>
 
