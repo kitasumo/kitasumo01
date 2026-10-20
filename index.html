@@ -3052,6 +3052,26 @@ html.is-android .site-nav a{
     object-position:69% center !important;
   }
 }
+
+/* ===== 2026-10-20：商品の拡大表示 スマホで説明文の「す。」だけ次の行に落ちないように ===== */
+@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
+  #modalDescription{
+    letter-spacing:-0.9px;
+  }
+}
+#modalDescription .nw{
+  white-space:nowrap;
+}
+
+/* ===== 2026-10-20：両端ぞろえで字のすき間が広がって見えるので、ふつうの左ぞろえに ===== */
+.sales-links .sales-shop-note,
+.car-caption,
+.transport-head p,
+.closing-note p{
+  text-align:left !important;
+  text-align-last:left !important;
+  text-justify:auto !important;
+}
 </style>
 </head>
 
@@ -3209,7 +3229,7 @@ html.is-android .site-nav a{
       <img class="product-image"
         src="milkpack-chair.PNG"
         alt="牛乳パック椅子"
-        onclick="openImage(this.src, '牛乳パック椅子', '牛乳パックとダンボールで強度を持たせた、手作り椅子です。<br>子供から大人までお使いいただけます。<br><br>1,200円〜（税込み）<br>※サイズにより価格変動します。<br><br>※強い衝撃や無理な荷重はお避けください。')">
+        onclick="openImage(this.src, '牛乳パック椅子', '牛乳パックとダンボールで強度を持たせた、手作り<span class=nw>椅子です。</span><br>子供から大人までお使いいただけます。<br><br>1,200円〜（税込み）<br>※サイズにより価格変動します。<br><br>※強い衝撃や無理な荷重はお避けください。')">
     </div>
   </div>
   <div class="product-wrap">
@@ -3218,7 +3238,7 @@ html.is-android .site-nav a{
     <img class="product-image"
          src="sobagara-pillow.PNG"
          alt="そばがら枕"
-         onclick="openImage(this.src, 'そばがら枕', '幌加内産の天然そばがら100％を使用した、手作り枕です。<br><br>1,000円〜（税込み）<br>※サイズにより価格変動します。<br><br>※そばアレルギーの方はお控えください。')">
+         onclick="openImage(this.src, 'そばがら枕', '幌加内産の天然そばがら100％を使用した、手作り<span class=nw>枕です。</span><br><br>1,000円〜（税込み）<br>※サイズにより価格変動します。<br><br>※そばアレルギーの方はお控えください。')">
   </div>
 </div>
   <div class="product-wrap">
