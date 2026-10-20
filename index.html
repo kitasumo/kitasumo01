@@ -3119,6 +3119,28 @@ html.is-android .site-nav a{
     padding-right:0 !important;
   }
 }
+
+/* ===== 2026-10-20：ヘッダー下のメニュー あたたかいうすグレーにして、高さを少し低く ===== */
+.site-nav{
+  background:#edeae5 !important;
+  border-bottom-color:#d6d0c7 !important;
+}
+.site-nav a{
+  border-color:#d6d0c7 !important;
+}
+@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
+  .site-nav a{
+    min-height:38px !important;
+  }
+}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .site-nav a{
+    min-height:48px !important;
+  }
+  .site-nav a + a::before{
+    background:#d6d0c7 !important;
+  }
+}
 </style>
 </head>
 
