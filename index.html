@@ -3141,6 +3141,13 @@ html.is-android .site-nav a{
     background:#d6d0c7 !important;
   }
 }
+
+/* ===== 2026-10-20：スマホ 皆さまへ「お気軽にご連絡ください。」の最後が1〜2文字だけ落ちないように少し詰める ===== */
+@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
+  .closing-note p.closing-boshu{
+    letter-spacing:-0.4px;
+  }
+}
 </style>
 </head>
 
@@ -3469,7 +3476,7 @@ html.is-android .site-nav a{
   <p>北のスモークのホームページを見ていただき、ありがとうございます。</p>
   <p>私たちは、通ってくる皆さんが、その日あったことを気軽に話せるような、ほっとできる場所でありたいと思っています。</p>
   <p>商品を手に取ってくださる方や、出店先で声をかけてくださる方とのつながりも、私たちの元気の源です。新しい仲間との出会いも、いつも楽しみにしています。</p>
-  <p>利用者さんやボランティアさんも募集しています。見学もできますので、気軽にご連絡ください。</p>
+  <p class="closing-boshu">利用者さんやボランティアさんも募集しています。見学もできますので、お気軽に<span class="nowrap">ご連絡ください。</span></p>
   <p class="closing-last">今後とも、<span class="nowrap">北のスモークをよろしくお願いします。</span></p></div>
 
 <footer class="footer-image">
