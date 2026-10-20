@@ -3005,6 +3005,38 @@ html.is-android .site-nav a{
     font-size:16px !important;
   }
 }
+
+/* ===== 2026-10-20：スライド下の案内文を大きく・皆さまへの最後の文字を詰める・お役立ちリンクの枠をなくす ===== */
+/* スマホ：スライドの下の案内文（上記のタブから…）を大きく。1行ずつ折り返さずに枠いっぱいに */
+@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
+  .activity-note{
+    padding-left:8px !important;
+    padding-right:8px !important;
+    font-size:min(13.5px, 3vw) !important;
+    line-height:1.8 !important;
+    white-space:nowrap;
+  }
+  /* 皆さまへの最後の段落：「す。」だけ次の行に落ちないように字を詰める */
+  .closing-note p:last-child{
+    letter-spacing:-0.9px;
+  }
+}
+/* 「お願いします。」は途中で切らない（入りきらない時はまとめて次の行へ） */
+.nowrap{
+  white-space:nowrap;
+}
+/* お役立ちリンク：外側の大きい枠をなくして、白いボタンだけ並べる */
+.sales-links{
+  background:transparent !important;
+  border:none !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  padding-top:0 !important;
+}
+.sales-links a{
+  margin-left:0 !important;
+  margin-right:0 !important;
+}
 </style>
 </head>
 
@@ -3334,7 +3366,7 @@ html.is-android .site-nav a{
   <p>私たちは、通ってくる皆さんが、その日あったことを気軽に話せるような、ほっとできる場所でありたいと思っています。</p>
   <p>商品を手に取ってくださる方や、出店先で声をかけてくださる方とのつながりも、私たちの元気の源です。新しい仲間との出会いも、いつも楽しみにしています。</p>
   <p>利用者さんやボランティアさんも募集しています。見学もできますので、気軽にご連絡ください。</p>
-  <p>これからも、北のスモークをよろしくお願いします。</p></div>
+  <p>これからも、北のスモークをよろしく<span class="nowrap">お願いします。</span></p></div>
 
 <footer class="footer-image">
   <img src="footer.png" alt="地域活動支援センター 北のスモーク">
