@@ -3349,6 +3349,33 @@ br.note-br{
     color:#3f2a1c;
   }
 }
+
+/* ===== 2026-10-21：お役立ちリンク ほんのり温かい白に、左端にオレンジの細い線、右の「›」もオレンジ（スマホ・PC共通） ===== */
+.sales-links a{
+  background:#fffcf7 !important;
+  position:relative;
+  overflow:hidden;
+}
+.sales-links a::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:5px;
+  background:#E86F3C;
+}
+.sales-links a::after{
+  color:#E86F3C !important;
+}
+.sales-links a:hover{
+  background:#fdf3e7 !important;
+}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .sales-links a::before{
+    width:7px;
+  }
+}
 </style>
 </head>
 
