@@ -13,6 +13,9 @@
 <meta property="og:image" content="https://kitasumo.github.io/kitasumo01/header0.jpg">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Playfair+Display:ital,wght@1,700&family=Shippori+Mincho+B1:wght@800&display=swap" rel="stylesheet">
 <style>
 *{
   box-sizing:border-box;
@@ -3185,6 +3188,167 @@ br.note-br{
 .activity-tab:not(.active){
   color:#c2532a !important;
 }
+
+/* ===== 2026-10-21：ブログの入口を画像から「こげ茶の帯にオレンジ」のボタンに（スマホ・PC共通） ===== */
+.sns .sns-links-wrap{
+  display:block !important;
+  width:calc(100% - 36px) !important;
+  max-width:560px !important;
+  margin:0 auto 18px !important;
+}
+.sns .sns-blog{
+  display:block !important;
+  transform:none !important;
+}
+.blog-band-link{
+  display:block;
+  text-decoration:none;
+}
+.blog-band{
+  display:flex;
+  align-items:center;
+  background:#3f2a1c;
+  border-radius:12px;
+  overflow:hidden;
+  color:#ffffff;
+  box-shadow:0 4px 12px rgba(63,42,28,.18);
+}
+.blog-band-bar{
+  width:8px;
+  align-self:stretch;
+  background:#E86F3C;
+  flex:none;
+}
+.blog-band-text{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  padding:14px 16px;
+  line-height:1.3;
+  text-align:left;
+}
+.blog-band-sub{
+  font-size:10px;
+  letter-spacing:.25em;
+  color:#f5b48f;
+}
+.blog-band-title{
+  font-size:19px;
+  font-weight:700;
+  margin-top:3px;
+  color:#ffffff;
+}
+.blog-band-go{
+  padding:0 18px;
+  font-size:14px;
+  font-weight:700;
+  color:#f5b48f;
+  white-space:nowrap;
+}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .blog-band-text{ padding:18px 22px; }
+  .blog-band-title{ font-size:22px; }
+  .blog-band-link:hover .blog-band{ background:#523726; }
+}
+
+/* ===== 2026-10-21：スライドの左右の矢印ボタンをオレンジに ===== */
+.activity-arrow{
+  background:#E86F3C !important;
+  color:#ffffff !important;
+}
+
+/* ===== 2026-10-21：ブログの帯と最新記事をくっつけて1枚のカードに（緑の枠はやめる・スマホ・PC共通） ===== */
+.sns .sns-links-wrap,
+.sns .latest-post{
+  width:calc(100% - 36px) !important;
+  max-width:560px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.sns .sns-links-wrap{
+  margin-bottom:0 !important;
+}
+.sns .blog-band{
+  border-radius:12px 12px 0 0;
+  box-shadow:none;
+}
+.sns .latest-post{
+  margin-top:0 !important;
+  margin-bottom:52px !important;
+  padding:12px 16px !important;
+  background:#fdf6ec !important;
+  border:1px solid #e3ccaf !important;
+  border-top:none !important;
+  border-radius:0 0 12px 12px !important;
+  text-align:left !important;
+}
+.sns .latest-post span{
+  color:#63351d !important;
+  margin-bottom:4px !important;
+}
+.sns .latest-post .new-badge{
+  background:#c2532a !important;
+  color:#ffffff !important;
+  border-radius:999px !important;
+}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .sns .sns-links-wrap,
+  .sns .latest-post{
+    max-width:850px !important;
+  }
+  .sns .latest-post{
+    padding:14px 22px !important;
+  }
+}
+
+/* ===== 2026-10-21：ブログの帯 ほんのりグラデーションと、かっこいい文字に ===== */
+.sns .blog-band{
+  background:linear-gradient(90deg,#3a2619 0%,#5a3a26 100%);
+}
+.blog-band-sub{
+  font-family:"Montserrat",-apple-system,sans-serif;
+  font-weight:600;
+  letter-spacing:.32em;
+}
+.blog-band-title{
+  font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  font-weight:800;
+  letter-spacing:.05em;
+}
+.blog-band-en{
+  font-family:"Playfair Display",Georgia,serif;
+  font-style:italic;
+  font-weight:700;
+  font-size:1.18em;
+  letter-spacing:.02em;
+  color:#f5b48f;
+  margin-left:3px;
+}
+.blog-band-go{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.blog-band-arrow{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:26px;
+  height:26px;
+  border:1.5px solid #f5b48f;
+  border-radius:50%;
+  font-size:13px;
+  line-height:1;
+}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .sns .blog-band-link:hover .blog-band{
+    background:linear-gradient(90deg,#45301f 0%,#6a462e 100%);
+  }
+  .blog-band-link:hover .blog-band-arrow{
+    background:#f5b48f;
+    color:#3f2a1c;
+  }
+}
 </style>
 </head>
 
@@ -3379,14 +3543,18 @@ br.note-br{
     <div class="sns-links-wrap">
 
       <div class="sns-blog">
-        <a
+        <a class="blog-band-link"
           href="https://ameblo.jp/sumokubei/"
           target="_blank"
           rel="noopener noreferrer">
-          <img
-            src="blog -aicon.PNG"
-            alt="北スモblog"
-            class="ameblo-image">
+          <span class="blog-band">
+            <span class="blog-band-bar"></span>
+            <span class="blog-band-text">
+              <span class="blog-band-sub">KITASUMO BLOG</span>
+              <span class="blog-band-title">北スモ<span class="blog-band-en">blog</span></span>
+            </span>
+            <span class="blog-band-go">ブログへ<span class="blog-band-arrow">→</span></span>
+          </span>
         </a>
         
 </div>
