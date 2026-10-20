@@ -3160,6 +3160,25 @@ html.is-android .site-nav a{
     letter-spacing:-0.5px !important;
   }
 }
+/* ===== 2026-10-21：メニューの字の色をオレンジに（スマホ・PC共通） ===== */
+.site-nav a{
+  color:#c75a2b !important;
+}
+
+/* ===== 2026-10-21：スマホ 商品ラインナップの「画像をタップすると〜」「※受注製造の〜」を見やすい大きさに（PCはそのまま） ===== */
+br.note-br{
+  display:none;
+}
+@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
+  .product-tap-note,
+  .product-note{
+    font-size:13px !important;
+    line-height:1.6 !important;
+  }
+  br.note-br{
+    display:inline;
+  }
+}
 </style>
 </head>
 
@@ -3340,7 +3359,7 @@ html.is-android .site-nav a{
 
 </div>
 </div>
-    <p class="product-note">※受注製造の商品もございます。お電話にてご確認ください。</p>
+    <p class="product-note">※受注製造の商品もございます。<br class="note-br">お電話にてご確認ください。</p>
   </div>
 </section>
 
