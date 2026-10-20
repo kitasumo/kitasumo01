@@ -3037,6 +3037,20 @@ html.is-android .site-nav a{
   margin-left:0 !important;
   margin-right:0 !important;
 }
+
+/* ===== 2026-10-20：エプロンお披露目の写真 画面が狭いスマホでも3人の顔が切れないように全体を表示（幅430px以上のiPhoneとPCはそのまま） ===== */
+@media (max-width:429.98px){
+  .activity-slider .activity-images{
+    height:260px;
+    display:flex;
+    align-items:center;
+  }
+  .activity-slider .activity-images img[src="apron-ohirome.jpg"]{
+    height:auto !important;
+    aspect-ratio:1200 / 903;
+    object-fit:cover !important;
+  }
+}
 </style>
 </head>
 
