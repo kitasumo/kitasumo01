@@ -3087,6 +3087,14 @@ html.is-android .site-nav a{
 .closing-note p.closing-last{
   text-indent:0 !important;
 }
+
+/* ===== 2026-10-20：スマホ 商品名「ブルーベリージャム」が2行にならないように、この商品だけ字を少し小さく ===== */
+@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
+  .product-name.name-long{
+    font-size:min(11px, 2.7vw) !important;
+    white-space:nowrap !important;
+  }
+}
 </style>
 </head>
 
@@ -3189,7 +3197,7 @@ html.is-android .site-nav a{
   </div>
 
   <div class="product-wrap">
-    <h3 class="product-name">ブルーベリー<wbr>ジャム</h3>
+    <h3 class="product-name name-long">ブルーベリー<wbr>ジャム</h3>
     <div class="product-slot">
       <img class="product-image"
         src="blueberry.JPEG"
