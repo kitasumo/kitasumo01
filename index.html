@@ -3388,6 +3388,56 @@ br.note-br{
     font-size:16px !important;
   }
 }
+
+/* ===== 2026-10-21：スマホ 本文の字を「私たちの活動について」と同じ16pxにそろえる（スライド・商品名・メニュー・1行にしている※受注製造は除く） ===== */
+@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
+  .product-tap-note,
+  .sns > .inner > p,
+  .sales-guide-box p,
+  .sales-links .sales-shop-note,
+  .transport-head p,
+  .car-caption,
+  .address,
+  .address .phone,
+  .mail-address,
+  .gmail-link,
+  .access-hours,
+  .map-note,
+  .sns .latest-post a,
+  .sales-links a{
+    font-size:16px !important;
+  }
+  .product-tap-note,
+  .sns > .inner > p,
+  .sales-guide-box p,
+  .sales-links .sales-shop-note,
+  .transport-head p,
+  .car-caption,
+  .address,
+  .mail-address,
+  .access-hours,
+  .map-note{
+    line-height:1.65 !important;
+  }
+  .access-feature{
+    font-size:14px !important;
+  }
+  .product-tap-note{
+    white-space:normal !important;
+  }
+}
+.sales-links a .link-name{
+  flex:1;
+  min-width:0;
+}
+br.sp-only-br{
+  display:none;
+}
+@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
+  br.sp-only-br{
+    display:inline;
+  }
+}
 </style>
 </head>
 
@@ -3413,19 +3463,19 @@ br.note-br{
 
     <div class="about-text">
       <p style="margin-left:20px; margin-right:20px;">
-        北のスモークは、障がいの種別や程度を問わず、多様なメンバーが集う札幌市の<br class="pc-only-br">「地域活動支援センター」です。
+        北のスモークは、障がいの種別や程度を問わず、多様なメンバーが集う札幌市の<br class="pc-only-br">「地域活動支援<span class="nowrap">センター」です。</span>
       </p>
 
       <p style="margin-left:20px; margin-right:20px;">
-        食品加工、受託作業、畑作業、手芸品製作、バザーへの出店など、幅広い活動を行っています。
+        食品加工、受託作業、畑作業、手芸品製作、バザーへの出店など、幅広い活動を<span class="nowrap">行っています。</span>
       </p>
 
       <p style="margin-left:20px; margin-right:20px;">
-        一人ひとりが自分に合った作業に取り組み、それぞれの力を発揮できるよう努めています。
+        一人ひとりが自分に合った作業に取り組み、それぞれの力を発揮できる<span class="nowrap">よう努めています。</span>
       </p>
 
       <p style="margin-left:20px; margin-right:20px;">
-        また、作業だけではなく、清掃や昼食の調理、行事での外出、誕生日会やクリスマス会など、日々の生活も大切にしながら、楽しい時間を共に過ごしています。
+        また、作業だけではなく、清掃や昼食の調理、行事での外出、誕生日会やクリスマス会など、日々の生活も大切にしながら、楽しい時間を<span class="nowrap">共に過ごしています。</span>
       </p>
 
       <div class="about-bottom-line"></div>
@@ -3476,7 +3526,7 @@ br.note-br{
 <section class="products" id="products">
   <div class="inner">
     <h2>北スモ商品ラインナップ</h2>
-    <p class="product-tap-note">画像をタップすると拡大と説明がご覧いただけます。</p>
+    <p class="product-tap-note">画像をタップすると<br class="sp-only-br">拡大と説明がご覧いただけます。</p>
 <div class="product-grid">
 
   <div class="product-wrap">
@@ -3630,7 +3680,7 @@ br.note-br{
 
   <div class="sales-links-list">
     <a href="https://genkishopequal.jp/" target="_blank" rel="noopener">
-      元気ショップ「いこ〜る」（アンテナショップ）
+      <span class="link-name">元気ショップ「いこ〜る」<span class="nowrap">（アンテナショップ）</span></span>
     </a>
 
     <a href="https://sassaren.or.jp/" target="_blank" rel="noopener">
@@ -3638,11 +3688,11 @@ br.note-br{
     </a>
 
     <a href="https://nice-heart-net.jp/" target="_blank" rel="noopener">
-      ナイスハートネット北海道（就労支援センター）
+      <span class="link-name">ナイスハートネット北海道<span class="nowrap">（就労支援センター）</span></span>
     </a>
 
     <a href="https://hiromaaru.org/" target="_blank" rel="noopener">
-      ひろまある清田（地域情報交流サイト）
+      <span class="link-name">ひろまある清田<span class="nowrap">（地域情報交流サイト）</span></span>
     </a>
   </div>
 
@@ -3719,7 +3769,7 @@ br.note-br{
   <h3 class="closing-title">北のスモークから皆さまへ</h3>
   <p>北のスモークのホームページを見ていただき、ありがとうございます。</p>
   <p>私たちは、通ってくる皆さんが、その日あったことを気軽に話せるような、ほっとできる場所でありたいと思っています。</p>
-  <p>商品を手に取ってくださる方や、出店先で声をかけてくださる方とのつながりも、私たちの元気の源です。新しい仲間との出会いも、いつも楽しみにしています。</p>
+  <p>商品を手に取ってくださる方や、出店先で声をかけてくださる方とのつながりも、私たちの元気の源です。新しい仲間との出会いも、いつも<span class="nowrap">楽しみにしています。</span></p>
   <p class="closing-boshu">利用者さんやボランティアさんも募集しています。見学もできますので、お気軽に<span class="nowrap">ご連絡ください。</span></p>
   <p class="closing-last">今後とも、<span class="nowrap">北のスモークをよろしくお願いします。</span></p></div>
 
