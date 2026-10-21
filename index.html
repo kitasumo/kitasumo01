@@ -3103,7 +3103,29 @@ br.note-br{
     line-height:1.6 !important;
   }
   br.note-br{
-    display:inline;
+    display:none;
+  }
+  /* 2026-10-21：「※受注製造の〜」はスマホでも1行に（狭い画面は字を少し小さく） */
+  .product-note{
+    font-size:min(13px, calc((100vw - 58px) / 28)) !important;
+    white-space:nowrap !important;
+    letter-spacing:-0.2px;
+    padding-left:0 !important;
+    padding-right:0 !important;
+  }
+}
+/* 2026-10-21：PC 商品ラインナップの説明文（画像をタップすると〜・※受注製造の〜）を少し大きく */
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .product-tap-note,
+  .product-note{
+    font-size:16px !important;
+    line-height:1.7 !important;
+  }
+  .product-tap-note{
+    margin-bottom:22px !important;
+  }
+  .product-note{
+    margin-top:22px !important;
   }
 }
 
