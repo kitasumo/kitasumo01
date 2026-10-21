@@ -3194,16 +3194,11 @@ br.sp-only-br{
     padding-right:0 !important;
   }
 }
-/* 2026-10-21：スマホ 「※受注製造の〜」は16pxで「。」のところで2行に */
-@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
-  .product-note{
-    font-size:16px !important;
-    line-height:1.65 !important;
-    white-space:normal !important;
-    letter-spacing:0 !important;
-  }
-  .product-note br.note-br{
-    display:inline !important;
+
+/* ===== 2026-10-21：PCだけ、区切りのいい1文を途中で折り返さない ===== */
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .pc-nowrap{
+    white-space:nowrap;
   }
 }
 </style>
@@ -3537,7 +3532,7 @@ br.sp-only-br{
   <h3 class="closing-title">北のスモークから皆さまへ</h3>
   <p>北のスモークのホームページを見ていただき、ありがとうございます。</p>
   <p>私たちは、通ってくる皆さんが、その日あったことを気軽に話せるような、ほっとできる場所でありたいと思っています。</p>
-  <p>商品を手に取ってくださる方や、出店先で声をかけてくださる方とのつながりも、私たちの元気の源です。新しい仲間との出会いも、いつも<span class="nowrap">楽しみにしています。</span></p>
+  <p>商品を手に取ってくださる方や、出店先で声をかけてくださる方とのつながりも、私たちの元気の源です。<span class="pc-nowrap">新しい仲間との出会いも、<span class="nowrap">いつも楽しみにしています。</span></span></p>
   <p class="closing-boshu">利用者さんやボランティアさんも募集しています。見学もできますので、お気軽に<span class="nowrap">ご連絡ください。</span></p>
   <p class="closing-last">今後とも、<span class="nowrap">北のスモークをよろしくお願いします。</span></p></div>
 
