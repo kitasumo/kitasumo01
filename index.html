@@ -2098,6 +2098,9 @@ section,
 }
 
 /* 案内枠：「見出し → 活動の一覧 → 点線 → 案内文」の順に（PC・スマホ共通。2026-10-21 スマホにも表示） */
+.activities .activity-note .act-list{
+  display:none;
+}
 .activities .activity-note{
   display:flex !important;
   flex-direction:column;
@@ -2129,16 +2132,36 @@ section,
   text-align:left;
 }
 @media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
+  .activities .activity-note{
+    align-items:center;
+  }
   .activities .activity-note::before{
     font-size:16px;
     margin-bottom:10px;
     padding-bottom:8px;
+    align-self:stretch;
+    text-align:center;
   }
   .activities .activity-note::after{
+    content:none !important;
+    display:none !important;
+  }
+  /* スマホの一覧は本物の文字で作り、「─」の位置を表のようにそろえる */
+  .activities .activity-note .act-list{
+    display:grid !important;
+    grid-template-columns:auto auto auto;
+    justify-content:center;
+    column-gap:0.4em;
+    order:-1;
+    align-self:stretch;
+    margin:0 0 12px;
+    padding:0 0 10px;
+    border-bottom:2px dashed #f0dcc6;
     font-size:min(14px, calc((100vw - 90px) / 23));
     line-height:2;
-    margin-bottom:12px !important;
-    padding-bottom:10px !important;
+    color:#63351d;
+    text-align:left;
+    white-space:nowrap;
   }
 }
 
@@ -2628,7 +2651,7 @@ html.is-android .site-nav a{
     font-size:min(13.5px, 3vw) !important;
     line-height:1.8 !important;
     white-space:nowrap;
-    text-align:left !important;
+    text-align:center !important;
   }
   /* 皆さまへの最後の段落：「す。」だけ次の行に落ちないように字を詰める */
   .closing-note p:last-child{
@@ -3189,6 +3212,7 @@ br.sp-only-br{
     </div>
 
     <div class="activity-note">
+<span class="act-list" aria-hidden="false"><span>受ける</span><span>─</span><span>食品の箱詰め・広報誌のポスティング</span><span>作る</span><span>─</span><span>チーズ・石鹸・枕・エプロンの製造</span><span>出店</span><span>─</span><span>アンテナショップ・フリーマーケット</span><span>その他</span><span>─</span><span>施設整備・畑・レクリエーション</span></span>
 上記のタブから、<br class="pc-br">それぞれの活動の様子をご覧いただけます。<br>
 <span style="color:#c66a2b;">複数の画像がある項目は、<br class="pc-br">横にスライドしてご覧ください。</span>
     </div>
