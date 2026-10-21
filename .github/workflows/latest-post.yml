@@ -1,0 +1,48 @@
+# 北スモblog（アメブロ）の最新記事のタイトルを、1日数回自動で latest-post.json に保存する
+name: ブログ最新記事の取得
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"   # 3時間ごと（日本時間でも3時間ごと）
+  workflow_dispatch:          # GitHubの画面から手動でも動かせる
+  push:
+    paths:
+      - ".github/workflows/latest-post.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: アメブロのRSSから最新記事を取る
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request, xml.etree.ElementTree as ET
+          url = "https://rssblog.ameba.jp/sumokubei/rss20.xml"
+          req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+          xml = urllib.request.urlopen(req, timeout=30).read()
+          root = ET.fromstring(xml)
+          items = root.findall("./channel/item")
+          # 「PR」など広告の記事はとばす
+          for it in items:
+              title = (it.findtext("title") or "").strip()
+              link = (it.findtext("link") or "").strip()
+              if title and link and "ameblo.jp/sumokubei/" in link:
+                  break
+          else:
+              raise SystemExit("記事が見つかりませんでした")
+          data = {"title": title, "link": link, "date": (it.findtext("pubDate") or "").strip()}
+          with open("latest-post.json", "w", encoding="utf-8") as f:
+              json.dump(data, f, ensure_ascii=False, indent=2)
+              f.write("\n")
+          print(data)
+          PY
+      - name: 変わっていたら保存する
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add latest-post.json
+          git diff --cached --quiet || (git commit -m "ブログ最新記事を更新" && git push)

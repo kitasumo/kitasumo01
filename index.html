@@ -3764,21 +3764,32 @@ buildActivitySlider();
     const timer = setTimeout(function(){
       if (link.textContent.indexOf("読み込み中") !== -1) showFallback();
     }, 6000);
-    fetch("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frssblog.ameba.jp%2Fsumokubei%2Frss20.xml")
-      .then(response => response.json())
-      .then(data => {
-        if (data.status === "ok" && data.items && data.items.length > 0) {
-          const latest = data.items[0];
-          done = true;
-          clearTimeout(timer);
-          link.textContent = latest.title;
-          link.href = latest.link;
-          try {
-            localStorage.setItem("kitasumo-latest-post", JSON.stringify({title: latest.title, link: latest.link}));
-          } catch (e) {}
-        } else if (link.textContent.indexOf("読み込み中") !== -1) {
-          showFallback();
-        }
+    const show = function(title, href){
+      done = true;
+      clearTimeout(timer);
+      link.textContent = title;
+      link.href = href;
+      try {
+        localStorage.setItem("kitasumo-latest-post", JSON.stringify({title: title, link: href}));
+      } catch (e) {}
+    };
+    /* 2026-10-21：まずGitHubが自動で保存した latest-post.json を読む。なければ外部サービスで取る */
+    fetch("latest-post.json?t=" + Date.now())
+      .then(r => { if (!r.ok) throw new Error("no json"); return r.json(); })
+      .then(d => {
+        if (d && d.title && d.link) { show(d.title, d.link); }
+        else { throw new Error("empty"); }
+      })
+      .catch(function(){
+        return fetch("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frssblog.ameba.jp%2Fsumokubei%2Frss20.xml")
+          .then(response => response.json())
+          .then(data => {
+            if (data.status === "ok" && data.items && data.items.length > 0) {
+              show(data.items[0].title, data.items[0].link);
+            } else if (link.textContent.indexOf("読み込み中") !== -1) {
+              showFallback();
+            }
+          });
       })
       .catch(error => {
         console.error("ブログ最新記事取得エラー:", error);
