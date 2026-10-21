@@ -177,8 +177,6 @@ top:-115px;
     margin:10px auto 25px;
   padding:12px 14px;
   text-align:left;
-  background:#fff8ef;
-  border:1px solid #ead8c7;
   border-radius:10px;
 }
 .latest-post span{
@@ -191,10 +189,7 @@ top:-115px;
 
 
 .latest-post a{
-  font-size:13px;
   line-height:1.6;
-  color:#553725;
-  font-weight:700;
   text-decoration:none;
 }
   
@@ -380,15 +375,7 @@ top:-115px;
     margin-bottom:24px;
   }
 
-  .about h2::after{
-    background:linear-gradient(
-      to right,
-      transparent 0%,
-      #dc7c31 12%,
-      #dc7c31 88%,
-      transparent 100%
-    );
-  }
+  
 
   .about-text{
     width:82% !important;
@@ -413,7 +400,6 @@ top:-115px;
   
 
   .map{
-    width:92%;
     height:210px;
   }
 }
@@ -467,10 +453,7 @@ top:-115px;
 
 @media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
   .about h2::after{
-    width:300px !important;
-    height:20px;
     margin-top:7px;
-    font-size:14px;
   }
 
   
@@ -579,9 +562,7 @@ top:-115px;
     margin-bottom:20px;
   }
 
-  .activities h2::after{
-    width:270px;
-  }
+  
 
    .activity-tabs{
     display:flex;
@@ -762,9 +743,7 @@ top:-115px;
     margin-bottom:24px;
   }
 
-  .products h2::after{
-    width:230px;
-  }
+  
 
   
 
@@ -910,7 +889,6 @@ top:-115px;
   margin-right:auto !important;
 }
   .product-gray-box{
-  background:#e6dfd5;
   border-radius:16px;
 }
 }
@@ -1121,9 +1099,7 @@ display:flex;
   margin:0;
 }
 @media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
-  .sales-guide-box{
-    background:#fff8ef;
-  }
+  
 
   
   .sales-links a{
@@ -1238,7 +1214,6 @@ display:flex;
   .car-caption{
     width:fit-content;
     max-width:calc(100% - 36px);
-    text-align:left;
   }
 }
 
@@ -1264,9 +1239,7 @@ display:flex;
   text-align:center;
 }
 @media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
-  .sns h2::after{
-  width:260px;
-}
+  
   }
 
 /* ===== PC版 ヘッダー・フッター ===== */
@@ -1356,19 +1329,7 @@ background-color:transparent !important;
 @media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine) {
  .about h2::after,
 .about-bottom-line {
-    content:"" !important;
     width:100% !important;
-  font-size:0 !important;
-    height:5px !important;
-   background:linear-gradient(
-  to right,
-  transparent 0%,
-  #dc7c31 12%,
-  #dc7c31 88%,
-  transparent 100%
-) !important;
- 
-    border-radius:0 !important;
   }
 }
   /* PC版：活動スライド調整 */
@@ -1602,8 +1563,6 @@ background-color:transparent !important;
   .latest-post{
     margin:10px auto 30px;
     text-align:left;
-    background:#fff8ef;
-    border:1px solid #ead8c7;
     border-radius:12px;
   }
 
@@ -1616,8 +1575,6 @@ background-color:transparent !important;
 
   .latest-post a{
     line-height:1.6;
-    color:#553725;
-    font-weight:700;
     text-decoration:none;
   }
 
@@ -1639,9 +1596,7 @@ background-color:transparent !important;
 
   
 
-  .sales-links a:hover{
-    background:#f8f4ee;
-  }
+  
 
   /* --- アクセス --- */
   
@@ -1828,12 +1783,7 @@ background-color:transparent !important;
   /* ===== PC全体の統一：背景・余白・横幅をそろえる ===== */
 
   /* 背景色はスマホ版と同じ配色に */
-  html,
-  body,
-  .about,
-  .sns{
-    background-color:#fbfcf7;
-  }
+  
 
   /* 各ブロックの上下の余白を同じに */
   .about,
@@ -1885,9 +1835,7 @@ background-color:transparent !important;
     font-size:13px;
   }
 
-  .latest-post a{
-    font-size:16px;
-  }
+  
 
   
 
@@ -1914,14 +1862,10 @@ background-color:transparent !important;
   }
 
   /* 枠を広げたぶん、字と余白もひと回り大きく */
-  .sns .latest-post{
-    text-align:center !important;
-  }
+  
 
   /* 最新記事：下の販売案内と同じく中央ぞろえにして、右側の空きをなくす */
-  .sns .latest-post span{
-    margin-bottom:10px !important;
-  }
+  
 
   .sns .latest-post span{
     font-size:15px !important;
@@ -1937,19 +1881,13 @@ background-color:transparent !important;
   }
 
   /* 商品販売案内：背景と枠線は最新記事と同じ、文字は枠いっぱいに */
-  .sales-guide-box{
-    background:#fff8ef !important;
-    border:1px solid #ead8c7 !important;
-    border-radius:12px !important;
-  }
+  
 
   .sales-guide-box p{
     letter-spacing:0;
   }
 
-  .sales-links{
-    margin-top:44px !important;   /* お役立ちリンクの上の余白を広げる */
-  }
+  
 
   .sales-links a{
     font-size:17px !important;
@@ -1960,10 +1898,7 @@ background-color:transparent !important;
     display:none;
   }
 
-  .sales-links .sales-shop-note{
-    margin:26px auto 6px !important;
-    padding:18px 28px !important;
-  }
+  
 
   /* 「日々の活動を経て…」：PCだけ1行に */
   .bridge-text br.sp-br{
@@ -1996,22 +1931,10 @@ background-color:transparent !important;
   }
 
   /* 「私たちの活動について」：見出しの下の線を、本文の下の線と同じ長さに */
-  .about h2::after{
-    width:100% !important;
-    max-width:820px !important;
-    margin-left:auto !important;
-    margin-right:auto !important;
-  }
+  
 
   /* 見出しを文字の幅にそろえる（下線を文字の長さに合わせるため） */
-  .activities h2,
-  .products h2,
-  .sns h2,
-  .access h2{
-    display:table !important;
-    margin-left:auto !important;
-    margin-right:auto !important;
-  }
+  
 
   /* 各セクションの見出しの下線：太さ・色・間隔をそろえ、長さは文字に合わせる */
   .activities h2::after,
@@ -2019,8 +1942,6 @@ background-color:transparent !important;
   .sns h2::after,
   .access h2::after{
     content:"" !important;
-    display:block !important;
-    width:auto !important;
     height:3px !important;
     margin:12px -24px 0 !important;   /* 線の長さは見出しの文字の長さ＋左右少し */
     font-size:0 !important;
@@ -2066,9 +1987,7 @@ br.pc-br{display:none;}
 
   /* 本文の3行：行の途中で折れない大きさに（画面幅に合わせて少しだけ調整） */
   /* 見出しを「アクセス・ご利用案内」にしたので、下線も文字の長さに合わせる */
-  .access h2::after{
-    width:210px;
-  }
+  
 
   .recruit-note p:not(.recruit-title){
     font-size:min(12px, calc((100vw * 0.88 - 32px) / 27.5));
@@ -2115,8 +2034,6 @@ br.pc-br{display:none;}
     width:calc(100% - 36px) !important;
     max-width:740px !important;
     margin:10px auto 0 !important;
-    text-align:justify !important;
-    text-align-last:left;
     white-space:normal !important;
   }
   .car-caption br{
@@ -2140,13 +2057,10 @@ br.pc-br{display:none;}
     display:none;
   }
 
-  /* お役立ちリンクの下のお店の案内文（枠はそのまま・両端ぞろえ） */
+  /* お役立ちリンクの下のお店の案内文（左端を上の「北のスモーク主力商品〜」の文にそろえる） */
   .sales-links .sales-shop-note{
-    width:calc(100% - 36px) !important;
+    width:100% !important;
     max-width:none !important;
-    font-size:12px !important;
-    text-align:justify !important;
-    text-align-last:left;
     white-space:normal !important;
   }
   
@@ -2455,8 +2369,6 @@ html.is-android .site-nav a{
     width:calc(100% - 36px) !important;
     max-width:560px !important;
     margin:12px auto 0 !important;
-    text-align:justify !important;
-    text-align-last:left !important;
   }
   .car-caption br{
     display:none !important;
@@ -2467,7 +2379,6 @@ html.is-android .site-nav a{
 @media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
   /* お店の案内：区切りのいいところで改行し、左ぞろえに */
   .sales-links .sales-shop-note{
-    text-align:left !important;
     white-space:normal !important;
   }
   /* 商品販売案内：「石鹸は、」で改行し、左ぞろえに（ピラミッドにしない） */
@@ -2479,9 +2390,7 @@ html.is-android .site-nav a{
   .sales-guide-box p br.sp-br{
     display:none !important;
   }
-  .sales-guide-box{
-    padding:16px 24px !important;
-  }
+  
   .sales-links .sales-shop-note{
     width:fit-content !important;
     max-width:calc(100% - 48px) !important;
@@ -2567,9 +2476,7 @@ html.is-android .site-nav a{
     margin:44px auto 14px;
     font-size:18px;
   }
-  .sales-links{
-    padding-top:22px !important;
-  }
+  
   .sales-links a{
     margin:0 22px 12px !important;
     padding:14px 16px !important;
