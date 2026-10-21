@@ -3437,6 +3437,18 @@ br.sp-only-br{
     display:inline;
   }
 }
+
+/* ===== 2026-10-21：スマホ 「画像をタップすると〜」と「※受注製造の〜」を同じ大きさで1行に ===== */
+@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
+  .product-tap-note,
+  .product-note{
+    font-size:min(13.5px, calc((100vw - 58px) / 28)) !important;
+    white-space:nowrap !important;
+    letter-spacing:-0.2px !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
+  }
+}
 </style>
 </head>
 
@@ -3525,7 +3537,7 @@ br.sp-only-br{
 <section class="products" id="products">
   <div class="inner">
     <h2>北スモ商品ラインナップ</h2>
-    <p class="product-tap-note">画像をタップすると<br class="sp-only-br">拡大と説明がご覧いただけます。</p>
+    <p class="product-tap-note">画像をタップすると拡大と説明がご覧いただけます。</p>
 <div class="product-grid">
 
   <div class="product-wrap">
