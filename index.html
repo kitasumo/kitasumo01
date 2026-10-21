@@ -1759,27 +1759,6 @@ background-color:transparent !important;
     white-space:nowrap;
   }
 
-  /* 各タブの中身の一覧（枠の下半分を埋める） */
-  .activities .activity-note::after{
-    content:"受ける ─ 食品の箱詰め・広報誌のポスティング\A作る ─ チーズ・石鹸・枕・エプロンの製造\A出店 ─ アンテナショップ・フリーマーケット\Aその他 ─ 施設整備・畑・レクリエーション";
-    white-space:pre;
-    display:block;
-    font-size:14px;
-    line-height:2.1;
-    color:#63351d;
-  }
-
-  .activities .activity-note::before{
-    content:"北スモの日々の活動";
-    display:block;
-    margin-bottom:12px;
-    padding-bottom:10px;
-    border-bottom:2px solid #f0dcc6;
-    font-size:18px;
-    font-weight:700;
-    color:#63351d;
-  }
-
   /* ===== PC全体の統一：背景・余白・横幅をそろえる ===== */
 
   /* 背景色はスマホ版と同じ配色に */
@@ -2118,19 +2097,48 @@ section,
   border-color:#e6c9a8 !important;
 }
 
-/* PCだけ：右の案内枠は「見出し → 活動の一覧 → 点線 → 案内文」の順に */
-@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+/* 案内枠：「見出し → 活動の一覧 → 点線 → 案内文」の順に（PC・スマホ共通。2026-10-21 スマホにも表示） */
+.activities .activity-note{
+  display:flex !important;
+  flex-direction:column;
+}
+.activities .activity-note::before{
+  content:"北スモの日々の活動";
+  order:-2;
+  display:block;
+  margin-bottom:12px;
+  padding-bottom:10px;
+  border-bottom:2px solid #f0dcc6;
+  font-size:18px;
+  font-weight:700;
+  color:#63351d;
+  text-align:left;
+}
+.activities .activity-note::after{
+  content:"受ける ─ 食品の箱詰め・広報誌のポスティング\A作る ─ チーズ・石鹸・枕・エプロンの製造\A出店 ─ アンテナショップ・フリーマーケット\Aその他 ─ 施設整備・畑・レクリエーション";
+  order:-1;
+  white-space:pre;
+  display:block;
+  margin:0 0 18px !important;
+  padding:0 0 14px !important;
+  border-top:none !important;
+  border-bottom:2px dashed #f0dcc6;
+  font-size:14px;
+  line-height:2.1;
+  color:#63351d;
+  text-align:left;
+}
+@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
   .activities .activity-note::before{
-    order:-2;
+    font-size:16px;
+    margin-bottom:10px;
+    padding-bottom:8px;
   }
   .activities .activity-note::after{
-    order:-1;
-    margin-top:0 !important;
-    padding-top:0 !important;
-    border-top:none !important;
-    margin-bottom:18px;
-    padding-bottom:14px;
-    border-bottom:2px dashed #f0dcc6;
+    font-size:min(14px, calc((100vw - 90px) / 23));
+    line-height:2;
+    margin-bottom:12px !important;
+    padding-bottom:10px !important;
   }
 }
 
@@ -2620,6 +2628,7 @@ html.is-android .site-nav a{
     font-size:min(13.5px, 3vw) !important;
     line-height:1.8 !important;
     white-space:nowrap;
+    text-align:left !important;
   }
   /* 皆さまへの最後の段落：「す。」だけ次の行に落ちないように字を詰める */
   .closing-note p:last-child{
