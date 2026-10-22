@@ -21,10 +21,14 @@
   box-sizing:border-box;
 }
 
+/* Windowsの游ゴシックは細く見えるので、普通の字はMedium・太字はBoldを使う */
+@font-face{font-family:"YuGothicM";src:local("Yu Gothic Medium"),local("YuGothic-Medium");font-weight:400;}
+@font-face{font-family:"YuGothicM";src:local("Yu Gothic Bold"),local("YuGothic-Bold");font-weight:700;}
+
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,
-  "Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+  "Hiragino Kaku Gothic ProN","YuGothicM","Yu Gothic",Meiryo,sans-serif;
   color:#44372f;
   background:#fff;
   line-height:1.8;
