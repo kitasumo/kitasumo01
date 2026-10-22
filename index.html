@@ -21,14 +21,10 @@
   box-sizing:border-box;
 }
 
-/* Windowsの游ゴシックは細く見えるので、普通の字はMedium・太字はBoldを使う */
-@font-face{font-family:"YuGothicM";src:local("Yu Gothic Medium"),local("YuGothic-Medium");font-weight:400;}
-@font-face{font-family:"YuGothicM";src:local("Yu Gothic Bold"),local("YuGothic-Bold");font-weight:700;}
-
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,
-  "Hiragino Kaku Gothic ProN","YuGothicM","Yu Gothic",Meiryo,sans-serif;
+  "Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
   color:#44372f;
   background:#fff;
   line-height:1.8;
@@ -1297,9 +1293,10 @@ background-color:transparent !important;
 
   /* PC版だけ背景をベージュに */
 @media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine) {
-   
-
-  
+  /* PCだけ本文をやや太く（Windowsの游ゴシックが細く見えるため。Macのヒラギノは変わらない） */
+  body{
+    font-weight:500;
+  }
 }
   /* PC版ヘッダー画像だけ変更 */
 /* PC版ヘッダー小窓表示 */
@@ -2250,7 +2247,7 @@ html.is-android .site-nav a{
 .closing-note p{
   font-size:16px;
   line-height:1.8;
-  font-weight:400;
+  font-weight:inherit;
   color:#44372f;
 }
 .closing-note br.pc-only{
@@ -2547,7 +2544,7 @@ html.is-android .site-nav a{
 .sales-links .sales-shop-note,
 .car-caption,
 .transport-head p{
-  font-weight:400 !important;
+  font-weight:inherit !important;
   color:#44372f !important;
 }
 /* ===== お役立ちリンク：スマホはボタンを細く、PCは左に文・右にリンク ===== */
@@ -2569,7 +2566,7 @@ html.is-android .site-nav a{
 /* ===== 最新記事：NEWは赤、記事タイトルは本文と同じ字に ===== */
 
 .latest-post a{
-  font-weight:400 !important;
+  font-weight:inherit !important;
   font-size:13px !important;
 }
 /* ===== 北のスモークから皆さまへ：段落に分けて、行の頭を1文字あける ===== */
