@@ -3146,6 +3146,33 @@ br.sp-only-br{
     white-space:nowrap;
   }
 }
+/* ===== 2026-10-23：ボタンとスライドのあいだに操作の案内文（下の枠からここへ移動）（スマホ・PC共通） ===== */
+.activity-howto{
+  margin:-6px auto 14px;
+  color:#63351d;
+  font-size:min(13.5px, 3.2vw);
+  line-height:1.7;
+  text-align:center;
+  white-space:nowrap;
+}
+/* 下の枠は一覧で終わるので、一覧の下の点線と余白をなくす */
+.activities .activity-note .act-list{
+  margin-bottom:0 !important;
+  padding-bottom:0 !important;
+  border-bottom:none !important;
+}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .activities .activity-howto{
+    grid-column:1 / -1;
+    grid-row:2;
+    margin:-6px 0 20px;
+    font-size:16px;
+  }
+  .activities .activity-slider,
+  .activities .activity-note{
+    grid-row:3 !important;
+  }
+}
 </style>
 </head>
 
@@ -3199,6 +3226,7 @@ br.sp-only-br{
   <button class="activity-tab">出店</button>
   <button class="activity-tab">その他の活動</button>
 </div>
+    <p class="activity-howto">ボタンを押すと、活動の写真が見られます。<br><span style="color:#c66a2b;">写真は ‹ › で切りかえられます。</span></p>
     <div class="activity-slider">
       <button class="activity-arrow prev">‹</button>
      <div class="activity-images">
@@ -3219,8 +3247,6 @@ br.sp-only-br{
 
     <div class="activity-note">
 <span class="act-list" aria-hidden="false"><span>作る</span><span>─</span><span>チーズ・ジャム・石鹸・枕・<wbr>エプロンの製造</span><span>受ける</span><span>─</span><span>食品の箱詰め・<wbr>広報誌のポスティング</span><span>出店</span><span>─</span><span>地域イベント・<wbr>フリーマーケット</span><span>その他</span><span>─</span><span>施設整備・畑・<wbr>レクリエーション</span></span>
-上のボタンを押すと、活動の写真が見られます。<br>
-<span style="color:#c66a2b;">写真は ‹ › で切りかえられます。</span>
     </div>
   </div>
 </section>
