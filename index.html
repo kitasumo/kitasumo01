@@ -2099,7 +2099,19 @@ section,
 
 /* 案内枠：「見出し → 活動の一覧 → 点線 → 案内文」の順に（PC・スマホ共通。2026-10-21 スマホにも表示） */
 .activities .activity-note .act-list{
-  display:none;
+  display:grid;
+  grid-template-columns:auto auto 1fr;
+  column-gap:0.4em;
+  order:-1;
+  margin:0 0 18px;
+  padding:0 0 14px;
+  border-bottom:2px dashed #f0dcc6;
+  font-size:15px;
+  line-height:1.9;
+  color:#63351d;
+  text-align:left;
+  white-space:normal;
+  word-break:keep-all;
 }
 .activities .activity-note{
   display:flex !important;
@@ -2114,20 +2126,6 @@ section,
   border-bottom:2px solid #f0dcc6;
   font-size:18px;
   font-weight:700;
-  color:#63351d;
-  text-align:left;
-}
-.activities .activity-note::after{
-  content:"受ける ─ 食品の箱詰め・広報誌のポスティング\A作る ─ チーズ・ジャム・石鹸・枕・\A　　　  エプロンの製造\A出店 ─ アンテナショップ・フリーマーケット\Aその他 ─ 施設整備・畑・レクリエーション";
-  order:-1;
-  white-space:pre;
-  display:block;
-  margin:0 0 18px !important;
-  padding:0 0 14px !important;
-  border-top:none !important;
-  border-bottom:2px dashed #f0dcc6;
-  font-size:14px;
-  line-height:2.1;
   color:#63351d;
   text-align:left;
 }
@@ -3212,7 +3210,7 @@ br.sp-only-br{
     </div>
 
     <div class="activity-note">
-<span class="act-list" aria-hidden="false"><span>受ける</span><span>─</span><span>食品の箱詰め・広報誌のポスティング</span><span>作る</span><span>─</span><span>チーズ・ジャム・石鹸・枕・エプロンの製造</span><span>出店</span><span>─</span><span>アンテナショップ・フリーマーケット</span><span>その他</span><span>─</span><span>施設整備・畑・レクリエーション</span></span>
+<span class="act-list" aria-hidden="false"><span>受ける</span><span>─</span><span>食品の箱詰め・<wbr>広報誌のポスティング</span><span>作る</span><span>─</span><span>チーズ・ジャム・石鹸・枕・<wbr>エプロンの製造</span><span>出店</span><span>─</span><span>アンテナショップ・<wbr>フリーマーケット</span><span>その他</span><span>─</span><span>施設整備・畑・<wbr>レクリエーション</span></span>
 上記のタブから、<br class="pc-br">それぞれの活動の様子をご覧いただけます。<br>
 <span style="color:#c66a2b;">複数の画像がある項目は、<br class="pc-br">横にスライドしてご覧ください。</span>
     </div>
