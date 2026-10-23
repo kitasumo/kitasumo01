@@ -3659,13 +3659,16 @@ function changeActivity(index){
 
   activityIndex = index;
 
-  if(activityIndex < 0){
-    activityIndex =
-      currentSet.images.length - 1;
-  }
-
-  if(activityIndex >= currentSet.images.length){
-    activityIndex = 0;
+  /* 2026-10-24：最後の写真の次は次のタブへ、最初の写真の前は前のタブの最後の写真へ */
+  if(activityIndex < 0 || activityIndex >= currentSet.images.length){
+    const tabs = [...activityTabs].filter(t => activitySets[t.textContent.trim()]);
+    const now = tabs.findIndex(t => activitySets[t.textContent.trim()] === currentSet);
+    const step = activityIndex < 0 ? -1 : 1;
+    const next = tabs[(now + step + tabs.length) % tabs.length];
+    tabs.forEach(t => t.classList.remove("active"));
+    next.classList.add("active");
+    currentSet = activitySets[next.textContent.trim()];
+    activityIndex = step < 0 ? currentSet.images.length - 1 : 0;
   }
 
   buildActivitySlider();
