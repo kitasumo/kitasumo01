@@ -658,7 +658,6 @@ top:-115px;
     width:94%;
     margin-top:14px;
     padding:11px 13px;
-    text-align:center;
   }
 }
 
@@ -1246,7 +1245,6 @@ display:flex;
 @media (min-width:1025px), (min-width:700px) and (hover:hover) and (pointer:fine){
 
 .hero{
-background:#f1e9dd;
   width:100%;
 height:auto;
   margin:0;
@@ -1254,31 +1252,13 @@ height:auto;
   text-align:center;
 }
 
-  .hero img{
-    display:block;
-   width:100%;
-max-width:1200px;
-height:auto;
-content:url("kitasumo-header-pc-w.jpg");
-    margin:0 auto;
-  }
-
-  .footer-image{
-   width:100%;
-max-width:none;
-    margin:0 auto;
-  }
-
   .footer-image img{
     display:block;
-    width:100%;
     height:auto;
   }
     /* PC版だけ見出しの線を細く */
 .about h2::after{
 background-image:linear-gradient(to right,transparent 0%,#dc7c31 8%,#dc7c31 43%,transparent 43%,transparent 57%,#dc7c31 57%,#dc7c31 92%,transparent 100%) !important;
-  background-size:100% 1px !important;
-background-color:transparent !important;
 }
 }
 /* PCブラウザを小窓にした場合はスマホ幅で中央表示 */
@@ -1725,8 +1705,6 @@ background-color:transparent !important;
   .activities .activity-note{
     grid-row:2;
     align-self:stretch;
-    display:flex;
-    flex-direction:column;
     justify-content:flex-start;
     padding:24px 24px !important;
     border-radius:18px !important;
@@ -2106,7 +2084,6 @@ section,
   order:-1;
   margin:0 0 18px;
   padding:0 0 14px;
-  border-bottom:2px dashed #f0dcc6;
   font-size:15px;
   line-height:1.9;
   color:#63351d;
@@ -2155,7 +2132,6 @@ section,
     align-self:stretch;
     margin:0 0 12px;
     padding:0 0 10px;
-    border-bottom:2px dashed #f0dcc6;
     font-size:min(14px, calc((100vw - 90px) / 23));
     line-height:2;
     color:#63351d;
