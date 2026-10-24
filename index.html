@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>北のスモーク｜札幌市清田区の地域活動支援センター</title>
-<meta name="description" content="札幌市清田区里塚緑ケ丘の地域活動支援センター「北のスモーク」です。食品の箱詰めなどの受託作業や、チーズスモーク・ブルーベリージャム・リサイクル石鹸の製造・販売をおこなっています。見学・送迎のご相談もお気軽にどうぞ。">
+<meta name="description" content="札幌市清田区里塚緑ケ丘の地域活動支援センター「北のスモーク」です。食品の箱詰めなどの受託作業や、チーズスモーク<span class="naka">・</span>ブルーベリージャム<span class="naka">・</span>リサイクル石鹸の製造・販売をおこなっています。見学・送迎のご相談もお気軽にどうぞ。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="北のスモーク">
 <meta property="og:title" content="北のスモーク｜札幌市清田区の地域活動支援センター">
-<meta property="og:description" content="札幌市清田区里塚緑ケ丘の地域活動支援センター「北のスモーク」です。食品の箱詰めなどの受託作業や、チーズスモーク・ブルーベリージャム・リサイクル石鹸の製造・販売をおこなっています。見学・送迎のご相談もお気軽にどうぞ。">
+<meta property="og:description" content="札幌市清田区里塚緑ケ丘の地域活動支援センター「北のスモーク」です。食品の箱詰めなどの受託作業や、チーズスモーク<span class="naka">・</span>ブルーベリージャム<span class="naka">・</span>リサイクル石鹸の製造・販売をおこなっています。見学・送迎のご相談もお気軽にどうぞ。">
 <meta property="og:url" content="https://kitasumo.github.io/kitasumo01/">
 <meta property="og:image" content="https://kitasumo.github.io/kitasumo01/header0-w.jpg">
 <meta property="og:locale" content="ja_JP">
@@ -2880,6 +2880,12 @@ br.note-br{
   white-space:normal;
   word-break:keep-all;
 }
+/* 2026-10-24：商品名のあいだの「・」の左右のすき間を詰める */
+.naka{
+  display:inline-block;
+  margin:0 -0.3em;
+  text-indent:0;
+}
 /* ===== 2026-10-24：商品販売案内・お役立ちリンクの下の文・通所の送迎・送迎車の説明
    行の頭を1文字あけ、スマホは意味の切れ目で改行（PCは今の並びのまま） ===== */
 .kaigyo{
@@ -3139,10 +3145,10 @@ br.m-only{
 <div class="sales-area">
   <div class="sales-guide-title">商品販売案内</div>
 <div class="sales-guide-box">
-   <p class="kaigyo">北のスモーク主力商品の<br class="sp-br"><!--
-    -->チーズスモーク・ブルーベリージャム・<br class="sp-br"><!--
-    -->リサイクル石鹸は、<br><!--
-    -->下記のリンク先からもご購入いただけ<span class="nowrap">ます。</span>
+   <p class="kaigyo"><span class="nowrap">北のスモーク</span><span class="nowrap">主力商品</span>の<br class="sp-br"><!--
+    --><span class="nowrap">チーズスモーク<span class="naka">・</span></span><span class="nowrap">ブルーベリージャム<span class="naka">・</span></span><br class="sp-br"><!--
+    --><span class="nowrap">リサイクル石鹸</span>は、<br><!--
+    -->下記の<span class="nowrap">リンク先</span>からも<span class="nowrap">ご購入</span><span class="nowrap">いただけます。</span>
   </p>
 </div>
   
@@ -3167,7 +3173,7 @@ br.m-only{
     </a>
   </div>
 
-  <p class="sales-shop-note kaigyo">JR札幌駅 西コンコース1階の元気ショップ「いこ〜る」と、地下鉄南北線 大通駅コンコース内の元気ショップでも、北のスモークの商品をお買い求めいただけ<span class="nowrap">ます。</span><br class="m-br m-only"><span class="m-ind"></span>お近くにお越しの際は、<br class="shop-br">ぜひお立ち寄りいただけると幸い<span class="nowrap">です。</span>
+  <p class="sales-shop-note kaigyo"><span class="nowrap">JR札幌駅</span> <span class="nowrap">西コンコース</span>1階の<span class="nowrap">元気ショップ</span><span class="nowrap">「いこ〜る」</span>と、<span class="nowrap">地下鉄南北線</span> <span class="nowrap">大通駅</span><span class="nowrap">コンコース</span>内の<span class="nowrap">元気ショップ</span>でも、<span class="nowrap">北のスモーク</span>の<span class="nowrap">商品</span>を<span class="nowrap">お買い求め</span><span class="nowrap">いただけます。</span><br class="m-br m-only"><span class="m-ind"></span><span class="nowrap">お近く</span>に<span class="nowrap">お越し</span>の際は、<br class="shop-br">ぜひ<span class="nowrap">お立ち寄り</span><span class="nowrap">いただけると</span><span class="nowrap">幸いです。</span>
   </p>
 
 </div>
@@ -3179,10 +3185,10 @@ br.m-only{
     <h2>ご利用案内</h2>
 
     <div class="transport-head">
-      <p class="kaigyo">通所の送迎は、ご自宅から北のスモークまでおこなってい<span class="nowrap">ます。</span></p>
+      <p class="kaigyo">通所の<span class="nowrap">送迎</span>は、<span class="nowrap">ご自宅</span>から<span class="nowrap">北のスモーク</span>まで<span class="nowrap">おこなって</span><span class="nowrap">います。</span></p>
     </div>
     <img class="car-photo" src="sougei-car2.jpg" alt="北のスモークの送迎車（車椅子用リフト付き）" loading="lazy">
-    <p class="car-caption kaigyo">車両は、スロープ付きの軽バンと、<br class="car-sp">リフト付きの福祉車両です。<br class="m-br"><span class="m-ind"></span>どちらも車椅子のまま、安心してご乗車いただけ<span class="nowrap">ます。</span><br class="car-sp">日時はご相談に応じますので、<br class="car-sp">お気軽にご利用くだ<span class="nowrap">さい。</span></p>
+    <p class="car-caption kaigyo"><span class="nowrap">車両</span>は、<span class="nowrap">スロープ</span>付きの<span class="nowrap">軽バン</span>と、<br class="car-sp"><span class="nowrap">リフト</span>付きの<span class="nowrap">福祉車両</span><span class="nowrap">です。</span><br class="m-br"><span class="m-ind"></span><span class="nowrap">どちらも</span><span class="nowrap">車椅子</span>のまま、<span class="nowrap">安心して</span><span class="nowrap">ご乗車</span><span class="nowrap">いただけます。</span><br class="car-sp"><span class="nowrap">日時</span>は<span class="nowrap">ご相談</span>に<span class="nowrap">応じます</span>ので、<br class="car-sp"><span class="nowrap">お気軽</span>に<span class="nowrap">ご利用</span><span class="nowrap">ください。</span></p>
     <div class="transport-head" id="access-map">
       <h3>アクセス</h3>
     </div>
