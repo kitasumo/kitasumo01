@@ -412,20 +412,6 @@ top:-115px;
   margin:10px auto 0 !important;
   color:#7d9b62 !important;
   line-height:20px !important;
-  background-image:linear-gradient(
-    to right,
-    transparent 0%,
-    #dc7c31 8%,
-    #dc7c31 43%,
-    transparent 43%,
-    transparent 57%,
-    #dc7c31 57%,
-    #dc7c31 92%,
-    transparent 100%
-  ) !important;
-  background-size:100% 3px !important;
-  background-position:center !important;
-  background-repeat:no-repeat !important;
 }
 
 .about-bottom-line{
@@ -946,9 +932,6 @@ display:flex;
     margin-bottom:-40px;
   }
   }
-  @media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
-  
-}
   .activity-product-bridge{
   width:100%;
   box-sizing:border-box;
@@ -1126,7 +1109,6 @@ display:flex;
 }
   
 .sales-links a{
-  border-bottom:1px solid #d9d9d9;
   font-size:14px;
   line-height:1.5;
 }
@@ -1237,9 +1219,6 @@ display:flex;
   color:#6b5b52;
   text-align:center;
 }
-@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
-  
-  }
 
 /* ===== PC版 ヘッダー・フッター ===== */
 @media (min-width:1025px), (min-width:700px) and (hover:hover) and (pointer:fine){
@@ -1256,10 +1235,6 @@ height:auto;
     display:block;
     height:auto;
   }
-    /* PC版だけ見出しの線を細く */
-.about h2::after{
-background-image:linear-gradient(to right,transparent 0%,#dc7c31 8%,#dc7c31 43%,transparent 43%,transparent 57%,#dc7c31 57%,#dc7c31 92%,transparent 100%) !important;
-}
 }
 /* PCブラウザを小窓にした場合はスマホ幅で中央表示 */
 @media (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
@@ -1296,14 +1271,6 @@ background-image:linear-gradient(to right,transparent 0%,#dc7c31 8%,#dc7c31 43%,
     max-width: none;
     height: auto;
     margin: 0 auto;
-  }
-}
-  /* PC版：上下のオレンジ線を統一 */
-@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine) {
-  .about h2::after {
-    background-color: transparent !important;
-    background-size: 100% 3px !important;
-    background-position: center !important;
   }
 }
   /* PC全画面：見出し下を一本線に */
@@ -1703,7 +1670,6 @@ background-image:linear-gradient(to right,transparent 0%,#dc7c31 8%,#dc7c31 43%,
 
   /* 右の案内枠：スライドと同じ高さ・同じ角丸・同じ余白でバランスをとる */
   .activities .activity-note{
-    grid-row:2;
     align-self:stretch;
     justify-content:flex-start;
     padding:24px 24px !important;
@@ -1743,14 +1709,6 @@ background-image:linear-gradient(to right,transparent 0%,#dc7c31 8%,#dc7c31 43%,
   /* 背景色はスマホ版と同じ配色に */
   
 
-  /* 各ブロックの上下の余白を同じに */
-  .about,
-  .activities,
-  .products,
-  .access{
-    padding-top:64px;
-    padding-bottom:64px;
-  }
 
   
 
@@ -2237,10 +2195,6 @@ html.is-android .site-nav a{
   text-align:center !important;
   text-align-last:center !important;
 }
-/* スマホ：改行なしで端まで使って折り返す（両端ぞろえ） */
-@media (max-width:699.98px), (pointer:coarse) and (max-width:1024.98px){
-  
-}
 /* PC：区切りのいいところで改行して中央に */
 @media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
   .closing-note{
@@ -2338,9 +2292,6 @@ html.is-android .site-nav a{
 .transport-head br.pc-only{
   display:none;
 }
-@media (max-width:699.98px), (pointer:coarse) and (max-width:1024.98px){
-  
-}
 @media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
   .transport-head{ max-width:560px; margin-top:40px; }
   .transport-head h3{ font-size:21px; }
@@ -2412,9 +2363,6 @@ html.is-android .site-nav a{
   padding:0 !important;
   margin:22px auto 0 !important;
 }
-@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
-  
-}
 
 .sales-links{
   padding-bottom:26px !important;
@@ -2464,7 +2412,6 @@ html.is-android .site-nav a{
   width:auto !important;
   margin:0 14px 10px !important;
   padding:12px 12px !important;
-  border-left:8px solid #E86F3C !important;
   font-weight:600;
   text-align:left;
   text-decoration:none;
@@ -2568,9 +2515,6 @@ html.is-android .site-nav a{
     line-height:1.65 !important;
   }
 }
-@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
-  
-}
 /* ===== 見出しの下線：PC・スマホとも、見出しの文字の長さ＋左右少しにそろえる ===== */
 .about h2,
 .activities h2,
@@ -2612,9 +2556,6 @@ html.is-android .site-nav a{
     text-align:justify !important;
     text-align-last:left !important;
   }
-}
-@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
-  
 }
 
 /* ===== 2026-10-20：スライド下の案内文を大きく・皆さまへの最後の文字を詰める・お役立ちリンクの枠をなくす ===== */
@@ -2685,10 +2626,6 @@ html.is-android .site-nav a{
   text-justify:auto !important;
 }
 
-/* ===== 2026-10-20：スマホ 商品販売案内・お店の案内文・送迎の文・送迎車の説明の行間を少し詰める（「活動について」と同じくらいに） ===== */
-@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
-  
-}
 
 /* 皆さまへの最後の1文：頭を下げずに1行で（入りきらない狭い機種は「今後とも、」で改行） */
 .closing-note p.closing-last{
