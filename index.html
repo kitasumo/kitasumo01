@@ -207,6 +207,11 @@ h2::after{
 .phone{
   white-space:nowrap;
 }
+/* 2026-10-25：電話番号をタップで電話できるように（見た目は今のまま） */
+.phone a{
+  color:inherit;
+  text-decoration:none;
+}
 
 /* ===== Googleマップ ===== */
 .map{
@@ -3189,7 +3194,7 @@ br.m-only{
     <div class="address">
       〒004-0805<br>
       北海道札幌市清田区里塚緑ケ丘12丁目3-22<br>
-      <span class="phone">TEL / FAX：011-886-3354</span><br>
+      <span class="phone">TEL / FAX：<a href="tel:0118863354">011-886-3354</a></span><br>
 <a class="mail-link" href="mailto:kitasumo@jk2.so-net.ne.jp">
   ✉ メールでお問い合わせ
 </a>
