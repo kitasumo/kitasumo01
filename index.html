@@ -1144,7 +1144,6 @@ height:auto;
 }
   /* PC全画面：見出し下を一本線に */
 @media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine) {
- .about h2::after,
 .about-bottom-line {
     width:100% !important;
   }
@@ -1803,9 +1802,7 @@ html,
 body,
 section,
 .about,
-.activities,
 .products,
-.sns,
 .access,
 .activity-product-bridge{
   background-color:#fdf5ea !important;
@@ -1813,16 +1810,13 @@ section,
 
 /* 文章の枠 */
 .latest-post,
-.sales-guide-box,
-.sales-links .sales-shop-note,
 .activity-note{
   background:#fffdf9 !important;
   border:1px solid #e6c9a8 !important;
 }
 
 /* 写真・リンクの大きい枠 */
-.activity-slider,
-.sales-links{
+.activity-slider{
   border:1px solid #e6c9a8 !important;
 }
 
@@ -2327,8 +2321,7 @@ html.is-android .site-nav a{
   line-height:1.8 !important;
 }
 @media (max-width:699.98px), (pointer:coarse) and (max-width:1024.98px){
-  .sales-guide-box p,
-  .sales-links .sales-shop-note{
+  .sales-guide-box p{
     text-align:justify !important;
     text-align-last:left !important;
   }
