@@ -3129,7 +3129,7 @@ br.m-only{
 
 <div class="latest-post">
  
-  <span>最新記事 <b class="new-badge">NEW</b></span>
+  <span>最新記事 <b class="new-badge" id="latest-post-new" style="display:none">NEW</b></span>
   <a id="latest-post-link" href="https://ameblo.jp/sumokubei/" target="_blank" rel="noopener noreferrer">
     読み込み中...
   </a>
@@ -3460,6 +3460,18 @@ buildActivitySlider();
   (function(){
     const link = document.getElementById("latest-post-link");
     if (!link) return;
+    /* 2026-10-27：NEWマークは投稿から7日以内のときだけ出す */
+    const badge = document.getElementById("latest-post-new");
+    const setNew = function(date){
+      if (!badge) return;
+      let t = NaN;
+      if (date) {
+        t = Date.parse(date);
+        if (isNaN(t)) t = Date.parse(String(date).replace(" ", "T") + "Z");
+      }
+      const days = (Date.now() - t) / 86400000;
+      badge.style.display = (!isNaN(t) && days >= 0 && days <= 7) ? "" : "none";
+    };
     let done = false;
     const showFallback = function(){
       if (done) return;
@@ -3472,25 +3484,27 @@ buildActivitySlider();
       if (saved && saved.title && saved.link) {
         link.textContent = saved.title;
         link.href = saved.link;
+        setNew(saved.date);
       }
     } catch (e) {}
     const timer = setTimeout(function(){
       if (link.textContent.indexOf("読み込み中") !== -1) showFallback();
     }, 6000);
-    const show = function(title, href){
+    const show = function(title, href, date){
       done = true;
       clearTimeout(timer);
       link.textContent = title;
       link.href = href;
+      setNew(date);
       try {
-        localStorage.setItem("kitasumo-latest-post", JSON.stringify({title: title, link: href}));
+        localStorage.setItem("kitasumo-latest-post", JSON.stringify({title: title, link: href, date: date || ""}));
       } catch (e) {}
     };
     /* 2026-10-21：まずGitHubが自動で保存した latest-post.json を読む。なければ外部サービスで取る */
     fetch("latest-post.json?t=" + Date.now())
       .then(r => { if (!r.ok) throw new Error("no json"); return r.json(); })
       .then(d => {
-        if (d && d.title && d.link) { show(d.title, d.link); }
+        if (d && d.title && d.link) { show(d.title, d.link, d.date); }
         else { throw new Error("empty"); }
       })
       .catch(function(){
@@ -3498,7 +3512,7 @@ buildActivitySlider();
           .then(response => response.json())
           .then(data => {
             if (data.status === "ok" && data.items && data.items.length > 0) {
-              show(data.items[0].title, data.items[0].link);
+              show(data.items[0].title, data.items[0].link, data.items[0].pubDate);
             } else if (link.textContent.indexOf("読み込み中") !== -1) {
               showFallback();
             }
