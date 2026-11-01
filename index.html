@@ -2917,6 +2917,22 @@ br.m-only{
     width:1em;
   }
 }
+
+/* ===== 2026-11-01：「私たちの活動について」だけ、見出しの下の線を本文の下の線（文の幅）と同じ長さに（スマホ・PC共通） ===== */
+.about h2{
+  display:block !important;
+}
+.about h2::after{
+  width:82% !important;
+  max-width:820px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .about h2::after{
+    width:100% !important;
+  }
+}
 </style>
 </head>
 
