@@ -2942,6 +2942,14 @@ br.m-only{
     font-size:21px !important;
   }
 }
+
+/* ===== 2026-11-03：お役立ちリンクを強く（ボタンを白くして薄い影、スマホは字を14pxに。本文は16pxのまま）===== */
+.sales-links-list a{background:#fff !important;box-shadow:0 1px 4px rgba(120,80,40,.12) !important;}
+/* スマホだけ字を12px→14pxに（PCは17pxのまま） */
+@media (max-width:650.98px), (min-width:651px) and (max-width:699.98px) and (hover:hover) and (pointer:fine), (min-width:651px) and (max-width:1024.98px) and (pointer:coarse){
+  .sales-links-list a{font-size:14px !important;}
+  .sales-links-list a *{font-size:inherit !important;}
+}
 </style>
 </head>
 
