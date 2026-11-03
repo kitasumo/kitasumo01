@@ -2950,6 +2950,14 @@ br.m-only{
   .sales-links-list a{font-size:14px !important;}
   .sales-links-list a *{font-size:inherit !important;}
 }
+
+/* ===== 2026-11-03：「商品販売案内」「お役立ちリンク」の見出しにも、ほかの見出しと同じオレンジの下線（字の長さ）をつける ===== */
+.sales-guide-title,.sales-links-title{display:table !important;margin-left:auto !important;margin-right:auto !important;}
+.sales-guide-title::after,.sales-links-title::after{content:"";display:block;height:3px;margin:9px -24px 0;border-radius:5px;
+  background-image:linear-gradient(to right,rgba(0,0,0,0) 0%,rgb(220,124,49) 12%,rgb(220,124,49) 88%,rgba(0,0,0,0) 100%);}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .sales-guide-title::after,.sales-links-title::after{margin-top:11px;border-radius:0;}
+}
 </style>
 </head>
 
