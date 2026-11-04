@@ -2966,6 +2966,12 @@ br.m-only{
     font-size:15px !important;
   }
 }
+/* 2026-11-05：お店の案内文（さん付け）：PCは3行に。「お近くにお越しの際は、」で改行しない */
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .sales-shop-note br.shop-br{
+    display:none !important;
+  }
+}
 </style>
 </head>
 
@@ -3224,7 +3230,7 @@ br.m-only{
     </a>
   </div>
 
-  <p class="sales-shop-note kaigyo">JR札幌駅 西コンコース1階の元気ショップ「いこ〜る」と、地下鉄南北線 大通駅コンコース内の元気ショップでも、北のスモークの商品をお買い求め<span class="nowrap">いただけます。</span><br class="m-br m-only"><span class="m-ind"></span>お近くにお越しの際は、<br class="shop-br">お立ち寄りいただけ<span class="nowrap">ると幸いです。</span>
+  <p class="sales-shop-note kaigyo">JR札幌駅 西コンコース1階の元気ショップ「いこ〜る」さんと、地下鉄南北線<br class="pc-only-br"> 大通駅コンコース内の元気ショップさんでも、北のスモークの商品をお買い求め<span class="nowrap">いただけます。</span><br class="pc-only-br"><br class="m-br m-only"><span class="m-ind"></span>お近くにお越しの際は、<br class="shop-br">お立ち寄りいただけ<span class="nowrap">ると幸いです。</span>
   </p>
 
 </div>
