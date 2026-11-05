@@ -3000,7 +3000,8 @@ br.m-only{
 
 .shop2{width:calc(100% - 36px);max-width:850px;margin:10px auto 30px;display:flex;flex-direction:column;gap:30px;text-align:left;color:#553725;}
 .shop2-title{margin:0 0 12px;font-size:17px;font-weight:700;color:#63351d;text-align:center;}
-.shop2-title::after{content:"";display:block;width:110px;height:3px;margin:8px auto 0;background:linear-gradient(to right,transparent,#dc7c31 15%,#dc7c31 85%,transparent);}
+.shop2-title{display:table;margin-left:auto !important;margin-right:auto !important;}
+.shop2-title::after{content:"";display:block;height:3px;margin:9px -24px 0;border-radius:5px;background-image:linear-gradient(to right,rgba(0,0,0,0) 0%,rgb(220,124,49) 12%,rgb(220,124,49) 88%,rgba(0,0,0,0) 100%);}
 .shop2-lead{margin:0 0 12px;font-size:14px;line-height:1.7;text-align:center;}
 .shop2-card{display:flex;align-items:center;gap:12px;margin:0 0 8px;padding:11px 14px;background:#fffdf9;border:1px solid #e6c9a8;border-radius:12px;text-decoration:none;color:#553725;}
 .shop2-ic{font-size:22px;flex:none;}
@@ -3013,6 +3014,7 @@ br.m-only{
 .shop2-rel a span{color:#dc7c31;font-weight:700;}
 @media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
   .shop2{max-width:620px;gap:40px;}
+  .shop2-title::after{margin-top:11px;border-radius:0;}
   .shop2-title{font-size:20px;}
   .shop2-lead{font-size:15px;}
   .shop2-tx b{font-size:16px;} .shop2-tx small{font-size:13.5px;}
@@ -3264,7 +3266,7 @@ br.m-only{
   </div>
   <div class="shop2-col shop2-rel">
     <h3 class="shop2-title">関係団体・地域のリンク</h3>
-    <a href="https://sassaren.or.jp/" target="_blank" rel="noopener">特定非営利活動法人 さっされん<span>›</span></a>
+    <a href="https://sassaren.or.jp/" target="_blank" rel="noopener">さっされん<small>（特定非営利活動法人）</small><span>›</span></a>
     <a href="https://nice-heart-net.jp/" target="_blank" rel="noopener">ナイスハートネット北海道<small>（就労支援センター）</small><span>›</span></a>
     <a href="https://hiromaaru.org/" target="_blank" rel="noopener">ひろまある清田<small>（地域情報交流サイト）</small><span>›</span></a>
   </div>
