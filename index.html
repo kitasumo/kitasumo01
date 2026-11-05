@@ -2997,6 +2997,27 @@ br.m-only{
   text-align-last:right !important;
   text-indent:0 !important;
 }
+
+.shop2{width:calc(100% - 36px);max-width:850px;margin:10px auto 30px;display:flex;flex-direction:column;gap:30px;text-align:left;color:#553725;}
+.shop2-title{margin:0 0 12px;font-size:17px;font-weight:700;color:#63351d;text-align:center;}
+.shop2-title::after{content:"";display:block;width:110px;height:3px;margin:8px auto 0;background:linear-gradient(to right,transparent,#dc7c31 15%,#dc7c31 85%,transparent);}
+.shop2-lead{margin:0 0 12px;font-size:14px;line-height:1.7;text-align:center;}
+.shop2-card{display:flex;align-items:center;gap:12px;margin:0 0 8px;padding:11px 14px;background:#fffdf9;border:1px solid #e6c9a8;border-radius:12px;text-decoration:none;color:#553725;}
+.shop2-ic{font-size:22px;flex:none;}
+.shop2-tx{flex:1;display:flex;flex-direction:column;line-height:1.45;}
+.shop2-tx b{font-size:15px;color:#63351d;}
+.shop2-tx small{font-size:12.5px;color:#7a6050;}
+.shop2-arw{color:#dc7c31;font-size:20px;font-weight:700;}
+.shop2-rel a{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:10px 4px;border-bottom:1px dashed #e3ccaf;font-size:14px;color:#2f6aa8;text-decoration:none;}
+.shop2-rel a small{font-size:12px;color:#7a6050;margin-right:auto;}
+.shop2-rel a span{color:#dc7c31;font-weight:700;}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .shop2{max-width:620px;gap:40px;}
+  .shop2-title{font-size:20px;}
+  .shop2-lead{font-size:15px;}
+  .shop2-tx b{font-size:16px;} .shop2-tx small{font-size:13.5px;}
+  .shop2-rel a{font-size:15px;}
+}
 </style>
 </head>
 
@@ -3223,43 +3244,31 @@ br.m-only{
 
   </section>
 
-<!-- 商品販売案内 -->
-<div class="sales-area">
-  <div class="sales-guide-title">商品販売案内</div>
-<div class="sales-guide-box">
-   <p class="kaigyo">北のスモーク主力商品の<br class="sp-br"><!--
-    -->チーズスモーク、ブルーベリージャム、<br class="sp-br"><!--
-    -->リサイクル石鹸は、<br><!--
-    -->下記のリンク先からもご購入いただけます。
-  </p>
-</div>
-  
-<div class="sales-links-title">お役立ちリンク</div>
-<div class="sales-links">
-
-  <div class="sales-links-list">
-    <a href="https://genkishopequal.jp/" target="_blank" rel="noopener">
-      <span class="link-name">元気ショップ「いこ〜る」<span class="nowrap">（アンテナショップ）</span></span>
+<!-- 商品販売案内（見本） -->
+<div class="sales-area"><div class="shop2">
+  <div class="shop2-col shop2-buy">
+    <h3 class="shop2-title">お買い求めいただける場所</h3>
+    <p class="shop2-lead">チーズスモーク・ブルーベリージャム・<br>リサイクル石鹸などを販売しています。</p>
+    <a class="shop2-card" href="https://genkishopequal.jp/" target="_blank" rel="noopener">
+      <span class="shop2-ic">📍</span><span class="shop2-tx"><b>元気ショップ「いこ〜る」さん</b><small>JR札幌駅 西コンコース1階</small></span><span class="shop2-arw">›</span>
     </a>
-
-    <a href="https://sassaren.or.jp/" target="_blank" rel="noopener">
-      特定非営利活動法人 さっされん
-    </a>
-
-    <a href="https://nice-heart-net.jp/" target="_blank" rel="noopener">
-      <span class="link-name">ナイスハートネット北海道<span class="nowrap">（就労支援センター）</span></span>
-    </a>
-
-    <a href="https://hiromaaru.org/" target="_blank" rel="noopener">
-      <span class="link-name">ひろまある清田<span class="nowrap">（地域情報交流サイト）</span></span>
-    </a>
+    <div class="shop2-card">
+      <span class="shop2-ic">📍</span><span class="shop2-tx"><b>元気ショップさん</b><small>地下鉄南北線 大通駅コンコース内</small></span>
+    </div>
+    <div class="shop2-card">
+      <span class="shop2-ic">🎪</span><span class="shop2-tx"><b>出店・イベント</b><small>フリーマーケットや地域のイベント<br>（予定はブログでお知らせします）</small></span>
+    </div>
+    <div class="shop2-card">
+      <span class="shop2-ic">📞</span><span class="shop2-tx"><b>北のスモークへ直接</b><small>お電話でのご注文・受注製造も承ります</small></span>
+    </div>
   </div>
-
-  <p class="sales-shop-note kaigyo">JR札幌駅 西コンコース1階の元気ショップ「いこ〜る」さんと、地下鉄南北線<br class="pc-only-br"> 大通駅コンコース内の元気ショップさんでも、北のスモークの商品をお買い求め<span class="nowrap">いただけます。</span><br class="pc-only-br"><br class="m-br m-only"><span class="m-ind"></span>お近くにお越しの際は、<br class="shop-br">お立ち寄りいただけ<span class="nowrap">ると幸いです。</span>
-  </p>
-
-</div>
-</div>
+  <div class="shop2-col shop2-rel">
+    <h3 class="shop2-title">関係団体・地域のリンク</h3>
+    <a href="https://sassaren.or.jp/" target="_blank" rel="noopener">特定非営利活動法人 さっされん<span>›</span></a>
+    <a href="https://nice-heart-net.jp/" target="_blank" rel="noopener">ナイスハートネット北海道<small>（就労支援センター）</small><span>›</span></a>
+    <a href="https://hiromaaru.org/" target="_blank" rel="noopener">ひろまある清田<small>（地域情報交流サイト）</small><span>›</span></a>
+  </div>
+</div></div>
 
 <section class="access access-up" id="access">
 
