@@ -2429,6 +2429,15 @@ html.is-android .site-nav a{
 /* 皆さまへの最後の1文：頭を下げずに1行で（入りきらない狭い機種は「今後とも、」で改行） */
 .closing-note p.closing-last{
   text-indent:0 !important;
+  text-align:center !important;
+  text-align-last:center !important;
+  font-size:16px !important;
+  font-weight:700 !important;
+  color:#63351d;
+  margin-top:28px !important;
+}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .closing-note p.closing-last{ font-size:20px !important; }
 }
 
 /* ===== 2026-10-20：スマホ 商品名が2行にならないように、狭い画面では全部の商品名を同じだけ小さく ===== */
