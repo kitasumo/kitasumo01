@@ -1,4 +1,5 @@
 # 北スモblog（アメブロ）の最新記事のタイトルを、1日数回自動で latest-post.json に保存する
+# RSS と 記事一覧ページ の両方を見て、記事番号がいちばん大きい（新しい）記事を選ぶ
 name: ブログ最新記事の取得
 
 on:
@@ -17,28 +18,81 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: アメブロのRSSから最新記事を取る
+      - name: アメブロから最新記事を取る
         run: |
           python3 - <<'PY'
-          import json, urllib.request, xml.etree.ElementTree as ET
-          url = "https://rssblog.ameba.jp/sumokubei/rss20.xml"
-          req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-          xml = urllib.request.urlopen(req, timeout=30).read()
-          root = ET.fromstring(xml)
-          items = root.findall("./channel/item")
-          # 「PR」など広告の記事はとばす
-          for it in items:
-              title = (it.findtext("title") or "").strip()
-              link = (it.findtext("link") or "").strip()
-              if title and link and "ameblo.jp/sumokubei/" in link:
-                  break
-          else:
+          import json, re, html, urllib.request, xml.etree.ElementTree as ET
+          from email.utils import format_datetime
+          from datetime import datetime
+
+          BLOG = "sumokubei"
+          HDR = {"User-Agent": "Mozilla/5.0"}
+
+          def get(url):
+              req = urllib.request.Request(url, headers=HDR)
+              return urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "replace")
+
+          def eid(link):
+              m = re.search(r"/%s/entry-(\d+)\.html" % BLOG, link or "")
+              return int(m.group(1)) if m else None
+
+          found = {}   # 記事番号 -> {title, link, date}
+
+          # 1) RSS
+          try:
+              root = ET.fromstring(get("https://rssblog.ameba.jp/%s/rss20.xml" % BLOG))
+              for it in root.findall("./channel/item"):
+                  link = (it.findtext("link") or "").strip()
+                  title = (it.findtext("title") or "").strip()
+                  n = eid(link)
+                  if n and title:
+                      found[n] = {"title": title,
+                                  "link": "https://ameblo.jp/%s/entry-%d.html" % (BLOG, n),
+                                  "date": (it.findtext("pubDate") or "").strip()}
+              print("RSS:", sorted(found)[-5:])
+          except Exception as e:
+              print("RSSエラー:", e)
+
+          # 2) 記事一覧ページ（RSSに載っていない新しい記事を拾う）
+          ids = set()
+          for page in ("entrylist.html", ""):
+              try:
+                  ids |= {int(x) for x in re.findall(r"/%s/entry-(\d+)\.html" % BLOG,
+                                                     get("https://ameblo.jp/%s/%s" % (BLOG, page)))}
+              except Exception as e:
+                  print("一覧エラー:", page, e)
+          print("一覧:", sorted(ids)[-5:])
+
+          allids = set(found) | ids
+          if not allids:
               raise SystemExit("記事が見つかりませんでした")
-          data = {"title": title, "link": link, "date": (it.findtext("pubDate") or "").strip()}
+          n = max(allids)
+
+          if n in found:
+              data = found[n]
+          else:
+              # RSSにない記事は、記事ページから題名と日付を読む
+              page = get("https://ameblo.jp/%s/entry-%d.html" % (BLOG, n))
+              m = re.search(r'<meta[^>]+property="og:title"[^>]+content="([^"]*)"', page)
+              title = html.unescape(m.group(1)) if m else ""
+              title = re.sub(r"\s*\|\s*[^|]*$", "", title).strip()
+              d = re.search(r'"datePublished"\s*:\s*"([^"]+)"', page)
+              date = ""
+              if d:
+                  try:
+                      date = format_datetime(datetime.fromisoformat(d.group(1).replace("Z", "+00:00")))
+                  except Exception:
+                      date = d.group(1)
+              if not title:
+                  raise SystemExit("最新記事の題名が読めませんでした: %d" % n)
+              data = {"title": title,
+                      "link": "https://ameblo.jp/%s/entry-%d.html" % (BLOG, n),
+                      "date": date}
+
           with open("latest-post.json", "w", encoding="utf-8") as f:
               json.dump(data, f, ensure_ascii=False, indent=2)
               f.write("\n")
-          print(data)
+          print("選んだ記事:", data)
           PY
       - name: 変わっていたら保存する
         run: |
