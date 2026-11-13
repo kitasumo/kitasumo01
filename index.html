@@ -3066,6 +3066,33 @@ br.m-only{
 .shop2-box{border:1.5px solid #e86f3c !important;}
 .shop2-rel3 a .lk-ic{display:flex;color:#e86f3c;margin-bottom:1px;}
 .shop2-lk{display:flex;align-items:center;color:#e86f3c !important;}
+
+/* 2026-11-14：配置変え（お店は商品の下・リンクはブログの下）、色はブログ欄にそろえる */
+.buy-wrap.shop2{width:100%;max-width:620px;margin:34px auto 0;gap:0;text-align:left;}
+.shop2-box{background:#fdf6ec !important;border:1px solid #e3ccaf !important;box-shadow:none !important;}
+.shop2-box .shop2-card{border-bottom-color:#ead8c0 !important;}
+.shop2-lk{color:#2f5f9f !important;}
+.sns .relh{margin:20px 2px 8px !important;padding:0 !important;font-size:14px;font-weight:700;color:#7a6050;text-align:left;}
+.sns .shop2-rel3{display:block;width:100%;margin:0;background:#fdf6ec;border:1px solid #e3ccaf;border-radius:14px;overflow:hidden;text-align:left;}
+.sns .shop2-rel3 a{flex-direction:row;justify-content:flex-start;align-items:center;gap:10px;min-height:0;padding:12px 14px;border:none;border-bottom:1px solid #ead8c0;border-radius:0;text-align:left;background:transparent;}
+.sns .shop2-rel3 a:last-child{border-bottom:none;}
+.sns .shop2-rel3 a b{font-size:15px;color:#2f5f9f;}
+.sns .shop2-rel3 a small{font-size:12.5px;margin-left:auto;white-space:nowrap;color:#6b5546;}
+.sns .shop2-rel3 a .lk-ic{order:3;margin:0;color:#2f5f9f;}
+@media (max-width:400px){.sns .shop2-rel3 a{padding:12px;gap:8px;}.sns .shop2-rel3 a b{font-size:14px;}.sns .shop2-rel3 a small{font-size:11.5px;letter-spacing:0;}}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .sns .relh{font-size:15px;margin-top:24px !important;}
+  .sns .shop2-rel3{margin-top:0;}
+  .sns .shop2-rel3 a{min-height:0;}
+  .sns .shop2-rel3 a b{font-size:15px;} .sns .shop2-rel3 a small{font-size:12.5px;}
+}
+.sns .rel-wrap{width:calc(100% - 36px);max-width:560px;margin:0 auto;}
+@media (max-width:370px){.buy-wrap .shop2-card{padding:11px 10px;gap:10px;}.buy-wrap .shop2-tx b{font-size:14.5px;}}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){.sns .rel-wrap{max-width:850px;}}
+@media (max-width:400px){.sns .shop2-rel3 a{padding:12px 10px;gap:6px;}.sns .shop2-rel3 a b{font-size:13.5px;}}
+@media (max-width:370px){.sns .shop2-rel3 a b{font-size:13px;}.sns .shop2-rel3 a small{font-size:11px;letter-spacing:0;}}
+.sns .rel-wrap{margin-bottom:56px;}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){.sns .rel-wrap{margin-bottom:0;}}
 </style>
 </head>
 
@@ -3080,7 +3107,7 @@ br.m-only{
   <a href="#about">活動について</a>
   <a href="#activities">活動の様子</a>
   <a href="#products">商品ラインナップ</a>
-  <a href="#blog">ブログ・販売案内</a>
+  <a href="#blog">ブログ・リンク</a>
   <a href="#access">ご利用案内</a>
   <a href="#access-map">アクセス</a>
 </nav>
@@ -3248,13 +3275,31 @@ br.m-only{
 </div>
 </div>
     <p class="product-note">※受注製造の商品もございます。<br class="note-br">お電話にてご確認ください。<br>※季節の商品は、販売時にブログでお知らせします。</p>
+    <div class="buy-wrap shop2">
+      <h3 class="shop2-title">お買い求めはこちら</h3>
+      <p class="shop2-lead"><span class="nowrap">北のスモークで作った</span><span class="nowrap">チーズスモーク、</span><span class="nowrap">ブルーベリージャム、</span><span class="nowrap">リサイクル石鹸などを、</span><span class="nowrap">下記のお店や</span><span class="nowrap">出店先で</span><span class="nowrap">販売しています。</span></p>
+      <div class="shop2-box">
+    <div class="shop2-card">
+      <span class="shop2-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c8602e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/></svg></span><span class="shop2-tx"><b>北のスモーク店頭</b><small>お電話でのご注文も承ります</small></span>
+    </div>
+    <div class="shop2-card">
+      <span class="shop2-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c8602e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v2"/><path d="M3 11l9-6 9 6"/><path d="M3 11c1.5 1.6 3 1.6 4.5 0 1.5 1.6 3 1.6 4.5 0 1.5 1.6 3 1.6 4.5 0 1.5 1.6 3 1.6 4.5 0"/><path d="M5 12.5V20M19 12.5V20M9.5 20v-4.5h5V20"/></svg></span><span class="shop2-tx"><b>出店・イベント</b><small>フリーマーケットや地域のイベント<br>（予定はブログでお知らせします）</small></span>
+    </div>
+    <a class="shop2-card" href="https://genkishopequal.jp/" target="_blank" rel="noopener">
+      <span class="shop2-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c8602e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0"/><path d="M5.5 12.5V19h13v-6.5"/><path d="M10 19v-4h4v4"/></svg></span><span class="shop2-tx"><b>元気ショップ「いこ〜る」さん</b><small>JR札幌駅 西コンコース1階</small></span><span class="shop2-arw shop2-lk"><svg class="lk" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span>
+    </a>
+    <div class="shop2-card">
+      <span class="shop2-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c8602e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0"/><path d="M5.5 12.5V19h13v-6.5"/><path d="M10 19v-4h4v4"/></svg></span><span class="shop2-tx"><b>元気ショップさん</b><small>地下鉄南北線 大通駅コンコース内</small></span>
+    </div>
+  </div>
+    </div>
   </div>
 </section>
 
 <section class="sns" id="blog">
   <div class="inner">
 
-   <h2>ブログ・販売案内・お役立ちリンク</h2>
+   <h2>ブログ・お役立ちリンク</h2>
 
     <p>日々の活動や最新情報を掲載しています。</p>
 
@@ -3285,37 +3330,18 @@ br.m-only{
     読み込み中...
   </a>
 </div>
+<div class="rel-wrap"><p class="relh">お役立ちリンク</p>
+<div class="shop2-rel3">
+    <a href="https://sassaren.or.jp/" target="_blank" rel="noopener"><span class="lk-ic"><svg class="lk" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span><b>さっされん</b><small>特定非営利活動法人</small></a>
+    <a href="https://nice-heart-net.jp/" target="_blank" rel="noopener"><span class="lk-ic"><svg class="lk" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span><b><span class="nowrap">ナイスハート</span><span class="nowrap">ネット北海道</span></b><small>就労支援センター</small></a>
+    <a href="https://hiromaaru.org/" target="_blank" rel="noopener"><span class="lk-ic"><svg class="lk" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span><b>ひろまある清田</b><small>地域情報交流サイト</small></a>
+  </div></div>
    
     </div>
 
   
 
   </section>
-
-<!-- 商品販売案内（見本） -->
-<div class="sales-area"><div class="shop2">
-  <p class="shop2-lead">北のスモークで作ったチーズスモーク、ブルーベリージャム、リサイクル石鹸などを、下記のお店や出店先で<span class="nowrap">販売しています。</span></p>
-  <div class="shop2-box">
-    <div class="shop2-card">
-      <span class="shop2-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c8602e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/></svg></span><span class="shop2-tx"><b>北のスモーク店頭</b><small>お電話でのご注文も承ります</small></span>
-    </div>
-    <div class="shop2-card">
-      <span class="shop2-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c8602e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v2"/><path d="M3 11l9-6 9 6"/><path d="M3 11c1.5 1.6 3 1.6 4.5 0 1.5 1.6 3 1.6 4.5 0 1.5 1.6 3 1.6 4.5 0 1.5 1.6 3 1.6 4.5 0"/><path d="M5 12.5V20M19 12.5V20M9.5 20v-4.5h5V20"/></svg></span><span class="shop2-tx"><b>出店・イベント</b><small>フリーマーケットや地域のイベント<br>（予定はブログでお知らせします）</small></span>
-    </div>
-    <a class="shop2-card" href="https://genkishopequal.jp/" target="_blank" rel="noopener">
-      <span class="shop2-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c8602e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0"/><path d="M5.5 12.5V19h13v-6.5"/><path d="M10 19v-4h4v4"/></svg></span><span class="shop2-tx"><b>元気ショップ「いこ〜る」さん</b><small>JR札幌駅 西コンコース1階</small></span><span class="shop2-arw shop2-lk"><svg class="lk" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span>
-    </a>
-    <div class="shop2-card">
-      <span class="shop2-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c8602e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0"/><path d="M5.5 12.5V19h13v-6.5"/><path d="M10 19v-4h4v4"/></svg></span><span class="shop2-tx"><b>元気ショップさん</b><small>地下鉄南北線 大通駅コンコース内</small></span>
-    </div>
-  </div>
-
-  <div class="shop2-rel3">
-    <a href="https://sassaren.or.jp/" target="_blank" rel="noopener"><span class="lk-ic"><svg class="lk" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span><b>さっされん</b><small>特定非営利活動法人</small></a>
-    <a href="https://nice-heart-net.jp/" target="_blank" rel="noopener"><span class="lk-ic"><svg class="lk" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span><b><span class="nowrap">ナイスハート</span><span class="nowrap">ネット北海道</span></b><small>就労支援センター</small></a>
-    <a href="https://hiromaaru.org/" target="_blank" rel="noopener"><span class="lk-ic"><svg class="lk" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span><b>ひろまある清田</b><small>地域情報交流サイト</small></a>
-  </div>
-</div></div>
 
 <section class="access access-up" id="access">
 
