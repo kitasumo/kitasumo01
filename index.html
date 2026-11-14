@@ -3104,6 +3104,20 @@ br.m-only{
 @media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){.sns .rel-wrap{margin-bottom:0;}}
 html body .products .buy-wrap p.shop2-lead{text-indent:0 !important;text-align:center !important;text-align-last:center !important;}
 .buy-wrap .shop2-lead{text-indent:0 !important;text-align:center !important;}
+/* 2026-11-14：お買い求め・お役立ちリンクを見出し左寄せ＋ラベル付きの白い箱に */
+.buy-wrap .shop2-title,.sns .relh{display:block !important;margin:0 0 12px !important;padding:0 !important;font-size:20px !important;font-weight:700;color:#63351d !important;text-align:left !important;}
+.buy-wrap .shop2-title::after,.sns .relh::after{content:"";display:block;width:150px;height:4px;margin:8px 0 0 !important;border-radius:4px;background:#dc7c31 !important;background-image:none !important;}
+html body .products .buy-wrap.shop2 p.shop2-lead{margin:0 0 14px !important;}
+.shop2-pill{display:inline-block;width:max-content;align-self:flex-start;margin:0 0 6px;padding:3px 14px;border-radius:999px;background:#dc7c31;color:#fff;font-size:13px;font-weight:700;line-height:1.5;}
+.buy-wrap .shop2-box{background:#fff !important;border:1.5px solid #dc7c31 !important;margin-bottom:16px;}
+.buy-wrap .shop2-box .shop2-card{border-bottom-color:#eee3d6 !important;}
+.sns .rel-wrap{margin-top:28px;}
+.sns .shop2-rel3{background:#fff !important;border:1.5px solid #dc7c31 !important;}
+.sns .shop2-rel3 a{display:grid !important;grid-template-columns:1fr auto;grid-template-areas:"b ic" "s ic";row-gap:0 !important;border-bottom-color:#eee3d6 !important;}
+.sns .shop2-rel3 a b{grid-area:b;} .sns .shop2-rel3 a small{grid-area:s;margin-left:0 !important;}
+.sns .shop2-rel3 a .lk-ic{grid-area:ic;align-self:center;}
+.sns .shop2-rel3 a .lk-ic svg{width:18px;height:18px;}
+@media (min-width:700px){.shop2-pill{font-size:14px !important;}}
 </style>
 </head>
 
@@ -3289,18 +3303,22 @@ html body .products .buy-wrap p.shop2-lead{text-indent:0 !important;text-align:c
     <div class="buy-wrap shop2">
       <h3 class="shop2-title">お買い求めはこちら</h3>
       <p class="shop2-lead"><span class="nowrap">北のスモークの商品は、</span><span class="nowrap">下記のお店や出店先で販売しています。</span></p>
+      <span class="shop2-pill">自分たちで販売</span>
       <div class="shop2-box">
     <div class="shop2-card">
       <span class="shop2-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c8602e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/></svg></span><span class="shop2-tx"><b>北のスモーク店頭</b><small>お電話でのご注文も承ります</small></span>
     </div>
     <div class="shop2-card">
-      <span class="shop2-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c8602e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v2"/><path d="M3 11l9-6 9 6"/><path d="M3 11c1.5 1.6 3 1.6 4.5 0 1.5 1.6 3 1.6 4.5 0 1.5 1.6 3 1.6 4.5 0 1.5 1.6 3 1.6 4.5 0"/><path d="M5 12.5V20M19 12.5V20M9.5 20v-4.5h5V20"/></svg></span><span class="shop2-tx"><b>出店・イベント</b><small>フリーマーケットや地域のイベント<br>（予定はブログでお知らせします）</small></span>
+      <span class="shop2-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c8602e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v2"/><path d="M3 11l9-6 9 6"/><path d="M3 11c1.5 1.6 3 1.6 4.5 0 1.5 1.6 3 1.6 4.5 0 1.5 1.6 3 1.6 4.5 0 1.5 1.6 3 1.6 4.5 0"/><path d="M5 12.5V20M19 12.5V20M9.5 20v-4.5h5V20"/></svg></span><span class="shop2-tx"><b>出店・イベント</b><small><span class="nowrap">フリーマーケットや地域のイベント</span><span class="nowrap">（予定はブログで）</span></small></span>
     </div>
+    </div>
+      <span class="shop2-pill">アンテナショップ</span>
+      <div class="shop2-box">
     <a class="shop2-card" href="https://genkishopequal.jp/" target="_blank" rel="noopener">
-      <span class="shop2-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c8602e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0"/><path d="M5.5 12.5V19h13v-6.5"/><path d="M10 19v-4h4v4"/></svg></span><span class="shop2-tx"><b>元気ショップ「いこ〜る」さん</b><small>JR札幌駅 西コンコース1階</small></span><span class="shop2-arw shop2-lk"><svg class="lk" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span>
+      <span class="shop2-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c8602e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0"/><path d="M5.5 12.5V19h13v-6.5"/><path d="M10 19v-4h4v4"/></svg></span><span class="shop2-tx"><b>元気ショップ「いこ〜る」</b><small>JR札幌駅 西コンコース1階</small></span><span class="shop2-arw shop2-lk"><svg class="lk" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span>
     </a>
     <div class="shop2-card">
-      <span class="shop2-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c8602e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0"/><path d="M5.5 12.5V19h13v-6.5"/><path d="M10 19v-4h4v4"/></svg></span><span class="shop2-tx"><b>元気ショップさん</b><small>地下鉄南北線 大通駅コンコース内</small></span>
+      <span class="shop2-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c8602e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0"/><path d="M5.5 12.5V19h13v-6.5"/><path d="M10 19v-4h4v4"/></svg></span><span class="shop2-tx"><b>元気ショップ</b><small>地下鉄南北線 大通駅コンコース内</small></span>
     </div>
   </div>
     </div>
