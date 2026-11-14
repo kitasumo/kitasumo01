@@ -3118,6 +3118,10 @@ html body .products .buy-wrap.shop2 p.shop2-lead{margin:0 0 14px !important;}
 .sns .shop2-rel3 a .lk-ic{grid-area:ic;align-self:center;}
 .sns .shop2-rel3 a .lk-ic svg{width:18px;height:18px;}
 @media (min-width:700px){.shop2-pill{font-size:14px !important;}}
+/* 2026-11-14：お買い求め・お役立ちリンクの見出しを他と同じ中央＋フェード線に */
+.buy-wrap .shop2-title,.sns .relh{display:table !important;margin:0 auto 14px !important;text-align:center !important;font-size:17px !important;}
+.buy-wrap .shop2-title::after,.sns .relh::after{width:auto !important;height:3px !important;margin:9px -24px 0 !important;border-radius:5px;background:none !important;background-image:linear-gradient(to right,rgba(0,0,0,0) 0%,rgb(220,124,49) 12%,rgb(220,124,49) 88%,rgba(0,0,0,0) 100%) !important;}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){.buy-wrap .shop2-title,.sns .relh{font-size:20px !important;}.buy-wrap .shop2-title::after,.sns .relh::after{margin-top:11px !important;}}
 </style>
 </head>
 
