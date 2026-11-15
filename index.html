@@ -3155,6 +3155,12 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
 /* 2026-11-14：お店欄の上に大見出し */
 .products h2.buy-h2{margin-top:44px !important;}
 @media (max-width:400px){.products h2.buy-h2{font-size:min(20px,calc((100vw - 64px)/16)) !important;white-space:nowrap;max-width:100%;box-sizing:border-box;}}
+/* 2026-11-15：商品の値段を題名のすぐ下にそろえて表示 */
+#modalPrice{display:block;width:max-content;max-width:calc(100% - 32px);margin:2px auto 12px;padding:6px 16px;border:1px solid rgba(255,255,255,.55);border-radius:10px;color:#fff;font-size:15px;font-weight:700;line-height:1.6;text-align:center;}
+#modalPrice small{font-size:12px;font-weight:400;opacity:.9;}
+#modalPrice .mp-grid{display:grid;grid-template-columns:auto auto;column-gap:12px;text-align:left;white-space:nowrap;font-size:min(15px,calc((100vw - 64px)/23));}
+#modalPrice .mp-r{text-align:right;}
+#modalPrice .mp-note{grid-column:1 / -1;text-align:center;}
 </style>
 </head>
 
@@ -3495,6 +3501,7 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
   <span class="modal-close">&times;</span>
   <img id="modalImage" src="" alt="拡大画像">
   <p id="modalTitle"></p>
+  <p id="modalPrice"></p>
 <p id="modalDescription"></p>
 </div>
 
@@ -3502,7 +3509,30 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
 function openImage(src, title = "", description = ""){
   document.getElementById("modalImage").src = src;
   document.getElementById("modalTitle").textContent = title;
-  document.getElementById("modalDescription").innerHTML = description;
+  // 値段の行（〇〇円…と、そのすぐ下の※価格変動）を抜き出して、題名のすぐ下にそろえて表示
+  var lines = String(description).split("<br>"), price = [], rest = [];
+  for (var i = 0; i < lines.length; i++){
+    var t = lines[i];
+    if (/[0-9,]+円/.test(t) || (price.length && /^※.*価格変動/.test(t) && rest.length && rest[rest.length-1] === "\u0000")){
+      price.push(t); if (rest[rest.length-1] !== "\u0000") rest.push("\u0000");
+    } else rest.push(t);
+  }
+  rest = rest.filter(function(x){ return x !== "\u0000"; });
+  while (rest.length && rest[rest.length-1].trim() === "") rest.pop();
+  for (var j = 1; j < rest.length; j++){ if (rest[j].trim()==="" && rest[j-1].trim()===""){ rest.splice(j,1); j--; } }
+  var pe = document.getElementById("modalPrice");
+  var yen = price.filter(function(x){ return /[0-9,]+円/.test(x); });
+  if (yen.length > 1){
+    pe.innerHTML = '<span class="mp-grid">' + price.map(function(x){
+      var m = x.match(/^(.*?)([0-9,]+円.*)$/);
+      if (!m) return '<small class="mp-note">'+x+'</small>';
+      return '<span class="mp-l">'+(m[1].trim() || '単品')+'</span><span class="mp-r">'+m[2]+'</span>';
+    }).join("") + '</span>';
+  } else {
+    pe.innerHTML = price.map(function(x,n){ return n ? "<small>"+x+"</small>" : x; }).join("<br>");
+  }
+  pe.style.display = price.length ? "" : "none";
+  document.getElementById("modalDescription").innerHTML = rest.join("<br>");
   document.getElementById("imageModal").classList.add("show");
 }
 
