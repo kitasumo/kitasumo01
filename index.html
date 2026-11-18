@@ -3197,6 +3197,12 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
 }
 /* 2026-11-18：スライドの説明文が枠からはみ出さないように（1つのかたまりとして折り返す） */
 .activity-caption .cap-in{display:block;max-width:100%;text-align:center;}
+/* 2026-11-19：商品一覧に段ごとの見出し */
+.product-grid .pg-head{grid-column:1 / -1;display:flex;align-items:center;gap:12px;margin:14px 0 2px;font-size:15px;font-weight:700;color:#c8501f;letter-spacing:.05em;}
+.product-grid .pg-head::before,.product-grid .pg-head::after{content:"";flex:1;height:1px;background:linear-gradient(to right,rgba(220,124,49,0),rgba(220,124,49,.7));}
+.product-grid .pg-head::after{background:linear-gradient(to left,rgba(220,124,49,0),rgba(220,124,49,.7));}
+.product-grid .pg-head:first-child{margin-top:0;}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){.product-grid .pg-head{font-size:18px;margin-top:22px;}}
 </style>
 </head>
 
@@ -3288,6 +3294,8 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
     <p class="product-tap-note">画像をタップすると拡大と説明がご覧いただけます。</p>
 <div class="product-grid">
 
+  <h3 class="pg-head">通年商品</h3>
+
   <div class="product-wrap">
     <h3 class="product-name">チーズ<wbr>スモーク</h3>
     <div class="product-slot">
@@ -3318,6 +3326,8 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
     </div>
   </div>
 
+  <h3 class="pg-head">受注製品</h3>
+
   <div class="product-wrap">
     <h3 class="product-name">エプロン<wbr>ドレス</h3>
     <div class="product-slot">
@@ -3347,6 +3357,8 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
          onclick="openImage(this.src, 'そばがら枕', '幌加内産の天然そばがら100％を使用した、手作り<span class=nw>枕です。</span><br><br>1,000円〜（税込み）<br>※サイズにより価格変動します。<br><br>※そばアレルギーの方はお控えください。')">
   </div>
 </div>
+
+  <h3 class="pg-head">季節商品</h3>
 
   <div class="product-wrap">
   <h3 class="product-name">切干し大根</h3>
