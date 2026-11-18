@@ -3195,6 +3195,8 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
   .modal-info #modalDescription{font-size:18px !important;line-height:1.9 !important;}
   .modal-info .nw{white-space:nowrap;}
 }
+/* 2026-11-18：スライドの説明文が枠からはみ出さないように（1つのかたまりとして折り返す） */
+.activity-caption .cap-in{display:block;max-width:100%;text-align:center;}
 </style>
 </head>
 
@@ -3623,8 +3625,8 @@ const activitySets = {
     "北スモ商品の柱、スモークチーズの燻製作業に<br>なります。温度管理を徹底しています。",
     "<span class=\"nowrap\">採れたての新鮮な大根をスライスして干し、</span><span class=\"nowrap\">切り干し大根にしています。</span>",
     "石鹸：使用済み油と苛性ソーダを加え<br>しっかり混ぜ合わせます。",
-    "出来上がった石鹸の形を整えて製品になります。",
-    "そばがらを選別する作業です。枕の素材にします。",
+    "<span class=\"nowrap\">出来上がった石鹸の形を整えて</span><span class=\"nowrap\">製品になります。</span>",
+    "<span class=\"nowrap\">そばがらを選別する作業です。</span><span class=\"nowrap\">枕の素材にします。</span>",
     "エプロンの生地を整える作業です。",
     "出来上がったエプロンのお披露目です。"
   ]
@@ -3692,7 +3694,7 @@ function buildActivitySlider(){
 });
 
 activityCaption.innerHTML =
-  currentSet.captions[activityIndex] || "";
+  '<span class="cap-in">' + (currentSet.captions[activityIndex] || "") + '</span>';
 
 
   const showArrows =
