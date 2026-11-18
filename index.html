@@ -3203,6 +3203,11 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
 .product-grid .pg-head::after{background:linear-gradient(to left,rgba(220,124,49,0),rgba(220,124,49,.7));}
 .product-grid .pg-head:first-child{margin-top:0;}
 @media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){.product-grid .pg-head{font-size:18px;margin-top:22px;}}
+#modalDescription .nw{white-space:nowrap;}
+/* 2026-11-19：スマホの商品説明を左ぞろえのかたまりにして中央に置く（ピラミッドにならないように） */
+@media screen and (max-width:699px), screen and (max-width:1024px) and (hover:none), screen and (max-width:1024px) and (pointer:coarse){
+  #modalDescription{display:table !important;margin-left:auto !important;margin-right:auto !important;text-align:left !important;max-width:calc(100% - 40px) !important;}
+}
 </style>
 </head>
 
@@ -3302,7 +3307,7 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
       <img class="product-image cheese-image"
         src="cheese-smoke-new1-w-l.jpg"
         alt="チーズスモーク"
-       onclick="openImage(this.src, 'チーズスモーク', '北海道生乳100％のプロセスチーズを<br>クルミのチップで燻製しています。<br><br>香りも楽しめるおいしいチーズです。<br>北スモで一番人気の商品です。<br>ぜひご賞味ください。<br><br>1個（200g）　800円（税込み）')">
+       onclick="openImage(this.src, 'チーズスモーク', '<span class=nowrap>北海道生乳100％の</span><span class=nowrap>プロセスチーズを</span><span class=nowrap>クルミのチップで</span><span class=nowrap>燻製しています。</span><br><br><span class=nowrap>香りも楽しめる</span><span class=nowrap>おいしいチーズです。</span><br><span class=nowrap>北スモで</span><span class=nowrap>一番人気の商品です。</span><br><span class=nowrap>ぜひ</span><span class=nowrap>ご賞味ください。</span><br><br>1個（200g）　800円（税込み）')">
     </div>
   </div>
 
@@ -3312,7 +3317,7 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
       <img class="product-image"
         src="blueberry4-w-l.jpg"
         alt="ブルーベリージャム"
-        onclick="openImage('blueberry-set3-w-l.jpg', 'ブルーベリージャム', '畑から収穫、製造、商品化まで、<br>北のスモークでおこなっています。<br><br>国産ブルーベリーと甜菜糖のみを使用した、<br>コク深くまろやかな味わいです。<br><br>1瓶（200g）800円（税込み）<br>ギフトセット（200g×3瓶）2,500円（税込み）')">
+        onclick="openImage('blueberry-set3-w-l.jpg', 'ブルーベリージャム', '<span class=nowrap>畑から収穫、</span><span class=nowrap>製造、</span><span class=nowrap>商品化まで、</span><span class=nowrap>北のスモークで</span><span class=nowrap>おこなっています。</span><br><br><span class=nowrap>国産ブルーベリーと</span><span class=nowrap>甜菜糖のみを使用した、</span><span class=nowrap>コク深く</span><span class=nowrap>まろやかな味わいです。</span><br><br>1瓶（200g）800円（税込み）<br>ギフトセット（200g×3瓶）2,500円（税込み）')">
     </div>
   </div>
 
@@ -3322,7 +3327,7 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
       <img class="product-image"
         src="sopa-w-l.jpg"
         alt="リサイクル石鹸"
-        onclick="openImage(this.src, 'リサイクル石鹸', '使い終わった食用油を再利用して作った、<br>リサイクル石鹸です。<br><br>お洗濯・お掃除・食器洗いにお使いいただけます。<br>物価高の今、お求めやすい価格で販売しています。<br>ぜひお試しください。<br><br>80円（税込み）')">
+        onclick="openImage(this.src, 'リサイクル石鹸', '<span class=nowrap>使い終わった</span><span class=nowrap>食用油を再利用して作った、</span><span class=nowrap>リサイクル石鹸です。</span><br><br><span class=nowrap>お洗濯・</span><span class=nowrap>お掃除・</span><span class=nowrap>食器洗いに</span><span class=nowrap>お使いいただけます。</span><br><span class=nowrap>物価高の今、</span><span class=nowrap>お求めやすい価格で</span><span class=nowrap>販売しています。</span><br><span class=nowrap>ぜひ</span><span class=nowrap>お試しください。</span><br><br>80円（税込み）')">
     </div>
   </div>
 
@@ -3334,7 +3339,7 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
       <img class="product-image"
         src="handmade-apron-w-l.jpg"
         alt="エプロンドレス"
-       onclick="openImage('apron-360-w-l.jpg', '手作りエプロンドレス', '腰まわりなどにストレッチゴムを使い<br>動きやすく仕上げています。<br>ちょっとおしゃれで、着やすいエプロンです。<br>生地の在庫があれば、柄の変更も可能です。<br><br>1,000円〜（税込み）<br>※仕様により価格変動します。')">
+       onclick="openImage('apron-360-w-l.jpg', '手作りエプロンドレス', '<span class=nowrap>腰まわりなどに</span><span class=nowrap>ストレッチゴムを使い、</span><span class=nowrap>動きやすく</span><span class=nowrap>仕上げています。</span><br><span class=nowrap>ちょっとおしゃれで、</span><span class=nowrap>着やすいエプロンです。</span><br><span class=nowrap>生地の在庫があれば、</span><span class=nowrap>柄の変更も</span><span class=nowrap>可能です。</span><br><br>1,000円〜（税込み）<br>※仕様により価格変動します。')">
     </div>
   </div>
 
@@ -3344,7 +3349,7 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
       <img class="product-image"
         src="milkpack-chair2-w-l.jpg"
         alt="牛乳パック椅子"
-        onclick="openImage(this.src, '牛乳パック椅子', '牛乳パックとダンボールで強度を持たせた、手作り<span class=nw>椅子です。</span><br>子どもから大人までお使いいただけます。<br>形は正方形・六角形の2種類、<br>サイズは写真のものから多少の調整ができます。<br><br>1,200円〜（税込み）<br>※サイズにより価格変動します。<br><br>※強い衝撃や無理な荷重はお避けください。')">
+        onclick="openImage(this.src, '牛乳パック椅子', '<span class=nowrap>牛乳パックと</span><span class=nowrap>ダンボールで</span><span class=nowrap>強度を持たせた、</span><span class=nowrap>手作り椅子です。</span><br><span class=nowrap>子どもから大人まで</span><span class=nowrap>お使いいただけます。</span><br><span class=nowrap>形は</span><span class=nowrap>正方形・六角形の2種類、</span><span class=nowrap>サイズは</span><span class=nowrap>写真のものから</span><span class=nowrap>多少の調整が</span><span class=nowrap>できます。</span><br><br>1,200円〜（税込み）<br>※サイズにより価格変動します。<br><br><span class=nowrap>※椅子の上に</span><span class=nowrap>立つなど、</span><span class=nowrap>座る以外の使い方は</span><span class=nowrap>お避けください。</span>')">
     </div>
   </div>
 
@@ -3354,7 +3359,7 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
     <img class="product-image"
          src="sobagara-pillow-w-l.jpg"
          alt="そばがら枕"
-         onclick="openImage(this.src, 'そばがら枕', '幌加内産の天然そばがら100％を使用した、手作り<span class=nw>枕です。</span><br><br>1,000円〜（税込み）<br>※サイズにより価格変動します。<br><br>※そばアレルギーの方はお控えください。')">
+         onclick="openImage(this.src, 'そばがら枕', '<span class=nowrap>幌加内産の</span><span class=nowrap>天然そばがら100％、</span><span class=nowrap>化学素材を</span><span class=nowrap>使わない</span><span class=nowrap>手作り枕です。</span><br><span class=nowrap>粒が</span><span class=nowrap>頭の形に</span><span class=nowrap>なじみ、</span><span class=nowrap>通気性もよく</span><span class=nowrap>蒸れにくいのが</span><span class=nowrap>特長です。</span><br><span class=nowrap>高さの調整や</span><span class=nowrap>サイズオーダーも</span><span class=nowrap>可能です。</span><br><br>1,000円〜（税込み）<br>※サイズにより価格変動します。<br><br><span class=nowrap>※そばがらは</span><span class=nowrap>湿気を吸うため、</span><span class=nowrap>ときどき</span><span class=nowrap>天日干しを</span><span class=nowrap>してください。</span><br><span class=nowrap>※そばアレルギーの方は</span><span class=nowrap>お控えください。</span>')">
   </div>
 </div>
 
@@ -3366,7 +3371,7 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
     <img class="product-image"
          src="kiriboshi-daikon5-w-l.jpg"
          alt="切干し大根"
-         onclick="openImage(this.src, '切干し大根', '北広島でお借りしている畑で育てた大根を、<br>一本ずつ手でスライスし、干して作りました。<br>水で戻すと、大根の甘みがふわっと広がります。<br><br>1袋（40g）　450円（税込み）<br><br>※収穫の量により、<span class=nw>販売期間が変わる場合がございます。</span>')">
+         onclick="openImage(this.src, '切干し大根', '<span class=nowrap>北広島で</span><span class=nowrap>お借りしている畑で</span><span class=nowrap>育てた大根を、</span><span class=nowrap>一本ずつ手で</span><span class=nowrap>スライスし、</span><span class=nowrap>干して作りました。</span><br><span class=nowrap>水で戻すと、</span><span class=nowrap>大根の甘みが</span><span class=nowrap>ふわっと広がります。</span><br><br>1袋（40g）　450円（税込み）<br><br><span class=nowrap>※収穫の量により、</span><span class=nowrap>販売期間が</span><span class=nowrap>変わる場合が</span><span class=nowrap>ございます。</span>')">
   </div>
 
 
@@ -3378,7 +3383,7 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
   <img class="product-image"
        src="taro-kombu-w-l.jpg"
        alt="岩手産たろう昆布"
-       onclick="openImage(this.src, '岩手産たろう昆布', '岩手県宮古市（旧田老町）産のたろう昆布。<br>三陸の豊かな海で育った昆布ならではの、<br>上品で深いコクのある出汁が取れます。<br><br>1袋（95g）　950円（税込み）')">
+       onclick="openImage(this.src, '岩手産たろう昆布', '<span class=nowrap>岩手県宮古市</span><span class=nowrap>（旧田老町）産の</span><span class=nowrap>たろう昆布。</span><br><span class=nowrap>三陸の豊かな海で</span><span class=nowrap>育った昆布ならではの、</span><span class=nowrap>上品で深いコクのある出汁が取れます。</span><br><br>1袋（95g）　950円（税込み）')">
 </div>
     </div>
 
