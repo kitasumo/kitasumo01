@@ -3179,6 +3179,22 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
 .sns .blog-band-arrow{background:#e8823a !important;border-color:#e8823a !important;color:#fff !important;}
 #modalPrice .mp-grid{width:max-content;}
 #modalPrice:has(.mp-grid){width:auto;display:table;}
+/* 2026-11-18：PCの商品拡大表示で、商品名・値段・説明を写真の右上にまとめて並べる */
+.modal-info{display:contents;}
+@media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){
+  .modal.show{grid-template-rows:auto !important;}
+  .modal img{grid-row:1 !important;}
+  .modal-info{display:block;grid-column:2;grid-row:1;align-self:start;padding-top:4px;}
+  .modal-info #modalTitle{margin:0 0 14px !important;}
+  .modal-info #modalPrice{margin:0 0 20px !important;}
+  .modal.show{grid-template-columns:minmax(0,auto) minmax(300px,460px) !important;}
+  .modal-info #modalTitle{font-size:30px !important;}
+  .modal-info #modalPrice{font-size:18px !important;padding:8px 20px !important;}
+  .modal-info #modalPrice .mp-grid{font-size:18px !important;column-gap:16px !important;}
+  .modal-info #modalPrice small{font-size:14px !important;}
+  .modal-info #modalDescription{font-size:18px !important;line-height:1.9 !important;}
+  .modal-info .nw{white-space:nowrap;}
+}
 </style>
 </head>
 
@@ -3518,9 +3534,11 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
 <div id="imageModal" class="modal" onclick="closeImage()">
   <span class="modal-close">&times;</span>
   <img id="modalImage" src="" alt="拡大画像">
-  <p id="modalTitle"></p>
-  <p id="modalPrice"></p>
-<p id="modalDescription"></p>
+  <div class="modal-info">
+    <p id="modalTitle"></p>
+    <p id="modalPrice"></p>
+    <p id="modalDescription"></p>
+  </div>
 </div>
 
 <script>
