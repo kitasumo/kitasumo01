@@ -3221,6 +3221,17 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
 .sns .blog-band-sub{font-size:9.5px !important;line-height:1.2 !important;}
 .sns .blog-band-title{margin-top:1px !important;line-height:1.1 !important;}
 @media screen and (min-width:1025px), screen and (min-width:700px) and (hover:hover) and (pointer:fine){.sns .blog-band-text{padding-top:12px !important;padding-bottom:12px !important;}}
+/* 2026-11-22：お店の箱をスリムに */
+.buy-wrap .shop2-box .shop2-card{padding-top:7px !important;padding-bottom:7px !important;}
+.buy-wrap .shop2-box .shop2-ic{width:32px !important;height:32px !important;min-width:32px !important;}
+.buy-wrap .shop2-box .shop2-ic svg{width:20px !important;height:20px !important;}
+/* 2026-11-22：上下ボタンはスクロール中だけ出す（止まると消えて下の文字に重ならない） */
+.page-jump{transition:opacity .35s ease;}
+.page-jump.pj-hide{opacity:0;pointer-events:none;}
+/* 2026-11-22：ブログの見出しをほかと同じオレンジのラベルに */
+.sns .blog-pill{display:block;width:max-content;margin:0 0 6px;}
+.sns .blog-lead{margin:0 0 10px !important;text-align:left !important;font-size:13px;color:#6a5a50;}
+.sns .sns-links-wrap{display:block;}
 </style>
 </head>
 
@@ -3447,11 +3458,9 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
 <section class="sns" id="blog">
   <div class="inner">
 
-   <h2>ブログ</h2>
-
-    <p>日々の活動や最新情報を掲載しています。</p>
-
     <div class="sns-links-wrap">
+      <span class="shop2-pill blog-pill">ブログ</span>
+      <p class="blog-lead">日々の活動や最新情報を掲載しています。</p>
 
       <div class="sns-blog">
         <a class="blog-band-link"
@@ -3910,6 +3919,15 @@ document.getElementById("jumpBottom").addEventListener("click", function(){
     behavior:"smooth"
   });
 });
+</script>
+<script>
+(function(){
+  var pj=document.querySelector(".page-jump"); if(!pj) return;
+  var t; pj.classList.add("pj-hide");
+  function show(){ pj.classList.remove("pj-hide"); clearTimeout(t); t=setTimeout(function(){ pj.classList.add("pj-hide"); },1800); }
+  window.addEventListener("scroll",show,{passive:true});
+  pj.addEventListener("touchstart",show,{passive:true});
+})();
 </script>
 </body>
 
