@@ -3289,6 +3289,11 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
 .products .product-note{margin-top:20px !important;}
 .products h2.buy-h2{margin-top:68px !important;}
 .products h2.buy-h2::before{top:-42px !important;}
+/* 2026-11-22：車両の文の上に余白、iPadで見出しを1行に */
+.car-caption{margin-top:16px !important;}
+@media screen and (min-width:700px) and (max-width:1024px) and (hover:none), screen and (min-width:700px) and (max-width:1024px) and (pointer:coarse){
+.products h2.buy-h2{white-space:nowrap;font-size:19px !important;}
+}
 </style>
 </head>
 
@@ -3561,10 +3566,10 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
       <p class="kaigyo">通所の送迎は、ご自宅から北のスモークまでおこなっています。</p>
     </div>
     <img class="car-photo" src="sougei-car2-l.jpg" alt="北のスモークの送迎車（車椅子用リフト付き）" loading="lazy">
-    <p class="car-caption kaigyo">車両は、スロープ付きの軽バンと、<br class="car-sp">リフト付きの福祉車両です。<br class="m-br"><span class="m-ind"></span>どちらも車椅子のまま、安心してご乗車いただけます。<br class="car-sp">日時はご相談に応じますので、<br class="car-sp"><span class="nowrap">どうぞご利用ください。</span></p>
+    <p class="car-caption kaigyo"><span class="nowrap">車両は、</span><span class="nowrap">スロープ付きの</span><span class="nowrap">軽バンと、</span><br class="car-sp"><span class="nowrap">リフト付きの福祉車両です。</span><br class="m-br"><span class="m-ind"></span><span class="nowrap">どちらも</span><span class="nowrap">車椅子のまま、</span><span class="nowrap">安心して</span><span class="nowrap">ご乗車いただけます。</span><br class="car-sp"><span class="nowrap">日時は</span><span class="nowrap">ご相談に</span><span class="nowrap">応じますので、</span><br class="car-sp"><span class="nowrap">どうぞご利用ください。</span></p>
     <div class="boshu-box">
   <p class="boshu-title">メンバー・ボランティア募集</p>
-  <p class="closing-boshu">利用者さんやボランティアさんも募集しています。小規模な作業所で、親しみやすい環境です。体験参加や見学も随時受け付けていますので、<span class="nowrap">お気軽にご連絡ください。</span></p>
+  <p class="closing-boshu"><span class="nowrap">利用者さんや</span><span class="nowrap">ボランティアさんも</span><span class="nowrap">募集しています。</span><span class="nowrap">小規模な</span><span class="nowrap">作業所で、</span><span class="nowrap">親しみやすい</span><span class="nowrap">環境です。</span><span class="nowrap">体験参加や</span><span class="nowrap">見学も</span><span class="nowrap">随時受け付けていますので、</span><span class="nowrap">お気軽にご連絡ください。</span></p>
   <p class="closing-tanto">担当　二階堂</p>
   </div>
     <div class="transport-head" id="access-map">
