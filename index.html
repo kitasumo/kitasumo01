@@ -3235,10 +3235,16 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
 /* 2026-11-22：ブログのバナーに透明感 */
 .sns .blog-band{background:linear-gradient(90deg,rgba(60,36,22,.78) 0%,rgba(60,36,22,.62) 60%,rgba(60,36,22,.45) 100%),url("cheese-smoke-new1-w-l.jpg") center 40%/cover no-repeat !important;}
 .buy-wrap .shop2-tx b .ev-sub{font-size:12px;font-weight:500;color:#8a6a55;margin-left:8px;white-space:nowrap;}
-/* ===== 2026-11-22：商品ラインナップの背景をスライド欄と同じベージュに（「日々の活動の中で〜」の一行も含めてひと続き）、商品写真にうすい影（スマホ・PC共通） ===== */
-.activity-product-bridge,
+/* ===== 2026-11-22：コーナーの背景を「濃い・明るい」の交互に（スマホ・PC共通）
+   スライド欄（濃）→「日々の活動の中で〜」の一行（明）→ 商品ラインナップ（濃）→ 販売案内（明）→ ブログ（濃）→ ご利用案内（明）
+   濃いベージュは少し濃くした #f6e6cf。商品写真にうすい影 ===== */
+.activities,
+.sns,
 .products{
-  background-color:#faefdf !important;
+  background-color:#f6e6cf !important;
+}
+.activity-product-bridge{
+  background-color:#fdf5ea !important;
 }
 .product-slot img,
 .product-image{
