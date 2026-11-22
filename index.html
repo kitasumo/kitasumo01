@@ -3270,6 +3270,13 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
 .product-image{
   box-shadow:0 2px 6px rgba(110,70,30,.20) !important;
 }
+/* 2026-11-22：アクセスも濃い帯にして交互に、濃いベージュを少し薄く */
+.activities,.sns{background-color:#f8eada !important;}
+.products h2.buy-h2::before{background:#f8eada !important;}
+.access.access-up{position:relative;overflow:hidden;isolation:isolate;}
+.access #access-map{position:relative;}
+.access #access-map::before{content:"";position:absolute;left:-100vw;right:-100vw;top:-28px;height:5000px;background:#f8eada;z-index:-1;}
+.closing-note{position:relative;z-index:1;background:#fdf5ea;}
 </style>
 </head>
 
