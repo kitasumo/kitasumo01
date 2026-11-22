@@ -3281,6 +3281,14 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
 .product-grid .pg-head{margin-bottom:-8px !important;}
 /* 2026-11-22：募集枠と濃い帯の間をあける */
 .boshu-box{margin-bottom:60px !important;}
+/* 2026-11-22：商品見出しまわりを詰め、下の注意書きに余白 */
+@media screen and (max-width:699px), screen and (max-width:1024px) and (hover:none), screen and (max-width:1024px) and (pointer:coarse){
+.product-grid .pg-head{margin-top:2px !important;margin-bottom:-12px !important;}
+.product-grid .pg-head:first-child{margin-top:0 !important;}
+}
+.products .product-note{margin-top:20px !important;}
+.products h2.buy-h2{margin-top:68px !important;}
+.products h2.buy-h2::before{top:-42px !important;}
 </style>
 </head>
 
