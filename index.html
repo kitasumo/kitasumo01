@@ -3235,16 +3235,36 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
 /* 2026-11-22：ブログのバナーに透明感 */
 .sns .blog-band{background:linear-gradient(90deg,rgba(60,36,22,.78) 0%,rgba(60,36,22,.62) 60%,rgba(60,36,22,.45) 100%),url("cheese-smoke-new1-w-l.jpg") center 40%/cover no-repeat !important;}
 .buy-wrap .shop2-tx b .ev-sub{font-size:12px;font-weight:500;color:#8a6a55;margin-left:8px;white-space:nowrap;}
-/* ===== 2026-11-22：コーナーの背景を「濃い・明るい」の交互に（スマホ・PC共通）
-   スライド欄（濃）→「日々の活動の中で〜」の一行（明）→ 商品ラインナップ（濃）→ 販売案内（明）→ ブログ（濃）→ ご利用案内（明）
-   濃いベージュは少し濃くした #f6e6cf。商品写真にうすい影 ===== */
+/* ===== 2026-11-22：コーナー（見出し）ごとに背景を「明るい・濃い」の交互に（スマホ・PC共通）
+   私たちの活動について（明）→ 活動スライド（濃）→ 日々の活動の中で〜・商品ラインナップ（明）
+   → 商品販売案内・ブログ・お役立ちリンク（濃：見出しからブログの下まで）→ ご利用案内（明）
+   濃いベージュは #f6e6cf。商品写真にうすい影 ===== */
 .activities,
-.sns,
-.products{
+.sns{
   background-color:#f6e6cf !important;
 }
-.activity-product-bridge{
+.activity-product-bridge,
+.products{
   background-color:#fdf5ea !important;
+}
+/* 商品販売案内の見出しから下だけ濃いベージュに（同じ欄の中なので、見出しのうしろに横いっぱいの色を敷く） */
+.products{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+.products h2.buy-h2{
+  position:relative;
+}
+.products h2.buy-h2::before{
+  content:"";
+  position:absolute;
+  left:-100vw;
+  right:-100vw;
+  top:-44px;
+  height:5000px;
+  background:#f6e6cf;
+  z-index:-1;
 }
 .product-slot img,
 .product-image{
