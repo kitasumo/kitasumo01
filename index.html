@@ -3299,11 +3299,14 @@ html body .products .buy-wrap.shop2 p.shop2-lead{font-size:16.5px !important;fon
 /* 2026-11-28：車両の文と募集の文を、端まで流す */
 html body p.car-caption.kaigyo,html body .access .boshu-box p.closing-boshu{text-align:left !important;text-align-last:left !important;text-indent:0 !important;line-break:strict;}
 .car-caption br{display:inline !important;}
-/* 2026-11-28：私たちの活動についての文を端まで流し、スマホは行間を少しつめる */
+/* 2026-11-28：私たちの活動について・皆さまへの文を端まで流し、スマホは行間をつめる */
 html body .about-text p{text-align:left !important;text-align-last:left !important;line-break:strict;}
 @media screen and (max-width:699px), screen and (max-width:1024px) and (hover:none), screen and (max-width:1024px) and (pointer:coarse){
-html body .about-text p{line-height:1.55 !important;}
+html body .about-text p{line-height:1.45 !important;margin-bottom:6px !important;}
+html body .closing-note > p:not(.closing-last){line-height:1.45 !important;margin-bottom:6px !important;text-align:left !important;text-align-last:left !important;}
 }
+/* 2026-11-28：通所の送迎の文を「まで」で改行（「まで」が入りきらない狭い画面は自然改行） */
+@media (max-width:383.98px){ html body .kaigyo br.sg-br{display:none !important;} }
 </style>
 </head>
 
@@ -3573,7 +3576,7 @@ html body .about-text p{line-height:1.55 !important;}
     <h2>ご利用案内</h2>
 
     <div class="transport-head">
-      <p class="kaigyo">通所の送迎は、ご自宅から北のスモークまでおこなっています。</p>
+      <p class="kaigyo">通所の送迎は、ご自宅から北のスモーク<span class="nowrap">まで</span><br class="m-br sg-br">おこなっています。</p>
     </div>
     <img class="car-photo" src="sougei-car2-l.jpg" alt="北のスモークの送迎車（車椅子用リフト付き）" loading="lazy">
     <p class="car-caption kaigyo">車両は、スロープ付きの軽バンと、リフト付きの福祉車両がございます。どちらも車椅子のまま、安心してご乗車いただけます。日時はご相談に応じますので、どうぞご利用<span class="nowrap">ください。</span></p>
@@ -3638,8 +3641,8 @@ html body .about-text p{line-height:1.55 !important;}
   <h3 class="closing-title">北のスモークから皆さまへ</h3>
   <p>北のスモークのホームページをご覧いただき、ありがとうございます。</p>
   <p>私たちは、通ってくる皆さんが、その日あったことを気軽に話せるような、ほっとできる場所でありたいと思っています。</p>
-  <p>商品を手に取ってくださる方や、出店先で声をかけてくださる方とのつながりも、私たちの元気の源です。<span class="pc-nowrap">新しい仲間との出会いも、<span class="nowrap">いつも楽しみにしています。</span></span></p>
-  <p>また、北のスモークを応援してくださり、ご支援をいただいた企業様・個人様のお名前は、広報誌「北スモ通信」に掲載させていただいております。企業様・個人様には、日ごろから活動へのご理解とご協力を賜り、感謝申し上げます。<span class="nowrap">ご支援ありがとうございました。</span></p>
+  <p>商品を手に取ってくださる方や、出店先で声をかけてくださる方とのつながりも、私たちの元気の源です。<span class="pc-nowrap">新しい仲間との出会いも、いつも楽しみにして<span class="nowrap">います。</span></span></p>
+  <p>また、北のスモークを応援してくださり、ご支援をいただいた企業様・個人様のお名前は、広報誌「北スモ通信」に掲載させていただいております。企業様・個人様には、日ごろから活動へのご理解とご協力を賜り、感謝申し上げます。ご支援ありがとうござい<span class="nowrap">ました。</span></p>
   <p class="closing-last">今後とも、<span class="nowrap">北のスモークをよろしくお願いします。</span></p></div>
 
 <footer class="footer-image">
